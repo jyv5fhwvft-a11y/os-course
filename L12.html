@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container":"#1c1f2a","on-error":"#690005","secondary":"#ddb7ff","error-container":"#93000a","inverse-on-surface":"#2c303b","on-secondary-container":"#d6a9ff","tertiary-container":"#48d99e","inverse-primary":"#00677f","error":"#ffb4ab","tertiary-fixed":"#6ffbbe","on-primary-container":"#00566a","surface-bright":"#353944","surface-tint":"#47d6ff","on-tertiary-container":"#005b3d","surface-variant":"#313540","inverse-surface":"#dfe2f1","background":"#0f131d","primary-container":"#00d2ff","primary-fixed-dim":"#47d6ff","on-secondary":"#490080","on-secondary-fixed-variant":"#6900b3","on-surface-variant":"#bbc9cf","on-secondary-fixed":"#2c0051","surface-container-high":"#262a35","secondary-fixed-dim":"#ddb7ff","secondary-fixed":"#f0dbff","primary-fixed":"#b6ebff","tertiary":"#69f6b9","primary":"#a5e7ff","on-primary":"#003543","on-error-container":"#ffdad6","outline-variant":"#3c494e","tertiary-fixed-dim":"#4edea3","on-tertiary-fixed-variant":"#005236","surface":"#0f131d","outline":"#859399","surface-container-lowest":"#0a0e18","on-surface":"#dfe2f1","on-primary-fixed":"#001f28","on-tertiary-fixed":"#002113","secondary-container":"#6f00be","surface-dim":"#0f131d","on-background":"#dfe2f1","on-primary-fixed-variant":"#004e60","on-tertiary":"#003824","surface-container-highest":"#313540","surface-container-low":"#171b26"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xs":"0.25rem","space-xl":"2.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-md":"1rem","margin":"3rem","gutter":"1.5rem"},"fontFamily":{"headline-sm":["Space Grotesk"],"headline-lg":["Space Grotesk"],"headline-md":["Space Grotesk"],"label-tag":["JetBrains Mono"],"headline-xl":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"headline-xl-mobile":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"label-code":["JetBrains Mono"],"body-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Space Grotesk"]},"fontSize":{"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-80 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center text-primary-container"><span class="material-symbols-outlined text-[18px]">memory</span></div><div class="flex flex-col"><span class="font-label-code text-label-code text-primary uppercase font-bold tracking-wider">KERNEL LAB</span><span class="font-label-tag text-label-tag text-on-surface-variant tracking-widest">SYSTEMS STUDIO</span></div></div><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-tag text-label-tag text-tertiary">LIVE</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-sm flex flex-col gap-space-md"><div class="flex flex-col gap-space-xs"><div class="px-space-sm py-space-xs flex items-center justify-between"><span class="font-label-tag text-label-tag text-on-surface-variant tracking-wider uppercase">Curriculum // Core Units</span><span class="font-label-tag text-label-tag text-primary">12 / 14</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container text-primary font-semibold shadow-[inset_0_0_0_1px_#00d2ff]"><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l0-course-intro" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L0 Course Intro</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l1-os-components" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L1 OS Components</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l2-pcb-and-context-sw" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L2 PCB &amp; Context Sw</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l3-kernel-design" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L3 Kernel Design</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l4-the-boot-process" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L4 The Boot Process</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l5-what-is-a-process" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L5 What is a Process?</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l6-process-and-switch" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L6 Process &amp; Switch</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l7-cpu-scheduling-i" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L7 CPU Scheduling I</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l8-cpu-scheduling-ii" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L8 CPU Scheduling II</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l9-threads-and-concurrency" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L9 Threads &amp; Concurrency</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l10-race-conditions" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L10 Race Conditions</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l11-deadlocks-and-sync" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L11 Deadlocks &amp; Sync</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-space-xs rounded transition-all group bg-surface-container text-primary font-semibold shadow-[inset_0_0_0_1px_#00d2ff]" data-path="l12-memory-relocation" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[16px]">play_circle</span><span class="font-label-code text-label-code">L12 Memory Relocation</span></div><span class="font-label-tag text-label-tag bg-surface-container px-space-xs py-0.5 rounded text-primary-container shadow-[0_0_8px_rgba(0,210,255,0.4)]">ACTIVE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group opacity-75" data-path="l13-paging-and-tlb" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-outline text-[16px]">lock</span><span class="font-label-code text-label-code">L13 Paging &amp; TLB</span></div><span class="font-label-tag text-label-tag text-outline">QUEUED</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group opacity-75" data-path="l14-virtual-memory" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-outline text-[16px]">lock</span><span class="font-label-code text-label-code">L14 Virtual Memory</span></div><span class="font-label-tag text-label-tag text-outline">QUEUED</span></a></nav></div><div class="flex flex-col gap-space-xs pt-space-xs"><div class="px-space-sm py-space-xs flex items-center justify-between"><span class="font-label-tag text-label-tag text-on-surface-variant tracking-wider uppercase">Telemetry &amp; Tools</span><span class="font-label-tag text-label-tag text-secondary">DEBUG</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container text-primary font-semibold shadow-[inset_0_0_0_1px_#00d2ff]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="register-inspector" href="#"><span class="material-symbols-outlined text-secondary text-[16px]">terminal</span><span class="font-label-code text-label-code">Register Inspector</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="syscall-debugger" href="#"><span class="material-symbols-outlined text-primary text-[16px]">bug_report</span><span class="font-label-code text-label-code">Syscall Debugger</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="mmu-address-bus" href="#"><span class="material-symbols-outlined text-tertiary text-[16px]">alt_route</span><span class="font-label-code text-label-code">MMU Address Bus</span></a></nav></div></div><div class="p-space-sm bg-surface-container-low"><div class="p-space-sm rounded bg-surface-container-lowest flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase">Kernel Engine</span><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="font-label-tag text-label-tag text-tertiary">ONLINE</span></div></div><div class="font-label-code text-label-code text-primary font-semibold">RISC-V 64-bit Emulator</div><div class="flex items-center justify-between text-on-surface-variant font-label-tag text-label-tag pt-space-xs"><span class="text-outline">HART: 0 [ACTIVE]</span><span class="text-tertiary">IPC: 1.42</span></div></div></div></aside><div class="pl-80"><header class="fixed top-0 left-80 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="flex items-center gap-space-lg"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">CS 301</span><span class="text-outline-variant font-label-tag text-label-tag">//</span><span class="font-label-code text-label-code text-on-surface font-semibold">Systems Architecture</span></div><span class="font-label-tag text-label-tag text-on-surface-variant uppercase">Undergraduate Core Engine</span></div><div class="hidden xl:flex items-center gap-space-md pl-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container"><span class="font-label-tag text-label-tag text-on-surface-variant">POLLER:</span><span class="font-label-code text-label-code text-primary">1000 Hz</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container"><span class="font-label-tag text-label-tag text-on-surface-variant">MODULE:</span><span class="font-label-code text-label-code text-on-surface">12 / 14</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container"><span class="font-label-tag text-label-tag text-on-surface-variant">DIFF:</span><span class="font-label-code text-label-code text-secondary">Intermediate</span></div></div></div><div class="flex items-center gap-space-lg"><div class="hidden md:flex flex-col items-end gap-1"><div class="flex items-center gap-space-sm"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase">Syllabus Progress</span><span class="font-label-code text-label-code text-tertiary font-bold">86%</span></div><div class="w-36 h-1.5 rounded-full bg-surface-container overflow-hidden"><div class="h-full bg-tertiary w-[86%]"></div></div></div><div class="flex items-center gap-space-sm"><button aria-label="Notifications" class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_6px_#00d2ff]"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 min-h-screen bg-surface px-gutter"><div class="flex flex-col w-full text-on-surface pb-space-xl">
+<!-- TOP SUB-HEADER & TELEMETRY BANNER -->
+<div class="flex flex-col gap-space-sm pt-space-md mb-space-lg">
+<!-- Meta Tracker String -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs text-on-surface-variant">
+<div class="flex items-center gap-space-xs text-label-tag font-label-tag text-primary-container tracking-wider uppercase">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse shadow-[0_0_8px_#00d2ff]"></span>
+<span>LESSON 12 // ACADEMIC RUNTIME SERIES • CS 301 CORE KERNEL LABS • RISC-V 64 ARCH • HARDWARE MMU ACTIVE</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-label-tag font-label-tag bg-surface-container px-space-sm py-0.5 rounded text-secondary font-semibold">SEC: RING-3 VIRTUALIZED</span>
+<span class="text-label-tag font-label-tag bg-surface-container px-space-sm py-0.5 rounded text-tertiary">STABLE 0x64</span>
+</div>
+</div>
+<!-- Main Title Card with Glow & Hairline Aesthetic -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-lg shadow-xl shadow-surface-container-lowest/60">
+<div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -bottom-20 w-72 h-72 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-2">
+<span class="px-space-xs py-0.5 bg-surface-container text-primary-fixed-dim rounded font-label-tag text-label-tag uppercase tracking-widest">Interactive Systems Poster</span>
+<span class="text-outline font-label-code text-label-tag">// RELOCATION ENGINE v4.2</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">
+          🏷️ OPERATING SYSTEMS: L12 - Memory Relocation &amp; Base-and-Bound Protection
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-5xl">
+          An interactive primer designed for systems novices: dissecting hardware base-and-bound registers, MMU address translation, memory isolation fences, and physical RAM protection.
+        </p>
+</div>
+<!-- Quick Telemetry Metric Badges Strip -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-sm mt-space-md pt-space-md bg-surface-container-lowest/60 p-space-sm rounded-lg backdrop-blur-md">
+<div class="flex flex-col p-space-xs bg-surface-container rounded shadow-sm">
+<span class="font-label-tag text-label-tag text-on-surface-variant tracking-wider uppercase">Engine</span>
+<span class="font-label-code text-label-code text-primary-container font-semibold truncate">TRANSLATION ENGINE: MMU HARDWARE ACTIVE</span>
+</div>
+<div class="flex flex-col p-space-xs bg-surface-container rounded shadow-sm">
+<span class="font-label-tag text-label-tag text-on-surface-variant tracking-wider uppercase">Base Register</span>
+<span class="font-label-code text-label-code text-tertiary font-semibold truncate">BASE REGISTER: 0x1388 (5000)</span>
+</div>
+<div class="flex flex-col p-space-xs bg-surface-container rounded shadow-sm">
+<span class="font-label-tag text-label-tag text-on-surface-variant tracking-wider uppercase">Bound Limit</span>
+<span class="font-label-code text-label-code text-secondary font-semibold truncate">BOUND LIMIT: 0x0BB8 (3000 BYTES)</span>
+</div>
+<div class="flex flex-col p-space-xs bg-surface-container rounded shadow-sm">
+<span class="font-label-tag text-label-tag text-on-surface-variant tracking-wider uppercase">Circuit Protection</span>
+<span class="font-label-code text-label-code text-primary font-semibold truncate">FAULT PROTECTION: HARDWARE INTERCEPT TRAP</span>
+</div>
+<div class="flex flex-col p-space-xs bg-surface-container rounded shadow-sm">
+<span class="font-label-tag text-label-tag text-on-surface-variant tracking-wider uppercase">Sandbox Level</span>
+<span class="font-label-code text-label-code text-tertiary-fixed font-semibold truncate">ISOLATION STATUS: SANDBOX SECURE</span>
+</div>
+</div>
+<!-- Interactive Quick Action Controls Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mt-space-md pt-space-sm">
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-primary-container text-on-primary-container font-label-code text-label-code font-bold rounded shadow-md hover:bg-primary-fixed-dim hover:shadow-[0_0_20px_rgba(0,210,255,0.45)] transition-all" id="simStepBtn">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>[ ▶ STEP THROUGH MMU TRANSLATION ]</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-high text-on-surface font-label-code text-label-code rounded shadow-sm hover:bg-surface-variant hover:text-primary transition-all" id="simResetBtn">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>[ ↺ RESET ]</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">Status Note:</span>
+<span class="font-label-code text-label-code text-tertiary font-semibold">INTERACTIVE SIMULATOR READY: V4.2 ACTIVE RUNTIME</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 1: CORE CONCEPTUAL ONBOARDING -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex items-center gap-space-sm pb-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-primary-container/10 text-primary-container font-label-tag text-label-tag uppercase font-bold">Module 01</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">1️⃣ Core Conceptual Onboarding (The Silent Hotel Room Mapping)</h2>
+</div>
+<!-- The Foundational Question Text Box -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-md relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-widest font-bold">The Foundational Question</span>
+<p class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed">
+          The Foundational Question: Memory Relocation is the hardware-to-software mapping process where the operating system referee dynamically shifts a program's private memory layout into physical RAM chips, ensuring applications cannot assume fixed hardware addresses or read each other's data.
+        </p>
+</div>
+</div>
+<!-- Grid: Key Characteristics & Core Motivation -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Key Characteristics Bullet Block -->
+<div class="lg:col-span-5 p-space-md rounded-xl bg-surface-container flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-secondary uppercase tracking-wider font-semibold">Hardware Key Registers</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">layers</span>
+</div>
+<div class="flex flex-col gap-space-sm text-body-md font-body-md text-on-surface-variant">
+<div class="p-space-sm rounded bg-surface-container-lowest">
+<span class="font-label-code text-label-code text-primary font-semibold block">• Logical Address (Virtual Address):</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+                The fake, internal memory tracking number generated by the compiler during code assembly, always assuming the app has the machine entirely to itself starting at location 0.
+              </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest">
+<span class="font-label-code text-label-code text-tertiary font-semibold block">• Base Register:</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+                A dedicated physical hardware pocket inside the CPU chip that stores the exact starting location where the process currently lives in real RAM.
+              </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest">
+<span class="font-label-code text-label-code text-secondary font-semibold block">• Bound Register:</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+                A protective physical hardware boundary fence register that tracks the absolute maximum size footprint allocated to the application.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Core Motivation Block with Visual Memory Sandbox Graphic -->
+<div class="lg:col-span-7 p-space-md rounded-xl bg-surface-container flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-tertiary uppercase tracking-wider font-semibold">Core Architectural Motivation</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">security</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Software developers write code assuming infinite resources, and compilers compile programs assuming they always load at memory address 0. If two applications like Google Chrome and Spotify both ran on raw physical hardware assuming they occupied address 0, they would instantly crash, smashing their binary data into the exact same silicon memory cells. The OS acts as a protective referee, creating a virtual fence around apps by utilizing physical hardware base-and-bound registers to seamlessly translate fake logical pointers into real physical coordinates at runtime.
+          </p>
+</div>
+<!-- Inline Visual Diagram: Two Compilers hitting Zero vs Virtualization -->
+<div class="mt-space-md p-space-sm rounded bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-label-tag font-label-tag text-on-surface-variant">
+<span>COMPILER VIRTUAL LOGIC (ADDR 0)</span>
+<span class="text-tertiary font-semibold">SAFE HARDWARE DISPATCH</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm text-center">
+<div class="p-space-xs bg-surface-container rounded flex flex-col items-center">
+<span class="font-label-code text-label-code text-primary">Chrome Proc [PID: 104]</span>
+<span class="font-label-tag text-label-tag text-outline">Virtual: 0x0000 ➔ Base: 4000</span>
+<span class="text-label-tag font-label-tag text-tertiary mt-1">Real RAM: 4000 - 6999</span>
+</div>
+<div class="p-space-xs bg-surface-container rounded flex flex-col items-center">
+<span class="font-label-code text-label-code text-secondary">Spotify Proc [PID: 105]</span>
+<span class="font-label-tag text-label-tag text-outline">Virtual: 0x0000 ➔ Base: 9000</span>
+<span class="text-label-tag font-label-tag text-tertiary mt-1">Real RAM: 9000 - 11999</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Application vs Analogy Parallel Components -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Real-World Technical Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-high shadow-md flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">terminal</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">💻 Real-World Application Example</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Imagine you open Google Chrome and Spotify simultaneously on your machine. Both applications were compiled assuming their code starts at logical address 0. When they load, the OS kernel sets Chrome's Base Register to 4000 and Spotify's Base Register to 9000 inside the CPU hardware registers. When Chrome tries to read instruction 10, the CPU intercepts it, calculates 4000 + 10, and fetches real address 4010. Neither application has any clue where it actually lives, keeping their workflows perfectly isolated.
+        </p>
+<div class="mt-auto pt-space-sm flex items-center gap-space-sm text-label-tag font-label-tag text-outline">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-lowest text-primary">CHROME: BASE 4000</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-lowest text-secondary">SPOTIFY: BASE 9000</span>
+</div>
+</div>
+<!-- Everyday Analogy (5th Grader) Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-high shadow-md flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">hotel</span>
+<h3 class="font-headline-sm text-headline-sm text-secondary font-bold">🎒 Everyday Example (5th Grader)</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Imagine a giant luxury hotel. Inside the hotel guest booklet, every single room layout map is printed exactly the same, telling guests that their private bathroom is through the door labeled 'Door 100'. However, when Guest A arrives, the hotel manager silently assigns them to real Room 402 on the 4th floor, and Guest B goes to real Room 905 on the 9th floor. When Guest A walks through their door, the hotel structure translates 'Door 100' to Floor 4, Room 402. Every guest thinks they are using 'Door 100', but the manager seamlessly maps them to separate rooms so nobody wakes up in a stranger's bed!
+        </p>
+<div class="mt-auto pt-space-sm flex items-center gap-space-sm text-label-tag font-label-tag text-outline">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-lowest text-secondary">BOOKLET DOOR: 100</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-lowest text-tertiary">ACTUAL: ROOM 402 &amp; ROOM 905</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: STRUCTURAL DISSECTION (THE TRANSLATION ARCHITECTURE) -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex items-center gap-space-sm pb-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-tertiary-container/10 text-tertiary font-label-tag text-label-tag uppercase font-bold">Module 02</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">2️⃣ Structural Dissection (The Memory Translation Architecture)</h2>
+</div>
+<!-- Split-Pane Architecture Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left: MMU Mathematical Lanes Diagram -->
+<div class="lg:col-span-7 p-space-lg rounded-xl bg-surface-container-low shadow-md flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-widest font-bold">THE HARDWARE MMU TRANSLATION LANES</span>
+<span class="px-space-xs py-0.5 bg-surface-container text-tertiary rounded font-label-code text-label-tag">CIRCUIT: ACTIVE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Live hardware arithmetic line routing logical instruction offsets through base addition and comparator gate fences.
+          </p>
+</div>
+<!-- Visual Circuit Block -->
+<div class="my-space-md p-space-md bg-surface-container-lowest rounded-lg flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<!-- Node A -->
+<div class="flex-1 min-w-[140px] p-space-sm rounded bg-surface-container flex flex-col items-center text-center shadow-sm transition-all duration-300" id="simNodeLogical">
+<span class="font-label-tag text-label-tag text-on-surface-variant">Virtual Input</span>
+<span class="font-label-code text-label-code text-primary font-bold">Logical Address (e.g., 20)</span>
+<span class="text-label-tag font-label-tag text-outline mt-1">[Offset 0x0014]</span>
+</div>
+<span class="material-symbols-outlined text-primary-container text-[24px]">arrow_forward</span>
+<!-- Node B: Base Adder -->
+<div class="flex-1 min-w-[140px] p-space-sm rounded bg-surface-container flex flex-col items-center text-center shadow-sm transition-all duration-300" id="simNodeBase">
+<span class="font-label-tag text-label-tag text-tertiary">Hardware Adder</span>
+<span class="font-label-code text-label-code text-on-surface font-bold">[ + ] Hardware Base Register (e.g., 5000)</span>
+<span class="text-label-tag font-label-tag text-tertiary mt-1">Offset + 5000</span>
+</div>
+<span class="material-symbols-outlined text-primary-container text-[24px]">arrow_forward</span>
+<!-- Node C: Bound Comparator -->
+<div class="flex-1 min-w-[140px] p-space-sm rounded bg-surface-container flex flex-col items-center text-center shadow-sm transition-all duration-300" id="simNodeBound">
+<span class="font-label-tag text-label-tag text-secondary">Safety Comparator</span>
+<span class="font-label-code text-label-code text-on-surface font-bold">Is Less Than ( &lt; ) Bound Register (e.g., 3000)?</span>
+<span class="text-label-tag font-label-tag text-tertiary mt-1">20 &lt; 3000 = YES</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[24px]">arrow_forward</span>
+<!-- Node D: Physical RAM Target -->
+<div class="flex-1 min-w-[140px] p-space-sm rounded bg-surface-container flex flex-col items-center text-center shadow-sm transition-all duration-300" id="simNodeRAM">
+<span class="font-label-tag text-label-tag text-tertiary">Target Pin</span>
+<span class="font-label-code text-label-code text-tertiary font-bold">Physical RAM Address (e.g., 5020)</span>
+<span class="text-label-tag font-label-tag text-outline mt-1">[Real Silicon Cell]</span>
+</div>
+</div>
+<!-- Formula Ribbon -->
+<div class="flex items-center justify-between p-space-xs px-space-sm bg-surface-container-high rounded text-label-tag font-label-tag">
+<span class="text-on-surface-variant font-label-code">MMU CALC FORMULA:</span>
+<span class="text-primary font-bold">Physical_Address = CPU.Base + Virtual_Logical_Address</span>
+<span class="text-secondary font-bold">ASSERT (Virtual_Logical_Address &lt; CPU.Bound)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-label-tag font-label-tag text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span> Bus clock: 1.2 GHz
+          </span>
+<span class="text-primary">LATENCY: &lt; 0.4ns TRANSLATION CYCLE</span>
+</div>
+</div>
+<!-- Right: Live Tracking Telemetry Card -->
+<div class="lg:col-span-5 p-space-lg rounded-xl bg-surface-container shadow-md flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-secondary uppercase tracking-widest font-bold">THE REGISTER CONFIGURATION TELEMETRY</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Live internal register snapshots active on the physical execution core during current task slice.
+          </p>
+</div>
+<div class="my-space-sm flex flex-col gap-space-sm">
+<!-- Register Rows -->
+<div class="p-space-sm rounded bg-surface-container-lowest flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-tag text-label-tag text-on-surface-variant">REGISTER: CPU.Base</span>
+<span class="font-label-code text-label-code text-on-surface font-bold">Base Starting Location in RAM</span>
+</div>
+<span class="font-label-code text-label-code text-tertiary font-bold px-space-sm py-1 bg-surface-container rounded">CPU.Base = 5000</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-tag text-label-tag text-on-surface-variant">REGISTER: CPU.Bound</span>
+<span class="font-label-code text-label-code text-on-surface font-bold">Maximum Sandbox Byte Range</span>
+</div>
+<span class="font-label-code text-label-code text-secondary font-bold px-space-sm py-1 bg-surface-container rounded">CPU.Bound = 3000</span>
+</div>
+<!-- Diagnostic Row -->
+<div class="p-space-sm rounded bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-on-surface-variant uppercase">Hardware Gate Validation</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified_user</span>
+</div>
+<div class="font-label-code text-label-code text-primary font-semibold">
+              Address Validation: Safe Inside Fence vs. Hardware Intercept Crash
+            </div>
+<div class="flex flex-wrap gap-space-xs mt-1">
+<span class="px-space-xs py-0.5 rounded bg-tertiary/10 text-tertiary font-label-tag text-label-tag font-semibold">
+                STATUS: VALID / SAFE INSIDE FENCE
+              </span>
+<span class="px-space-xs py-0.5 rounded bg-primary-container/10 text-primary-container font-label-tag text-label-tag font-semibold">
+                HARDWARE INTERCEPT: ARMED
+              </span>
+</div>
+</div>
+</div>
+<div class="p-space-xs bg-surface-container-high rounded text-center text-label-tag font-label-tag text-on-surface-variant">
+          FAULT TRAP VECTOR: 0xFFFFFFFF80000000 [KERNEL_SEG_EXCEPTION]
+        </div>
+</div>
+</div>
+<!-- Structural Definitions Rows -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-xs">
+<!-- Item 1: Logical Address Space -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs shadow-sm">
+<span class="font-label-code text-label-code text-primary font-bold">
+          • The Logical Address Space:
+        </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          The virtual address playground layout where the program compiles its Text, Data, Heap, and Stack segments, completely detached from physical chip reality.
+        </p>
+<div class="mt-auto pt-space-xs p-space-sm rounded bg-surface-container-lowest flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-primary uppercase font-semibold">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            When you compile a script inside Microsoft VS Code, the output binary instructions reference logical offsets from zero, blind to whether your laptop has 8GB or 32GB of physical RAM.
+          </p>
+</div>
+</div>
+<!-- Item 2: Base Register Manipulation -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs shadow-sm">
+<span class="font-label-code text-label-code text-tertiary font-bold">
+          • Base Register Manipulation:
+        </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          The high-privilege operation where the kernel scheduler swaps base values during a context switch to update active physical pointers.
+        </p>
+<div class="mt-auto pt-space-xs p-space-sm rounded bg-surface-container-lowest flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-tertiary uppercase font-semibold">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            When the CPU referee swaps execution from Chrome to Spotify, it updates the hardware Base register value inside a single clock cycle, instantly shifting the active memory target lane.
+          </p>
+</div>
+</div>
+<!-- Item 3: Bound Register Guardrail Protection -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs shadow-sm">
+<span class="font-label-code text-label-code text-secondary font-bold">
+          • Bound Register Guardrail Protection:
+        </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          A hardware-driven check circuit that compares every memory request against the maximum allowed size before allowing a physical access signal to pass.
+        </p>
+<div class="mt-auto pt-space-xs p-space-sm rounded bg-surface-container-lowest flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-secondary uppercase font-semibold">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            If Spotify is assigned a bound limit of 3000 bytes, any instruction attempting to access address 3500 will be caught instantly by the hardware chips before the memory cell can be touched.
+          </p>
+</div>
+</div>
+</div>
+<!-- Bottom Footer Note (Sketchbook Everyday Example) -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[24px]">draw</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">🎒 Everyday Example:</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Think of a student drawing inside a personal sketchbook! The page lines inside your sketchbook are the Logical Addresses—they always start at line 0 no matter where you carry the book. The Base register is the exact table coordinate where you lay the sketchbook down in the classroom. The Bound register is the physical edge boundaries of the paper sheets—if your crayon slides past the bound edge, you are drawing on the teacher's clean wooden table desk!
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 3: LINEAR OPERATIONAL PIPELINE (THE ADDRESS TRANSLATION WORKFLOW) -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex items-center gap-space-sm pb-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-secondary-container/20 text-secondary font-label-tag text-label-tag uppercase font-bold">Module 03</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">3️⃣ Linear Operational Pipeline (The Address Translation Workflow)</h2>
+</div>
+<!-- Horizontal Workflow Timeline Tracker Layout -->
+<div class="p-space-lg rounded-xl bg-surface-container shadow-md flex flex-col gap-space-lg">
+<div class="flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-primary-container uppercase tracking-widest font-bold">Runtime Execution Sequence</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">The 4-Stage Hardware Calculation Path</span>
+</div>
+<!-- Stepper Nodes Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm relative">
+<!-- Node 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-high transition-all flex flex-col gap-space-xs shadow-sm" id="stepCard1">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container font-label-code text-label-tag font-bold flex items-center justify-center">1</span>
+<span class="font-label-tag text-label-tag text-primary">USERSPACE</span>
+</div>
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">1. App Issues Virtual Pointer</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Requesting data at logical address 150.</p>
+</div>
+<!-- Node 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-high transition-all flex flex-col gap-space-xs shadow-sm" id="stepCard2">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-tertiary text-on-tertiary font-label-code text-label-tag font-bold flex items-center justify-center">2</span>
+<span class="font-label-tag text-label-tag text-tertiary">MMU ADDER</span>
+</div>
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">2. MMU Addition Step</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Computes target: 7000 + 150 = 7150.</p>
+</div>
+<!-- Node 3 -->
+<div class="p-space-md rounded-lg bg-surface-container-high transition-all flex flex-col gap-space-xs shadow-sm" id="stepCard3">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-code text-label-tag font-bold flex items-center justify-center">3</span>
+<span class="font-label-tag text-label-tag text-secondary">BOUND COMPARATOR</span>
+</div>
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">3. Bound Boundary Check</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Compares 150 &lt; 1000 limit (Valid).</p>
+</div>
+<!-- Node 4 -->
+<div class="p-space-md rounded-lg bg-surface-container-high transition-all flex flex-col gap-space-xs shadow-sm" id="stepCard4">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-tag font-bold flex items-center justify-center">4</span>
+<span class="font-label-tag text-label-tag text-tertiary-fixed">HARDWARE BUS</span>
+</div>
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">4. Physical RAM Execution</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Accesses physical RAM address 7150.</p>
+</div>
+</div>
+<!-- Underneath Text Breakdown -->
+<div class="flex flex-col gap-space-sm pt-space-sm bg-surface-container-lowest p-space-md rounded-lg">
+<span class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider font-bold">Sequential Protocol Dissection:</span>
+<div class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface leading-relaxed">
+<p><strong class="font-label-code text-label-code text-primary">1. App Issues Virtual Pointer:</strong> A running application attempts to access a local function variable or array index, requesting data at logical address 150.</p>
+<p><strong class="font-label-code text-label-code text-tertiary">2. MMU Addition Step:</strong> The physical Memory Management Unit (MMU) chip intercepts the request, grabs the active value inside the CPU Base register (e.g., 7000), and computes the physical target target address: 7000 + 150 = 7150.</p>
+<p><strong class="font-label-code text-label-code text-secondary">3. Bound Boundary Check:</strong> The MMU compares the raw logical request (150) against the maximum limit value stored inside the Bound register (e.g., 1000). Since 150 is less than 1000, the request is validated as safe.</p>
+<p><strong class="font-label-code text-label-code text-tertiary-fixed">4. Physical RAM Execution:</strong> The hardware control bus opens the electrical gates at physical RAM address 7150, reads the data byte, and drops it back to the low-privilege User Mode app space.</p>
+</div>
+</div>
+</div>
+<!-- Diagnostic Activity & Playground Analogy Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Diagnostic Activity Component Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-md flex flex-col gap-space-sm justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">calculate</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">💻 Address Calculation Diagnostic Activity</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Present a live data matrix table on the chalkboard ➔ Provide sample tracking variables: Base = 3000, Bound = 1500 ➔ Have students manually compute physical addresses for logical values 50, 400, and 1200 ➔ Input a malicious or broken logical request of 1600 ➔ Have the class trace why this mathematical calculation breaches the bound fence and triggers an immediate hardware stop.
+          </p>
+</div>
+<!-- Matrix Board Micro-Display -->
+<div class="p-space-sm rounded bg-surface-container-lowest flex flex-col gap-space-xs font-label-code text-label-tag">
+<div class="flex justify-between text-on-surface-variant">
+<span>SAMPLE: BASE = 3000</span>
+<span>BOUND = 1500</span>
+</div>
+<div class="grid grid-cols-4 gap-1 text-center font-bold">
+<span class="p-1 rounded bg-surface-container text-tertiary">50 ➔ 3050</span>
+<span class="p-1 rounded bg-surface-container text-tertiary">400 ➔ 3400</span>
+<span class="p-1 rounded bg-surface-container text-tertiary">1200 ➔ 4200</span>
+<span class="p-1 rounded bg-error/20 text-error">1600 ➔ FAULT!</span>
+</div>
+</div>
+</div>
+<!-- Playground Map Analogy Component Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-md flex flex-col gap-space-sm justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">sports_handball</span>
+<h3 class="font-headline-sm text-headline-sm text-secondary font-bold">🎒 Playground Map Analogy</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            A child claims they want to take 10 steps forward from their starting marker (Virtual Pointer) ➔ The monitor looks at the starting flag set at fence post 200 and calculates: 200 + 10 = 210 (MMU Addition) ➔ The monitor checks if 10 steps stays inside the allowed safety sandbox length of 50 steps (Bound Check) ➔ The child is allowed to walk to coordinate 210 safely (RAM Execution).
+          </p>
+</div>
+<!-- Playground Sequence Micro-Track -->
+<div class="p-space-sm rounded bg-surface-container-lowest flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span class="text-primary">START FLAG: 200</span>
+<span>+ 10 STEPS</span>
+<span class="text-tertiary">FENCE POST: 210 (SAFE)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: PARADIGM SHOWDOWN & GUARDRAILS -->
+<section class="flex flex-col gap-space-md mb-space-lg">
+<div class="flex items-center gap-space-sm pb-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-error-container/20 text-error font-label-tag text-label-tag uppercase font-bold">Module 04</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">4️⃣ Paradigm Showdown &amp; Guardrails</h2>
+</div>
+<!-- Comparative Table Component -->
+<div class="rounded-xl overflow-hidden bg-surface-container shadow-md">
+<div class="p-space-md bg-surface-container-high flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">
+          Logical Memory Spaces (Compiler Virtual World) vs Physical Memory Spaces (Silicon Hardware RAM)
+        </span>
+<span class="font-label-tag text-label-tag text-primary-container px-space-sm py-0.5 rounded bg-surface-container">SYSTEM MATRIX</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="bg-surface-container-lowest/80 text-on-surface-variant font-label-tag text-label-tag uppercase">
+<th class="p-space-md">Comparison Dimension</th>
+<th class="p-space-md text-primary">Logical Memory Spaces (Virtual World)</th>
+<th class="p-space-md text-tertiary">Physical Memory Spaces (Silicon Hardware RAM)</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-label-code text-label-code text-on-surface font-semibold">Initial Offset</td>
+<td class="p-space-md text-primary font-body-md">Always begins at fixed address 0</td>
+<td class="p-space-md text-tertiary font-body-md">Scattered dynamically across real hardware address lines</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-label-code text-label-code text-on-surface font-semibold">Control Entity</td>
+<td class="p-space-md text-on-surface font-body-md">Driven by software code pointers</td>
+<td class="p-space-md text-on-surface font-body-md">Arbitrated strictly by physical CPU registers</td>
+</tr>
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-label-code text-label-code text-on-surface font-semibold">Isolation Security</td>
+<td class="p-space-md text-on-surface-variant font-body-md">Blind to neighbor apps</td>
+<td class="p-space-md text-tertiary-fixed font-body-md font-medium">Isolated behind rigid hardware protective fences</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="p-space-lg rounded-xl bg-error-container/20 shadow-md relative overflow-hidden flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[24px]">warning</span>
+<span class="font-headline-sm text-headline-sm text-error font-bold">Common Mistakes Warning Banner</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+        Do not assume address protection is managed by software filters! A very common mistake is believing that the operating system checks every memory pointer using slow software scripts while an app is running. If it did, your computer would crawl to a halt! The base-and-bound calculation is hardwired directly into the physical silicon computer chips, running at maximum electronic speed!
+      </p>
+</div>
+<!-- Interview Takeaway Panel -->
+<div class="p-space-lg rounded-xl bg-surface-container-high shadow-lg flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">psychology</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">Interview Takeaway Panel</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-label-tag text-label-tag text-secondary uppercase font-bold">HIGH FREQUENCY TOPIC</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+        Base-and-bound protection provides ultimate speed and safety isolation for simple multi-programming layouts. However, if a broken application script attempts to access a pointer variable that expands past its Bound limit register boundary, the physical MMU hardware catches the leak instantly, halts the processor, drops a fatal Segmentation Fault boundary violation error, and kills the unique parent PID immediately to protect your other apps (just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling down!).
+      </p>
+<!-- Tags Footer Inside Section 4 -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-sm mt-space-xs">
+<span class="px-space-sm py-1 rounded bg-surface-container font-label-tag text-label-tag text-primary font-semibold">#MemoryRelocation</span>
+<span class="px-space-sm py-1 rounded bg-surface-container font-label-tag text-label-tag text-tertiary font-semibold">#BaseAndBound</span>
+<span class="px-space-sm py-1 rounded bg-surface-container font-label-tag text-label-tag text-primary-container font-semibold">#MMU</span>
+<span class="px-space-sm py-1 rounded bg-surface-container font-label-tag text-label-tag text-secondary font-semibold">#VirtualAddress</span>
+<span class="px-space-sm py-1 rounded bg-surface-container font-label-tag text-label-tag text-tertiary-fixed font-semibold">#HardwareFence</span>
+<span class="px-space-sm py-1 rounded bg-surface-container font-label-tag text-label-tag text-error font-semibold">#SegFaultAvoidance</span>
+</div>
+</div>
+</section>
+<!-- MODULE COMPLETION FOOTER BAR -->
+<footer class="p-space-lg rounded-xl bg-surface-container-low shadow-xl flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-tertiary-container/20 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[32px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-tertiary font-bold tracking-wide">
+          MODULE 12 COMPLETE // 100% MASTERY • Telemetry verified: Base-and-Bound Registers, MMU Hardware Translation, and Segmentation Protection.
+        </span>
+<span class="font-label-tag text-label-tag text-on-surface-variant">RISC-V 64-BIT HARDWARE TRAP PIPELINE CERTIFIED READY</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-md py-space-sm rounded bg-surface-container text-on-surface font-label-code text-label-code hover:bg-surface-variant transition-colors shadow-sm">
+        [ 📖 Review L12 Notes ]
+      </button>
+<button class="px-space-md py-space-sm rounded bg-primary-container text-on-primary-container font-label-code text-label-code font-bold hover:bg-primary-fixed-dim shadow-[0_0_16px_rgba(0,210,255,0.35)] transition-all">
+        [ Advance to Module 13 (Paging &amp; Virtual Memory) ➔ ]
+      </button>
+</div>
+</footer>
+<!-- Inline Micro-interaction Script for Stepping and Interactive Feedback -->
+<script>
+    (function() {
+      let currentStep = 0;
+      const stepCards = [
+        document.getElementById('stepCard1'),
+        document.getElementById('stepCard2'),
+        document.getElementById('stepCard3'),
+        document.getElementById('stepCard4')
+      ];
+
+      const simNodes = [
+        document.getElementById('simNodeLogical'),
+        document.getElementById('simNodeBase'),
+        document.getElementById('simNodeBound'),
+        document.getElementById('simNodeRAM')
+      ];
+
+      const stepBtn = document.getElementById('simStepBtn');
+      const resetBtn = document.getElementById('simResetBtn');
+
+      function clearHighlights() {
+        stepCards.forEach(c => {
+          if (c) {
+            c.classList.remove('bg-surface-bright', 'shadow-[0_0_16px_rgba(0,210,255,0.4)]');
+            c.classList.add('bg-surface-container-high');
+          }
+        });
+        simNodes.forEach(n => {
+          if (n) {
+            n.classList.remove('bg-surface-bright', 'shadow-[0_0_16px_rgba(0,210,255,0.35)]');
+            n.classList.add('bg-surface-container');
+          }
+        });
+      }
+
+      function highlightStep(idx) {
+        clearHighlights();
+        if (stepCards[idx]) {
+          stepCards[idx].classList.remove('bg-surface-container-high');
+          stepCards[idx].classList.add('bg-surface-bright', 'shadow-[0_0_16px_rgba(0,210,255,0.4)]');
+        }
+        if (simNodes[idx]) {
+          simNodes[idx].classList.remove('bg-surface-container');
+          simNodes[idx].classList.add('bg-surface-bright', 'shadow-[0_0_16px_rgba(0,210,255,0.35)]');
+        }
+      }
+
+      if (stepBtn) {
+        stepBtn.addEventListener('click', () => {
+          highlightStep(currentStep);
+          currentStep = (currentStep + 1) % 4;
+        });
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          currentStep = 0;
+          clearHighlights();
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>
