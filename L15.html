@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-fixed":"#6ffbbe","secondary-fixed":"#f0dbff","tertiary-fixed-dim":"#4edea3","inverse-surface":"#dfe2f1","on-error-container":"#ffdad6","primary":"#a5e7ff","background":"#0f131d","outline":"#859399","on-secondary-fixed":"#2c0051","on-tertiary":"#003824","error-container":"#93000a","surface-tint":"#47d6ff","surface-container-lowest":"#0a0e18","on-background":"#dfe2f1","secondary":"#ddb7ff","on-surface":"#dfe2f1","primary-container":"#00d2ff","primary-fixed":"#b6ebff","tertiary-container":"#48d99e","on-tertiary-container":"#005b3d","error":"#ffb4ab","on-tertiary-fixed":"#002113","on-surface-variant":"#bbc9cf","tertiary":"#69f6b9","outline-variant":"#3c494e","surface-container-low":"#171b26","surface-variant":"#313540","on-secondary-container":"#d6a9ff","secondary-fixed-dim":"#ddb7ff","inverse-primary":"#00677f","surface-container-highest":"#313540","on-primary-fixed-variant":"#004e60","surface-container":"#1c1f2a","on-tertiary-fixed-variant":"#005236","on-primary-container":"#00566a","surface-dim":"#0f131d","on-error":"#690005","secondary-container":"#6f00be","on-primary-fixed":"#001f28","inverse-on-surface":"#2c303b","primary-fixed-dim":"#47d6ff","surface-container-high":"#262a35","on-secondary":"#490080","surface-bright":"#353944","on-secondary-fixed-variant":"#6900b3","surface":"#0f131d","on-primary":"#003543"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-lg":"1.5rem","space-md":"1rem",margin:"3rem","margin-mobile":"1.25rem","gutter-mobile":"1rem","space-sm":"0.5rem",gutter:"1.5rem","space-xl":"2.5rem","space-xs":"0.25rem"},fontFamily:{"headline-xl":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"label-code":["JetBrains Mono"],"body-md":["Plus Jakarta Sans"],"headline-md":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"],"label-tag":["JetBrains Mono"],"body-sm":["Plus Jakarta Sans"],"headline-lg":["Space Grotesk"]},fontSize:{"headline-xl":["3.5rem",{lineHeight:"4rem",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-xl-mobile":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.01em",fontWeight:"700"}],"body-lg":["1.125rem",{lineHeight:"1.75rem",fontWeight:"400"}],"label-code":["0.875rem",{lineHeight:"1.25rem",fontWeight:"500"}],"body-md":["1rem",{lineHeight:"1.5rem",fontWeight:"400"}],"headline-md":["1.75rem",{lineHeight:"2.25rem",fontWeight:"600"}],"headline-lg-mobile":["1.75rem",{lineHeight:"2.25rem",fontWeight:"600"}],"headline-sm":["1.25rem",{lineHeight:"1.75rem",fontWeight:"600"}],"label-tag":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.06em",fontWeight:"600"}],"body-sm":["0.875rem",{lineHeight:"1.25rem",fontWeight:"400"}],"headline-lg":["2.5rem",{lineHeight:"3rem",letterSpacing:"-0.015em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="h-16 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded bg-primary-container/20 flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">memory</span></div><div><span class="font-headline-sm text-headline-sm text-primary tracking-tight">KERNEL LAB</span><span class="font-label-code text-label-code text-on-surface-variant ml-space-xs">// CS 301</span></div></div><div class="hidden xl:flex items-center gap-space-xs font-label-tag text-label-tag bg-surface-container-high px-space-sm py-space-xs rounded text-outline"><span class="material-symbols-outlined text-primary text-[14px]">terminal</span><span>CORE_ARCH::x86_64</span></div></div><div class="hidden lg:flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-tag text-label-tag text-tertiary">KERNEL OK</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container"><span class="material-symbols-outlined text-primary text-[14px]">speed</span><span class="font-label-code text-label-code text-on-surface">3.80 GHz</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container"><span class="material-symbols-outlined text-secondary text-[14px]">layers</span><span class="font-label-tag text-label-tag text-secondary">UNIT 04 // V-MEM</span></div></div><div class="flex items-center gap-space-md"><nav class="hidden md:flex items-center gap-space-xs font-label-code text-label-code" data-active-classes="bg-surface-container-high text-primary font-bold rounded"><a class="px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="syllabus" href="#">Syllabus</a><a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-surface-container-high text-primary font-bold rounded" data-path="interactive-poster-and-diagnostics" href="#">Lab Studio</a><a class="px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="system-telemetry" href="#">Telemetry</a><a class="px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="register-debugger" href="#">Debugger</a></nav><div class="flex items-center gap-space-sm pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-72 bg-surface-container-lowest/95 backdrop-blur-lg z-40 overflow-y-auto p-space-md"><div class="flex items-center justify-between pb-space-sm mb-space-sm"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">CURRICULUM SYLLABUS</span><span class="font-label-tag text-label-tag text-primary">L0 - L15</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-bold rounded shadow-[inset_2px_0_0_0_#00d2ff]"><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-00-system-architecture" href="#"><span class="truncate">L00 Hardware &amp; ISA</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-01-kernel-boot" href="#"><span class="truncate">L01 Bootstrapping &amp; Init</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-02-process-lifecycle" href="#"><span class="truncate">L02 Process Abstraction</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-03-context-switching" href="#"><span class="truncate">L03 Context Switching</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-04-cpu-scheduling" href="#"><span class="truncate">L04 CPU Schedulers</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-05-real-time-scheduling" href="#"><span class="truncate">L05 RTOS &amp; Multilevel</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-06-threads-concurrency" href="#"><span class="truncate">L06 POSIX Threads</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-07-synchronization" href="#"><span class="truncate">L07 Mutex &amp; Semaphores</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-08-deadlocks" href="#"><span class="truncate">L08 Deadlock &amp; Bankers</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-09-ipc" href="#"><span class="truncate">L09 IPC &amp; Shared Memory</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-10-signals-handlers" href="#"><span class="truncate">L10 Traps, Faults, Signals</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-11-memory-management" href="#"><span class="truncate">L11 Physical Addressing</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-12-segmentation" href="#"><span class="truncate">L12 Segmentation</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-13-paging-tlb" href="#"><span class="truncate">L13 Page Tables &amp; TLB</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-14-page-replacement" href="#"><span class="truncate">L14 LRU &amp; Page Replacement</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-space-xs transition-colors bg-surface-container-high text-primary font-bold rounded shadow-[inset_2px_0_0_0_#00d2ff]" data-path="interactive-poster-and-diagnostics" href="#"><span class="truncate">L15 Virtual Memory &amp; Paging</span><span class="material-symbols-outlined text-primary text-[16px] animate-pulse">radio_button_checked</span></a></nav></aside><div class="pl-72"><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command Ribbon & Header Segment -->
+<div class="w-full px-gutter py-space-lg flex flex-col gap-space-md bg-surface-container-lowest">
+<!-- Breadcrumbs & System Metadata -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs font-label-tag text-label-tag text-on-surface-variant">
+<span class="text-primary font-bold">LESSON 15</span>
+<span class="text-outline">//</span>
+<span>ACADEMIC RUNTIME SERIES</span>
+<span class="text-outline">•</span>
+<span class="text-tertiary">CS 301 CORE KERNEL LABS</span>
+<span class="text-outline">•</span>
+<span class="text-secondary">RISC-V 64 ARCH</span>
+<span class="text-outline">•</span>
+<span class="text-primary-fixed">HARDWARE MMU DEMAND PAGING</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-high shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">tune</span>
+<span class="font-label-tag text-label-tag text-primary tracking-widest uppercase">CORE MODULE: SUB-SYSTEM: MEMORY MANAGEMENT UNIT // VIRTUAL MEMORY SWAP ENGINE</span>
+</div>
+</div>
+<!-- Main Title & Operational Actions Header -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg pt-space-xs">
+<div class="max-w-4xl flex flex-col gap-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight flex items-center gap-space-sm">
+<span>🏷️ OPERATING SYSTEMS: L15 - Virtual Memory &amp; Demand Paging</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          An interactive primer designed for systems novices: dissecting virtual memory on-demand, page fault traps, disk swap spaces, FIFO vs. LRU page replacement, and thrashing mechanics.
+        </p>
+</div>
+<!-- Primary Simulation Trigger Buttons -->
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-md py-space-sm rounded bg-primary-container text-on-primary-container font-label-code text-label-code font-bold hover:shadow-[0_0_20px_rgba(0,210,255,0.4)] transition-all flex items-center gap-space-xs" id="stepTrapBtn" onclick="stepSimulation()">
+<span class="material-symbols-outlined text-[16px]">fast_forward</span>
+<span>[ ▶ ▶ STEP THROUGH PAGE FAULT TRAP ]</span>
+</button>
+<button class="px-space-md py-space-sm rounded bg-surface-container-high text-secondary font-label-code text-label-code font-bold hover:bg-secondary-container/30 transition-all flex items-center gap-space-xs shadow-sm" id="resetSimBtn" onclick="resetSimulation()">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span>[ ↺ RESET SIMULATOR ]</span>
+</button>
+</div>
+</div>
+<!-- Hardware Telemetry Bar -->
+<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-space-sm pt-space-sm">
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-space-xs shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">SWAP ENGINE STATE</span>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-code text-label-code text-tertiary truncate font-bold">DISK SWAP SUBSYSTEM // ACTIVE</span>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-space-xs shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">VIRTUAL ADDRESS SPACE</span>
+<span class="font-label-code text-label-code text-primary font-bold">64-BIT SV39 (512GB VIRTUAL)</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-space-xs shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">PAGE FAULT LATENCY</span>
+<span class="font-label-code text-label-code text-error font-bold">~8-10 ms // DISK SEEK TAX</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-space-xs shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">CURRENT HIT RATIO</span>
+<span class="font-label-code text-label-code text-tertiary-fixed font-bold">97.8% OPTIMAL</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-space-xs shadow-sm col-span-2 md:col-span-1">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">REPLACEMENT POLICY</span>
+<span class="font-label-code text-label-code text-secondary font-bold truncate">LRU STACK ESTIMATOR</span>
+</div>
+</div>
+<!-- Status Note Ribbon -->
+<div class="px-space-md py-space-xs rounded bg-surface-container-low flex items-center gap-space-xs text-on-surface-variant font-label-tag text-label-tag shadow-inner">
+<span class="material-symbols-outlined text-primary text-[14px]">terminal</span>
+<span class="text-tertiary font-bold">● STATUS NOTE:</span>
+<span>DEMAND PAGER ONLINE: V5.0 HIGH-SPEED ZERO-COPY SWAP // DISK NVMe CACHE CHANNEL</span>
+</div>
+</div>
+<!-- Main Instructional Workspace Grid -->
+<div class="w-full px-gutter py-space-xl flex flex-col gap-space-xl">
+<!-- ========================================== -->
+<!-- SECTION 1: Core Conceptual Onboarding       -->
+<!-- ========================================== -->
+<section class="flex flex-col gap-space-md">
+<!-- Section Header -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">1️⃣ Core Conceptual Onboarding (The Library Desk Strategy)</span>
+</div>
+<span class="font-label-tag text-label-tag px-space-sm py-space-xs rounded bg-surface-container-high text-primary tracking-widest font-bold">LAYER: OS_KERNEL_VMM</span>
+</div>
+<!-- Foundational Question Box -->
+<div class="p-space-md rounded bg-surface-container-high shadow-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[24px]">school</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag text-primary uppercase font-bold tracking-wider">THE FOUNDATIONAL QUESTION // DEMAND PAGING ARCHITECTURE</span>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+              Demand Paging is a dynamic virtual memory resource allocation architecture where the operating system referee keeps only the actively executing pages of an application inside physical RAM chips, loading missing pages from the cold storage disk drive only when the CPU explicitly reaches for them.
+            </p>
+</div>
+</div>
+</div>
+<!-- Technical Foundations: 3 Key Characteristics & Core Motivation -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Key Characteristics Block -->
+<div class="lg:col-span-7 p-space-md rounded bg-surface-container flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-tag text-label-tag text-tertiary uppercase tracking-wider font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">data_check</span>
+              KEY CHARACTERISTICS &amp; ARCHITECTURAL DEFINITIONS
+            </span>
+<div class="flex flex-col gap-space-sm font-body-md text-body-md text-on-surface-variant">
+<div class="p-space-sm rounded bg-surface-container-low shadow-sm">
+<span class="text-primary font-bold font-label-code text-label-code">• Page Fault:</span>
+<span class="ml-space-xs">A routine hardware interrupt (a system call for help) triggered when a running process attempts to read a virtual memory page that is not currently mapped into a physical RAM frame slot.</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low shadow-sm">
+<span class="text-secondary font-bold font-label-code text-label-code">• Swap Space:</span>
+<span class="ml-space-xs">A dedicated hidden overflow partition track on your slow storage disk drive used as an extension area to hold inactive memory pages when RAM is completely full.</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low shadow-sm">
+<span class="text-error font-bold font-label-code text-label-code">• Thrashing:</span>
+<span class="ml-space-xs">A catastrophic system state where the computer spends 99% of its processing power continuously swapping pages back and forth between disk and RAM, causing your whole machine to freeze.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Core Motivation Block -->
+<div class="lg:col-span-5 p-space-md rounded bg-surface-container flex flex-col gap-space-sm shadow-sm">
+<span class="font-label-tag text-label-tag text-secondary uppercase tracking-wider font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">lightbulb</span>
+            CORE MOTIVATION &amp; LATENCY INVERSION
+          </span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Physical RAM chips are incredibly fast but limited in storage space, whereas disk drives are massive but painfully slow. If an operating system forced every program to load its entire file footprint into RAM before it could run, you could never open heavy applications on limited hardware. Demand paging solves this bottleneck. The OS referee leaves the bulk of the program resting cold on the disk drive, mapping pages into active RAM frames strictly 'on-demand' to trick applications into believing they have infinite memory access.
+          </p>
+</div>
+</div>
+<!-- Real-World Application & Everyday Analogy Dual Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Real-World Application Card -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">💻 Real-World Application Example</span>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-space-xs rounded bg-surface-container-high text-primary font-bold">VS CODE / MEDIA RUNTIME</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Imagine you want to open a massive 4GB media video file inside an editor tool on a laptop that has only 2GB of physical RAM chips available. Under older contiguous models, the app would drop a fatal out-of-memory error and refuse to launch. Under Demand Paging, the OS opens the app instantly by loading only the first 4KB page containing the landing layout. As you watch the video timeline scroll, the kernel continuously triggers page faults in the background, fetching the next 4KB video data blocks from your storage disk right before the player reads them, safely destroying old played frames to free up room.
+          </p>
+</div>
+<!-- Everyday Example Card -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">backpack</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">🎒 Everyday Example (5th Grader)</span>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-space-xs rounded bg-surface-container-high text-tertiary font-bold">DESK STACK NOTE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Imagine you are doing a giant research project at a massive school library desk. The desk top workspace is your fast physical RAM chip, and the huge book stacks in the back basement are your slow hard drive disk. Instead of walking downstairs and trying to pile 50 heavy history books onto your tiny wooden desk all at once (which would collapse the desk!), you bring up only 2 books that you are actively reading. You keep working until you reach a step that requires a definition inside a 3rd book. You pause, run down to the basement stacks to swap a book, bring it back to your desk, and continue working cleanly!
+          </p>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- SECTION 2: Structural Dissection            -->
+<!-- ========================================== -->
+<section class="flex flex-col gap-space-md">
+<!-- Section Header -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">2️⃣ Structural Dissection (Inside the Page Fault Loop &amp; The Present Bit)</span>
+</div>
+<span class="font-label-tag text-label-tag px-space-sm py-space-xs rounded bg-surface-container-high text-secondary tracking-widest font-bold">ARCHITECTURE_FLOW_GRAPH</span>
+</div>
+<!-- Split-Pane Architecture Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left Pane: Hardware Page Fault Trap Lanes (Flow Diagram) -->
+<div class="lg:col-span-7 p-space-md rounded bg-surface-container flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-wider font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">account_tree</span>
+              THE HARDWARE PAGE FAULT TRAP LANES
+            </span>
+<span class="font-label-tag text-label-tag px-space-xs py-space-xs rounded bg-surface-container-high text-outline">INTERRUPT VECTOR: 0x0E (#PF)</span>
+</div>
+<!-- Interactive Visual Flowchart Nodes -->
+<div class="flex flex-col gap-space-sm" id="flowchartContainer">
+<!-- Stage 1 & 2 -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded bg-surface-container-high flex flex-col gap-space-xs shadow-sm transition-all duration-300" id="flow-step-1">
+<span class="font-label-tag text-label-tag text-primary">STEP 01 // CPU REQ</span>
+<span class="font-label-code text-label-code text-on-surface font-bold">1. CPU Address Request</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Executes load/store at virtual addr `0x7FFF0400`</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high flex flex-col gap-space-xs shadow-sm transition-all duration-300" id="flow-step-2">
+<span class="font-label-tag text-label-tag text-primary">STEP 02 // MMU LOOKUP</span>
+<span class="font-label-code text-label-code text-on-surface font-bold">2. Check Page Table Entry</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hardware MMU evaluates PTE entry bitmask</span>
+</div>
+</div>
+<!-- Arrow Bridge -->
+<div class="flex justify-around items-center text-outline">
+<span class="material-symbols-outlined text-[18px]">south</span>
+<span class="material-symbols-outlined text-[18px]">south</span>
+</div>
+<!-- Stage 3 & 4 -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded bg-error-container/40 flex flex-col gap-space-xs shadow-sm transition-all duration-300" id="flow-step-3">
+<span class="font-label-tag text-label-tag text-error font-bold">STEP 03 // EXCEPTION</span>
+<span class="font-label-code text-label-code text-on-surface font-bold">Valid Bit = 0? (Page Fault Trigger!)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hardware raises trap vector 0x0E; stops CPU pipeline</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high flex flex-col gap-space-xs shadow-sm transition-all duration-300" id="flow-step-4">
+<span class="font-label-tag text-label-tag text-secondary font-bold">STEP 04 // KERNEL TRAP</span>
+<span class="font-label-code text-label-code text-on-surface font-bold">4. OS Intercepts Handler</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Context switch into ring 0 Page Fault ISR service</span>
+</div>
+</div>
+<!-- Arrow Bridge -->
+<div class="flex justify-around items-center text-outline">
+<span class="material-symbols-outlined text-[18px]">south</span>
+<span class="material-symbols-outlined text-[18px]">south</span>
+</div>
+<!-- Stage 5 & 6 -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded bg-surface-container-high flex flex-col gap-space-xs shadow-sm transition-all duration-300" id="flow-step-5">
+<span class="font-label-tag text-label-tag text-primary">STEP 05 // STORAGE SEEK</span>
+<span class="font-label-code text-label-code text-on-surface font-bold">5. Locate Page on Disk</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Find frame block in NVMe Swap Sector Table</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high flex flex-col gap-space-xs shadow-sm transition-all duration-300" id="flow-step-6">
+<span class="font-label-tag text-label-tag text-primary">STEP 06 // ALLOCATOR</span>
+<span class="font-label-code text-label-code text-on-surface font-bold">6. Find Free RAM Frame</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Inspect frame freelist (or evict victim frame)</span>
+</div>
+</div>
+<!-- Arrow Bridge -->
+<div class="flex justify-around items-center text-outline">
+<span class="material-symbols-outlined text-[18px]">south</span>
+<span class="material-symbols-outlined text-[18px]">south</span>
+</div>
+<!-- Stage 7, 8 & 9 -->
+<div class="grid grid-cols-3 gap-space-sm">
+<div class="p-space-sm rounded bg-surface-container-high flex flex-col gap-space-xs shadow-sm transition-all duration-300" id="flow-step-7">
+<span class="font-label-tag text-label-tag text-tertiary">STEP 07 // I/O DMA</span>
+<span class="font-label-code text-label-code text-on-surface font-bold">7. Clone Page to RAM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">DMA transfer fills 4KB frame</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high flex flex-col gap-space-xs shadow-sm transition-all duration-300" id="flow-step-8">
+<span class="font-label-tag text-label-tag text-tertiary">STEP 08 // PTE BIT</span>
+<span class="font-label-code text-label-code text-on-surface font-bold">8. Flip Valid Bit = 1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Set Present=1, record PFN</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high flex flex-col gap-space-xs shadow-sm transition-all duration-300" id="flow-step-9">
+<span class="font-label-tag text-label-tag text-tertiary-fixed">STEP 09 // RESUME</span>
+<span class="font-label-code text-label-code text-on-surface font-bold">9. Restart Instruction</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Re-execute faulting opcode</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Pane: The Memory Replacement Regulator -->
+<div class="lg:col-span-5 p-space-md rounded bg-surface-container flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-tertiary uppercase tracking-wider font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">memory</span>
+              THE MEMORY REPLACEMENT REGULATOR
+            </span>
+<span class="font-label-tag text-label-tag px-space-xs py-space-xs rounded bg-surface-container-high text-tertiary font-bold">LIVE MMU BUS</span>
+</div>
+<!-- Tracking Row 1: Page Table Present / Valid Bit Status -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag text-outline uppercase font-bold">TRACKING ROW 1: Page Table Present / Valid Bit Status</span>
+<div class="overflow-x-auto rounded bg-surface-container-low shadow-inner">
+<table class="w-full text-left font-label-code text-label-code">
+<thead class="bg-surface-container-high text-outline text-label-tag uppercase">
+<tr>
+<th class="p-space-xs">VPN</th>
+<th class="p-space-xs">Valid/Present</th>
+<th class="p-space-xs">Frame Addr</th>
+<th class="p-space-xs">Disk Swap Sector</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/30 text-on-surface">
+<tr id="pte-row-0">
+<td class="p-space-xs text-primary font-bold">VPN 0</td>
+<td class="p-space-xs"><span class="px-space-xs py-0.5 rounded bg-tertiary/20 text-tertiary font-bold">1 (RAM)</span></td>
+<td class="p-space-xs">0x00A1F000</td>
+<td class="p-space-xs text-outline">— (Cached)</td>
+</tr>
+<tr id="pte-row-1">
+<td class="p-space-xs text-primary font-bold">VPN 1</td>
+<td class="p-space-xs"><span class="px-space-xs py-0.5 rounded bg-tertiary/20 text-tertiary font-bold">1 (RAM)</span></td>
+<td class="p-space-xs">0x00A24000</td>
+<td class="p-space-xs text-outline">— (Cached)</td>
+</tr>
+<tr id="pte-row-2">
+<td class="p-space-xs text-primary font-bold">VPN 2</td>
+<td class="p-space-xs" id="vpn2StatusCell"><span class="px-space-xs py-0.5 rounded bg-error/20 text-error font-bold">0 (DISK)</span></td>
+<td class="p-space-xs" id="vpn2FrameCell"><span class="text-outline">Unassigned</span></td>
+<td class="p-space-xs text-secondary font-bold">0x8F04_A000</td>
+</tr>
+<tr id="pte-row-3">
+<td class="p-space-xs text-primary font-bold">VPN 3</td>
+<td class="p-space-xs"><span class="px-space-xs py-0.5 rounded bg-tertiary/20 text-tertiary font-bold">1 (RAM)</span></td>
+<td class="p-space-xs">0x00A38000</td>
+<td class="p-space-xs text-outline">— (Cached)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Tracking Row 2: Disk Swap Allocation Coordinate Pointer -->
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-space-xs shadow-inner">
+<span class="font-label-tag text-label-tag text-outline uppercase font-bold">TRACKING ROW 2: Disk Swap Allocation Coordinate Pointer</span>
+<div class="flex items-center justify-between font-label-code text-label-code">
+<span class="text-secondary font-bold">Disk Swap Sector: 0x8F04</span>
+<span class="text-on-surface-variant">4KB Page Inode: #88219</span>
+</div>
+<div class="w-full bg-surface-container-high rounded h-2 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 68%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Backing Storage: NVMe Block Array partition /dev/nvme0n1p2</span>
+</div>
+<!-- Tracking Row 3: Active Frame Occupancy Grid Tracker -->
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-space-xs shadow-inner">
+<span class="font-label-tag text-label-tag text-outline uppercase font-bold">TRACKING ROW 3: Active Frame Occupancy Grid Tracker</span>
+<div class="grid grid-cols-4 gap-space-xs pt-space-xs text-center font-label-code text-label-code">
+<div class="p-space-xs rounded bg-surface-container-high flex flex-col gap-0.5">
+<span class="text-outline text-label-tag">FRAME 0</span>
+<span class="text-tertiary font-bold">USED</span>
+<span class="text-on-surface-variant text-[11px]">VPN 0</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-high flex flex-col gap-0.5">
+<span class="text-outline text-label-tag">FRAME 1</span>
+<span class="text-tertiary font-bold">USED</span>
+<span class="text-on-surface-variant text-[11px]">VPN 1</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-high flex flex-col gap-0.5 transition-all" id="frameSlot2">
+<span class="text-outline text-label-tag">FRAME 2</span>
+<span class="text-primary font-bold" id="frameSlot2Text">FREE</span>
+<span class="text-on-surface-variant text-[11px]" id="frameSlot2Vpn">—</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-high flex flex-col gap-0.5">
+<span class="text-outline text-label-tag">FRAME 3</span>
+<span class="text-tertiary font-bold">USED</span>
+<span class="text-on-surface-variant text-[11px]">VPN 3</span>
+</div>
+</div>
+<div class="flex justify-between items-center text-label-tag text-outline pt-space-xs">
+<span>RAM Allocation: 75% Capacity</span>
+<span class="text-tertiary font-bold">1 Free Frame In Reserve</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Structural Definitions Text Rows with Embedded Real-World Examples -->
+<div class="flex flex-col gap-space-md pt-space-sm">
+<!-- Item 1 -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-sm shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-body-lg text-body-lg text-on-surface font-bold">
+              • The Present / Valid Bit Flag: <span class="font-normal text-on-surface-variant">A specialized single-bit token tracking column inside every Page Table Entry row that tells the CPU hardware instantly whether a page is sitting inside fast RAM (1) or resting out on the disk drive (0).</span>
+</span>
+<div class="p-space-sm rounded bg-surface-container-low flex items-start gap-space-xs text-on-surface shadow-inner">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">terminal</span>
+<span class="font-body-md text-body-md"><strong class="text-primary">💻 Real-World Application Example:</strong> When you minimize Google Chrome to look at Spotify, the kernel referee eventually flips Chrome's page bits to 0, archiving them to disk so Spotify can use the physical RAM chips.</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-sm shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-body-lg text-body-lg text-on-surface font-bold">
+              • Page Fault Exception Trap: <span class="font-normal text-on-surface-variant">A specialized hardware exception routine. A page fault is NOT an application error bug; it is a normal architecture signal handled completely transparently by the kernel.</span>
+</span>
+<div class="p-space-sm rounded bg-surface-container-low flex items-start gap-space-xs text-on-surface shadow-inner">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">terminal</span>
+<span class="font-body-md text-body-md"><strong class="text-primary">💻 Real-World Application Example:</strong> When you maximize that background Chrome window, your very first click triggers a flurry of page fault intercepts. The OS freezes Chrome for a microsecond, pulls its code back from the disk drive, and un-freezes it so smoothly you never notice the swap.</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-sm shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-body-lg text-body-lg text-on-surface font-bold">
+              • Page Replacement Policy: <span class="font-normal text-on-surface-variant">The algorithmic strategy used by the scheduler line manager to decide exactly which innocent RAM frame page must be kicked out to the swap partition when physical memory hits 100% capacity.</span>
+</span>
+<div class="p-space-sm rounded bg-surface-container-low flex items-start gap-space-xs text-on-surface shadow-inner">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">terminal</span>
+<span class="font-body-md text-body-md"><strong class="text-primary">💻 Real-World Application Example:</strong> Operating systems run background daemons that evaluate whether an app like Microsoft VS Code has left its memory loops idle, marking those inactive frames as prime targets for eviction.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Footer Note: Pencil Box Everyday Example -->
+<div class="p-space-md rounded bg-surface-container-high flex items-start gap-space-md shadow-md">
+<div class="w-10 h-10 rounded bg-tertiary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[24px]">draw</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag text-tertiary uppercase font-bold tracking-wider">🎒 Everyday Example (The Student's Pencil Box Container)</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Think of a student's pencil box container! The box can only hold exactly 4 items. The items inside the box are the pages with the Present Bit set to 1. The large storage closet in your bedroom is the disk Swap Space. If you need to use a marker that is currently sitting in the closet, you encounter a Page Fault! You must open your pencil box, pick a crayon you haven't touched in hours, carry it to the closet to swap them, and put the new marker into your box to continue drawing!
+          </p>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- SECTION 3: Linear Operational Pipeline      -->
+<!-- ========================================== -->
+<section class="flex flex-col gap-space-md">
+<!-- Section Header -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">3️⃣ Linear Operational Pipeline (The Page Reference String Workflow)</span>
+</div>
+<span class="font-label-tag text-label-tag px-space-sm py-space-xs rounded bg-surface-container-high text-tertiary-fixed tracking-widest font-bold">STATE_MACHINE_RUNNER</span>
+</div>
+<!-- Horizontal Workflow Timeline Tracker (4 Interactive Nodes) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-primary uppercase font-bold">STAGE 01</span>
+<span class="material-symbols-outlined text-primary text-[18px]">stream</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">1. Reference String Influx</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Incoming memory coordinate string stream from CPU execution loop.</p>
+</div>
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-secondary uppercase font-bold">STAGE 02</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">queue</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">2. FIFO Queue Processing</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ages tracked chronologically. Blind eviction of the oldest frame.</p>
+</div>
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-tertiary uppercase font-bold">STAGE 03</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">history</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">3. LRU History Evaluation</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Backward telemetry inspects timestamps to preserve active hot sets.</p>
+</div>
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-tertiary-fixed uppercase font-bold">STAGE 04</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]">query_stats</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">4. Total Fault Metrics</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fault tally calculation &amp; benchmark delta between FIFO and LRU.</p>
+</div>
+</div>
+<!-- Sequential Process Rules Text -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-sm shadow-sm">
+<span class="font-label-tag text-label-tag text-primary uppercase font-bold tracking-wider">SEQUENTIAL PROCESS RULES &amp; TELEMETRY EXECUTION</span>
+<div class="flex flex-col gap-space-sm font-body-md text-body-md text-on-surface leading-relaxed">
+<div class="p-space-sm rounded bg-surface-container-low shadow-sm">
+<strong>1. Reference String Influx:</strong> An active application process executes code loops inside Microsoft VS Code, requesting a sequential string vector stream of virtual memory page access coordinates (e.g., 7, 0, 1, 2, 0, 3).
+          </div>
+<div class="p-space-sm rounded bg-surface-container-low shadow-sm">
+<strong>2. FIFO Queue Processing:</strong> The First-In, First-Out (FIFO) algorithm processes the string. It treats frames like a simple line—the oldest page that arrived first is blindly evicted first when a page fault occurs, completely ignoring how often it is used.
+          </div>
+<div class="p-space-sm rounded bg-surface-container-low shadow-sm">
+<strong>3. LRU History Evaluation:</strong> The Least Recently Used (LRU) algorithm evaluates the string. It looks backward in time telemetry, tracking usage timestamps to evict the page that hasn't been accessed for the longest duration, optimizing for future hits.
+          </div>
+<div class="p-space-sm rounded bg-surface-container-low shadow-sm">
+<strong>4. Total Fault Metrics Comparison:</strong> The scheduler counts the total number of page fault triggers generated under both policies, dividing the metrics to analyze how smart replacement choices prevent system lags.
+          </div>
+</div>
+</div>
+<!-- Pedagogical & Classroom Components Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Classroom Activity Card -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">co_present</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">💻 Page Reference String Evaluation Activity</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low text-on-surface font-body-md text-body-md leading-relaxed shadow-inner">
+            Draw a 3-frame memory allocation matrix grid on the chalkboard ➔ Write out the sample reference page string: <strong>7, 0, 1, 2, 0, 3</strong> ➔ Hand-walk the class through the string line-by-line using FIFO rules to count the resulting page faults ➔ Clear the board and re-trace the exact same string using LRU rules ➔ Compare the final fault counts side-by-side to demonstrate mathematically how tracking usage history slashes memory swaps.
+          </div>
+</div>
+<!-- Toy Box Sorting Analogy Card -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">toys</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">🎒 Toy Box Sorting Analogy</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low text-on-surface font-body-md text-body-md leading-relaxed shadow-inner">
+            A child asks for a sequence of toys to play with over an hour (Reference String Influx) ➔ The parent cleans the small toy box by blindly throwing away the toy that was bought the longest time ago (FIFO Rules) ➔ The parent switches tactics, checking their tracking clock to throw away the toy the child hasn't touched for the longest duration (LRU Rules) ➔ The parent records how many times they had to walk to the garage to fetch toys under both sorting rules (Fault Metrics).
+          </div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- SECTION 4: Paradigm Showdown & Guardrails   -->
+<!-- ========================================== -->
+<section class="flex flex-col gap-space-md">
+<!-- Section Header -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">4️⃣ Paradigm Showdown &amp; Guardrails</span>
+</div>
+<span class="font-label-tag text-label-tag px-space-sm py-space-xs rounded bg-surface-container-high text-error tracking-widest font-bold">COMPARATIVE_ANALYSIS</span>
+</div>
+<!-- Side-by-Side Comparative Matrix Table -->
+<div class="w-full rounded bg-surface-container overflow-hidden shadow-md">
+<div class="p-space-md bg-surface-container-high flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">First-In, First-Out Policy (Age-Based Eviction) vs Least Recently Used Policy (History-Based Eviction)</span>
+<span class="font-label-tag text-label-tag text-outline uppercase font-bold">BENCHMARK MATRIX</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead class="bg-surface-container-low text-outline font-label-tag text-label-tag uppercase">
+<tr>
+<th class="p-space-md w-1/4">Evaluation Field</th>
+<th class="p-space-md w-3/8 text-primary">First-In, First-Out (FIFO) Policy</th>
+<th class="p-space-md w-3/8 text-tertiary">Least Recently Used (LRU) Policy</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/30 text-on-surface">
+<tr>
+<td class="p-space-md font-label-code text-label-code font-bold text-outline">Eviction Logic</td>
+<td class="p-space-md text-on-surface">Kicks out the oldest page regardless of active use</td>
+<td class="p-space-md text-on-surface">Kicks out the page left untouched for the longest duration</td>
+</tr>
+<tr>
+<td class="p-space-md font-label-code text-label-code font-bold text-outline">Implementation Cost</td>
+<td class="p-space-md text-on-surface">Ultra-simple queue tracking with zero hardware tax</td>
+<td class="p-space-md text-on-surface">High hardware overhead requiring continuous register timestamp updates</td>
+</tr>
+<tr>
+<td class="p-space-md font-label-code text-label-code font-bold text-outline">Algorithmic Defect</td>
+<td class="p-space-md text-error font-semibold">Suffers from Belady's Anomaly where adding more RAM frames can paradoxically cause MORE page faults</td>
+<td class="p-space-md text-tertiary font-semibold">Flawless stack-property optimization</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="p-space-md rounded bg-error-container/30 flex items-start gap-space-md shadow-md">
+<div class="w-10 h-10 rounded bg-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error text-[24px]">warning</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag text-error uppercase font-bold tracking-wider">COMMON MISTAKES WARNING BANNER // KERNEL SIGNAL GUARDRAIL</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed font-semibold">
+            Do not assume a page fault means your code is broken! A very common mistake beginner developers make is confusing a Page Fault with a Segmentation Fault. A Segmentation Fault means your app breached a forbidden fence boundary and must be killed. A Page Fault is a completely safe, normal event where the OS simply needs to fetch your next textbook block from the disk drive to keep going!
+          </p>
+</div>
+</div>
+<!-- Interview Takeaway Panel -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-sm shadow-md">
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">psychology</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Interview Takeaway Panel: Thrashing &amp; The Working Set Model</span>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-space-xs rounded bg-surface-container-high text-secondary font-bold">HIGH-FREQUENCY INTERVIEW TOPIC</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Demand paging provides the illusion of boundless memory, but systems rely on the Working Set Model to function smoothly. If the combined active pages of running applications exceed physical RAM capacity, the system enters catastrophic <strong class="text-error">Thrashing</strong>—where the CPU spends all of its cycles waiting on high-latency disk I/O swaps instead of executing application logic. When thrashing begins, system responsiveness collapses instantly to zero (just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling down!).
+        </p>
+</div>
+<!-- Course Completion & Module Credential Footer Ribbon -->
+<div class="p-space-md rounded bg-surface-container-high flex flex-col lg:flex-row items-center justify-between gap-space-md shadow-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-on-surface font-bold">MODULE 15 COMPLETE // 100% MASTERY</span>
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">CREDITS ACCREDITED - CS 301 KERNEL RUNTIME EVAL PASS</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-md py-space-sm rounded bg-surface-container text-on-surface-variant font-label-code text-label-code font-bold hover:text-on-surface hover:bg-surface-container-low transition-all">
+            [ 📖 Review L15 Notes ]
+          </button>
+<button class="px-space-md py-space-sm rounded bg-primary-container text-on-primary-container font-label-code text-label-code font-bold hover:shadow-[0_0_20px_rgba(0,210,255,0.4)] transition-all flex items-center gap-space-xs">
+<span>[ Advance to Course Capstone (OS Kernel Architecture Review) ➔ ]</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  let currentStep = 0;
+  const totalSteps = 9;
+
+  function stepSimulation() {
+    currentStep++;
+    if (currentStep > totalSteps) {
+      currentStep = 1;
+    }
+    renderStepState();
+  }
+
+  function resetSimulation() {
+    currentStep = 0;
+    renderStepState();
+  }
+
+  function renderStepState() {
+    // Reset all step card styles
+    for (let i = 1; i <= totalSteps; i++) {
+      const el = document.getElementById(`flow-step-${i}`);
+      if (!el) continue;
+      if (i === currentStep) {
+        el.classList.add('bg-primary-container/30', 'scale-[1.02]');
+        el.classList.remove('bg-surface-container-high');
+      } else {
+        el.classList.remove('bg-primary-container/30', 'scale-[1.02]');
+        if (i === 3) {
+          el.classList.add('bg-error-container/40');
+        } else {
+          el.classList.add('bg-surface-container-high');
+        }
+      }
+    }
+
+    // Interactive updates to PTE table and frame slots based on simulation progress
+    const vpn2Status = document.getElementById('vpn2StatusCell');
+    const vpn2Frame = document.getElementById('vpn2FrameCell');
+    const frame2Text = document.getElementById('frameSlot2Text');
+    const frame2Vpn = document.getElementById('frameSlot2Vpn');
+    const frame2Box = document.getElementById('frameSlot2');
+
+    if (currentStep >= 8) {
+      // Step 8 & 9: Present Bit is 1, page is loaded in RAM
+      vpn2Status.innerHTML = '<span class="px-space-xs py-0.5 rounded bg-tertiary/20 text-tertiary font-bold">1 (RAM)</span>';
+      vpn2Frame.innerHTML = '<span class="text-on-surface font-bold">0x00A52000</span>';
+      frame2Text.textContent = 'USED';
+      frame2Text.className = 'text-tertiary font-bold';
+      frame2Vpn.textContent = 'VPN 2';
+      frame2Box.classList.add('bg-primary-container/20');
+    } else {
+      // Step 0 - 7: Still pending / on disk
+      vpn2Status.innerHTML = '<span class="px-space-xs py-0.5 rounded bg-error/20 text-error font-bold">0 (DISK)</span>';
+      vpn2Frame.innerHTML = '<span class="text-outline">Unassigned</span>';
+      frame2Text.textContent = 'FREE';
+      frame2Text.className = 'text-primary font-bold';
+      frame2Vpn.textContent = '—';
+      frame2Box.classList.remove('bg-primary-container/20');
+    }
+  }
+</script></main></div></body></html>
