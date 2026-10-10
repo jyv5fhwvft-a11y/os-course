@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary":"#ddb7ff","on-background":"#dfe2f1","surface-container":"#1c1f2a","on-surface-variant":"#bbc9cf","surface":"#0f131d","primary":"#a5e7ff","surface-container-low":"#171b26","inverse-primary":"#00677f","tertiary-fixed":"#6ffbbe","on-tertiary-fixed-variant":"#005236","inverse-surface":"#dfe2f1","on-surface":"#dfe2f1","tertiary-fixed-dim":"#4edea3","outline":"#859399","secondary-fixed-dim":"#ddb7ff","on-primary":"#003543","error-container":"#93000a","on-secondary-fixed":"#2c0051","on-tertiary-container":"#005b3d","tertiary-container":"#48d99e","surface-container-high":"#262a35","on-tertiary":"#003824","on-error":"#690005","outline-variant":"#3c494e","surface-container-lowest":"#0a0e18","secondary-fixed":"#f0dbff","on-secondary-container":"#d6a9ff","primary-fixed-dim":"#47d6ff","tertiary":"#69f6b9","on-secondary":"#490080","surface-dim":"#0f131d","inverse-on-surface":"#2c303b","on-tertiary-fixed":"#002113","error":"#ffb4ab","secondary-container":"#6f00be","surface-container-highest":"#313540","on-primary-container":"#00566a","surface-bright":"#353944","on-primary-fixed-variant":"#004e60","primary-fixed":"#b6ebff","background":"#0f131d","surface-variant":"#313540","primary-container":"#00d2ff","surface-tint":"#47d6ff","on-error-container":"#ffdad6","on-secondary-fixed-variant":"#6900b3","on-primary-fixed":"#001f28"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-lg":"1.5rem","gutter":"1.5rem","space-sm":"0.5rem","space-md":"1rem","space-xs":"0.25rem","space-xl":"2.5rem","gutter-mobile":"1rem","margin":"3rem","margin-mobile":"1.25rem"},fontFamily:{"headline-lg":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-tag":["JetBrains Mono"],"headline-xl":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"label-code":["JetBrains Mono"],"headline-sm":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"]},fontSize:{"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface min-h-screen selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-50 flex flex-col border-r border-outline-variant/30 shadow-[0_0_24px_rgba(0,0,0,0.6)]"><div class="h-16 px-space-md flex items-center justify-between border-b border-outline-variant/30 bg-surface-container-low"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary-container">terminal</span><span class="font-label-tag text-label-tag text-primary-fixed uppercase tracking-wider">CS301-CORE-V2.4</span></div><span class="px-space-xs py-0.5 rounded bg-tertiary/10 border border-tertiary/40 font-label-tag text-label-tag text-tertiary">ONLINE</span></div><div class="p-space-md bg-surface-container-lowest border-b border-outline-variant/20"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase">Kernel Module Syllabus</span><span class="font-label-tag text-label-tag text-primary-fixed-dim">24 UNITS</span></div><div class="w-full bg-surface-container h-1.5 rounded overflow-hidden"><div class="bg-primary-container h-full w-[95.8%]"></div></div></div><nav class="flex-1 overflow-y-auto p-space-sm space-y-1" data-active-classes="bg-surface-container-high border-l-2 border-primary-container text-primary-fixed font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l00-course-setup-boot-sequence" href="#"><span>L00 Boot Seq &amp; Architecture</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l01-interrupts-traps-system-calls" href="#"><span>L01 Traps &amp; Syscalls</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l02-process-abstraction-pcb" href="#"><span>L02 Process Abstraction</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l03-thread-concurrency-locks" href="#"><span>L03 Threads &amp; Locks</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l04-cpu-scheduling-algorithms" href="#"><span>L04 CPU Schedulers</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l05-virtual-memory-paging" href="#"><span>L05 VM &amp; Paging</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l06-page-replacement-tlb" href="#"><span>L06 Page Replace &amp; TLB</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l07-ipc-pipes-shared-memory" href="#"><span>L07 IPC &amp; Shared Mem</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l08-synchronization-primitives" href="#"><span>L08 Semaphores &amp; Mutex</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l09-deadlocks-bankers-algorithm" href="#"><span>L09 Deadlock Avoidance</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l10-file-systems-inodes" href="#"><span>L10 File Systems &amp; Inodes</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l11-io-devices-driver-model" href="#"><span>L11 I/O Drivers &amp; DMA</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l12-memory-allocation-heap" href="#"><span>L12 Heap &amp; Slab Alloc</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l13-signals-asynchronous-events" href="#"><span>L13 Posix Signals</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l14-virtualization-hypervisors" href="#"><span>L14 Hardware Virt</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l15-containers-namespaces-cgroups" href="#"><span>L15 Namespaces &amp; Cgroups</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l16-network-stack-sockets" href="#"><span>L16 Sockets &amp; Epoll</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l17-real-time-operating-systems" href="#"><span>L17 RTOS Scheduling</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l18-journaling-crash-recovery" href="#"><span>L18 Journaling &amp; Ext4</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l19-microkernels-l4-mach" href="#"><span>L19 Microkernel IPC</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l20-distributed-file-systems" href="#"><span>L20 NFS &amp; Raft Sync</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l21-hardware-security-enclaves" href="#"><span>L21 SGX &amp; TPM Enclaves</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l22-access-control-and-domains" href="#"><span>L22 Access Control &amp; Domains</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l23-authentication-identity-verification" href="#"><span>L23 Auth &amp; Identity Verification</span><span class="px-1.5 py-0.5 rounded bg-primary-container/20 border border-primary-container font-label-tag text-[10px] text-primary-container">ACTIVE</span></a></nav><div class="p-space-md bg-surface-container-lowest border-t border-outline-variant/30"><div class="flex items-center justify-between text-on-surface-variant font-label-tag text-label-tag"><span>SYS_CLOCK: TSC-SYNC</span><span class="text-tertiary">4.10 GHz</span></div><div class="flex items-center justify-between text-on-surface-variant font-label-tag text-label-tag mt-1"><span>MEM_MAP: E820</span><span class="text-primary-fixed">64GB OK</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30 z-40 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high border border-outline-variant/40"><span class="material-symbols-outlined text-primary text-[18px]">memory</span><span class="font-headline-sm text-[13px] tracking-wider text-on-surface font-bold uppercase">CS 301 OPERATING SYSTEMS</span></div><div class="hidden xl:flex items-center gap-space-xs font-label-tag text-[11px]"><span class="px-2 py-0.5 rounded bg-tertiary/10 border border-tertiary/30 text-tertiary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>SYS_AUTH_ACTIVE</span><span class="px-2 py-0.5 rounded bg-secondary-container/30 border border-secondary/40 text-secondary">SECURITY_MODE: PAM / KERBEROS 5</span><span class="px-2 py-0.5 rounded bg-surface-container border border-outline-variant/50 text-on-surface-variant">IDENTITY_STORE: /etc/shadow + TOTP-OATH</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center gap-space-xs"><button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded bg-primary-container text-on-primary font-label-tag text-label-tag hover:shadow-[0_0_16px_rgba(0,210,255,0.4)] transition-all" type="button"><span class="material-symbols-outlined text-[16px]">fingerprint</span><span>Authenticate Handshake Challenge</span></button><button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded border border-secondary/40 text-secondary hover:bg-secondary/10 font-label-tag text-label-tag transition-all" type="button"><span class="material-symbols-outlined text-[16px]">restart_alt</span><span>Flush Auth Tokens</span></button></div><div class="h-6 w-px bg-outline-variant/40 mx-1"></div><div class="flex items-center gap-space-xs font-label-code text-label-code text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[20px]">tune</span><span class="hidden lg:inline text-primary-fixed">UID: 1000 (KERNEL_LAB)</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-lg py-space-md"><div class="flex flex-col w-full space-y-space-xl text-on-surface">
+<!-- TOP TELEMETRY & HERO HEADER -->
+<section class="relative rounded-xl bg-surface-container-low p-space-lg shadow-xl overflow-hidden">
+<div class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-primary-container/5 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -bottom-20 w-96 h-96 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col space-y-space-md">
+<!-- Breadcrumb / Kernel Module Meta -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-sm font-label-tag text-label-tag">
+<span class="px-2 py-0.5 rounded bg-primary-container/15 text-primary-fixed uppercase tracking-wider">KERNEL_SUB: L23</span>
+<span class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-tertiary-container/15 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+            SYS_AUTH_CORE
+          </span>
+<span class="hidden sm:inline text-outline font-label-code text-label-tag">REF: IEEE-802.1X // POSIX-1003.1E</span>
+</div>
+<div class="font-label-tag text-label-tag text-on-surface-variant flex items-center gap-2">
+<span>SECURITY LEVEL: RING-0 VERIFIED</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-primary-fixed">SHA3-512</span>
+</div>
+</div>
+<!-- Main Poster Title Badge -->
+<div class="space-y-space-xs">
+<div class="inline-flex items-center gap-2 px-space-sm py-1 rounded-lg bg-surface-container-high text-primary-fixed text-headline-sm font-headline-sm">
+<span>🏷️</span>
+<span>OPERATING SYSTEMS: L23 - Authentication &amp; Identity Verification Frameworks</span>
+</div>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-5xl">
+          An intuitive visual architectural guide for beginners: Discover how the operating system referee verifies your identity claim, hashes passwords with salt, checks biometric templates on secure chips, and enforces multi-factor security boundaries.
+        </p>
+</div>
+<!-- Telemetry Chip Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col space-y-0.5 shadow-sm">
+<span class="text-label-tag font-label-tag text-outline uppercase">AUTH ENGINE</span>
+<span class="text-label-code font-label-code text-primary truncate">PAM / LINUX SHADOW &amp; HARDWARE ENCLAVE (SYS_AUTH_ONLINE)</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col space-y-0.5 shadow-sm">
+<span class="text-label-tag font-label-tag text-outline uppercase">HASH CIPHER</span>
+<span class="text-label-code font-label-code text-secondary truncate">ARGON2ID // PBKDF2 + 128-BIT SALT BUFFER</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col space-y-0.5 shadow-sm">
+<span class="text-label-tag font-label-tag text-outline uppercase">ENCLAVE STATUS</span>
+<span class="text-label-code font-label-code text-tertiary truncate">SECURE ENCLAVE // TPM 2.0 ATTESTATION READY</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col space-y-0.5 shadow-sm">
+<span class="text-label-tag font-label-tag text-outline uppercase">VERIFICATION PIPELINE</span>
+<span class="text-label-code font-label-code text-on-surface truncate">KNOWLEDGE + POSSESSION + BIOMETRIC</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col space-y-0.5 shadow-sm">
+<span class="text-label-tag font-label-tag text-outline uppercase">AUTH STATUS</span>
+<span class="text-label-code font-label-code text-primary-fixed-dim truncate">PRIVILEGE_CHECKPOINT_ARMED // IDENTITY VERIFIED</span>
+</div>
+</div>
+<!-- Interactive Simulation Control Panel -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-sm">
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary font-label-code text-label-code font-bold hover:shadow-[0_0_24px_rgba(0,210,255,0.45)] transition-all transform active:scale-95" id="sim-start-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>▶ ⚡ Simulate MFA Challenge &amp; Enclave Verification</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-code text-label-code transition-all" id="sim-reset-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>🔄 Reset Auth Simulator</span>
+</button>
+<div class="hidden items-center gap-2 px-3 py-1.5 rounded bg-tertiary-container/15 text-tertiary font-label-tag text-label-tag" id="sim-live-indicator">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+<span id="sim-status-text">PIPELINE EXECUTION: EVALUATING PASS_HASH_0x7FE...</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 1: CORE CONCEPTUAL ONBOARDING -->
+<section class="flex flex-col space-y-space-md">
+<!-- Chapter Tracker Header -->
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary-container"></span>
+<span class="font-label-tag text-label-tag text-primary tracking-widest uppercase">
+          • CHAPTER 23.1 • IDENTITY PROOFS &amp; AUTHENTICATION FACTOR FOUNDATIONS // CORE_AUTH // 01
+        </span>
+</div>
+<span class="font-label-tag text-label-tag text-outline">EST. READ: 6 MIN</span>
+</div>
+<div class="space-y-space-sm">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        1️⃣ Core Conceptual Onboarding (The Three Proofs of Identity)
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        How computer systems bridge the gap between anonymous binary instructions and authenticated human subjects through structured defense-in-depth gatekeepers.
+      </p>
+</div>
+<!-- The Foundational Question & Definition Callout -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-md space-y-space-xs">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+<span class="font-label-tag text-label-tag uppercase tracking-wider text-primary-fixed">The Foundational Question &amp; Core Law</span>
+</div>
+<blockquote class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed italic pl-space-sm bg-surface-container-lowest/60 rounded-lg p-space-sm">
+        "Authentication is the security vetting process where the operating system referee explicitly verifies and validates your digital identity claim before allowing you into the system, checking who you are through specialized factors of proof."
+      </blockquote>
+</div>
+<!-- Key Characteristics & Core Motivation Bento -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Key Characteristics -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container space-y-space-md shadow-sm">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-secondary">Three Pillars of Identification</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container/20 text-secondary text-label-tag font-label-tag">CRITICAL CONCEPTS</span>
+</div>
+<div class="space-y-space-sm font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1">
+<span class="font-label-code text-label-code text-primary font-semibold block">• Authentication Factor:</span>
+<p>An individual category of identification proof split into three pillars: something you know (like passwords), something you have (like key tokens), or something you are (like biometrics).</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1">
+<span class="font-label-code text-label-code text-secondary font-semibold block">• Multi-Factor Authentication (MFA):</span>
+<p>A robust security practice requiring a user to present two or more independent factors of proof to unlock an account.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1">
+<span class="font-label-code text-label-code text-tertiary font-semibold block">• Salted Hash:</span>
+<p>An encrypted mathematical scrambler strategy where the kernel adds random bits called salt to a password string before running it through a hashing function, ensuring plaintext passwords are never stored on disk.</p>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center gap-2 font-label-tag text-label-tag text-outline">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span>SYSTEM_STANDARD: FIPS 140-3 COMPLIANT VECTOR</span>
+</div>
+</div>
+<!-- Core Motivation -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-container space-y-space-md shadow-sm">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary">Core Architectural Motivation</span>
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary-fixed text-label-tag font-label-tag">THREAT LANDSCAPE</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low text-body-md font-body-md text-on-surface-variant leading-relaxed space-y-space-xs">
+<p>
+              Operating system security relies entirely on knowing exactly who is executing code instructions. If an unauthorized attacker gains access, they can bypass local access control lists completely. The OS referee cannot just take a process claim at face value. It must force users through authentication checkpoint gates. However, every factor of proof carries a distinct vulnerability bottleneck—passwords can be stolen or guessed, while biometric face or finger traits can never be reset or changed if their structural templates are compromised.
+            </p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between font-label-code text-label-code">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-primary">shield</span>
+<span>OS Access Control Isolation: RING-3 ➔ RING-0</span>
+</div>
+<span class="text-tertiary">ENFORCED</span>
+</div>
+</div>
+</div>
+<!-- Cards: Real-World & Everyday Analogy -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Technical Card -->
+<div class="p-space-md rounded-xl bg-surface-container-high space-y-space-sm shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">terminal</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">💻 Real-World Application Example</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-tag text-label-tag">POSIX / PAM MODULE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          When you approach your laptop lock screen interface, the system invokes an authentication loop. If you type a standard text password into the input block, the kernel hashes the string and compares it to a secure encrypted table list. If you utilize a biometric tool like Windows Hello fingerprint unlock or Apple FaceID, the OS reads your physical sensor data streams, maps it to a cryptographically locked mathematical template on an isolated security chip, and validates your identity near-instantly.
+        </p>
+<div class="pt-space-xs font-label-code text-label-code text-outline flex items-center gap-2">
+<span class="text-primary-container">pam_unix.so</span>
+<span>➔</span>
+<span class="text-secondary">pam_fprintd.so</span>
+<span>➔</span>
+<span class="text-tertiary">tpm2_nvread()</span>
+</div>
+</div>
+<!-- Analogy Card -->
+<div class="p-space-md rounded-xl bg-surface-container-high space-y-space-sm shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">cottage</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">🎒 Everyday Example (5th Grader)</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container/30 text-secondary font-label-tag text-label-tag">HOTEL / CLUB ANALOGY</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Imagine you are trying to enter a secret treehouse club room. There are three completely different ways to prove you belong to the club. Way 1 is Something You Know—whispering the secret clubhouse password phrase through a crack in the wooden door boards. Way 2 is Something You Have—showing the guard your official metal club badge token. Way 3 is Something You Are—letting the guard look right at your face to verify your eyes and hair color! Using Multi-Factor Authentication is forcing a kid to say the secret word AND show their physical badge before the treehouse ladder is dropped down!
+        </p>
+<div class="pt-space-xs flex items-center gap-2 font-label-tag text-label-tag text-secondary">
+<span class="material-symbols-outlined text-[16px]">key</span>
+<span>FACTOR COMBO: PASSWORD + BRASS BADGE + EYE CHECK</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: STRUCTURAL DISSECTION -->
+<section class="flex flex-col space-y-space-md">
+<!-- Chapter Tracker Header -->
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary"></span>
+<span class="font-label-tag text-label-tag text-secondary tracking-widest uppercase">
+          • CHAPTER 23.2 • THE AUTHENTICATION ARCHITECTURE MATRIX // STRUCT_VIEW // 02
+        </span>
+</div>
+<span class="font-label-tag text-label-tag text-outline">DIAGRAM ENGINE: ACTIVE</span>
+</div>
+<div class="space-y-space-xs">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        2️⃣ Structural Dissection (Inside the Authentication Core Matrix)
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Exploded hardware-software cross section of how kernel authentication routines interact with salted storage records and hardware-isolated cryptographic coprocessors.
+      </p>
+</div>
+<!-- Split-Pane Matrix Diagram -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left 6 Cols: Factor Classification Chain -->
+<div class="lg:col-span-6 flex flex-col justify-between p-space-md rounded-xl bg-surface-container space-y-space-md shadow-md">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary">THE FACTOR CLASSIFICATION CHAIN</span>
+<span class="font-label-tag text-label-tag text-outline px-2 py-0.5 rounded bg-surface-container-highest">STACK: L1 ➔ L3</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Hierarchical categorization of identity proofs evaluated sequentially by the kernel authentication daemon.
+          </p>
+<!-- Layer 1 Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-high space-y-2 hover:bg-surface-variant transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-primary/20 text-primary flex items-center justify-center font-label-code text-label-tag font-bold">1</span>
+<span class="font-label-code text-label-code text-primary font-bold">Knowledge Layer (Salted Password Hashes)</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-tag text-label-tag">WHAT YOU KNOW</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant pl-8 space-y-1">
+<p>Cryptographic hash comparisons of alphanumeric credentials combined with pseudo-random per-user salt seeds.</p>
+<div class="font-label-code text-label-tag text-outline flex items-center gap-2">
+<span>VECTOR: SHA-256 / ARGON2</span>
+<span class="text-tertiary">STATUS: READY</span>
+</div>
+</div>
+</div>
+<!-- Flow connector -->
+<div class="flex items-center justify-center py-0.5 text-primary">
+<span class="material-symbols-outlined text-[20px]">arrow_downward</span>
+</div>
+<!-- Layer 2 Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-high space-y-2 hover:bg-surface-variant transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-secondary/20 text-secondary flex items-center justify-center font-label-code text-label-tag font-bold">2</span>
+<span class="font-label-code text-label-code text-secondary font-bold">Possession Layer (SMS Codes / Physical Key Tokens)</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary/10 text-secondary font-label-tag text-label-tag">WHAT YOU HAVE</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant pl-8 space-y-1">
+<p>Hardware security tokens, FIDO2 WebAuthn keys, or synchronized time-based one-time password (TOTP) state registers.</p>
+<div class="font-label-code text-label-tag text-outline flex items-center gap-2">
+<span>VECTOR: YUBIKEY / RFC 6238 TOTP</span>
+<span class="text-tertiary">STATUS: LISTENING</span>
+</div>
+</div>
+</div>
+<!-- Flow connector -->
+<div class="flex items-center justify-center py-0.5 text-secondary">
+<span class="material-symbols-outlined text-[20px]">arrow_downward</span>
+</div>
+<!-- Layer 3 Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-high space-y-2 hover:bg-surface-variant transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-tertiary/20 text-tertiary flex items-center justify-center font-label-code text-label-tag font-bold">3</span>
+<span class="font-label-code text-label-code text-tertiary font-bold">Biometric Layer (Fingerprint / Retina Arrays)</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-tag text-label-tag">WHAT YOU ARE</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant pl-8 space-y-1">
+<p>Capacitive ridge-minutiae coordinate mapping and infrared facial depth meshes processed in hardware enclaves.</p>
+<div class="font-label-code text-label-tag text-outline flex items-center gap-2">
+<span>VECTOR: SENSOR DENSE MESH</span>
+<span class="text-tertiary">STATUS: ENCLAVE_ARMED</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-xs font-label-tag text-label-tag text-on-surface-variant flex items-center justify-between">
+<span>CLASSIFICATION PIPELINE: POSIX PAM CHAIN</span>
+<span class="text-primary font-bold">TRIPLE_FACTOR_ENABLED</span>
+</div>
+</div>
+<!-- Right 6 Cols: Secure Identity Validator Engine -->
+<div class="lg:col-span-6 flex flex-col justify-between p-space-md rounded-xl bg-surface-container space-y-space-md shadow-md">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-tertiary">THE SECURE IDENTITY VALIDATOR ENGINE</span>
+<span class="font-label-tag text-label-tag text-tertiary px-2 py-0.5 rounded bg-tertiary/10">RING-0 PRIVILEGED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Live hardware register telemetry inspecting credential ingestion, salt application, and enclave biometric score calculation.
+          </p>
+<!-- Tracking Row 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest space-y-1.5 shadow-inner">
+<div class="flex items-center justify-between text-label-tag font-label-tag">
+<span class="text-primary-fixed uppercase">Plaintext Input Stream Intercept</span>
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-tertiary/20 text-tertiary">INTERCEPT_ACTIVE</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/20 text-primary">BUFFER_ZEROED</span>
+</div>
+</div>
+<div class="font-label-code text-label-tag p-2 rounded bg-surface-container-high text-on-surface-variant overflow-x-auto">
+<code>stdin_raw: [••••••••••••••••] ➔ memzero_explicit() after ingest</code>
+</div>
+<div class="flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>RAM BUS: DMA ISOLATED</span>
+<span class="text-tertiary">MEMORY LEAK PROOF: ACTIVE</span>
+</div>
+</div>
+<!-- Tracking Row 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest space-y-1.5 shadow-inner">
+<div class="flex items-center justify-between text-label-tag font-label-tag">
+<span class="text-secondary uppercase">Salted Hash Comparison Directory</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container/30 text-secondary">LOOKUP: /etc/shadow</span>
+</div>
+<div class="font-label-code text-label-tag p-2 rounded bg-surface-container-high text-secondary overflow-x-auto">
+<code>$argon2id$v=19$m=65536,t=3,p=4$salt...$hash...</code>
+</div>
+<div class="flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>SALT: 128-BIT CRYPTO CSPRNG</span>
+<span class="text-tertiary">HASH EQUALITY: MATCH_OK</span>
+</div>
+</div>
+<!-- Tracking Row 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest space-y-1.5 shadow-inner">
+<div class="flex items-center justify-between text-label-tag font-label-tag">
+<span class="text-tertiary uppercase">Biometric Structural Chip Template Mapping</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-bold">HARDWARE_ISOLATED</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high flex flex-col space-y-1">
+<div class="flex items-center justify-between font-label-code text-label-tag">
+<span class="text-on-surface">ENCLAVE_MATCH_SCORE: 99.8%</span>
+<span class="text-tertiary">THRESHOLD &gt; 95.0% PASS</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[99.8%]"></div>
+</div>
+</div>
+<div class="flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>RAW SENSOR BITMAP: DISCARDED</span>
+<span class="text-tertiary">CO-PROCESSOR ATTESTED</span>
+</div>
+</div>
+</div>
+<div class="pt-space-xs font-label-code text-label-tag text-primary flex items-center justify-between">
+<span>KERNEL AUTH GATE: LOCKED</span>
+<span class="text-tertiary font-bold">READY TO DISPATCH TOKEN</span>
+</div>
+</div>
+</div>
+<!-- Structural Definitions Rows -->
+<div class="p-space-md rounded-xl bg-surface-container space-y-space-md shadow-sm">
+<div class="flex items-center justify-between pb-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Architectural Layer Specifications &amp; Vulnerabilities</h3>
+<span class="font-label-tag text-label-tag text-primary-fixed">KERNEL SPECIFICATION REFERENCE</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Knowledge Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col justify-between space-y-space-sm shadow-sm">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">password</span>
+<span class="font-label-code text-label-code text-primary font-bold">Knowledge-Based Architecture</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              • Knowledge-Based Architecture: Relies on text strings matching an archived record. The kernel forces encryption layers like salted hashing to ensure clear text keys never sit vulnerable on storage sectors.
+            </p>
+</div>
+<div class="p-space-xs rounded bg-surface-container space-y-1">
+<span class="font-label-tag text-label-tag text-primary">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface">When you log into an application portal inside Google Chrome, the backend server converts your typed password character array into an encrypted hash string instantly.</p>
+</div>
+</div>
+<!-- Possession Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col justify-between space-y-space-sm shadow-sm">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">usb</span>
+<span class="font-label-code text-label-code text-secondary font-bold">Possession-Based Architecture</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              • Possession-Based Architecture: Tracks unique physical assets. The system sends a one-time numeric passcode or queries a physical security key controller plugged into a USB port channel.
+            </p>
+</div>
+<div class="p-space-xs rounded bg-surface-container space-y-1">
+<span class="font-label-tag text-label-tag text-secondary">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface">Enterprise network portals demand a physical hardware key token to verify that the human operator is physically present at the computer workstation keyboard.</p>
+</div>
+</div>
+<!-- Biometric Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col justify-between space-y-space-sm shadow-sm">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">fingerprint</span>
+<span class="font-label-code text-label-code text-tertiary font-bold">Biometric-Based Architecture</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              • Biometric-Based Architecture: Reads physical human data markers. Biometrics completely flip the risk calculation—a password can be updated if leaked, but if an attacker steals your biometric print map, you cannot change your finger pattern.
+            </p>
+</div>
+<div class="p-space-xs rounded bg-surface-container space-y-1">
+<span class="font-label-tag text-label-tag text-tertiary">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface">Hardware tools like Windows Hello process fingerprint scans within isolated chip memory registers that are completely invisible to standard user apps like Spotify.</p>
+</div>
+</div>
+</div>
+<!-- Bottom Everyday Example Note -->
+<div class="p-space-sm rounded-lg bg-surface-container-high space-y-1 shadow-sm">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-[18px]">pedal_bike</span>
+<span class="font-label-tag text-label-tag uppercase font-bold">🎒 Everyday Example (The Bicycle Lock Triad)</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Let's complete the bicycle lock tracking mapping comparison! A standard combo lock is a Knowledge factor—if a bully guesses your three numbers, they steal your bike. A physical brass key is a Possession factor—if you drop it in the grass, anyone can pick it up. A thumbprint scan lock is a Biometric factor—it is welded right to your hand so you can't lose it, but if a villain makes a rubber mold copy of your thumb print, you can never change your thumb pattern for the rest of your life!
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 3: LINEAR OPERATIONAL PIPELINE -->
+<section class="flex flex-col space-y-space-md">
+<!-- Chapter Tracker Header -->
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-sm bg-tertiary"></span>
+<span class="font-label-tag text-label-tag text-tertiary tracking-widest uppercase">
+          • CHAPTER 23.3 • MULTI-FACTOR LOGIN PIPELINE &amp; DOMAIN TRANSITION // EXEC_LOOP // 03
+        </span>
+</div>
+<span class="font-label-tag text-label-tag text-outline">DISPATCH LATENCY: 14.2 MS</span>
+</div>
+<div class="space-y-space-xs">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        3️⃣ Linear Operational Pipeline (The Login Flow Verification Workflow)
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Step-by-step kernel state machine traversing user credential submission, cryptographic salt mixing, secondary token attestation, and capability ring promotion.
+      </p>
+</div>
+<!-- Horizontal Workflow Timeline (Four Nodes) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-sm">
+<!-- Node 1 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between space-y-space-sm shadow-md transition-all" id="pipe-node-1">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary-fixed font-label-tag text-label-tag font-bold">PHASE 01</span>
+<span class="material-symbols-outlined text-primary text-[20px]">login</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">1. Identity Claim Input</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            A user initiates a transaction loop by typing an account name string and password into an interface login container panel.
+          </p>
+</div>
+<div class="pt-space-xs font-label-code text-label-tag text-outline flex items-center justify-between">
+<span>VECTOR: USER_CLAIM</span>
+<span class="text-primary font-bold">ACTIVE</span>
+</div>
+</div>
+<!-- Node 2 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between space-y-space-sm shadow-md transition-all" id="pipe-node-2">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-secondary-container/20 text-secondary font-label-tag text-label-tag font-bold">PHASE 02</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">tag</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-secondary">2. Hashing and Salt Validation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            The kernel referee pulls the unique account's salt bits from the drive directory, appends them to the input text string, hashes the combined matrix block, and checks for a valid match.
+          </p>
+</div>
+<div class="pt-space-xs font-label-code text-label-tag text-outline flex items-center justify-between">
+<span>VECTOR: SHA3 + SALT</span>
+<span class="text-secondary font-bold">STAGED</span>
+</div>
+</div>
+<!-- Node 3 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between space-y-space-sm shadow-md transition-all" id="pipe-node-3">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-tag text-label-tag font-bold">PHASE 03</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">phonelink_lock</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-tertiary">3. Secondary Factor Check</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            For high-security loops, the system drops into an extra validation block, demanding a cryptographic signature signal from a possession token or a face geometry scan.
+          </p>
+</div>
+<div class="pt-space-xs font-label-code text-label-tag text-outline flex items-center justify-between">
+<span>VECTOR: FIDO2 / ENCLAVE</span>
+<span class="text-tertiary font-bold">CHALLENGE</span>
+</div>
+</div>
+<!-- Node 4 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between space-y-space-sm shadow-md transition-all" id="pipe-node-4">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-primary/20 text-primary font-label-tag text-label-tag font-bold">PHASE 04</span>
+<span class="material-symbols-outlined text-primary text-[20px]">lock_open</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">4. Protection Domain Unlock</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            With all factors cleared, the authentication engine flags a valid success, passes your security clearance level down to the Access Control Matrix, and draws your user desktop room.
+          </p>
+</div>
+<div class="pt-space-xs font-label-code text-label-tag text-outline flex items-center justify-between">
+<span>VECTOR: RING-3 PROMOTION</span>
+<span class="text-primary font-bold">AUTHORIZED</span>
+</div>
+</div>
+</div>
+<!-- Sequential Process Rules Panel -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Sequential Process Execution Rules</span>
+<span class="font-label-tag text-label-tag text-outline">STRICT FINITE STATE MACHINE (FSM)</span>
+</div>
+<div class="space-y-space-xs font-body-md text-body-md text-on-surface-variant">
+<div class="p-space-xs rounded bg-surface-container flex items-start gap-2">
+<span class="font-label-code text-primary font-bold">1.</span>
+<p><strong>Identity Claim Input:</strong> A user initiates a transaction loop by typing an account name string and password into an interface login container panel.</p>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-start gap-2">
+<span class="font-label-code text-secondary font-bold">2.</span>
+<p><strong>Hashing and Salt Validation:</strong> The kernel referee pulls the unique account's salt bits from the drive directory, appends them to the input text string, hashes the combined matrix block, and checks for a valid match.</p>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-start gap-2">
+<span class="font-label-code text-tertiary font-bold">3.</span>
+<p><strong>Secondary Factor Check:</strong> For high-security loops, the system drops into an extra validation block, demanding a cryptographic signature signal from a possession token or a face geometry scan.</p>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-start gap-2">
+<span class="font-label-code text-primary font-bold">4.</span>
+<p><strong>Protection Domain Unlock:</strong> With all factors cleared, the authentication engine flags a valid success, passes your security clearance level down to the Access Control Matrix, and draws your user desktop room.</p>
+</div>
+</div>
+</div>
+<!-- Interactive & Mental Model Panels (Banking Workshop vs Secret Fort) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Banking Portal Activity Card -->
+<div class="p-space-md rounded-xl bg-surface-container-high space-y-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">account_balance</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">💻 Banking Portal Design Activity</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary-fixed font-label-tag text-label-tag">LAB WORKSHOP</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Task students to construct a complete multi-factor login flow pipeline for a high-security banking app ➔ Have them track individual access routes for moving funds vs checking balances ➔ Challenge them to justify exactly which factors they would require across user touchpoints ➔ Force them to defend their design balance between high-security lockouts and smooth consumer usage metrics.
+        </p>
+<div class="pt-space-xs font-label-code text-label-code text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span>EVALUATION: FRICTION VS ATTRITION METRIC ANALYSIS</span>
+</div>
+</div>
+<!-- Secret Fort Analogy Card -->
+<div class="p-space-md rounded-xl bg-surface-container-high space-y-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">fort</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">🎒 Secret Fort Entrance Pipeline</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container/30 text-secondary font-label-tag text-label-tag">EVERYDAY PIPELINE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          You yell your user name through a wooden door hole (Identity Claim) ➔ You shout the secret phrase rhyme correctly (Hash Validation) ➔ The guard forces you to hold up a special blue marble stone from your pocket to double-check your clearance (Secondary Factor) ➔ The latch slides open, your tracking domain token maps to the fort, and you walk inside the door safely (Protection Domain Unlock).
+        </p>
+<div class="pt-space-xs font-label-code text-label-code text-secondary flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">vpn_key</span>
+<span>DOOR CHECK: SHOUT + STONE = ENTRY UNLOCKED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: PARADIGM SHOWDOWN & GUARDRAILS -->
+<section class="flex flex-col space-y-space-md">
+<!-- Chapter Tracker Header -->
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-sm bg-error"></span>
+<span class="font-label-tag text-label-tag text-error tracking-widest uppercase">
+          • CHAPTER 23.4 • PASSWORD VS BIOMETRIC THREAT MODELS // PARADIGM_SYNTH // 04
+        </span>
+</div>
+<span class="font-label-tag text-label-tag text-outline">ENGINEERING MATRIX: COMPLETE</span>
+</div>
+<div class="space-y-space-xs">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        4️⃣ Paradigm Showdown &amp; Guardrails
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Architectural trade-off assessment comparing mutable text entropy against immutable human physiology representations.
+      </p>
+</div>
+<!-- Comparative Table -->
+<div class="rounded-xl bg-surface-container overflow-hidden shadow-lg">
+<div class="p-space-md bg-surface-container-high flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+          Password Verification (Knowledge Lane) vs Biometric Verification (Identity Lane)
+        </h3>
+<span class="font-label-tag text-label-tag text-outline">SECURITY AUDIT MATRIX</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface font-label-code text-label-tag uppercase">
+<th class="p-space-md w-1/4">Evaluation Vector</th>
+<th class="p-space-md w-3/8 text-primary">Password Verification (Knowledge Lane)</th>
+<th class="p-space-md w-3/8 text-tertiary">Biometric Verification (Identity Lane)</th>
+</tr>
+</thead>
+<tbody class="text-on-surface-variant divide-y-0">
+<tr class="bg-surface-container/60 hover:bg-surface-container-high/40 transition-colors">
+<td class="p-space-md font-label-code text-label-code text-on-surface font-semibold">Core Vulnerability</td>
+<td class="p-space-md text-on-surface">Guessing, phishing, and dictionary credential leaks</td>
+<td class="p-space-md text-on-surface">Unresetable profile templates if the server data leaks</td>
+</tr>
+<tr class="bg-surface-container hover:bg-surface-container-high/40 transition-colors">
+<td class="p-space-md font-label-code text-label-code text-on-surface font-semibold">Revocation Strategy</td>
+<td class="p-space-md text-primary-fixed">Simple and instant to wipe out and reset a string</td>
+<td class="p-space-md text-error">Physically impossible to alter or replace human metrics</td>
+</tr>
+<tr class="bg-surface-container/60 hover:bg-surface-container-high/40 transition-colors">
+<td class="p-space-md font-label-code text-label-code text-on-surface font-semibold">Processing Overhead</td>
+<td class="p-space-md text-on-surface">Lightweight string hashing operations</td>
+<td class="p-space-md text-on-surface">Heavy machine scan image-processing algorithms running on secure co-processors</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="p-space-md rounded-xl bg-error-container/20 text-on-surface space-y-space-xs shadow-md">
+<div class="flex items-center gap-2 text-error">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+<h4 class="font-headline-sm text-headline-sm text-error">Common Mistakes Warning Banner: The Biometric Image Fallacy</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed pl-8">
+        Do not assume biometric systems store a photo of your face or finger! A very common mistake computer science students make is believing that the operating system saves a picture file of your fingerprint on the hard drive disk. If it did, an attacker could steal the file and trick your apps! The system only stores a complex mathematical score number compiled from coordinate lines. The raw image is thrown away instantly!
+      </p>
+<div class="pl-8 pt-1 flex items-center gap-2 font-label-tag text-label-tag text-error">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>SECURITY RULE: SENSOR FRAME BUFFER OVERWRITTEN IMMEDIATELY WITH ZERO PADDING</span>
+</div>
+</div>
+<!-- Systems Engineering Interview Takeaway Panel -->
+<div class="p-space-md rounded-xl bg-surface-container space-y-space-md shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">badge</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Systems Engineering Interview Takeaway Panel</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary-fixed font-label-tag text-label-tag">STAFF ENGINEER CORE</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low text-body-md font-body-md text-on-surface-variant leading-relaxed">
+        Authentication frameworks act as the absolute outer wall guardrails for modern computer security, converting human presence into clear cryptographic validation indicators. While combining multiple factors scales system resilience dramatically, designers must calculate the specific architecture trade-offs of each tier. If an authentication tracking loop script encounters a verification register error or drops an encryption pointer bit, it triggers a fatal access lockdown violation exception, freezing your screen environment instantly to protect your files (just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling down!).
+      </div>
+<!-- 4 Takeaway Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-high space-y-1">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">alt_route</span>
+<span class="font-label-code text-label-code font-bold">1. Multi-Factor Independence</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Each factor channel must remain isolated; compromise of one channel cannot expose secondary channels.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high space-y-1">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">grain</span>
+<span class="font-label-code text-label-code font-bold">2. Rainbow Table Mitigation</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cryptographic CSPRNG salt &amp; server pepper neutralize precomputed rainbow dictionaries on leaked tables.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high space-y-1">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+<span class="font-label-code text-label-code font-bold">3. Biometric Irrevocability</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Physical identity metrics cannot be rotated if an enclave key is cloned; fallback pins remain mandatory.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high space-y-1">
+<div class="flex items-center gap-1.5 text-tertiary">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+<span class="font-label-code text-label-code font-bold">4. Cascade &amp; Lockout Limits</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Exponential backoff delays protect against brute-force password guessing at the kernel PAM level.</p>
+</div>
+</div>
+</div>
+<!-- Bottom Module Progress Bar & Completion Controls -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-xl space-y-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between font-label-tag text-label-tag">
+<span class="text-tertiary font-bold tracking-wider">MODULE 23 COMPLETE // 100% MASTERY // CREDITS ACCREDITED</span>
+<span class="text-primary-fixed">CS301-L23: 4/4 CHAPTERS CLEARED</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-primary-container via-secondary to-tertiary h-full w-full"></div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-code text-label-code transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>📖 Review L23 Notes</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-label-code text-label-code font-bold hover:shadow-[0_0_20px_rgba(0,210,255,0.4)] transition-all" type="button">
+<span>🚀 Advance to L24 Course Review &amp; Final Exam ➔</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive Simulator Logic (Vanilla JS) -->
+<script>
+    (function initSimulator() {
+      const startBtn = document.getElementById('sim-start-btn');
+      const resetBtn = document.getElementById('sim-reset-btn');
+      const liveIndicator = document.getElementById('sim-live-indicator');
+      const statusText = document.getElementById('sim-status-text');
+
+      const nodes = [
+        document.getElementById('pipe-node-1'),
+        document.getElementById('pipe-node-2'),
+        document.getElementById('pipe-node-3'),
+        document.getElementById('pipe-node-4')
+      ];
+
+      let simulationTimer = null;
+      let currentStep = 0;
+
+      const stepMessages = [
+        "PHASE 1: INGESTING USERNAME & RAW PASSWORD BUFFER...",
+        "PHASE 2: APPLYING 128-BIT SALT & EVALUATING ARGON2ID MATCH...",
+        "PHASE 3: CHALLENGING TPM ENCLAVE FOR HARDWARE TOKEN VERIFICATION...",
+        "PHASE 4: ACCESS CONTROL MATRIX CLEARED ➔ RING-3 DOMAIN UNLOCKED!"
+      ];
+
+      function clearHighlights() {
+        nodes.forEach((n) => {
+          if (n) {
+            n.classList.remove('bg-surface-container-highest', 'shadow-[0_0_20px_rgba(0,210,255,0.35)]');
+            n.classList.add('bg-surface-container');
+          }
+        });
+      }
+
+      function highlightStep(stepIdx) {
+        clearHighlights();
+        if (nodes[stepIdx]) {
+          nodes[stepIdx].classList.remove('bg-surface-container');
+          nodes[stepIdx].classList.add('bg-surface-container-highest', 'shadow-[0_0_20px_rgba(0,210,255,0.35)]');
+        }
+      }
+
+      if (startBtn) {
+        startBtn.addEventListener('click', () => {
+          if (simulationTimer) clearInterval(simulationTimer);
+          currentStep = 0;
+          if (liveIndicator) liveIndicator.classList.remove('hidden');
+          if (liveIndicator) liveIndicator.classList.add('flex');
+
+          highlightStep(currentStep);
+          if (statusText) statusText.innerText = stepMessages[currentStep];
+
+          simulationTimer = setInterval(() => {
+            currentStep++;
+            if (currentStep < 4) {
+              highlightStep(currentStep);
+              if (statusText) statusText.innerText = stepMessages[currentStep];
+            } else {
+              clearInterval(simulationTimer);
+              if (statusText) statusText.innerText = "AUTHENTICATION HANDSHAKE COMPLETE // ACCESS GRANTED";
+            }
+          }, 1100);
+        });
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          if (simulationTimer) clearInterval(simulationTimer);
+          clearHighlights();
+          if (liveIndicator) {
+            liveIndicator.classList.add('hidden');
+            liveIndicator.classList.remove('flex');
+          }
+          if (statusText) statusText.innerText = "IDLE";
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>
