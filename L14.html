@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary":"#ddb7ff","primary-fixed":"#b6ebff","on-tertiary-fixed-variant":"#005236","on-surface":"#dfe2f1","secondary-fixed":"#f0dbff","on-tertiary-fixed":"#002113","surface-container":"#1c1f2a","on-secondary-container":"#d6a9ff","on-error":"#690005","inverse-surface":"#dfe2f1","on-primary-container":"#00566a","on-primary":"#003543","inverse-primary":"#00677f","primary-fixed-dim":"#47d6ff","error-container":"#93000a","on-error-container":"#ffdad6","tertiary":"#69f6b9","inverse-on-surface":"#2c303b","outline-variant":"#3c494e","primary-container":"#00d2ff","surface-container-highest":"#313540","surface-tint":"#47d6ff","surface-container-lowest":"#0a0e18","on-tertiary":"#003824","tertiary-container":"#48d99e","on-background":"#dfe2f1","surface-variant":"#313540","outline":"#859399","on-secondary":"#490080","secondary-fixed-dim":"#ddb7ff","surface-dim":"#0f131d","on-tertiary-container":"#005b3d","error":"#ffb4ab","surface":"#0f131d","surface-container-low":"#171b26","primary":"#a5e7ff","on-primary-fixed-variant":"#004e60","tertiary-fixed":"#6ffbbe","on-primary-fixed":"#001f28","secondary-container":"#6f00be","surface-container-high":"#262a35","on-secondary-fixed":"#2c0051","on-surface-variant":"#bbc9cf","tertiary-fixed-dim":"#4edea3","on-secondary-fixed-variant":"#6900b3","surface-bright":"#353944","background":"#0f131d"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"1rem","space-xs":"0.25rem","margin":"3rem","space-lg":"1.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem","gutter":"1.5rem","space-xl":"2.5rem","gutter-mobile":"1rem"},"fontFamily":{"label-code":["JetBrains Mono"],"body-sm":["Plus Jakarta Sans"],"headline-lg":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Space Grotesk"],"headline-xl":["Space Grotesk"],"label-tag":["JetBrains Mono"],"headline-xl-mobile":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"]},"fontSize":{"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}]}}}};</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md min-h-screen selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between border-r border-outline-variant/30"><div class="flex flex-col h-full"><div class="p-space-md border-b border-outline-variant/30 bg-surface-container-lowest/80 backdrop-blur-md"><div class="flex items-center gap-space-sm mb-space-xs"><span class="flex h-2.5 w-2.5 rounded-full bg-primary-container animate-pulse shadow-[0_0_8px_#00d2ff]"></span><span class="font-label-tag text-label-tag uppercase tracking-wider text-primary font-bold">CS 301 // ARCH</span></div><h1 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Kernel Lab Studio</h1><p class="font-label-tag text-label-tag text-on-surface-variant mt-1 flex items-center justify-between"><span>SYS_CORE // RV64GC</span><span class="text-tertiary">ONLINE</span></p></div><div class="px-space-md py-space-sm bg-surface-container-high/40 flex items-center justify-between"><span class="font-label-tag text-label-tag text-on-surface-variant font-semibold tracking-wider">CURRICULUM // CORE UNITS</span><span class="font-label-tag text-label-tag text-primary-fixed-dim">15 MODULES</span></div><nav class="flex-1 overflow-y-auto px-space-xs py-space-sm space-y-0.5" data-active-classes="bg-surface-container-high text-primary border-l-2 border-primary-container font-semibold shadow-[inset_0_0_12px_rgba(0,210,255,0.12)]"><a class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-label-code" data-path="l0-course-intro" href="#"><span class="truncate">L0 Course Intro</span><span class="font-label-tag text-label-tag text-outline">00</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-label-code" data-path="l1-os-components" href="#"><span class="truncate">L1 OS Components</span><span class="font-label-tag text-label-tag text-outline">01</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-label-code" data-path="l2-pcb-context-sw" href="#"><span class="truncate">L2 PCB &amp; Context Sw</span><span class="font-label-tag text-label-tag text-outline">02</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-label-code" data-path="l3-kernel-design" href="#"><span class="truncate">L3 Kernel Design</span><span class="font-label-tag text-label-tag text-outline">03</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-label-code" data-path="l4-the-boot-process" href="#"><span class="truncate">L4 The Boot Process</span><span class="font-label-tag text-label-tag text-outline">04</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-label-code" data-path="l5-what-is-a-process" href="#"><span class="truncate">L5 What Is a Process?</span><span class="font-label-tag text-label-tag text-outline">05</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-label-code" data-path="l6-process-creation-context-sw" href="#"><span class="truncate">L6 Process Creation</span><span class="font-label-tag text-label-tag text-outline">06</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-label-code" data-path="l7-cpu-scheduling-i" href="#"><span class="truncate">L7 CPU Scheduling I</span><span class="font-label-tag text-label-tag text-outline">07</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-label-code" data-path="l8-cpu-scheduling-ii" href="#"><span class="truncate">L8 CPU Scheduling II</span><span class="font-label-tag text-label-tag text-outline">08</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-label-code" data-path="l9-threads-concurrency" href="#"><span class="truncate">L9 Threads &amp; Concurrency</span><span class="font-label-tag text-label-tag text-outline">09</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-label-code" data-path="l10-race-conditions" href="#"><span class="truncate">L10 Race Conditions</span><span class="font-label-tag text-label-tag text-outline">10</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-label-code" data-path="l11-deadlocks-sync" href="#"><span class="truncate">L11 Deadlocks &amp; Sync</span><span class="font-label-tag text-label-tag text-outline">11</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-label-code" data-path="l12-memory-relocation" href="#"><span class="truncate">L12 Memory Relocation</span><span class="font-label-tag text-label-tag text-outline">12</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-label-code" data-path="l13-paging-model" href="#"><span class="truncate">L13 Paging Model</span><span class="font-label-tag text-label-tag text-outline">13</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-label-code" data-path="l14-tlb-acceleration-eat" href="#"><span class="truncate">L14 TLB Acceleration &amp; EAT</span><span class="font-label-tag text-label-tag text-tertiary font-bold animate-pulse">ACTIVE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-DEFAULT text-on-surface-variant/60 hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-label-code" data-path="l15-virtual-memory-swap" href="#"><span class="truncate">L15 Virtual Memory Swap</span><span class="font-label-tag text-label-tag text-outline">QUEUED</span></a></nav><div class="p-space-md bg-surface-container-low border-t border-outline-variant/30"><div class="flex items-center justify-between mb-1"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">Syllabus Run</span><span class="font-label-tag text-label-tag text-tertiary font-bold">96%</span></div><div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden"><div class="bg-tertiary h-full rounded-full shadow-[0_0_8px_#69f6b9]" style="width:96%"></div></div><div class="flex items-center justify-between mt-space-sm pt-space-xs font-label-tag text-label-tag text-outline"><span class="flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span>SYNC OK</span><span>CYCLE #10492</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-outline-variant/30 z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-code text-label-code px-space-sm py-1 rounded bg-surface-container border border-outline-variant/40"><span class="font-bold text-primary">CS 301</span><span class="text-outline">//</span><span class="text-on-surface">ARCH ENGINE</span></div><div class="hidden md:flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-container-low border border-outline-variant/30 font-label-tag text-label-tag text-on-surface-variant"><span class="text-outline">POLL:</span><span class="text-tertiary font-bold">1000 Hz</span></div><div class="hidden lg:flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-container-low border border-outline-variant/30 font-label-tag text-label-tag text-on-surface-variant"><span class="text-outline">MOD:</span><span class="text-on-surface font-semibold">14/16</span></div><div class="hidden xl:flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-container-low border border-outline-variant/30 font-label-tag text-label-tag text-on-surface-variant"><span class="text-outline">DIFF:</span><span class="text-secondary font-semibold">ADVANCED</span></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-sm font-label-code text-label-tag px-space-sm py-1 rounded bg-surface-container-high/60 border border-primary-container/30"><span class="text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">memory</span>RV64GC</span><span class="text-outline-variant">|</span><span class="text-tertiary">MMU: SATP SV39</span></div><nav class="hidden 2xl:flex items-center gap-space-sm font-label-code text-label-code"><a class="text-on-surface-variant hover:text-on-surface transition-colors px-2 py-1" data-path="terminal-inspector" href="#">Terminal</a><a class="text-on-surface-variant hover:text-on-surface transition-colors px-2 py-1" data-path="register-inspector" href="#">Registers</a><a class="text-on-surface-variant hover:text-on-surface transition-colors px-2 py-1" data-path="memory-visualizer" href="#">Memory</a></nav><div class="flex items-center gap-space-sm pl-space-sm border-l border-outline-variant/30"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Top Banner & Control Deck -->
+<section class="relative px-space-md lg:px-space-xl py-space-lg bg-surface-container-low border-b border-outline-variant/30 overflow-hidden">
+<!-- Ambient grid layer & micro glows -->
+<div class="absolute inset-0 bg-[radial-gradient(#00d2ff_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none"></div>
+<div class="absolute -right-24 -top-24 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute left-1/3 -bottom-24 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<!-- Breadcrumb & Overline -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm text-label-tag font-label-tag">
+<div class="flex items-center gap-2 text-on-surface-variant tracking-wider uppercase">
+<span class="inline-flex items-center gap-1.5 text-primary font-bold">
+<span class="material-symbols-outlined text-[15px] text-primary-container animate-pulse">terminal</span>
+            LESSON 14
+          </span>
+<span class="text-outline">/</span>
+<span>ACADEMIC RUNTIME SERIES</span>
+<span class="text-outline">•</span>
+<span class="text-primary-fixed-dim">CS 301 CORE KERNEL LABS</span>
+<span class="text-outline">•</span>
+<span class="text-tertiary">RISC-V 64 ARCH</span>
+<span class="text-outline">•</span>
+<span class="text-secondary">HARDWARE TLB MMU ACCELERATION</span>
+</div>
+<div class="flex items-center gap-2 px-space-sm py-1 rounded bg-surface-container border border-primary-container/40 shadow-[0_0_12px_rgba(0,210,255,0.15)]">
+<span class="h-2 w-2 rounded-full bg-tertiary animate-ping"></span>
+<span class="text-primary text-[11px] font-bold tracking-widest uppercase">CORE MODULE: SUB-SYSTEM: MEMORY MANAGEMENT UNIT // HARDWARE TRANSLATION CACHE</span>
+</div>
+</div>
+<!-- Main Headline Block -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg">
+<div class="max-w-4xl space-y-2">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-primary-container/10 border border-primary-container/30 text-primary-fixed-dim font-label-code text-label-code">
+<span class="material-symbols-outlined text-[16px] text-primary-container">memory</span>
+<span>MMU_CACHE_CONTROLLER // FAST_PATH_READY</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">
+            🏷️ OPERATING SYSTEMS: L14 - TLB Acceleration &amp; Effective Access Time
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+            An interactive primer designed for systems novices: dissecting hardware caching, hit vs. miss penalties, the double-trip RAM bottleneck, and Effective Access Time (EAT).
+          </p>
+</div>
+<!-- Master Interactive Controls -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="px-space-md py-2.5 bg-primary-container hover:bg-primary text-on-primary-container hover:shadow-[0_0_20px_rgba(0,210,255,0.45)] transition-all font-label-code text-label-code font-bold rounded flex items-center gap-2" id="step-pipeline-btn">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>▶ ⚡ STEP THROUGH TLB LOOKUP PIPELINE</span>
+</button>
+<button class="px-space-md py-2.5 bg-surface-container hover:bg-surface-container-high border border-outline-variant/50 hover:border-outline text-on-surface transition-all font-label-code text-label-code font-semibold rounded flex items-center gap-2" id="reset-sim-btn">
+<span class="material-symbols-outlined text-[18px] text-tertiary">restart_alt</span>
+<span>↺ RESET SIMULATOR</span>
+</button>
+</div>
+</div>
+<!-- Live Telemetry Pill Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded bg-surface-container border border-outline-variant/30 flex flex-col justify-between">
+<span class="font-label-tag text-[10px] text-outline uppercase tracking-wider">Engine State</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="h-2 w-2 rounded-full bg-primary-container shadow-[0_0_8px_#00d2ff]"></span>
+<span class="font-label-code text-label-code text-primary-fixed-dim font-semibold truncate">HARDWARE TLB CACHE ACTIVE</span>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container border border-outline-variant/30 flex flex-col justify-between">
+<span class="font-label-tag text-[10px] text-outline uppercase tracking-wider">Architecture Limit</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-[16px] text-primary">dns</span>
+<span class="font-label-code text-label-code text-primary font-semibold truncate">64 - 1024 ENTRIES (FULLY ASSOC)</span>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container border border-outline-variant/30 flex flex-col justify-between">
+<span class="font-label-tag text-[10px] text-outline uppercase tracking-wider">Latency Calibration</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">timer</span>
+<span class="font-label-code text-label-code text-tertiary font-semibold truncate">TLB: 1 ns // RAM: 100 ns</span>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container border border-tertiary-container/40 flex flex-col justify-between shadow-[0_0_12px_rgba(72,217,158,0.1)]">
+<span class="font-label-tag text-[10px] text-outline uppercase tracking-wider">Dynamic Hit Ratio</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-code text-label-code text-tertiary font-bold" id="telemetry-hit-rate">98.4%</span>
+<span class="font-label-tag text-[10px] px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-bold tracking-wider">OPTIMAL</span>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container border border-primary-container/40 flex flex-col justify-between shadow-[0_0_12px_rgba(0,210,255,0.1)]">
+<span class="font-label-tag text-[10px] text-outline uppercase tracking-wider">Effective Access Time (EAT)</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-code text-label-code text-primary-container font-bold" id="telemetry-eat">102.6 ns</span>
+<span class="font-label-tag text-[10px] text-on-surface-variant font-mono">~1 TRIP</span>
+</div>
+</div>
+</div>
+<!-- Engine Status Micro Note -->
+<div class="flex items-center gap-2 text-label-tag font-label-tag text-outline-variant border-t border-outline-variant/20 pt-2">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="text-tertiary font-bold">● STATUS NOTE:</span>
+<span class="text-on-surface-variant">MMU ACCELERATOR READY: V4.4 TLB HIGH-SPEED CACHING UNIT // 64-BIT RISC-V SV39 VIRTUALIZATION ONLINE</span>
+</div>
+</div>
+</section>
+<!-- Main Multi-Tier Grid Container -->
+<div class="p-space-md lg:p-space-xl space-y-space-xl max-w-[1700px] mx-auto w-full">
+<!-- ================= SECTION 1: CORE CONCEPTUAL ONBOARDING ================= -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-space-sm">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center h-8 w-8 rounded bg-primary-container/20 text-primary-container font-headline-sm font-bold border border-primary-container/40">1</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+            Core Conceptual Onboarding (The Hardware Sticky Notes)
+          </h2>
+</div>
+<span class="hidden md:inline-flex font-label-tag text-label-tag text-outline uppercase tracking-widest">LAYER: CPU_SILICON_MMU</span>
+</div>
+<!-- Hero Callout & Characteristics Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- The Foundational Question (5 Cols) -->
+<div class="lg:col-span-5 rounded bg-surface-container-high/60 border border-primary-container/40 p-space-md flex flex-col justify-between shadow-[0_0_18px_rgba(0,210,255,0.08)] relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 w-44 h-44 bg-primary-container/5 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary-container text-[20px]">help_center</span>
+<span class="font-label-tag text-label-tag uppercase tracking-wider text-primary font-bold">The Foundational Definition</span>
+</div>
+<p class="font-headline-sm text-headline-sm font-semibold text-on-surface leading-snug">
+              “A Translation Lookaside Buffer (frequently abbreviated as a TLB) is a small, blazing-fast physical hardware cache built directly inside the CPU chip whose sole job is to store recent virtual-to-physical memory page address translations, bypassing slow page table lookups in RAM.”
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/30 flex items-center justify-between text-label-tag font-label-tag text-outline">
+<span>CHIP LOCATION: L0 MMU FABRIC</span>
+<span class="text-tertiary">LATENCY: &lt; 1 CLOCK CYCLE</span>
+</div>
+</div>
+<!-- Key Characteristics Block (7 Cols) -->
+<div class="lg:col-span-7 rounded bg-surface-container border border-outline-variant/30 p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">fact_check</span>
+<span class="font-label-tag text-label-tag uppercase tracking-wider text-secondary font-bold">Key Architectural Characteristics</span>
+</div>
+<span class="font-label-code text-[11px] text-outline">HARDWARE_SPEC_v4</span>
+</div>
+<ul class="space-y-space-sm font-body-md text-body-md text-on-surface">
+<li class="p-space-sm rounded bg-surface-container-low border-l-4 border-tertiary">
+<span class="font-bold text-tertiary font-label-code mr-1">• TLB Hit:</span>
+                The ideal state where the CPU instantly finds the requested virtual page address translation inside the fast hardware TLB cache, completing the lookup in near-zero time.
+              </li>
+<li class="p-space-sm rounded bg-surface-container-low border-l-4 border-error">
+<span class="font-bold text-error font-label-code mr-1">• TLB Miss:</span>
+                The penalty state where the address translation is missing from the cache, forcing the CPU to perform a slow extra trip to read the page table inside RAM.
+              </li>
+<li class="p-space-sm rounded bg-surface-container-low border-l-4 border-primary-container">
+<span class="font-bold text-primary-container font-label-code mr-1">• Effective Access Time (EAT):</span>
+                The mathematical average amount of time the processor spends fetching data from memory, accounting for the ratio of cache hits and misses.
+              </li>
+</ul>
+</div>
+<div class="mt-space-sm text-label-tag font-label-tag text-outline-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span>Hardware optimization goal: Push Hit Ratio past 98% to prevent systemic CPU starvation.</span>
+</div>
+</div>
+</div>
+<!-- Core Motivation Box -->
+<div class="rounded bg-gradient-to-r from-surface-container to-surface-container-high border-l-4 border-secondary p-space-md shadow-md">
+<div class="flex items-center gap-2 mb-2 font-label-code text-label-code text-secondary font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">electric_bolt</span>
+<span>Core Hardware Motivation: The Brutal Double-Trip RAM Tax</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Because standard page tables must live inside your RAM chips due to their massive size, every single memory read or write from an application requires a double-trip performance penalty. The CPU must first read the page table in RAM to translate the address, and then read the actual data from RAM. This cuts memory hardware speed completely in half. To eliminate this major architecture bottleneck, physical CPU chips include a tiny, expensive hardware cache (the TLB) that acts as a short-term tracking archive, ensuring most memory accesses take only one trip.
+        </p>
+</div>
+<!-- Application vs Analogy Two-Column Split -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Technical Card -->
+<div class="rounded bg-surface-container border border-outline-variant/30 p-space-md hover:border-primary-container/60 transition-colors">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">terminal</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">💻 Real-World Application Example</h3>
+</div>
+<span class="font-label-tag text-[10px] px-2 py-0.5 rounded bg-primary/10 text-primary uppercase">VS CODE RUNTIME</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            When you run a heavy loop script inside Microsoft VS Code, the program reads the exact same array variables in memory millions of times per second. Without a TLB, every single loop cycle would force your physical CPU chip to make two separate trips to your RAM hardware cells, slowing execution heavily. With a TLB running, the very first loop cycle triggers a TLB Miss and fetches the translation from RAM. The next 999,999 cycles trigger a TLB Hit, grabbing the translation from the fast hardware cache instantly.
+          </p>
+<div class="mt-space-md p-space-sm rounded bg-surface-container-lowest font-label-code text-label-code text-tertiary flex items-center justify-between">
+<span>FOR LOOP: 1,000,000 ITERS</span>
+<span class="text-outline">MISSES: 1 | HITS: 999,999</span>
+</div>
+</div>
+<!-- Analogy Card -->
+<div class="rounded bg-surface-container border border-outline-variant/30 p-space-md hover:border-secondary/60 transition-colors">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">school</span>
+<h3 class="font-headline-sm text-headline-sm text-secondary font-bold">🎒 Everyday Example (5th Grader)</h3>
+</div>
+<span class="font-label-tag text-[10px] px-2 py-0.5 rounded bg-secondary/10 text-secondary uppercase">DESK STICKY NOTE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Imagine you are a receptionist working at a massive office desk. Every time a customer calls to ask for a manager's phone extension number, you have to stand up, walk all the way down the hallway to the back records room, look up the name in a massive phonebook directory layout, and walk back. This takes way too long! To solve this, you stick a yellow paper Sticky Note right onto the edge of your computer monitor showing the three most frequently called numbers. Now, when a call comes in, you look at the sticky note on your desk instantly (TLB Hit) instead of walking to the back room (TLB Miss)!
+          </p>
+<div class="mt-space-md p-space-sm rounded bg-surface-container-lowest font-label-code text-label-code text-secondary flex items-center justify-between">
+<span>STICKY NOTE = TLB CACHE</span>
+<span class="text-outline">RECORDS ROOM = SYSTEM RAM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= SECTION 2: STRUCTURAL DISSECTION ================= -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-space-sm">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center h-8 w-8 rounded bg-primary-container/20 text-primary-container font-headline-sm font-bold border border-primary-container/40">2</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+            Structural Dissection (The Double-Trip Penalty vs. Cache Lookup Map)
+          </h2>
+</div>
+<span class="hidden md:inline-flex font-label-tag text-label-tag text-outline uppercase tracking-widest">ARCHITECTURE_FLOW_GRAPH</span>
+</div>
+<!-- Split Pane Structural Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left Side: Interactive Traffic Lanes Diagram (7 Cols) -->
+<div class="lg:col-span-7 rounded bg-surface-container border border-outline-variant/30 p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">alt_route</span>
+<h3 class="font-label-code text-label-code text-primary font-bold uppercase tracking-wider">
+                  THE HARDWARE TLB CACHE LOOKUP TRAFFIC LANES
+                </h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-[11px] font-label-tag text-tertiary">SVG PIPELINE MONITOR</span>
+</div>
+<!-- Visual Flowchart Canvas -->
+<div class="rounded bg-surface-container-lowest p-space-md border border-outline-variant/20 relative space-y-space-md">
+<!-- Top Origin Node -->
+<div class="flex items-center justify-center">
+<div class="px-4 py-2 rounded bg-surface-container-high border border-outline-variant text-center transition-all duration-300" id="flow-origin">
+<div class="font-label-tag text-[10px] text-outline uppercase">EXECUTION STAGE</div>
+<div class="font-label-code text-label-code font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">pin</span>
+                    Virtual Address Issued (VPN + Offset)
+                  </div>
+</div>
+</div>
+<!-- Interconnecting Arrow Down -->
+<div class="flex justify-center text-outline">
+<span class="material-symbols-outlined text-[20px]">arrow_downward</span>
+</div>
+<!-- Decision Node -->
+<div class="flex items-center justify-center">
+<div class="px-6 py-3 rounded-xl bg-surface-container border-2 border-primary-container text-center shadow-[0_0_16px_rgba(0,210,255,0.2)] transition-all duration-300" id="flow-decision">
+<div class="font-label-tag text-[10px] text-primary uppercase font-bold tracking-widest">ON-CHIP MMU PARALLEL MATCH</div>
+<div class="font-label-code text-label-code font-bold text-on-surface mt-0.5">
+                    Is Virtual Page Number (VPN) in TLB Cache?
+                  </div>
+</div>
+</div>
+<!-- Branches Split -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<!-- YES Branch (Hit) -->
+<div class="rounded p-space-sm bg-surface-container-low border border-tertiary-container/30 transition-all duration-300" id="flow-hit-branch">
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-tag text-[11px] font-bold">BRANCH YES [HIT: ~98%]</span>
+<span class="font-label-code text-label-code text-tertiary font-bold">1 ns</span>
+</div>
+<div class="space-y-2 font-label-code text-[12px]">
+<div class="p-2 rounded bg-surface-container-high flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>TLB Hit ➔ Fetch PFN in 1ns</span>
+</div>
+<div class="flex justify-center text-tertiary">
+<span class="material-symbols-outlined text-[14px]">south</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">inventory_2</span>
+<span>Single RAM Data Access (100ns)</span>
+</div>
+</div>
+<div class="mt-2 text-[11px] font-label-tag text-tertiary text-right">TOTAL: 101 ns (SINGLE TRIP)</div>
+</div>
+<!-- NO Branch (Miss) -->
+<div class="rounded p-space-sm bg-surface-container-low border border-error/30 transition-all duration-300" id="flow-miss-branch">
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 rounded bg-error/10 text-error font-label-tag text-[11px] font-bold">BRANCH NO [MISS: ~2%]</span>
+<span class="font-label-code text-label-code text-error font-bold">201 ns</span>
+</div>
+<div class="space-y-2 font-label-code text-[12px]">
+<div class="p-2 rounded bg-surface-container-high flex items-center gap-2 text-error">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>TLB Miss ➔ Read Page Table in RAM (100ns)</span>
+</div>
+<div class="flex justify-center text-outline">
+<span class="material-symbols-outlined text-[14px]">south</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-[16px]">cached</span>
+<span>Update TLB Cache Entry</span>
+</div>
+<div class="flex justify-center text-outline">
+<span class="material-symbols-outlined text-[14px]">south</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">inventory_2</span>
+<span>Read RAM Data Block (100ns)</span>
+</div>
+</div>
+<div class="mt-2 text-[11px] font-label-tag text-error text-right">TOTAL: 201 ns (DOUBLE-TRIP TAX)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-sm font-label-code text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>HARDWARE BUS: RV64 MEMORY BUS 8-BYTE INTERLEAVE</span>
+<span class="text-primary">TAG ARRAY: CAM PARALLEL COMPARATORS</span>
+</div>
+</div>
+<!-- Right Side: The Mathematical Performance Matrix (5 Cols) -->
+<div class="lg:col-span-5 rounded bg-surface-container border border-outline-variant/30 p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">functions</span>
+<h3 class="font-label-code text-label-code text-primary-container font-bold uppercase tracking-wider">
+                  THE MATHEMATICAL PERFORMANCE MATRIX
+                </h3>
+</div>
+<span class="font-label-tag text-[10px] text-tertiary">EAT EVALUATOR</span>
+</div>
+<!-- Formula Equation Box -->
+<div class="rounded bg-surface-container-lowest border-2 border-primary-container/40 p-space-sm space-y-2">
+<div class="font-label-tag text-[10px] text-outline uppercase tracking-wider">Standard Hardware EAT Equation</div>
+<div class="font-label-code text-label-code text-primary font-bold overflow-x-auto py-1">
+                EAT = (Hit Rate × (TLB Time + RAM Time)) + ((1 - Hit Rate) × (TLB Time + 2 × RAM Time))
+              </div>
+</div>
+<!-- Interactive Slider Workbench -->
+<div class="mt-space-md space-y-space-sm bg-surface-container-low p-space-sm rounded border border-outline-variant/20">
+<div class="flex items-center justify-between">
+<label class="font-label-tag text-label-tag text-on-surface uppercase font-bold" for="hit-rate-slider">
+                  Simulate Hit Ratio (h):
+                </label>
+<span class="font-label-code text-label-code text-tertiary font-bold" id="slider-hit-val">98%</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary-container" id="hit-rate-slider" max="100" min="0" type="range" value="98"/>
+<div class="grid grid-cols-2 gap-space-xs text-label-code text-[11px]">
+<div class="p-2 rounded bg-surface-container border border-outline-variant/20">
+<div class="text-outline">Hit Path Latency</div>
+<div class="text-tertiary font-bold mt-0.5">1ns + 100ns = 101ns</div>
+</div>
+<div class="p-2 rounded bg-surface-container border border-outline-variant/20">
+<div class="text-outline">Miss Path Latency</div>
+<div class="text-error font-bold mt-0.5">1ns + 200ns = 201ns</div>
+</div>
+</div>
+<!-- Computed Output Display -->
+<div class="p-space-sm rounded bg-surface-container-high border border-primary-container/30 flex items-center justify-between">
+<div>
+<div class="font-label-tag text-[10px] text-outline uppercase">Computed Effective Access Time</div>
+<div class="font-headline-sm text-headline-sm text-primary-container font-bold font-label-code" id="live-eat-calc">
+                    103.00 ns
+                  </div>
+</div>
+<div class="text-right">
+<div class="font-label-tag text-[10px] text-outline uppercase">Delay Overhead</div>
+<div class="font-label-code text-label-code text-tertiary font-bold" id="live-overhead">+2.00%</div>
+</div>
+</div>
+</div>
+<!-- Explanatory Breakdown Callout -->
+<div class="mt-space-md space-y-2 text-label-code text-[12px] text-on-surface-variant">
+<div class="flex items-start gap-2">
+<span class="text-tertiary font-bold shrink-0">✓ Hit Path Breakdown:</span>
+<span>Lookup translation in TLB cache (1ns), then fetch target data line from RAM (100ns). Single trip penalty: <strong class="text-on-surface">101 ns</strong>.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="text-error font-bold shrink-0">✗ Miss Path Breakdown:</span>
+<span>TLB search miss (1ns), page table lookup in RAM (100ns), then actual data read in RAM (100ns). Double trip penalty: <strong class="text-on-surface">201 ns</strong>.</span>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-2 border-t border-outline-variant/30 text-label-tag text-[10px] text-outline font-label-tag">
+            DERIVATION VALIDATION: RISC-V MMU HARDWARE SV39 PROTOCOL SPECIFICATION
+          </div>
+</div>
+</div>
+<!-- Below the diagram: Deep Dive Bullet Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- 1. The TLB Cache Matrix Tier -->
+<div class="rounded bg-surface-container border border-outline-variant/30 p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2 text-primary font-label-code text-label-code font-bold">
+<span class="material-symbols-outlined text-[18px]">view_module</span>
+<span>The TLB Cache Matrix Tier</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-3">
+              Small, fully associative hardware cells sitting right next to the execution execution blocks on the physical CPU chip.
+            </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low border border-outline-variant/20">
+<span class="font-label-tag text-[10px] text-primary uppercase font-bold">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Modern hardware processors include tiny TLBs holding between 64 and 1024 translation rows, running at the absolute maximum speed of the electronic clock cycles.
+            </p>
+</div>
+</div>
+<!-- 2. The Double-Memory Read Tax -->
+<div class="rounded bg-surface-container border border-outline-variant/30 p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2 text-error font-label-code text-label-code font-bold">
+<span class="material-symbols-outlined text-[18px]">toll</span>
+<span>The Double-Memory Read Tax</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-3">
+              The inevitable performance tax paid every time a cache miss occurs, forcing the system hardware bus to cycle twice through RAM lines.
+            </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low border border-outline-variant/20">
+<span class="font-label-tag text-[10px] text-error uppercase font-bold">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              When you launch an entirely new application like Google Chrome, the initial cache state is empty, forcing the kernel to pay a flurry of double-trip lookup taxes before caching stabilizes.
+            </p>
+</div>
+</div>
+<!-- 3. Thrashing the Cache -->
+<div class="rounded bg-surface-container border border-outline-variant/30 p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2 text-secondary font-label-code text-label-code font-bold">
+<span class="material-symbols-outlined text-[18px]">sync_problem</span>
+<span>Thrashing the Cache</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-3">
+              A severe efficiency defect where an application jumps randomly across massive memory boundaries, causing the TLB to continuously erase and overwrite its rows, driving hit rates to near 0%.
+            </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low border border-outline-variant/20">
+<span class="font-label-tag text-[10px] text-secondary uppercase font-bold">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              If a developer writes a broken processing script in Python or C that skips randomly across gigantic data frames, it kicks out useful entries continuously, causing the app to lag heavily.
+            </p>
+</div>
+</div>
+</div>
+<!-- Footer Note (Library Analogy) -->
+<div class="p-space-md rounded bg-surface-container-high border-l-4 border-tertiary shadow-sm">
+<div class="flex items-center gap-2 font-label-code text-label-code text-tertiary font-bold mb-1">
+<span class="material-symbols-outlined text-[18px]">local_library</span>
+<span>🎒 Everyday Example: The School Library Analogy</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Think of a student doing homework in a massive school library! The large reference bookshelves are your RAM chips, and the book indices are the page tables. If you have to stand up and walk to the shelf every time you need to check the translation definition of a single word, you waste all your energy. The TLB cache is your personal workspace desktop—you keep the open dictionary sitting right next to your notebook so your eyes can look down instantly!
+        </p>
+</div>
+</section>
+<!-- ================= SECTION 3: LINEAR OPERATIONAL PIPELINE ================= -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-space-sm">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center h-8 w-8 rounded bg-primary-container/20 text-primary-container font-headline-sm font-bold border border-primary-container/40">3</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+            Linear Operational Pipeline (The Address Acceleration Workflow Loop)
+          </h2>
+</div>
+<span class="hidden md:inline-flex font-label-tag text-label-tag text-outline uppercase tracking-widest">STATE_MACHINE_RUNNER</span>
+</div>
+<!-- Horizontal Workflow Timeline Tracker (4 Interactive Nodes) -->
+<div class="rounded bg-surface-container border border-outline-variant/30 p-space-md space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 font-label-code text-label-code text-primary font-bold">
+<span class="material-symbols-outlined text-[18px]">route</span>
+<span>MMU STEP-BY-STEP LOOKUP PIPELINE</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-tag text-[10px] text-outline uppercase">Active Stage:</span>
+<span class="font-label-code text-label-code text-tertiary font-bold px-2 py-0.5 rounded bg-tertiary/10" id="active-stage-indicator">STAGE 1: READY</span>
+</div>
+</div>
+<!-- 4 Sequential Nodes in Track -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm relative">
+<!-- Node 1 -->
+<div class="p-space-sm rounded bg-surface-container-high border-2 border-primary-container transition-all duration-300 relative group" id="pipe-node-1">
+<div class="flex items-center justify-between mb-2">
+<span class="h-6 w-6 rounded-full bg-primary-container text-on-primary font-label-code text-xs font-bold flex items-center justify-center">1</span>
+<span class="font-label-tag text-[10px] text-primary uppercase font-semibold">STAGE 01</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">VPN Isolation</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              The CPU execution core issues a virtual memory address line request, isolating the Virtual Page Number (VPN) tracking bits.
+            </p>
+</div>
+<!-- Node 2 -->
+<div class="p-space-sm rounded bg-surface-container-low border border-outline-variant/30 transition-all duration-300 relative group" id="pipe-node-2">
+<div class="flex items-center justify-between mb-2">
+<span class="h-6 w-6 rounded-full bg-surface-container-highest text-on-surface font-label-code text-xs font-bold flex items-center justify-center">2</span>
+<span class="font-label-tag text-[10px] text-outline uppercase font-semibold">STAGE 02</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Parallel Cache Search</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              The Memory Management Unit (MMU) chip sweeps the physical TLB hardware lanes in parallel within 1 nanosecond. If the VPN matches an active tag, it extracts the Physical Frame Number (PFN) instantly.
+            </p>
+</div>
+<!-- Node 3 -->
+<div class="p-space-sm rounded bg-surface-container-low border border-outline-variant/30 transition-all duration-300 relative group" id="pipe-node-3">
+<div class="flex items-center justify-between mb-2">
+<span class="h-6 w-6 rounded-full bg-surface-container-highest text-on-surface font-label-code text-xs font-bold flex items-center justify-center">3</span>
+<span class="font-label-tag text-[10px] text-outline uppercase font-semibold">STAGE 03</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">The Fallback RAM Walk</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              If the cache searches empty, a TLB Miss is flagged. The hardware core drops down, travels across the motherboard bus lines to read the page table stored in RAM, incurring a heavy clock penalty.
+            </p>
+</div>
+<!-- Node 4 -->
+<div class="p-space-sm rounded bg-surface-container-low border border-outline-variant/30 transition-all duration-300 relative group" id="pipe-node-4">
+<div class="flex items-center justify-between mb-2">
+<span class="h-6 w-6 rounded-full bg-surface-container-highest text-on-surface font-label-code text-xs font-bold flex items-center justify-center">4</span>
+<span class="font-label-tag text-[10px] text-outline uppercase font-semibold">STAGE 04</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Cache Row Refresh</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              The hardware copies the newly discovered PFN translation, inserts it as a new row entry inside the TLB cache structure, and drops the target data back to the User Mode app.
+            </p>
+</div>
+</div>
+<!-- Sequential Process Rules Strip -->
+<div class="p-space-sm rounded bg-surface-container-lowest border border-outline-variant/20 flex flex-wrap items-center justify-between gap-space-sm text-label-code text-label-code text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>HARDWARE RULE: TLB lines update atomically via MMU hardware logic without kernel software trapping.</span>
+</div>
+<span class="font-label-tag text-outline text-[11px]">MMU REPLACEMENT ALGORITHM: PSEUDO-LRU</span>
+</div>
+</div>
+<!-- Two Pedagogical Support Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Card 1: Effective Access Time Solving Activity -->
+<div class="rounded bg-surface-container border border-primary-container/30 p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">calculate</span>
+<h3 class="font-headline-sm text-headline-sm text-primary-container font-bold">
+                  💻 Effective Access Time Solving Activity
+                </h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-container/10 font-label-tag text-[10px] text-primary font-bold">CHALKBOARD EXERCISE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-space-md leading-relaxed">
+              Present two mathematical performance scenarios on the chalkboard ➔
+            </p>
+<div class="space-y-space-sm font-label-code text-label-code">
+<!-- Problem 1 -->
+<div class="p-space-sm rounded bg-surface-container-low border border-tertiary/20">
+<div class="text-tertiary font-bold flex items-center justify-between">
+<span>Problem 1: High Locality (90% Hit Rate)</span>
+<span class="text-xs text-outline">TLB = 1ns, RAM = 100ns</span>
+</div>
+<div class="text-on-surface mt-1 text-[13px]">
+                  Calculate EAT given a 90% hit rate, 1ns TLB speed, and 100ns RAM speed:
+                </div>
+<div class="mt-2 p-2 rounded bg-surface-container-lowest text-tertiary font-mono text-[13px]">
+                  EAT = 0.90 × (1 + 100) + 0.10 × (1 + 200) = 111 ns
+                </div>
+</div>
+<!-- Problem 2 -->
+<div class="p-space-sm rounded bg-surface-container-low border border-error/20">
+<div class="text-error font-bold flex items-center justify-between">
+<span>Problem 2: Cache Thrashing (40% Hit Rate)</span>
+<span class="text-xs text-outline">Degraded Locality</span>
+</div>
+<div class="text-on-surface mt-1 text-[13px]">
+                  Drop the hit rate to a poor 40% due to cache thrashing and compute the math:
+                </div>
+<div class="mt-2 p-2 rounded bg-surface-container-lowest text-error font-mono text-[13px]">
+                  EAT = 0.40 × (1 + 100) + 0.60 × (1 + 200) = 161 ns
+                </div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-2 border-t border-outline-variant/30 font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">trending_down</span>
+<span>Have students map the mathematical results directly to cache degradation concepts.</span>
+</div>
+</div>
+<!-- Card 2: Grocery Shopping Analogy -->
+<div class="rounded bg-surface-container border border-secondary/30 p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">shopping_cart</span>
+<h3 class="font-headline-sm text-headline-sm text-secondary font-bold">
+                  🎒 Grocery Shopping Analogy
+                </h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary/10 font-label-tag text-[10px] text-secondary font-bold">INTUITIVE MAPPING</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-space-md leading-relaxed">
+              Step-by-step physical breakdown of the hardware workflow:
+            </p>
+<div class="space-y-space-sm font-body-md text-body-md">
+<div class="p-space-sm rounded bg-surface-container-low border-l-4 border-primary">
+<strong class="text-primary font-label-code block text-label-code">Step 1 // VPN Isolation:</strong>
+                You need to cook a recipe using salt.
+              </div>
+<div class="p-space-sm rounded bg-surface-container-low border-l-4 border-tertiary">
+<strong class="text-tertiary font-label-code block text-label-code">Step 2 // Parallel Cache Search:</strong>
+                You look into your small spice cabinet right above the kitchen stove counter line.
+              </div>
+<div class="p-space-sm rounded bg-surface-container-low border-l-4 border-error">
+<strong class="text-error font-label-code block text-label-code">Step 3 // Fallback RAM Walk:</strong>
+                The container is empty, forcing you to put on your shoes, drive to the grocery warehouse store, and hunt down the aisle rows.
+              </div>
+<div class="p-space-sm rounded bg-surface-container-low border-l-4 border-secondary">
+<strong class="text-secondary font-label-code block text-label-code">Step 4 // Cache Row Refresh:</strong>
+                You buy the salt, place the container inside your kitchen cabinet for next time, and finish cooking.
+              </div>
+</div>
+</div>
+<div class="mt-space-md pt-2 border-t border-outline-variant/30 text-label-tag text-[11px] font-label-tag text-outline flex items-center justify-between">
+<span>SPICE CABINET = HARDWARE TLB</span>
+<span class="text-secondary">GROCERY WAREHOUSE = EXTERNAL RAM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= SECTION 4: PARADIGM SHOWDOWN & GUARDRAILS ================= -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-space-sm">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center h-8 w-8 rounded bg-primary-container/20 text-primary-container font-headline-sm font-bold border border-primary-container/40">4</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+            Paradigm Showdown &amp; Guardrails
+          </h2>
+</div>
+<span class="hidden md:inline-flex font-label-tag text-label-tag text-outline uppercase tracking-widest">COMPARATIVE_ANALYSIS</span>
+</div>
+<!-- Side-by-Side Comparative Table -->
+<div class="rounded bg-surface-container border border-outline-variant/30 overflow-hidden shadow-lg">
+<div class="p-space-sm bg-surface-container-high border-b border-outline-variant/30 flex items-center justify-between">
+<div class="font-label-code text-label-code text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">balance</span>
+<span>TLB Cache Lookup (Blazing Fast Internal Track) vs Page Table Walk (Slow External RAM Path)</span>
+</div>
+<span class="font-label-tag text-[10px] text-tertiary">PERFORMANCE AUDIT</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest text-label-tag text-label-tag uppercase text-outline border-b border-outline-variant/20">
+<th class="py-space-sm px-space-md w-1/4">Evaluation Field</th>
+<th class="py-space-sm px-space-md w-3/8 text-primary font-bold">TLB Cache Lookup (Internal Track)</th>
+<th class="py-space-sm px-space-md w-3/8 text-error font-bold">Page Table Walk (External RAM Path)</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y divide-outline-variant/20">
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-sm px-space-md font-label-code text-label-code text-on-surface font-bold">
+                  Physical Location
+                </td>
+<td class="py-space-sm px-space-md text-tertiary font-label-code">
+                  On-Chip CPU Silicon (Right inside MMU)
+                </td>
+<td class="py-space-sm px-space-md text-on-surface-variant font-label-code">
+                  Off-Chip RAM Memory Storage (Across the bus)
+                </td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-sm px-space-md font-label-code text-label-code text-on-surface font-bold">
+                  Access Speed Cost
+                </td>
+<td class="py-space-sm px-space-md text-tertiary font-label-code font-bold">
+                  Typically 1 nanosecond (&lt;1 cycle)
+                </td>
+<td class="py-space-sm px-space-md text-error font-label-code font-bold">
+                  100 nanoseconds or more (~200+ cycles)
+                </td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-sm px-space-md font-label-code text-label-code text-on-surface font-bold">
+                  Directory Scope
+                </td>
+<td class="py-space-sm px-space-md text-on-surface-variant">
+                  Tracks a tiny handful of recent translations (64 - 1024 active entries)
+                </td>
+<td class="py-space-sm px-space-md text-on-surface-variant">
+                  Maps the complete, massive address footprint of the entire process (Gigabytes)
+                </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="rounded bg-gradient-to-r from-error/10 via-surface-container to-surface-container border-l-4 border-error p-space-md shadow-md">
+<div class="flex items-center gap-2 font-label-code text-label-code text-error font-bold mb-1 uppercase tracking-wider">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+<span>Common Mistakes Warning Banner</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Do not assume a 99% hit rate means performance overhead is zero! Because a single TLB Miss costs double the time of a standard RAM access, even a tiny 1% drop in your hit rate can cause your average effective access time to spike significantly. Hardware caches demand high locality of reference to keep your systems running smoothly!
+        </p>
+</div>
+<!-- Interview Takeaway Panel -->
+<div class="rounded bg-surface-container border-2 border-secondary/40 p-space-md shadow-[0_0_24px_rgba(221,183,255,0.08)] space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 font-headline-sm text-headline-sm text-secondary font-bold">
+<span class="material-symbols-outlined text-[24px]">psychology</span>
+<span>Interview Takeaway Panel: The Context Switch TLB Flush</span>
+</div>
+<span class="px-2.5 py-1 rounded bg-secondary/15 font-label-tag text-label-tag text-secondary uppercase font-bold">
+            HIGH-FREQUENCY INTERVIEW QUESTION
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          TLB acceleration is the absolute foundational engine that makes virtual memory architectures practical in modern high-speed computing. However, because the cache tracks hardware states directly, when the OS referee triggers a context switch between different unique PIDs, it must violently flush (wipe out) the entire TLB cache table to prevent App A from accidentally using App B's old address bookmarks. If a developer forces too many context switches between heavy tasks like Spotify and Chrome, the continuous flushes will drop hit rates to zero, causing fatal thrashing lags (just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling down!).
+        </p>
+<div class="p-space-sm rounded bg-surface-container-lowest border border-outline-variant/30 flex flex-wrap items-center justify-between gap-space-sm text-label-code text-label-code">
+<span class="text-secondary font-bold">ARCH MITIGATION: ASID (Address Space Identifier) tagged TLB entries.</span>
+<span class="text-outline">RISC-V INSTRUCTION: sfence.vma</span>
+</div>
+</div>
+<!-- Module Completion Footer Bar -->
+<div class="rounded bg-surface-container-high border border-outline-variant/40 p-space-md flex flex-col md:flex-row items-center justify-between gap-space-md shadow-xl">
+<div class="flex items-center gap-space-sm">
+<div class="h-10 w-10 rounded-full bg-tertiary/20 border border-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[24px]">verified_user</span>
+</div>
+<div>
+<div class="font-label-tag text-label-tag text-tertiary font-bold tracking-widest uppercase">
+              MODULE 14 COMPLETE // 100% MASTERY
+            </div>
+<div class="font-label-code text-label-code text-on-surface-variant">
+              CREDITS ACCREDITED - CS 301 KERNEL RUNTIME EVAL PASS
+            </div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-md py-2.5 bg-surface-container hover:bg-surface-container-highest border border-outline-variant/40 hover:border-outline text-on-surface font-label-code text-label-code font-semibold rounded transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>📖 Review L14 Notes</span>
+</button>
+<button class="px-space-md py-2.5 bg-primary-container hover:bg-primary text-on-primary-container font-label-code text-label-code font-bold rounded shadow-[0_0_16px_rgba(0,210,255,0.3)] transition-all flex items-center gap-2">
+<span>Advance to Module 15 (Virtual Memory Swap)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Interactive Logic for TLB Simulator Pipeline and Slider -->
+<script>
+  (function initTLBModule() {
+    // Slider & EAT Math
+    const slider = document.getElementById('hit-rate-slider');
+    const sliderHitVal = document.getElementById('slider-hit-val');
+    const liveEatCalc = document.getElementById('live-eat-calc');
+    const liveOverhead = document.getElementById('live-overhead');
+    const telemetryHitRate = document.getElementById('telemetry-hit-rate');
+    const telemetryEat = document.getElementById('telemetry-eat');
+
+    const TLB_TIME = 1; // 1 ns
+    const RAM_TIME = 100; // 100 ns
+
+    function updateEAT(hitPercent) {
+      const h = hitPercent / 100;
+      // Formula: (h * (TLB + RAM)) + ((1 - h) * (TLB + 2 * RAM))
+      const hitCost = TLB_TIME + RAM_TIME; // 101ns
+      const missCost = TLB_TIME + 2 * RAM_TIME; // 201ns
+      const eat = (h * hitCost) + ((1 - h) * missCost);
+      const overheadPercent = ((eat - RAM_TIME) / RAM_TIME) * 100;
+
+      sliderHitVal.textContent = hitPercent + '%';
+      liveEatCalc.textContent = eat.toFixed(2) + ' ns';
+      liveOverhead.textContent = '+' + overheadPercent.toFixed(1) + '%';
+      
+      // Update telemetry bar sync
+      telemetryHitRate.textContent = hitPercent + '%';
+      telemetryEat.textContent = eat.toFixed(1) + ' ns';
+
+      // Visual color shift if thrashing
+      if (hitPercent < 60) {
+        sliderHitVal.className = 'font-label-code text-label-code text-error font-bold';
+        liveEatCalc.className = 'font-headline-sm text-headline-sm text-error font-bold font-label-code';
+      } else if (hitPercent < 90) {
+        sliderHitVal.className = 'font-label-code text-label-code text-secondary font-bold';
+        liveEatCalc.className = 'font-headline-sm text-headline-sm text-secondary font-bold font-label-code';
+      } else {
+        sliderHitVal.className = 'font-label-code text-label-code text-tertiary font-bold';
+        liveEatCalc.className = 'font-headline-sm text-headline-sm text-primary-container font-bold font-label-code';
+      }
+    }
+
+    if (slider) {
+      slider.addEventListener('input', (e) => {
+        updateEAT(Number(e.target.value));
+      });
+    }
+
+    // Step-through Pipeline State Machine
+    let currentStep = 1;
+    const stepBtn = document.getElementById('step-pipeline-btn');
+    const resetBtn = document.getElementById('reset-sim-btn');
+    const stageIndicator = document.getElementById('active-stage-indicator');
+
+    const nodes = [
+      document.getElementById('pipe-node-1'),
+      document.getElementById('pipe-node-2'),
+      document.getElementById('pipe-node-3'),
+      document.getElementById('pipe-node-4')
+    ];
+
+    const stageNames = [
+      "STAGE 1: VPN ISOLATION",
+      "STAGE 2: PARALLEL CACHE SEARCH",
+      "STAGE 3: THE FALLBACK RAM WALK",
+      "STAGE 4: CACHE ROW REFRESH"
+    ];
+
+    function renderPipeline() {
+      nodes.forEach((node, index) => {
+        if (!node) return;
+        const stepIndex = index + 1;
+        if (stepIndex === currentStep) {
+          node.className = "p-space-sm rounded bg-surface-container-high border-2 border-primary-container shadow-[0_0_16px_rgba(0,210,255,0.25)] transition-all duration-300 relative group";
+          const badge = node.querySelector('span.h-6');
+          if (badge) badge.className = "h-6 w-6 rounded-full bg-primary-container text-on-primary font-label-code text-xs font-bold flex items-center justify-center animate-pulse";
+        } else if (stepIndex < currentStep) {
+          node.className = "p-space-sm rounded bg-surface-container-low border border-tertiary-container/60 transition-all duration-300 relative group";
+          const badge = node.querySelector('span.h-6');
+          if (badge) badge.className = "h-6 w-6 rounded-full bg-tertiary text-on-tertiary font-label-code text-xs font-bold flex items-center justify-center";
+        } else {
+          node.className = "p-space-sm rounded bg-surface-container-low border border-outline-variant/30 opacity-70 transition-all duration-300 relative group";
+          const badge = node.querySelector('span.h-6');
+          if (badge) badge.className = "h-6 w-6 rounded-full bg-surface-container-highest text-on-surface font-label-code text-xs font-bold flex items-center justify-center";
+        }
+      });
+
+      if (stageIndicator) {
+        stageIndicator.textContent = stageNames[currentStep - 1] || "COMPLETE";
+      }
+
+      // Diagram Highlight synchronizer
+      const flowHit = document.getElementById('flow-hit-branch');
+      const flowMiss = document.getElementById('flow-miss-branch');
+      if (flowHit && flowMiss) {
+        if (currentStep === 2) {
+          flowHit.classList.add('ring-2', 'ring-tertiary');
+          flowMiss.classList.remove('ring-2', 'ring-error');
+        } else if (currentStep === 3) {
+          flowHit.classList.remove('ring-2', 'ring-tertiary');
+          flowMiss.classList.add('ring-2', 'ring-error');
+        } else {
+          flowHit.classList.remove('ring-2', 'ring-tertiary');
+          flowMiss.classList.remove('ring-2', 'ring-error');
+        }
+      }
+    }
+
+    if (stepBtn) {
+      stepBtn.addEventListener('click', () => {
+        currentStep = (currentStep % 4) + 1;
+        renderPipeline();
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        currentStep = 1;
+        renderPipeline();
+        if (slider) {
+          slider.value = 98;
+          updateEAT(98);
+        }
+      });
+    }
+
+    // Initial render
+    renderPipeline();
+  })();
+</script></main></div></body></html>
