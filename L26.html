@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-primary-container":"#00566a","tertiary-fixed-dim":"#4edea3","surface-container-low":"#171b26","on-surface-variant":"#bbc9cf","on-primary-fixed-variant":"#004e60","on-secondary-fixed":"#2c0051","surface-dim":"#0f131d","on-secondary":"#490080","on-tertiary-container":"#005b3d","background":"#0f131d","outline":"#859399","primary":"#a5e7ff","surface-container-high":"#262a35","surface":"#0f131d","on-secondary-fixed-variant":"#6900b3","on-primary-fixed":"#001f28","primary-container":"#00d2ff","on-tertiary-fixed-variant":"#005236","on-primary":"#003543","inverse-primary":"#00677f","secondary":"#ddb7ff","error-container":"#93000a","inverse-on-surface":"#2c303b","tertiary-container":"#48d99e","on-secondary-container":"#d6a9ff","on-surface":"#dfe2f1","primary-fixed":"#b6ebff","surface-bright":"#353944","secondary-fixed":"#f0dbff","inverse-surface":"#dfe2f1","surface-tint":"#47d6ff","error":"#ffb4ab","tertiary":"#69f6b9","secondary-fixed-dim":"#ddb7ff","on-background":"#dfe2f1","on-tertiary-fixed":"#002113","surface-container-highest":"#313540","surface-container":"#1c1f2a","surface-variant":"#313540","on-error-container":"#ffdad6","secondary-container":"#6f00be","outline-variant":"#3c494e","tertiary-fixed":"#6ffbbe","on-error":"#690005","on-tertiary":"#003824","primary-fixed-dim":"#47d6ff","surface-container-lowest":"#0a0e18"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1.5rem","space-xl":"2.5rem","gutter-mobile":"1rem","space-xs":"0.25rem","space-md":"1rem","margin-mobile":"1.25rem","space-sm":"0.5rem","space-lg":"1.5rem","margin":"3rem"},"fontFamily":{"label-code":["JetBrains Mono"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-tag":["JetBrains Mono"],"headline-xl-mobile":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"],"headline-md":["Space Grotesk"],"headline-xl":["Space Grotesk"]},"fontSize":{"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex flex-col h-full overflow-hidden"><div class="px-space-md py-space-md bg-surface-container-lowest/60 flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></div><div class="flex flex-col"><span class="font-label-code text-label-code text-primary uppercase font-bold tracking-wider">CS 301 OS CORE</span><span class="font-label-tag text-label-tag text-on-surface-variant">TERM 2025 // SEC 04</span></div></div><span class="font-label-code text-label-tag px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-tertiary-fixed-dim">SYS::ONLINE</span></div><div class="px-space-md py-space-sm bg-surface-container-low"><div class="flex items-center justify-between font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider mb-space-xs"><span>Syllabus Progress</span><span class="text-primary font-label-code">26 / 28 MODULES</span></div><div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary-container w-[92%]"></div></div></div><nav class="flex-1 px-space-sm py-space-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg shadow-[0_0_12px_rgba(0,210,255,0.25)]"><div class="px-space-sm py-space-xs font-label-tag text-label-tag text-outline uppercase tracking-wider">Foundations &amp; Memory</div><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-code text-label-code transition-all" data-path="l00-kernel-bootstrap" href="#"><span class="truncate">L00: Kernel Bootstrap</span><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-code text-label-code transition-all" data-path="l01-virtual-memory" href="#"><span class="truncate">L01: Virtual Memory &amp; MMU</span><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-code text-label-code transition-all" data-path="l02-paging-algorithms" href="#"><span class="truncate">L02: Page Replacement TLB</span><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><div class="pt-space-sm px-space-sm py-space-xs font-label-tag text-label-tag text-outline uppercase tracking-wider">Concurrency &amp; Drivers</div><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-code text-label-code transition-all" data-path="l14-ipc-synchronization" href="#"><span class="truncate">L14: IPC &amp; Semaphores</span><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-code text-label-code transition-all" data-path="l18-io-device-drivers" href="#"><span class="truncate">L18: Network Ring Buffers</span><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><div class="pt-space-sm px-space-sm py-space-xs font-label-tag text-label-tag text-outline uppercase tracking-wider">Kernel Protection &amp; Network</div><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-code text-label-code transition-all" data-path="l24-packet-filtering-hooks" href="#"><span class="truncate">L24: Netfilter Socket Hooks</span><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-code text-label-code transition-all" data-path="l25-ebpf-telemetry" href="#"><span class="truncate">L25: eBPF Tracepoints</span><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-space-xs transition-all bg-primary-container text-on-primary-container font-bold rounded-lg shadow-[0_0_12px_rgba(0,210,255,0.25)]" data-path="unit-26-firewalls-and-ids" href="#"><span class="truncate font-bold">L26: Firewalls &amp; IDS</span><span class="font-label-tag text-label-tag px-space-xs rounded-DEFAULT bg-primary-container text-on-primary-container animate-pulse">ACTIVE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-code text-label-code transition-all opacity-60" data-path="l27-zero-trust-kernels" href="#"><span class="truncate">L27: Zero-Trust Enclaves</span><span class="font-label-tag text-label-tag text-outline">LOCKED</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-code text-label-code transition-all opacity-60" data-path="l28-capstone-exploit-lab" href="#"><span class="truncate">L28: Rootkit Defense Lab</span><span class="font-label-tag text-label-tag text-outline">LOCKED</span></a></nav><div class="p-space-md bg-surface-container-lowest/80"><div class="flex items-center gap-space-sm p-space-xs rounded-lg bg-surface-container-high"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">terminal</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-code text-label-code text-on-surface truncate">student@cs-lab-09</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">SSH::TTY_2 // UID:1042</span></div></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">CS 301 OPERATING SYSTEMS</span><span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded-DEFAULT bg-secondary-container text-on-secondary-container">UNIT 26</span></div><span class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">Stateful Packet Inspection &amp; Intrusion Detection Engines</span></div></div><nav class="hidden xl:flex items-center gap-space-md px-space-md py-1 bg-surface-container-low rounded-xl" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg"><a aria-current="page" class="transition-colors py-space-xs px-space-sm bg-primary-container text-on-primary-container font-bold rounded-lg" data-path="unit-26-firewalls-and-ids" href="#">Inspection Terminal</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-sm" data-path="firewall-rule-matrix" href="#">Netfilter Rules</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-sm" data-path="ids-signature-heuristics" href="#">Signature Heuristics</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-sm" data-path="kernel-telemetry-logs" href="#">Kernel TTY Stream</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded-DEFAULT bg-surface-container font-label-tag text-label-tag text-outline"><span class="text-tertiary font-label-code">SYN_FLOOD: MITIGATED</span><span class="text-outline-variant">|</span><span class="text-primary font-label-code">DROP RATE: 4.2%</span></div><div class="flex items-center gap-space-xs"><button class="font-label-code text-label-tag px-space-sm py-1.5 rounded-DEFAULT bg-primary-container text-on-primary font-bold shadow-[0_0_16px_rgba(0,210,255,0.3)] hover:shadow-[0_0_24px_rgba(0,210,255,0.6)] transition-all flex items-center gap-space-xs" type="button"><span class="material-symbols-outlined text-[16px]">play_arrow</span><span>SIMULATE DDOS</span></button><button class="font-label-code text-label-tag px-space-sm py-1.5 rounded-DEFAULT bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors flex items-center gap-space-xs" type="button"><span class="material-symbols-outlined text-[16px]">restart_alt</span><span>RESET HOOKS</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Telemetry Strip Banner -->
+<div class="w-full bg-surface-container-lowest py-space-sm px-space-md mb-space-lg rounded-xl shadow-xl flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-code text-label-tag text-primary-fixed uppercase tracking-wider">FIREWALL ENGINE: NETFILTER / IPTABLES HARDWARE STATEFUL INSPECTOR</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-code text-label-tag text-tertiary tracking-wider uppercase">IDS MONITOR: SNORT / SURICATA KERNEL EBPF TELEMETRY PROBE</span>
+</div>
+<div class="hidden lg:flex items-center gap-space-xs">
+<span class="font-label-code text-label-tag text-secondary uppercase tracking-wider">FILTER MODE: HYBRID BOUNDARY DEFENSE // STATEFUL PACKET FILTERING</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-code text-label-tag text-primary tracking-wider uppercase">LATENCY PENALTY: 0.14 ms (SUB-MILLISECOND INLINE INSPECTION)</span>
+</div>
+<div class="hidden xl:flex items-center gap-space-xs">
+<span class="font-label-code text-label-tag text-tertiary-fixed-dim tracking-wider uppercase">SECURITY STATUS: ZERO UNCHECKED INBOUND PACKETS // HEURISTICS ARMED</span>
+</div>
+</div>
+<!-- Interactive Terminal Simulator Header Bar -->
+<div class="w-full bg-surface-container-low p-space-md mb-space-xl rounded-xl shadow-lg flex flex-col md:flex-row items-center justify-between gap-space-md relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-56 h-56 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col z-10">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-code text-label-tag px-space-xs py-0.5 rounded-DEFAULT bg-primary-container text-on-primary font-bold">LIVE TELEMETRY LAB</span>
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">CS 301 // L26 EXPERIMENTAL BENCH</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">
+        L26: Firewalls &amp; Intrusion Detection Systems
+      </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">
+        Dual-layer kernel defenses: Active edge packet drops versus passive deep behavioral telemetry probe hooks.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap z-10">
+<button class="font-label-code text-label-code px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary font-bold shadow-[0_0_20px_rgba(0,210,255,0.4)] hover:brightness-110 active:scale-95 transition-all flex items-center gap-space-xs" id="btn-simulate-ddos" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>[ ▶ ⚡ Simulate Malicious Ingress &amp; Trigger IDS Alert ]</span>
+</button>
+<button class="font-label-code text-label-code px-space-md py-space-sm rounded-lg bg-surface-container-high text-secondary hover:bg-surface-container-highest active:scale-95 transition-all flex items-center gap-space-xs" id="btn-reset-simulator" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>[ 🔄 Reset Network Defense Simulator ]</span>
+</button>
+</div>
+</div>
+<!-- Realtime Alert Broadcast Banner (Dynamic) -->
+<div class="hidden w-full mb-space-lg p-space-md rounded-xl bg-error-container text-on-error-container shadow-xl flex items-start justify-between gap-space-md transition-all duration-300" id="sim-alert-banner">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error text-[28px]">warning</span>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code font-bold uppercase tracking-wider text-error">CRITICAL TELEMETRY EXCEPTION // IDS TRAP FIRED</span>
+<span class="font-body-sm text-body-sm text-on-error-container" id="sim-alert-text">Inbound exploit vector bypassed perimeter via legitimate open socket 443! Snort signature match: [CVE-2024-X90_TROJAN_PAYLOAD]. eBPF ring buffer flooded with outbound exfiltration packets!</span>
+</div>
+</div>
+<button class="font-label-code text-label-tag px-space-xs py-0.5 rounded bg-surface-container-lowest text-on-surface" onclick="document.getElementById('sim-alert-banner').classList.add('hidden')" type="button">DISMISS</button>
+</div>
+<!-- SECTION 1: Core Conceptual Onboarding -->
+<section class="flex flex-col mb-space-xl">
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="font-label-code text-label-tag px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-primary">MODULE 26 // BLOCK 01</span>
+<span class="font-label-tag text-label-tag text-outline tracking-wider uppercase">ARCHITECTURAL TAXONOMY</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mb-space-md">
+      1️⃣ Core Conceptual Onboarding (The Front-Door Bouncer vs. The Security Camera)
+    </h2>
+<!-- The Foundational Question Text Box -->
+<div class="bg-surface-container-low p-space-lg rounded-xl mb-space-md shadow-md relative overflow-hidden">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">help</span>
+<span class="font-label-code text-label-tag text-primary uppercase tracking-widest font-bold">The Foundational Question</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed">
+        A Firewall is a boundary defense mechanism that actively blocks or filters network traffic before it enters your system based on strict predefined rules, whereas an Intrusion Detection System (IDS) is a passive monitoring tool that watches active internal system data loops to flag and alert on suspicious behavior.
+      </p>
+</div>
+<!-- Dual Bento Grid for Motivation and Characteristics -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md mb-space-md">
+<!-- Core Motivation block -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">security</span>
+<span class="font-label-code text-label-tag text-tertiary uppercase tracking-wider font-bold">Core Motivation</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+            Operating system network sockets are continuously exposed to external traffic lines. If malicious packets bypass authentication gates, they can access local device files. The OS must act as a protective referee fence using a dual network guard. A firewall acts as a rigid perimeter filter, enforcing gate laws at the network edge. However, if a threat sneaks inside through a legal open port, the firewall is useless. The system demands a secondary internal layer—an IDS—to continuously trace flowing bytes and look for behavioral warning flags.
+          </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-code text-label-tag text-outline">
+<span>SOCKET PERIMETER: RIGID GATE</span>
+<span>•</span>
+<span>INTERNAL RUNTIME: AUDIT STREAM</span>
+</div>
+<span class="font-label-code text-label-tag text-tertiary">KERNEL DUAL-GUARD ACTIVE</span>
+</div>
+</div>
+<!-- Key Characteristics bullet block -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">fact_check</span>
+<span class="font-label-code text-label-tag text-secondary uppercase tracking-wider font-bold">Key Characteristics</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-high/60">
+<span class="font-label-code text-label-code text-primary font-bold block mb-1">• Port Filtering:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                A rigid firewall rule strategy that opens or plugs specific digital network docks (just like locking or unlocking doors to a warehouse building) to control network traffic entry.
+              </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high/60">
+<span class="font-label-code text-label-code text-tertiary font-bold block mb-1">• Signature-Based Detection:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                An IDS evaluation technique that checks current network packets against a database of known malware fingerprints to spot explicit threats.
+              </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high/60">
+<span class="font-label-code text-label-code text-secondary font-bold block mb-1">• Anomaly-Based Detection:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                An advanced IDS monitoring strategy that builds a baseline blueprint of normal system behavior and sounds an alarm the millisecond traffic patterns deviate wildly.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 1 Application & Analogy Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Technical Card Component -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">terminal</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">💻 Real-World Application Example</h3>
+</div>
+<span class="font-label-code text-label-tag px-space-xs py-0.5 rounded bg-primary-container/20 text-primary">OS RUNTIME</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            When you run an online network task or browse sites inside Google Chrome, your system actively uses a tool like Windows Defender Firewall to block unrequested inbound network connections from hacking tools. However, if a user accidentally downloads a hidden piece of malware that sneaks past the firewall, the malware might activate a background script to silently harvest credentials. A local IDS tool monitors this data flow, spotting that your machine is suddenly blasting multi-gigabyte outbound traffic loops to an unknown server at 3 a.m., throwing an immediate system alert flag.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm font-label-code text-label-tag text-outline flex items-center justify-between">
+<span>PORT: 443 TLS OUTBOUND</span>
+<span class="text-tertiary">IDS LOG: EXFILTRATION SUSPECTED</span>
+</div>
+</div>
+<!-- Analogy Card Component -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">school</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">🎒 Everyday Example (5th Grader)</h3>
+</div>
+<span class="font-label-code text-label-tag px-space-xs py-0.5 rounded bg-secondary-container/20 text-secondary">MENTAL MODEL</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Imagine a secret VIP club house. A Firewall is like a big, tough Bouncer standing right at the front entrance door holding a clipboard guest list. If a stranger approaches whose name isn't written on the paper list, the bouncer violently blocks them from stepping inside. An Intrusion Detection System (IDS) is like a security guard sitting in a back control room watching a row of video Security Cameras! The camera guard doesn't stand at the door or block entry; instead, they watch people who are already inside the club house. If a guest crawls under tables or tries to lock a locker, the camera guard immediately blows a loud whistle to sound the alarm!
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm font-label-code text-label-tag text-outline flex items-center justify-between">
+<span>BOUNCER = FIREWALL (DOOR)</span>
+<span class="text-secondary">CAMERA ROOM = IDS (MONITOR)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Structural Dissection -->
+<section class="flex flex-col mb-space-xl">
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="font-label-code text-label-tag px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-tertiary">MODULE 26 // BLOCK 02</span>
+<span class="font-label-tag text-label-tag text-outline tracking-wider uppercase">SYSTEM ARCHITECTURE &amp; HARDWARE MAPPING</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mb-space-md">
+      2️⃣ Structural Dissection (Perimeter Security Filtering vs. Internal Telemetry Traps)
+    </h2>
+<!-- Split Pane Structural Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md mb-space-md">
+<!-- Left side: Visual Layout Column -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-code text-label-code text-primary font-bold tracking-wider uppercase">THE NETWORK CHIP SECURITY STACK</span>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-outline">HARDWARE • DRIVER • KERNEL</span>
+</div>
+<!-- Flow Diagram -->
+<div class="flex flex-col gap-space-sm font-label-code text-label-code">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">input</span>
+<span class="text-on-surface font-bold">Incoming Network Packet</span>
+</div>
+<span class="text-outline font-label-tag text-label-tag">NIC ETH0 / PHY LAYER</span>
+</div>
+<div class="flex justify-center -my-1 text-primary">
+<span class="material-symbols-outlined">south</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high flex flex-col gap-1 transition-all duration-300" id="diagram-fw-node">
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+                  [ FIREWALL GUARD: Port Filter Rules ]
+                </span>
+<span class="font-label-tag text-label-tag text-outline">NETFILTER HOOK</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1">
+<span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-tag text-label-tag font-bold">Block Access (Drop)</span>
+<span class="text-outline font-label-tag text-label-tag">OR</span>
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary font-label-tag text-label-tag font-bold">Pass Access (Allow)</span>
+</div>
+</div>
+<div class="flex justify-center -my-1 text-primary">
+<span class="material-symbols-outlined">south</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface text-[18px]">hub</span>
+<span class="text-on-surface font-bold">[ INTERIOR NETWORK SYSTEM ]</span>
+</div>
+<span class="text-outline font-label-tag text-label-tag">TCP/IP SOCKET BUFFERS</span>
+</div>
+<div class="flex justify-center -my-1 text-tertiary">
+<span class="material-symbols-outlined">south</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high flex flex-col gap-1 transition-all duration-300" id="diagram-ids-node">
+<div class="flex items-center justify-between">
+<span class="text-tertiary font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                  [ PASSIVE IDS ACCELERATION TRACK: Signature / Anomaly Scanners ]
+                </span>
+<span class="font-label-tag text-label-tag text-tertiary">eBPF TELEMETRY RING</span>
+</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+                Copies live packets asynchronously • Computes baseline entropy • Regex signature lookup
+              </div>
+</div>
+<div class="flex justify-center -my-1 text-secondary">
+<span class="material-symbols-outlined">south</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs text-secondary font-bold">
+<span class="material-symbols-outlined text-[18px]">notification_important</span>
+<span>Trigger Security Alert Log</span>
+</div>
+<span class="text-outline font-label-tag text-label-tag">SYSLOG // SIEM STREAM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right side: Filter Engine Matrix Controller -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-code text-label-code text-secondary font-bold tracking-wider uppercase">THE FILTER ENGINE MATRIX CONTROLLER</span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Row 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-high">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-code text-label-code text-primary font-bold">Inbound/Outbound Port Protocol Rules</span>
+<span class="font-label-tag text-label-tag text-primary bg-primary/10 px-space-xs py-0.5 rounded">ACTIVE STATE</span>
+</div>
+<div class="font-label-code text-label-tag text-on-surface-variant space-y-1">
+<div>DROP INBOUND TCP ANY -&gt; ANY:23 (TELNET)</div>
+<div>ALLOW INBOUND TCP ANY -&gt; LOCAL:443 (TLS)</div>
+<div>DROP INBOUND ICMP ECHO-REQUEST</div>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-high">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-code text-label-code text-tertiary font-bold">Known Attack Signature Fingerprint Registry</span>
+<span class="font-label-tag text-label-tag text-tertiary bg-tertiary/10 px-space-xs py-0.5 rounded">182,491 RULES</span>
+</div>
+<div class="font-label-code text-label-tag text-on-surface-variant space-y-1">
+<div>SIG_7041: NOP_SLED_HEX_\x90\x90\x90\x90</div>
+<div>SIG_8892: LOG4J_JNDI_INJECTION_STR</div>
+<div>SIG_1042: REVERSE_METERPRETER_PAYLOAD</div>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-high">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-code text-label-code text-secondary font-bold">Baseline Anomaly Telemetry Tracker</span>
+<span class="font-label-tag text-label-tag text-secondary bg-secondary/10 px-space-xs py-0.5 rounded">σ = 2.4 DEV_LIMIT</span>
+</div>
+<div class="font-label-code text-label-tag text-on-surface-variant space-y-1">
+<div>BURST_THRESHOLD: 14,000 PKT/SEC</div>
+<div>OFF_HOURS_TRANSFER_MAX: 120 MB/HR</div>
+<div>RAW HEURISTIC ENTROPY: 7.94 (NORMAL)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-outline">TELEMETRY POLLING INTERVAL</span>
+<span class="font-label-code text-label-tag text-primary">KERNEL_IRQ • 100μs</span>
+</div>
+</div>
+</div>
+<!-- Structural Definitions Rows -->
+<div class="flex flex-col gap-space-sm mb-space-md">
+<!-- Def 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col md:flex-row md:items-start justify-between gap-space-sm">
+<div class="flex-1">
+<span class="font-label-code text-label-code text-primary font-bold block mb-1">
+            • Perimeter Port Filtering Layer: Sits directly at the edge of the socket connection channels, evaluating source addresses, destination codes, and data tags instantly before code can hit system resources.
+          </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            💻 Real-World Application Example: A system administrator uses firewall panels to close port 22, completely locking out network connection attempts from external terminal scanners.
+          </p>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-code self-start">IPTABLES INPUT DROP</span>
+</div>
+<!-- Def 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col md:flex-row md:items-start justify-between gap-space-sm">
+<div class="flex-1">
+<span class="font-label-code text-label-code text-tertiary font-bold block mb-1">
+            • Signature-Based Detection Matrix: A fast lookup dictionary that compares bit sequences inside network traffic streams against archived malware profiles.
+          </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            💻 Real-World Application Example: When an explicit virus attempt matches a known string pattern, the IDS flags the database record row, enabling logging scripts to catch the attack vector.
+          </p>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary font-label-code self-start">SNORT AHO-CORASICK</span>
+</div>
+<!-- Def 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col md:flex-row md:items-start justify-between gap-space-sm">
+<div class="flex-1">
+<span class="font-label-code text-label-code text-secondary font-bold block mb-1">
+            • Anomaly-Based Baseline Monitor: Tracks continuous background network telemetry metrics (such as daily average byte counts or process communication rates) to map standard operating patterns.
+          </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            💻 Real-World Application Example: If Spotify suddenly shifts from loading audio streaming packets to scanning internal file directories, the anomaly monitor flags the deviation, alerting the kernel core referee.
+          </p>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-label-code self-start">ZEEK BEHAVIOR STATE</span>
+</div>
+</div>
+<!-- Section 2 Footer Analogy -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">school</span>
+<div class="flex flex-col">
+<span class="font-label-code text-label-tag text-secondary uppercase tracking-wider font-bold mb-0.5">🎒 Everyday Example</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Let's complete the school building security comparison! A firewall is a metal ticket gate set up at the school entrance—you must slide a valid badge to walk through the steel bars. An IDS is a smoke detector placed inside the cafeteria ceiling grid. The smoke detector doesn't check badges or lock doors, but the instant it senses thick smoke variables in the air, it rings the emergency fire bell to notify the principal!
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Linear Operational Pipeline -->
+<section class="flex flex-col mb-space-xl">
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="font-label-code text-label-tag px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-secondary">MODULE 26 // BLOCK 03</span>
+<span class="font-label-tag text-label-tag text-outline tracking-wider uppercase">INGRESS INSPECTION CHRONOLOGY</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mb-space-md">
+      3️⃣ Linear Operational Pipeline (The Packet Sorting &amp; Analysis Sequence)
+    </h2>
+<!-- Horizontal Workflow Timeline Tracker Layout -->
+<div class="w-full bg-surface-container-low p-space-lg rounded-xl shadow-md mb-space-md">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md relative">
+<!-- Node 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-high flex flex-col justify-between transition-all duration-300" id="pipe-node-1">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-code text-label-tag px-space-xs py-0.5 rounded bg-primary-container text-on-primary font-bold">NODE 01</span>
+<span class="material-symbols-outlined text-primary text-[20px]">router</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">
+              1. Peripheral Packet Influx
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              External data packet packets arrive down the hardware network card, routing into the virtual device driver file channels.
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs font-label-code text-label-tag text-outline">
+            NIC DMA • RX Ring Buffer
+          </div>
+</div>
+<!-- Node 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-high flex flex-col justify-between transition-all duration-300" id="pipe-node-2">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-code text-label-tag px-space-xs py-0.5 rounded bg-primary-container text-on-primary font-bold">NODE 02</span>
+<span class="material-symbols-outlined text-primary text-[20px]">filter_alt</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">
+              2. Firewall Rule Matrix Filter
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              The network firewall engine intercepts the packets, cross-referencing their target port number against the allowed table rules. Malicious requests are dropped instantly.
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs font-label-code text-label-tag text-outline">
+            Iptables PREROUTING • Drop / Accept
+          </div>
+</div>
+<!-- Node 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-high flex flex-col justify-between transition-all duration-300" id="pipe-node-3">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-code text-label-tag px-space-xs py-0.5 rounded bg-tertiary-container text-on-tertiary font-bold">NODE 03</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">stream</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">
+              3. Active Stream Flow
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Approved packets cross the boundary into User Mode space, delivering content arrays to active application processes like Google Chrome.
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs font-label-code text-label-tag text-outline">
+            Kernel Sock -&gt; User Memory Syscall
+          </div>
+</div>
+<!-- Node 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-high flex flex-col justify-between transition-all duration-300" id="pipe-node-4">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-code text-label-tag px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary font-bold">NODE 04</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">troubleshoot</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">
+              4. IDS Diagnostic Log Evaluation
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              The internal IDS engine quietly processes a copy of the flowing data stream vector, running tracking metrics against signature files and anomaly calculators to verify system behavior.
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs font-label-code text-label-tag text-outline">
+            Passive Tracepoints • Alert Dispatch
+          </div>
+</div>
+</div>
+</div>
+<!-- Section 3 Dual Activity & Analogy Components -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Traffic Log Sorting Activity -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">psychology</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">💻 Traffic Log Sorting Activity</h3>
+</div>
+<span class="font-label-code text-label-tag px-space-xs py-0.5 rounded bg-primary-container/20 text-primary">INTERACTIVE CHALLENGE</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant mb-space-md space-y-2">
+<p>
+              Present a short raw network traffic log block on the chalkboard → Include lines:
+            </p>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest font-label-code text-label-tag text-on-surface space-y-1">
+<div class="text-error">• 'Blocked unauthorized inbound scan on Port 443'</div>
+<div class="text-secondary">• 'High-volume encrypted outbound transfer initiated at 3:15 AM'</div>
+<div class="text-tertiary">• 'Data match found for known trojan fingerprint x90'</div>
+</div>
+<p>
+              → Have the class debate and sort which entries a firewall rule would catch vs. which entries require an active IDS instead → Prove how a secure system demands both edge filters and behavioral guards.
+            </p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high flex items-center justify-between font-label-code text-label-tag">
+<span class="text-primary">FIREWALL: Line 1 (Edge drop)</span>
+<span class="text-tertiary">IDS: Lines 2 &amp; 3 (Behavior/Signature)</span>
+</div>
+</div>
+<!-- Customs Airport Pipeline Analogy -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">flight_takeoff</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">🎒 Customs Airport Pipeline</h3>
+</div>
+<span class="font-label-code text-label-tag px-space-xs py-0.5 rounded bg-secondary-container/20 text-secondary">AIRPORT ANALOGY</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            A travel passenger approaches the airport international border line (Packet Influx) → A border officer inspects their passport book page to check if they have a valid entry visa sticker (Firewall Filter) → The passenger is approved to walk past the glass gate into the luggage terminal (Active Stream Flow) → A plainclothes police detective watches the passengers in the terminal, looking for shifty eyes or erratic behavior to spot anomalies (IDS Evaluation).
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm font-label-code text-label-tag text-outline flex items-center justify-between">
+<span>VISA STAMP = FIREWALL PASS</span>
+<span class="text-secondary">DETECTIVE = IDS BEHAVIOR TRAP</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Paradigm Showdown & Guardrails -->
+<section class="flex flex-col mb-space-xl">
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="font-label-code text-label-tag px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-highest text-error">MODULE 26 // BLOCK 04</span>
+<span class="font-label-tag text-label-tag text-outline tracking-wider uppercase">HEAD-TO-HEAD MATRIX &amp; ANTI-PATTERNS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mb-space-md">
+      4️⃣ Paradigm Showdown &amp; Guardrails
+    </h2>
+<!-- Side-by-side Comparative Table -->
+<div class="w-full bg-surface-container-low p-space-lg rounded-xl shadow-md mb-space-md overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md border-collapse min-w-[600px]">
+<thead>
+<tr class="bg-surface-container-high text-on-surface font-label-code text-label-code">
+<th class="p-space-sm font-bold uppercase">Evaluation Metric</th>
+<th class="p-space-sm font-bold uppercase text-primary">Network Firewall (Edge Rule Filter)</th>
+<th class="p-space-sm font-bold uppercase text-tertiary">Intrusion Detection System (Behavioral Monitor)</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="bg-surface-container-low hover:bg-surface-container-high/40 transition-colors">
+<td class="p-space-sm font-label-code text-label-code font-bold text-outline">Primary Action</td>
+<td class="p-space-sm text-on-surface font-medium">Blocks or drops unauthorized data at the gate</td>
+<td class="p-space-sm text-on-surface font-medium">Detects and alerts on suspicious movements inside</td>
+</tr>
+<tr class="bg-surface-container-lowest/50 hover:bg-surface-container-high/40 transition-colors">
+<td class="p-space-sm font-label-code text-label-code font-bold text-outline">Security Position</td>
+<td class="p-space-sm text-on-surface">Perimeter shield outside the network stack</td>
+<td class="p-space-sm text-on-surface">Internal detector watching active communication lanes</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container-high/40 transition-colors">
+<td class="p-space-sm font-label-code text-label-code font-bold text-outline">Mitigation Focus</td>
+<td class="p-space-sm text-on-surface">Stops known bad ports and address sources</td>
+<td class="p-space-sm text-on-surface">Flags zero-day anomalies and hidden malicious scripts</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="w-full bg-surface-container-low p-space-lg rounded-xl shadow-md mb-space-md flex flex-col md:flex-row items-start gap-space-md">
+<div class="p-space-xs rounded-lg bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-[32px] text-error">gpp_maybe</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-code text-label-tag px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-bold">ACADEMIC PITFALL WARNING</span>
+<span class="font-headline-sm text-headline-sm text-error font-bold">Common Mistakes Warning Banner</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          An IDS does NOT block network attacks! A very common mistake computer science students make is believing that an IDS will stop a hacker from stealing data. An IDS is entirely passive—it only watches, records logs, and throws alerts! To actively block an attack that is already inside, the operating system must upgrade the system to an Intrusion Prevention System (IPS) which can dynamically rewrite firewall rules on-the-fly!
+        </p>
+</div>
+</div>
+<!-- Architectural Takeaway Panel -->
+<div class="w-full bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code text-label-tag text-tertiary font-bold tracking-widest uppercase">MODULE 26 COMPLETE // 100% MASTERY // CREDITS ACCREDITED</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">CS301 KERNEL CYBERSECURITY &amp; NETWORK SYSTEMS</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="font-label-code text-label-code px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span>[ 📖 Review L26 Notes ]</span>
+</button>
+<button class="font-label-code text-label-code px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary font-bold shadow-[0_0_16px_rgba(0,210,255,0.3)] hover:brightness-110 transition-all flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+<span>[ 🚀 Advance to Final Operating Systems Capstone Exam &amp; Lab → ]</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive Simulator Script -->
+<script>
+    (function () {
+      const simulateBtn = document.getElementById('btn-simulate-ddos');
+      const resetBtn = document.getElementById('btn-reset-simulator');
+      const alertBanner = document.getElementById('sim-alert-banner');
+      const alertText = document.getElementById('sim-alert-text');
+      const fwNode = document.getElementById('diagram-fw-node');
+      const idsNode = document.getElementById('diagram-ids-node');
+      const pipeNodes = [
+        document.getElementById('pipe-node-1'),
+        document.getElementById('pipe-node-2'),
+        document.getElementById('pipe-node-3'),
+        document.getElementById('pipe-node-4')
+      ];
+
+      if (simulateBtn && alertBanner) {
+        simulateBtn.addEventListener('click', function () {
+          alertBanner.classList.remove('hidden');
+          alertText.innerHTML = "<strong>CRITICAL EXPLOIT SEQUENCE ACTIVATED:</strong> Syn-flood bypassed filter via allowed Port 443! Snort engine triggered: <code>SIG_7041 [NOP_SLED_HEX]</code> at memory address <code>0x7ffe9a02</code>. Kernel IDS stream dispatched immediate high-priority syslog interrupt!";
+          
+          if (fwNode) {
+            fwNode.classList.add('bg-error-container/40');
+          }
+          if (idsNode) {
+            idsNode.classList.add('bg-secondary-container/40');
+          }
+
+          pipeNodes.forEach((node, idx) => {
+            if (node) {
+              setTimeout(() => {
+                node.classList.add('bg-primary-container/20');
+              }, idx * 150);
+            }
+          });
+        });
+      }
+
+      if (resetBtn && alertBanner) {
+        resetBtn.addEventListener('click', function () {
+          alertBanner.classList.add('hidden');
+          if (fwNode) fwNode.classList.remove('bg-error-container/40');
+          if (idsNode) idsNode.classList.remove('bg-secondary-container/40');
+          pipeNodes.forEach((node) => {
+            if (node) node.classList.remove('bg-primary-container/20');
+          });
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>
