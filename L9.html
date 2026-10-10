@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-on-surface":"#2c303b","on-secondary-container":"#d6a9ff","on-error":"#690005","secondary-fixed-dim":"#ddb7ff","error":"#ffb4ab","inverse-surface":"#dfe2f1","on-surface-variant":"#bbc9cf","primary-fixed-dim":"#47d6ff","background":"#0f131d","on-primary":"#003543","surface-container-high":"#262a35","on-background":"#dfe2f1","primary":"#a5e7ff","error-container":"#93000a","secondary":"#ddb7ff","secondary-container":"#6f00be","surface-container-low":"#171b26","on-tertiary":"#003824","on-tertiary-fixed-variant":"#005236","on-primary-fixed":"#001f28","on-surface":"#dfe2f1","on-secondary-fixed-variant":"#6900b3","tertiary-fixed-dim":"#4edea3","secondary-fixed":"#f0dbff","on-tertiary-fixed":"#002113","inverse-primary":"#00677f","outline-variant":"#3c494e","on-error-container":"#ffdad6","surface-container-lowest":"#0a0e18","surface-dim":"#0f131d","outline":"#859399","surface-container-highest":"#313540","tertiary-container":"#48d99e","on-tertiary-container":"#005b3d","surface-variant":"#313540","on-secondary":"#490080","surface-tint":"#47d6ff","on-primary-fixed-variant":"#004e60","on-secondary-fixed":"#2c0051","tertiary-fixed":"#6ffbbe","tertiary":"#69f6b9","primary-container":"#00d2ff","primary-fixed":"#b6ebff","surface-container":"#1c1f2a","surface":"#0f131d","surface-bright":"#353944","on-primary-container":"#00566a"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xs":"0.25rem","space-sm":"0.5rem","margin-mobile":"1.25rem","gutter":"1.5rem","space-lg":"1.5rem","space-xl":"2.5rem","margin":"3rem","gutter-mobile":"1rem","space-md":"1rem"},"fontFamily":{"headline-xl-mobile":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"headline-sm":["Space Grotesk"],"label-tag":["JetBrains Mono"],"headline-lg-mobile":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-code":["JetBrains Mono"],"headline-xl":["Space Grotesk"],"headline-lg":["Space Grotesk"],"headline-md":["Space Grotesk"]},"fontSize":{"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.25)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-lowest/80"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary-container text-[18px]">terminal</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">KernelLab</span><span class="font-label-tag text-label-tag text-primary">SYSTEMS STUDIO</span></div></div><span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">v4.19</span></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">Curriculum // Core Units</span></div><nav class="flex flex-col px-space-xs gap-0.5" data-active-classes="bg-surface-container-high text-primary-container font-semibold rounded-lg shadow-[inset_2px_0_0_0_#00d2ff]"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="threads-and-concurrency-models" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-primary">L9</span><span class="font-body-sm text-body-sm truncate">Threads &amp; Concurrency</span></div><span class="font-label-tag text-label-tag px-1.5 py-0.5 rounded bg-tertiary-container/20 text-tertiary">ACTIVE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="cpu-scheduling-ii" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L8</span><span class="font-body-sm text-body-sm truncate">CPU Scheduling II</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="cpu-scheduling-i" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L7</span><span class="font-body-sm text-body-sm truncate">CPU Scheduling I</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="process-and-switch" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L6</span><span class="font-body-sm text-body-sm truncate">Process &amp; Switch</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="what-is-a-process" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L5</span><span class="font-body-sm text-body-sm truncate">What Is a Process?</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="the-boot-process" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L4</span><span class="font-body-sm text-body-sm truncate">The Boot Process</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="kernel-design" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L3</span><span class="font-body-sm text-body-sm truncate">Kernel Design</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="pcb-and-context-switch" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L2</span><span class="font-body-sm text-body-sm truncate">PCB &amp; Context Sw</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="os-components" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L1</span><span class="font-body-sm text-body-sm truncate">OS Components</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="course-intro" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L0</span><span class="font-body-sm text-body-sm truncate">Course Intro</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a></nav><div class="px-space-md pt-space-lg pb-space-xs"><span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">Telemetry &amp; Tools</span></div><nav class="flex flex-col px-space-xs gap-0.5" data-active-classes="bg-surface-container-high text-primary-container font-semibold rounded-lg"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="register-inspector" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-body-sm text-body-sm truncate">Register Inspector</span></div><span class="font-label-tag text-label-tag text-tertiary">LIVE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="syscall-debugger" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-body-sm text-body-sm truncate">Syscall Debugger</span></div><span class="font-label-tag text-label-tag text-outline">INT 0x80</span></a></nav></div><div class="p-space-md bg-surface-container-lowest/60 m-space-xs rounded-xl flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase">Concurrency Telemetry</span><span class="w-2 h-2 rounded-full bg-error animate-pulse"></span></div><div class="flex items-center justify-between font-label-code text-label-code"><span class="text-outline">Thread Pool:</span><span class="text-tertiary">24 Active</span></div><div class="flex items-center justify-between font-label-code text-label-code"><span class="text-outline">Mapping Model:</span><span class="text-primary-container">1:1 KLT</span></div><div class="flex items-center justify-between font-label-code text-label-code"><span class="text-outline">Heap Sharing:</span><span class="text-secondary">Unrestricted</span></div><div class="flex items-center justify-between font-label-code text-label-code"><span class="text-outline">Data Race Risk:</span><span class="text-error font-semibold">CRITICAL</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.3)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">school</span><span class="font-headline-sm text-headline-sm text-on-surface">CS 301</span><span class="font-body-sm text-body-sm text-outline-variant">|</span><span class="font-body-sm text-body-sm text-on-surface-variant">Systems Architecture</span></div><div class="hidden xl:flex items-center gap-space-md pl-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-lg"><span class="font-label-tag text-label-tag text-outline">POLLER</span><span class="font-label-code text-label-code text-tertiary">1000 Hz</span></div><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-lg"><span class="font-label-tag text-label-tag text-outline">MODULE</span><span class="font-label-code text-label-code text-on-surface">09 / 14</span></div><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-lg"><span class="font-label-tag text-label-tag text-outline">DIFF</span><span class="font-label-code text-label-code text-secondary">INTERMEDIATE</span></div><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-lg"><span class="font-label-tag text-label-tag text-outline">MODEL</span><span class="font-label-code text-label-code text-primary">1:1 KLT</span></div></div></div><div class="flex items-center gap-space-lg"><div class="hidden md:flex items-center gap-space-sm"><div class="flex flex-col items-end"><span class="font-label-tag text-label-tag text-outline">SYLLABUS PROGRESS</span><span class="font-label-code text-label-code text-primary-container font-semibold">88% COMPLETED</span></div><div class="w-24 h-2 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary-container w-[88%]"></div></div></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-gutter"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Telemetry Metadata Strip -->
+<section class="w-full bg-surface-container-lowest/90 px-space-md py-space-sm rounded-xl mb-space-lg shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-y-space-sm gap-x-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">TELEMETRY BUS:</span>
+<span class="font-label-code text-label-code text-primary font-semibold">ONLINE (NODE 0x09)</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-lg">
+<span class="material-symbols-outlined text-primary text-[16px]">account_tree</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant">ACTIVE THREADS:</span>
+<span class="font-label-code text-label-code text-tertiary font-bold">24 (4 PROCESSES)</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[16px]">device_hub</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant">CONCURRENCY MODEL:</span>
+<span class="font-label-code text-label-code text-primary-fixed-dim font-bold">1:1 (KLT MAPPING)</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[16px]">memory</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant">HEAP MEMORY STATE:</span>
+<span class="font-label-code text-label-code text-tertiary-fixed font-bold">SHARED &amp; LIVE</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-lg">
+<span class="material-symbols-outlined text-primary-container text-[16px]">speed</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant">SYNC OVERHEAD:</span>
+<span class="font-label-code text-label-code text-primary font-bold">&lt; 0.18 µs</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[16px]">verified_user</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant">RACE RISK:</span>
+<span class="font-label-code text-label-code text-tertiary font-bold">GUARDED (MUTEX ACTIVE)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Title & Intro Billboard Header -->
+<header class="relative w-full bg-surface-container-low p-space-lg rounded-xl mb-space-xl overflow-hidden shadow-lg">
+<div class="absolute -right-16 -top-16 w-80 h-80 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute right-32 bottom-0 w-64 h-64 bg-secondary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="max-w-4xl">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary font-label-tag text-label-tag tracking-wider font-bold">LESSON 09</span>
+<span class="text-outline font-label-tag text-label-tag uppercase tracking-widest">// ACADEMIC RUNTIME SERIES</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">
+          🏷️ OPERATING SYSTEMS: L9 - Threads &amp; Concurrency Models
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">
+          An interactive primer designed for systems novices: deconstructing lightweight execution lanes, shared memory fabrics, and CPU core dispatchers.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-sm bg-primary-container text-on-primary-container rounded-lg font-label-code text-label-code font-bold hover:shadow-lg transition-all flex items-center gap-space-xs" id="btn-toggle-telemetry">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+<span>STEP THROUGH ENGINE</span>
+</button>
+</div>
+</div>
+</header>
+<!-- ========================================================================= -->
+<!-- SECTION 1: CORE CONCEPTUAL ONBOARDING -->
+<!-- ========================================================================= -->
+<section class="flex flex-col gap-space-lg mb-space-xl">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded bg-surface-container-highest text-primary font-label-tag text-label-tag tracking-wider font-semibold">MODULE ZONE 01 // CONCURRENCY PRIMITIVES</span>
+<div class="h-px flex-1 bg-surface-container-highest"></div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+        1️⃣ Core Conceptual Onboarding (One Stage, Multiple Actors)
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Building the intuitive mental model: how operating systems evolve from solitary workrooms into multi-lane computing arenas.
+      </p>
+</div>
+<!-- The Foundational Question & Core Motivation Split -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Foundational Box -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">The Foundational Question</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            A Thread (frequently called a lightweight process) is the smallest single unit of execution instructions that can be dispatched by an operating system referee. It represents an independent path of execution running inside a heavy parent Process container room.
+          </p>
+</div>
+<div class="mt-space-md pt-space-md bg-surface-container-lowest/80 p-space-sm rounded-lg flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-outline uppercase">EXECUTION UNIT IDENTITY</span>
+<span class="font-label-code text-label-code text-tertiary">DISPATCH_ENTITY_LWP</span>
+</div>
+</div>
+<!-- Core Motivation Box -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">Core Motivation</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            A standard Process is a heavy execution container that owns resources, but it is single-threaded by default—meaning it can only do one calculation at a time. If an application needs to do multiple tasks simultaneously (like checking spelling while loading text characters), forcing it to launch separate heavy processes wastes massive amounts of RAM and hardware resources. Threads solve this by allowing multiple independent execution lanes to run concurrently inside the exact same shared memory room.
+          </p>
+</div>
+<div class="mt-space-md flex flex-wrap gap-space-sm">
+<span class="px-space-xs py-1 rounded bg-surface-container-high font-label-tag text-label-tag text-outline">RESOURCE OVERHEAD: MINIMAL</span>
+<span class="px-space-xs py-1 rounded bg-surface-container-high font-label-tag text-label-tag text-primary">RAM MULTIPLIER: 1x (SHARED)</span>
+<span class="px-space-xs py-1 rounded bg-surface-container-high font-label-tag text-label-tag text-tertiary">CORE UTILITY: MAXIMIZED</span>
+</div>
+</div>
+</div>
+<!-- Key Characteristics Glowing Cards (3 Columns) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Card 1: Shared Memory Matrix -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-tertiary/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">hub</span>
+</div>
+<span class="font-label-tag text-label-tag text-tertiary uppercase">MATRIX_SEG_01</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Shared Memory Matrix</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">
+          Sibling threads living inside the same process container share 100% of the parent's Text, Data, and Heap memory footprints.
+        </p>
+<div class="pt-space-xs">
+<div class="bg-surface-container-lowest px-space-sm py-1.5 rounded-lg flex items-center justify-between font-label-code text-label-code">
+<span class="text-outline">Access:</span>
+<span class="text-tertiary font-bold">R/W Global Heap</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Private Counters & Stacks -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">layers</span>
+</div>
+<span class="font-label-tag text-label-tag text-primary uppercase">REG_STACK_02</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Private Counters &amp; Stacks</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">
+          Every individual thread retains its own private Program Counter bookmark and an isolated Stack channel to track separate temporary math variables.
+        </p>
+<div class="pt-space-xs">
+<div class="bg-surface-container-lowest px-space-sm py-1.5 rounded-lg flex items-center justify-between font-label-code text-label-code">
+<span class="text-outline">Isolation:</span>
+<span class="text-primary font-bold">PC + Stack Pointer</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Performance Economy -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-secondary/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">speed</span>
+</div>
+<span class="font-label-tag text-label-tag text-secondary uppercase">METRIC_SPEED_03</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Performance Economy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">
+          Creating, swapping, or deleting a thread is massively faster and cheaper than spawning a heavy process because the OS doesn't have to construct an entirely new private memory fence.
+        </p>
+<div class="pt-space-xs">
+<div class="bg-surface-container-lowest px-space-sm py-1.5 rounded-lg flex items-center justify-between font-label-code text-label-code">
+<span class="text-outline">Fork Cost:</span>
+<span class="text-secondary font-bold">~10x-30x Faster</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 1 Application vs Everyday Examples (2 Columns) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Technical Card -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">terminal</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">💻 Real-World Application Example</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            When you run an app like Google Chrome, opening a new tab creates a completely separate, heavy Process with its own isolated memory walls. However, inside that single tab process, Chrome spawns multiple Threads: one thread actively tracks your mouse clicks, another thread handles the page rendering engine, and a third thread downloads image packets. Because they share the exact same Heap memory space, the rendering thread can instantly draw an image fetched by the download thread without sending slow IPC mail messages.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>CHROMIUM MULTI-PROCESS ENGINE</span>
+<span class="text-primary font-label-code text-label-code">PID 4192 // 8 THREADS</span>
+</div>
+</div>
+<!-- Everyday Analogy Card -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[24px]">theater_comedy</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">🎒 Everyday Example (5th Grader)</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Imagine a master Process is a large physical stage in a theater, and the props, chairs, and tables on the stage are the shared memory Heap. Launching a new process is like building an entirely separate theater building next door, which costs a fortune. Spawning a Thread is like adding another actor onto the exact same stage using the exact same props simultaneously! You can have three actors performing separate actions on the same stage at the same time, sharing the same space without spending money on a new building!
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>THE STAGE &amp; ACTORS ANALOGY</span>
+<span class="text-tertiary font-label-code text-label-code">THEATER ROOM = PROCESS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 2: STRUCTURAL DISSECTION (USER vs KERNEL THREADS) -->
+<!-- ========================================================================= -->
+<section class="flex flex-col gap-space-lg mb-space-xl">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded bg-surface-container-highest text-secondary font-label-tag text-label-tag tracking-wider font-semibold">MODULE ZONE 02 // ARCHITECTURAL TOPOLOGY</span>
+<div class="h-px flex-1 bg-surface-container-highest"></div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+        2️⃣ Structural Dissection (User-Level vs. Kernel-Level Thread Mapping Models)
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Mapping user-space software routines through the kernel barrier directly down into silicon hardware registers.
+      </p>
+</div>
+<!-- Split-Pane Structural Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left Side: Interactive Multi-Layer Mapping Diagram (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">schema</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">THREAD MODEL ARCHITECTURES</span>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-bold">1:1 LIVE TOPOLOGY</span>
+</div>
+<!-- The 3 Vertical Layers Diagram -->
+<div class="flex flex-col gap-space-sm">
+<!-- Layer 1: User-Space Threads -->
+<div class="bg-surface-container-high/80 p-space-sm rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-primary font-bold">1. User-Space Threads (Managed by App Library)</span>
+<span class="font-label-tag text-label-tag text-outline">USER PRIVILEGE RING 3</span>
+</div>
+<div class="grid grid-cols-3 gap-space-sm pt-1">
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col items-center text-center">
+<span class="font-label-code text-label-code text-tertiary font-bold">Thread U1</span>
+<span class="font-label-tag text-label-tag text-outline">Stack_U1 | PC: 0x4A10</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col items-center text-center">
+<span class="font-label-code text-label-code text-tertiary font-bold">Thread U2</span>
+<span class="font-label-tag text-label-tag text-outline">Stack_U2 | PC: 0x82C4</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col items-center text-center">
+<span class="font-label-code text-label-code text-tertiary font-bold">Thread U3</span>
+<span class="font-label-tag text-label-tag text-outline">Stack_U3 | PC: 0x1F0B</span>
+</div>
+</div>
+</div>
+<!-- Mapping Connector Connectors -->
+<div class="flex justify-around items-center py-0.5 text-primary">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-[20px] animate-pulse">arrow_downward</span>
+<span class="font-label-tag text-[10px] text-outline">1:1 BUS</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-[20px] animate-pulse">arrow_downward</span>
+<span class="font-label-tag text-[10px] text-outline">1:1 BUS</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-[20px] animate-pulse">arrow_downward</span>
+<span class="font-label-tag text-[10px] text-outline">1:1 BUS</span>
+</div>
+</div>
+<!-- Layer 2: Kernel-Space Threads -->
+<div class="bg-surface-container-high/80 p-space-sm rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-secondary font-bold">2. Kernel-Space Threads (Managed by OS Core)</span>
+<span class="font-label-tag text-label-tag text-outline">SUPERVISOR RING 0</span>
+</div>
+<div class="grid grid-cols-3 gap-space-sm pt-1">
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col items-center text-center">
+<span class="font-label-code text-label-code text-secondary font-bold">Kernel Thread K1</span>
+<span class="font-label-tag text-label-tag text-outline">TCB #101 (READY)</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col items-center text-center">
+<span class="font-label-code text-label-code text-secondary font-bold">Kernel Thread K2</span>
+<span class="font-label-tag text-label-tag text-outline">TCB #102 (RUNNING)</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col items-center text-center">
+<span class="font-label-code text-label-code text-secondary font-bold">Kernel Thread K3</span>
+<span class="font-label-tag text-label-tag text-outline">TCB #103 (READY)</span>
+</div>
+</div>
+</div>
+<!-- Mapping Connector Connectors -->
+<div class="flex justify-around items-center py-0.5 text-secondary">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-[20px] animate-pulse">south</span>
+<span class="font-label-tag text-[10px] text-outline">DISPATCH</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-[20px] animate-pulse">south</span>
+<span class="font-label-tag text-[10px] text-outline">DISPATCH</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-[20px] animate-pulse">south</span>
+<span class="font-label-tag text-[10px] text-outline">DISPATCH</span>
+</div>
+</div>
+<!-- Layer 3: Physical Hardware Cores -->
+<div class="bg-surface-container-high/80 p-space-sm rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-tertiary font-bold">3. Physical CPU Hardware Cores</span>
+<span class="font-label-tag text-label-tag text-outline">OCTA-CORE SILICON DIE</span>
+</div>
+<div class="grid grid-cols-4 gap-space-xs pt-1">
+<div class="bg-surface-container-lowest p-space-xs rounded flex flex-col items-center text-center">
+<span class="font-label-code text-label-code text-on-surface font-semibold">Core 0</span>
+<span class="font-label-tag text-[11px] text-tertiary">Active (K1)</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded flex flex-col items-center text-center">
+<span class="font-label-code text-label-code text-on-surface font-semibold">Core 1</span>
+<span class="font-label-tag text-[11px] text-primary">Active (K2)</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded flex flex-col items-center text-center">
+<span class="font-label-code text-label-code text-on-surface font-semibold">Core 2</span>
+<span class="font-label-tag text-[11px] text-tertiary">Active (K3)</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded flex flex-col items-center text-center">
+<span class="font-label-code text-label-code text-on-surface font-semibold">Core 3</span>
+<span class="font-label-tag text-[11px] text-outline">Idle (Kernel)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>HARDWARE REGISTER PIPELINE ACTIVE</span>
+<span class="text-tertiary font-label-code text-label-code">DIRECT DISPATCH 1:1 CONFIRMED</span>
+</div>
+</div>
+<!-- Right Side: Concurrency Telemetry Status Card (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">analytics</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">THE CONCURRENCY TELEMETRY STATUS</span>
+</div>
+</div>
+<!-- Tracking Model Lanes -->
+<div class="flex flex-col gap-space-sm mb-space-md">
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-on-surface font-bold">Many-to-One Model Lane</span>
+<span class="font-label-tag text-label-tag text-outline">All user threads share single KLT</span>
+</div>
+<span class="px-space-xs py-1 rounded bg-error-container/30 text-error font-label-tag text-label-tag font-semibold">Legacy Green Threads / Blocker Risk</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-primary font-bold">One-to-One Model Lane</span>
+<span class="font-label-tag text-label-tag text-outline">1 user thread per 1 kernel thread</span>
+</div>
+<span class="px-space-xs py-1 rounded bg-tertiary-container/20 text-tertiary font-label-tag text-label-tag font-semibold">True Multicore Parallelism / 1:1 Active</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-secondary font-bold">Many-to-Many Model Lane</span>
+<span class="font-label-tag text-label-tag text-outline">M user threads multiplexed on N KLTs</span>
+</div>
+<span class="px-space-xs py-1 rounded bg-secondary-container/30 text-secondary font-label-tag text-label-tag font-semibold">Hybrid Multiplexing / Complex Scheduler</span>
+</div>
+</div>
+<!-- Live Telemetry Metrics Grid -->
+<div class="grid grid-cols-1 gap-space-xs bg-surface-container-lowest/80 p-space-sm rounded-lg font-label-code text-label-code">
+<div class="flex items-center justify-between py-1">
+<span class="text-outline">Active Scheduler Mappings:</span>
+<span class="text-primary font-bold">8 Cores</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="text-outline">User-Kernel Switch Cost:</span>
+<span class="text-tertiary font-bold">~0.4 µs</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="text-outline">Parallelism Ratio:</span>
+<span class="text-secondary font-bold">100%</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>KERNEL TELEMETRY POLLER</span>
+<span class="text-primary">SAMPLING FREQ: 1 KHZ</span>
+</div>
+</div>
+</div>
+<!-- Below the Diagram: Structural Definitions (Text Rows) -->
+<div class="flex flex-col gap-space-md">
+<!-- Item 1: ULT -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary font-semibold">
+          • User-Level Threads (ULT): Threads managed entirely outside the kernel by a user-space application library. The OS referee is completely blind to them and thinks the process is just a single entity.
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          💻 Real-World Application Example: Older programming platforms or specific web tools use user-level threads. They swap between tasks instantly without calling the OS referee, but if one user thread blocks, the entire process freezes completely.
+        </p>
+</div>
+<!-- Item 2: KLT -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-secondary font-semibold">
+          • Kernel-Level Threads (KLT): Threads managed directly by the operating system core kernel. The scheduler referee maps them directly onto physical CPU cores turn-by-turn.
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          💻 Real-World Application Example: Modern environments like Spotify or Microsoft VS Code run on kernel-level threads. If one thread stalls waiting for a slow disk file, the kernel swaps the CPU core over to keep your music thread running perfectly.
+        </p>
+</div>
+<!-- Item 3: 1:1 Model -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-tertiary font-semibold">
+          • One-to-One (1:1) Mapping Model: Every single user thread maps directly to its own unique kernel thread. This provides ultimate parallel processing power across modern multicore chips.
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          💻 Real-World Application Example: Standard desktop systems like Linux and Windows use the 1:1 model, allowing heavy applications to scale execution directly across all your physical processor cores.
+        </p>
+</div>
+</div>
+<!-- Bottom Footer Note: Everyday Example -->
+<div class="bg-surface-container-high/60 p-space-lg rounded-xl flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">school</span>
+<h4 class="font-headline-sm text-headline-sm font-bold">🎒 Everyday Example</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+        Think of a school classroom project! A User-Level Thread is like a group of students working together at a desk—they coordinate among themselves to trade tools without involving the teacher, but if the teacher tells the desk to stand up, the whole group must stop. A Kernel-Level Thread is when the teacher (the OS Core) assigns a dedicated helper to every single individual student, managing their turns and keeping everyone moving independently!
+      </p>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 3: LINEAR OPERATIONAL PIPELINE -->
+<!-- ========================================================================= -->
+<section class="flex flex-col gap-space-lg mb-space-xl">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded bg-surface-container-highest text-tertiary font-label-tag text-label-tag tracking-wider font-semibold">MODULE ZONE 03 // EXECUTION PIPELINE</span>
+<div class="h-px flex-1 bg-surface-container-highest"></div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+        3️⃣ Linear Operational Pipeline (The Thread Execution &amp; Assessment Flow)
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Step-by-step lifecycle from initialization and parallel hardware execution down to telemetry diagnosis and dissolution.
+      </p>
+</div>
+<!-- Horizontal Workflow Timeline Tracker Layout -->
+<div class="w-full bg-surface-container-low p-space-lg rounded-xl shadow-md overflow-x-auto">
+<div class="min-w-[700px] flex items-center justify-between relative py-space-sm">
+<!-- Connecting Track Line -->
+<div class="absolute top-1/2 left-8 right-8 h-1 bg-surface-container-highest -translate-y-1/2 z-0"></div>
+<!-- Node 1 -->
+<div class="relative z-10 flex flex-col items-center text-center max-w-[160px]">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-code text-label-code font-bold shadow-lg">
+            01
+          </div>
+<span class="font-label-code text-label-code text-primary font-bold mt-space-xs">Parent Thread Fork</span>
+<span class="font-label-tag text-[11px] text-outline">Spawn lightweight lane</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px] z-10 animate-pulse">arrow_forward</span>
+<!-- Node 2 -->
+<div class="relative z-10 flex flex-col items-center text-center max-w-[160px]">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-secondary flex items-center justify-center font-label-code text-label-code font-bold shadow-lg">
+            02
+          </div>
+<span class="font-label-code text-label-code text-secondary font-bold mt-space-xs">Parallel Multi-Core Run</span>
+<span class="font-label-tag text-[11px] text-outline">Kernel schedules on cores</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px] z-10 animate-pulse">arrow_forward</span>
+<!-- Node 3 -->
+<div class="relative z-10 flex flex-col items-center text-center max-w-[160px]">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/30 text-tertiary flex items-center justify-center font-label-code text-label-code font-bold shadow-lg">
+            03
+          </div>
+<span class="font-label-code text-label-code text-tertiary font-bold mt-space-xs">Task Manager Telemetry</span>
+<span class="font-label-tag text-[11px] text-outline">Monitor PIDs &amp; threads</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[24px] z-10 animate-pulse">arrow_forward</span>
+<!-- Node 4 -->
+<div class="relative z-10 flex flex-col items-center text-center max-w-[160px]">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-code text-label-code font-bold shadow-lg">
+            04
+          </div>
+<span class="font-label-code text-label-code text-on-surface font-bold mt-space-xs">Thread Destruction &amp; Join</span>
+<span class="font-label-tag text-[11px] text-outline">Dissolve stacks into heap</span>
+</div>
+</div>
+</div>
+<!-- Sequential Process Rules (Numbered List Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-xl flex gap-space-sm shadow-sm">
+<span class="font-label-code text-label-code text-primary font-bold text-headline-sm">01</span>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-1">1. Parent Thread Fork</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            A process app triggers a threading utility library call, bypasses heavy memory fence allocations, and constructs multiple execution lanes inside its existing boundaries.
+          </p>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex gap-space-sm shadow-sm">
+<span class="font-label-code text-label-code text-secondary font-bold text-headline-sm">02</span>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-1">2. Parallel Multi-Core Run</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            The OS kernel scheduler detects the multiple kernel-level threads, mapping them simultaneously across separate physical CPU hardware cores to execute work concurrently.
+          </p>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex gap-space-sm shadow-sm">
+<span class="font-label-code text-label-code text-tertiary font-bold text-headline-sm">03</span>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-1">3. Task Manager Telemetry</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            System monitoring utilities scan the active PIDs, tracking the distinction between a heavy base process container and the thread count lanes running inside it.
+          </p>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex gap-space-sm shadow-sm">
+<span class="font-label-code text-label-code text-on-surface-variant font-bold text-headline-sm">04</span>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-1">4. Thread Destruction &amp; Join</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Sibling threads complete their independent data calculations, merge their variables back into the parent's shared Heap space, and safely dissolve their private stacks.
+          </p>
+</div>
+</div>
+</div>
+<!-- Diagnostic Activity & Factory Analogy Components -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Diagnostic Activity Card -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">troubleshoot</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">💻 Task Manager Diagnostic Activity</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Open your system's built-in Windows Task Manager or macOS Activity Monitor utility ➔ Toggle the display settings to reveal the 'Threads' telemetry column next to the standard Process name ➔ Observe how an app like Discord or Chrome shows a single process entry but has dozens of active threads running inside it ➔ Have students guess which background components are heavy processes versus lightweight execution lanes.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest/90 p-space-sm rounded-lg flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>TASK MANAGER INSPECTION PATH</span>
+<span class="text-primary font-label-code text-label-code">PID VIEW // THREAD COLUMN</span>
+</div>
+</div>
+<!-- Factory Work Analogy Card -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">precision_manufacturing</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">🎒 Factory Work Analogy</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            A factory assembly room opens its doors (Process Created) ➔ Three workers walk inside to share the same assembly table and tools (Thread Fork) ➔ The inspector counts the number of busy workers standing at the single table row (Task Manager Telemetry) ➔ The workers pack up their individual toolbelts once the shift ends and leave the single room intact (Thread Destruction).
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest/90 p-space-sm rounded-lg flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>ASSEMBLY LINE MAPPING</span>
+<span class="text-secondary font-label-code text-label-code">FACTORY = PROCESS CONTAINER</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 4: PARADIGM SHOWDOWN & GUARDRAILS -->
+<!-- ========================================================================= -->
+<section class="flex flex-col gap-space-lg mb-space-xl">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded bg-surface-container-highest text-error font-label-tag text-label-tag tracking-wider font-semibold">MODULE ZONE 04 // COMPARATIVE EVALUATION</span>
+<div class="h-px flex-1 bg-surface-container-highest"></div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+        4️⃣ Paradigm Showdown &amp; Guardrails
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Rigorous trade-off analysis between heavy process compartmentalization and rapid multi-threaded execution vulnerability.
+      </p>
+</div>
+<!-- Side-by-Side Comparative Table -->
+<div class="w-full bg-surface-container-low rounded-xl overflow-hidden shadow-md">
+<div class="px-space-lg py-space-md bg-surface-container-high/60 flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Heavyweight Process (Isolated Boundary) vs Lightweight Thread (Shared Room)</h3>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-highest text-primary font-bold">ARCHITECTURAL MATRIX</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="bg-surface-container-lowest/80 text-outline font-label-tag text-label-tag uppercase">
+<th class="py-space-md px-space-lg">Evaluation Vector</th>
+<th class="py-space-md px-space-lg text-primary">Heavyweight Process (Isolated Boundary)</th>
+<th class="py-space-md px-space-lg text-tertiary">Lightweight Thread (Shared Room)</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1: Memory Matrix -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-space-md px-space-lg font-label-code text-label-code text-on-surface font-bold">
+                Memory Matrix
+              </td>
+<td class="py-space-md px-space-lg text-on-surface-variant">
+                Strictly isolated walls via private RAM
+              </td>
+<td class="py-space-md px-space-lg text-tertiary font-semibold">
+                Shared parent room Text/Data/Heap
+              </td>
+</tr>
+<!-- Row 2: Creation Speed -->
+<tr class="bg-surface-container-lowest/30 hover:bg-surface-container/50 transition-colors">
+<td class="py-space-md px-space-lg font-label-code text-label-code text-on-surface font-bold">
+                Creation Speed
+              </td>
+<td class="py-space-md px-space-lg text-on-surface-variant">
+                Slow and hardware-expensive
+              </td>
+<td class="py-space-md px-space-lg text-tertiary font-semibold">
+                Blazing fast and ultra-cheap
+              </td>
+</tr>
+<!-- Row 3: Crash Safety -->
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="py-space-md px-space-lg font-label-code text-label-code text-on-surface font-bold">
+                Crash Safety
+              </td>
+<td class="py-space-md px-space-lg text-primary font-semibold">
+                An app crash is completely sandboxed
+              </td>
+<td class="py-space-md px-space-lg text-error font-semibold">
+                One bad thread bug destroys the entire parent process
+              </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col md:flex-row gap-space-md items-start shadow-md">
+<div class="w-12 h-12 rounded-xl bg-error-container/30 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[30px]">warning</span>
+</div>
+<div class="flex flex-col gap-space-xs flex-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-error font-bold">Common Mistakes Warning Banner</span>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-bold uppercase">HAZARD LEVEL 1</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Threads do NOT give you safe isolation partitions! Do not assume threads are safe from each other. Because sibling threads share the exact same Heap and Data memory segments, they can easily corrupt each other's data. If Thread A has a bug and messes up a shared global variable, Thread B will read that corrupted variable and crash the entire application instantly!
+        </p>
+</div>
+</div>
+<!-- Interview Takeaway Panel -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col md:flex-row gap-space-md items-start shadow-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/30 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[30px]">military_tech</span>
+</div>
+<div class="flex flex-col gap-space-xs flex-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">Interview Takeaway Panel</span>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-bold uppercase">CORE RECAP</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Multi-threading is the ultimate mechanism for blazing-fast execution efficiency and data sharing. However, dropping your internal memory walls removes your protective fences. If an unchecked recursive thread script overflows its private Stack memory limits or violates boundaries, it triggers a fatal Segmentation Fault exception error, killing the entire parent PID and closing all sibling tabs instantly (just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling down!).
+        </p>
+</div>
+</div>
+<!-- Interactive Concept Tag Pills -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<span class="px-space-sm py-1 rounded bg-surface-container-high text-primary font-label-tag text-label-tag font-semibold">#Threads</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-high text-secondary font-label-tag text-label-tag font-semibold">#Concurrency</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-high text-tertiary font-label-tag text-label-tag font-semibold">#KLTvsULT</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-high text-primary-fixed-dim font-label-tag text-label-tag font-semibold">#SharedMemory</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-high text-error font-label-tag text-label-tag font-semibold">#RaceConditions</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-high text-outline font-label-tag text-label-tag font-semibold">#DeadlockPrevention</span>
+</div>
+<!-- Bottom Module Completion Verification Block -->
+<div class="w-full bg-surface-container-lowest p-space-lg rounded-xl mt-space-md flex flex-col md:flex-row items-center justify-between gap-space-md shadow-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/30 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[28px]">check_circle</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Module 09 Complete // 100% MASTERY</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Telemetry verified: ULT/KLT, 1:1 Mapping, Shared Heap vs Isolated Stacks, and Concurrency Faults.
+          </p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="px-space-md py-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded-lg font-label-code text-label-code font-semibold transition-colors">
+          Review L9 Notes
+        </button>
+<button class="px-space-md py-space-sm bg-primary-container text-on-primary-container rounded-lg font-label-code text-label-code font-bold hover:shadow-lg transition-all flex items-center gap-space-xs">
+<span>Advance to Module 10 (Synchronization &amp; Race Conditions)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive Client-side Script for Micro-interactions -->
+<script>
+    (function() {
+      const stepBtn = document.getElementById('btn-toggle-telemetry');
+      if (stepBtn) {
+        let isStepping = false;
+        stepBtn.addEventListener('click', function() {
+          isStepping = !isStepping;
+          if (isStepping) {
+            stepBtn.classList.remove('bg-primary-container', 'text-on-primary-container');
+            stepBtn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+            stepBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">pause</span><span>ENGINE DISPATCHING (24 THREADS)</span>';
+          } else {
+            stepBtn.classList.remove('bg-tertiary-container', 'text-on-tertiary-container');
+            stepBtn.classList.add('bg-primary-container', 'text-on-primary-container');
+            stepBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">play_circle</span><span>STEP THROUGH ENGINE</span>';
+          }
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>
