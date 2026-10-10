@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary":"#ddb7ff","on-background":"#dfe2f1","surface-container":"#1c1f2a","on-surface-variant":"#bbc9cf","surface":"#0f131d","primary":"#a5e7ff","surface-container-low":"#171b26","inverse-primary":"#00677f","tertiary-fixed":"#6ffbbe","on-tertiary-fixed-variant":"#005236","inverse-surface":"#dfe2f1","on-surface":"#dfe2f1","tertiary-fixed-dim":"#4edea3","outline":"#859399","secondary-fixed-dim":"#ddb7ff","on-primary":"#003543","error-container":"#93000a","on-secondary-fixed":"#2c0051","on-tertiary-container":"#005b3d","tertiary-container":"#48d99e","surface-container-high":"#262a35","on-tertiary":"#003824","on-error":"#690005","outline-variant":"#3c494e","surface-container-lowest":"#0a0e18","secondary-fixed":"#f0dbff","on-secondary-container":"#d6a9ff","primary-fixed-dim":"#47d6ff","tertiary":"#69f6b9","on-secondary":"#490080","surface-dim":"#0f131d","inverse-on-surface":"#2c303b","on-tertiary-fixed":"#002113","error":"#ffb4ab","secondary-container":"#6f00be","surface-container-highest":"#313540","on-primary-container":"#00566a","surface-bright":"#353944","on-primary-fixed-variant":"#004e60","primary-fixed":"#b6ebff","background":"#0f131d","surface-variant":"#313540","primary-container":"#00d2ff","surface-tint":"#47d6ff","on-error-container":"#ffdad6","on-secondary-fixed-variant":"#6900b3","on-primary-fixed":"#001f28"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-lg":"1.5rem","gutter":"1.5rem","space-sm":"0.5rem","space-md":"1rem","space-xs":"0.25rem","space-xl":"2.5rem","gutter-mobile":"1rem","margin":"3rem","margin-mobile":"1.25rem"},fontFamily:{"headline-lg":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-tag":["JetBrains Mono"],"headline-xl":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"label-code":["JetBrains Mono"],"headline-sm":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"]},fontSize:{"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface min-h-screen selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-50 flex flex-col border-r border-outline-variant/30 shadow-[0_0_24px_rgba(0,0,0,0.6)]"><div class="h-16 px-space-md flex items-center justify-between border-b border-outline-variant/30 bg-surface-container-low"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary-container">terminal</span><span class="font-label-tag text-label-tag text-primary-fixed uppercase tracking-wider">CS301-CORE-V2.4</span></div><span class="px-space-xs py-0.5 rounded bg-tertiary/10 border border-tertiary/40 font-label-tag text-label-tag text-tertiary">ONLINE</span></div><div class="p-space-md bg-surface-container-lowest border-b border-outline-variant/20"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase">Kernel Module Syllabus</span><span class="font-label-tag text-label-tag text-primary-fixed-dim">23 UNITS</span></div><div class="w-full bg-surface-container h-1.5 rounded overflow-hidden"><div class="bg-primary-container h-full w-[95.6%]"></div></div></div><nav class="flex-1 overflow-y-auto p-space-sm space-y-1" data-active-classes="bg-surface-container-high border-l-2 border-primary-container text-primary-fixed font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l00-course-setup-boot-sequence" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L00 Boot Seq &amp; Architecture</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l01-interrupts-traps-system-calls" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L01 Traps &amp; Syscalls</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l02-process-abstraction-pcb" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L02 Process Abstraction</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l03-thread-concurrency-locks" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L03 Threads &amp; Locks</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l04-cpu-scheduling-algorithms" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L04 CPU Schedulers</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l05-virtual-memory-paging" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L05 VM &amp; Paging</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l06-page-replacement-tlb" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L06 Page Replace &amp; TLB</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l07-ipc-pipes-shared-memory" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L07 IPC &amp; Shared Mem</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l08-synchronization-primitives" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L08 Semaphores &amp; Mutex</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l09-deadlocks-bankers-algorithm" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L09 Deadlock Avoidance</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l10-file-systems-inodes" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L10 File Systems &amp; Inodes</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l11-io-devices-driver-model" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L11 I/O Drivers &amp; DMA</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l12-memory-allocation-heap" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L12 Heap &amp; Slab Alloc</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l13-signals-asynchronous-events" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L13 Posix Signals</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l14-virtualization-hypervisors" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L14 Hardware Virt</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l15-containers-namespaces-cgroups" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L15 Namespaces &amp; Cgroups</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l16-network-stack-sockets" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L16 Sockets &amp; Epoll</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l17-real-time-operating-systems" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L17 RTOS Scheduling</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l18-journaling-crash-recovery" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L18 Journaling &amp; Ext4</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l19-microkernels-l4-mach" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L19 Microkernel IPC</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l20-distributed-file-systems" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L20 NFS &amp; Raft Sync</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="l21-hardware-security-enclaves" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>L21 SGX &amp; TPM Enclaves</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 rounded transition-all bg-surface-container-high border-l-2 border-primary-container text-primary-fixed font-semibold" data-path="l22-access-control-and-domains" href="#"><span class="flex items-center gap-space-sm truncate font-label-code text-label-code text-primary-fixed"><span class="material-symbols-outlined text-primary-container text-[16px] animate-pulse">radio_button_checked</span>L22 Access Control &amp; Domains</span><span class="px-1.5 py-0.5 rounded bg-primary-container/20 border border-primary-container font-label-tag text-[10px] text-primary-container">ACTIVE</span></a></nav><div class="p-space-md bg-surface-container-lowest border-t border-outline-variant/30"><div class="flex items-center justify-between text-on-surface-variant font-label-tag text-label-tag"><span>SYS_CLOCK: TSC-SYNC</span><span class="text-tertiary">4.10 GHz</span></div><div class="flex items-center justify-between text-on-surface-variant font-label-tag text-label-tag mt-1"><span>MEM_MAP: E820</span><span class="text-primary-fixed">64GB OK</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30 z-40 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high border border-outline-variant/40"><span class="material-symbols-outlined text-primary text-[18px]">memory</span><span class="font-headline-sm text-[13px] tracking-wider text-on-surface font-bold uppercase">CS 301 OPERATING SYSTEMS</span></div><div class="hidden xl:flex items-center gap-space-xs font-label-tag text-[11px]"><span class="px-2 py-0.5 rounded bg-tertiary/10 border border-tertiary/30 text-tertiary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>SYS_SEC_ACTIVE</span><span class="px-2 py-0.5 rounded bg-secondary-container/30 border border-secondary/40 text-secondary">DOMAIN_RING: RING 3 -&gt; RING 0</span><span class="px-2 py-0.5 rounded bg-surface-container border border-outline-variant/50 text-on-surface-variant">SECURITY_SUB: POSIX ACL / CAPABILITY MATRIX</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center gap-space-xs"><button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded bg-primary-container text-on-primary font-label-tag text-label-tag hover:shadow-[0_0_16px_rgba(0,210,255,0.4)] transition-all" type="button"><span class="material-symbols-outlined text-[16px]">bolt</span><span>Test Access Syscall &amp; Domain Switch</span></button><button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded border border-secondary/40 text-secondary hover:bg-secondary/10 font-label-tag text-label-tag transition-all" type="button"><span class="material-symbols-outlined text-[16px]">restart_alt</span><span>Reset Security Matrix</span></button></div><div class="h-6 w-px bg-outline-variant/40 mx-1"></div><div class="flex items-center gap-space-xs font-label-code text-label-code text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[20px]">tune</span><span class="hidden lg:inline text-primary-fixed">UID: 1000 (KERNEL_LAB)</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-lg py-space-md"><div class="flex flex-col w-full">
+<!-- HERO BANNER -->
+<section class="relative w-full bg-surface-container-lowest p-space-lg rounded-xl mb-space-lg overflow-hidden shadow-2xl">
+<div class="absolute -right-20 -top-24 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -bottom-24 w-96 h-96 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="px-2.5 py-1 rounded bg-primary-container text-on-primary font-label-tag text-label-tag font-bold uppercase tracking-wider">
+            KERNEL_SUB: L22
+          </span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-tertiary font-label-tag text-label-tag flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+            SYS_REF_ONLINE
+          </span>
+</div>
+<div class="font-label-code text-label-code text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">security</span>
+<span>DOMAIN_RING: RING_3 ➔ RING_0 GATE</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs max-w-5xl">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-bold">
+          🏷️ OPERATING SYSTEMS: L22 - Access Control Matrices &amp; Protection Domains
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          An intuitive visual architectural guide for beginners: Discover how the operating system referee enforces security boundaries, slices master permission matrices into ACL columns and Capability rows, and protects digital hardware resources.
+        </p>
+</div>
+<!-- Live Telemetry Strip -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-space-xs pt-space-xs font-label-code text-label-tag">
+<div class="bg-surface-container p-space-sm rounded flex flex-col justify-between">
+<span class="text-on-surface-variant text-[10px] uppercase">SECURITY ARCH</span>
+<span class="text-primary-fixed font-semibold truncate">ACM // MULTI-USER POSIX</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col justify-between">
+<span class="text-on-surface-variant text-[10px] uppercase">SECURITY MODEL</span>
+<span class="text-tertiary font-semibold truncate">HYBRID ACL + CAP HANDLES</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col justify-between">
+<span class="text-on-surface-variant text-[10px] uppercase">PROTECTION DOMAIN</span>
+<span class="text-secondary font-semibold truncate">RING 3 (SANDBOXED D_0)</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col justify-between">
+<span class="text-on-surface-variant text-[10px] uppercase">MATRIX SLICE</span>
+<span class="text-primary-fixed-dim font-semibold truncate">COLUMNS (ACL) // ROWS (FD)</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col justify-between">
+<span class="text-on-surface-variant text-[10px] uppercase">AUTH STATUS</span>
+<span class="text-tertiary-fixed font-semibold truncate">SYS_AUTH_ACTIVE // PRIV CEIL</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 1 -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-tag text-label-tag text-primary-fixed-dim uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+        CHAPTER 22.1 • PROTECTION DOMAINS &amp; SECURITY MATRICES
+      </div>
+<span class="text-on-surface-variant font-label-code text-label-tag">CORE_ARCH // 01</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+      1️⃣ Core Conceptual Onboarding (The Keycard Guest List vs. The Physical Key)
+    </h2>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Foundational Question Card -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-space-xs mb-space-sm text-primary">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+<span class="font-label-tag text-label-tag uppercase tracking-wide">The Foundational Question &amp; Definition</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold mb-space-md leading-relaxed">
+            "Access Control is the structural security framework where the operating system referee enforces protection domain policies, determining exactly which users or application processes are legally allowed to read, write, or execute specific physical and digital resources."
+          </p>
+<div class="space-y-space-sm font-body-md text-body-md text-on-surface-variant">
+<div class="p-space-sm bg-surface-container rounded flex items-start gap-space-xs">
+<span class="text-tertiary font-label-code text-label-code font-bold mt-0.5">•</span>
+<p>
+<strong class="text-on-surface">Access Control List (ACL):</strong> A resource-centric security list attached directly to an object (like a file) that lists every user account and their specific allowed permissions.
+              </p>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex items-start gap-space-xs">
+<span class="text-secondary font-label-code text-label-code font-bold mt-0.5">•</span>
+<p>
+<strong class="text-on-surface">Capability Token:</strong> A user-centric, unforgeable security passkey ticket carried by a subject (like a process) that grants them instant entry to matching resources wherever it fits.
+              </p>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex items-start gap-space-xs">
+<span class="text-primary-container font-label-code text-label-code font-bold mt-0.5">•</span>
+<p>
+<strong class="text-on-surface">Protection Domain:</strong> The complete, bounded matrix set of access rights and resource permissions that an active process holds at any given millisecond.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Core Motivation -->
+<div class="lg:col-span-5 bg-surface-container p-space-lg rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-space-xs mb-space-sm text-secondary">
+<span class="material-symbols-outlined text-[24px]">shield_lock</span>
+<span class="font-label-tag text-label-tag uppercase tracking-wide">Core Motivation</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+            Operating system objects (like file descriptors, RAM frames, or device files) are shared across multiple users and background processes. If any random app could alter system files, security would collapse. The OS acts as a protective referee fence, tracking permissions via an Access Control Matrix. Because a master matrix table mapping every user to every single file is too massive to store in memory, systems must split the bookkeeping—either pinning permission lists onto the resources (ACLs) or handing secure passkey badges to the users (Capabilities).
+          </p>
+</div>
+<div class="p-space-sm bg-surface-container-high rounded flex items-center justify-between font-label-code text-label-tag">
+<span class="text-on-surface-variant">MATRIX SPARSITY FACTOR</span>
+<span class="text-tertiary font-bold">&gt; 99.4% SPARSE</span>
+</div>
+</div>
+</div>
+<!-- Application & Analogy Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Technical Card Component -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">laptop_chromebook</span>
+            💻 Real-World Application Example
+          </span>
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-tag text-[10px]">POSIX / CHMOD</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          When you run an app like Microsoft VS Code or Google Chrome on Linux or macOS, the OS tracks your user identity account. When VS Code attempts to open a configuration file, the kernel intercepts the request and reads the file's built-in Access Control List (the classic rwx permission bits). If your user account doesn't match the 'read' bit flag column, the kernel referee blocks the operation instantly, dropping an 'Access Denied' alert window onto your desktop screen.
+        </p>
+</div>
+<!-- Analogy Card Component -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-secondary flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">hotel</span>
+            🎒 Everyday Example (5th Grader)
+          </span>
+<span class="px-2 py-0.5 rounded bg-secondary-container/40 text-secondary font-label-tag text-[10px]">HOTEL ANALOGY</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Imagine a giant luxury hotel. An Access Control List (ACL) is like pinning a paper Guest List right onto the front of Room 100's door. Every time someone wants to walk inside, the security guard reads the list to see if your name is written down. A Capability Token is like handing a guest an electronic Hotel Keycard. The room door doesn't have a guest list pinned to it anymore; it just has an electronic lock box. If your keycard fits the slot and blinks green, the lock pops open instantly! Both designs do the same job, but one looks at the room, while the other looks at the key!
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 2 -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-tag text-label-tag text-primary-fixed-dim uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+        CHAPTER 22.2 • SLICING THE MATRIX: ACLS VS CAPABILITIES
+      </div>
+<span class="text-on-surface-variant font-label-code text-label-tag">STRUCT_VIEW // 02</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+      2️⃣ Structural Dissection (The Access Control Matrix &amp; Columns vs. Rows)
+    </h2>
+<!-- Split-Pane Block -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md">
+<!-- Left: The Matrix Grid -->
+<div class="xl:col-span-7 bg-surface-container-lowest p-space-md rounded-xl shadow-lg flex flex-col">
+<div class="flex items-center justify-between mb-space-sm pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">grid_on</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">THE ACCESS CONTROL MATRIX GRID</span>
+</div>
+<span class="font-label-tag text-label-tag text-on-surface-variant">S_ij = PERM_FLAGS</span>
+</div>
+<!-- Matrix Slicing Interactive Indicator -->
+<div class="grid grid-cols-5 gap-1.5 font-label-code text-[11px] text-center mb-space-xs">
+<div class="bg-surface-container p-2 rounded text-on-surface-variant flex items-center justify-center font-bold">
+            SUBJECTS \ OBJ
+          </div>
+<div class="bg-surface-container-high p-2 rounded text-primary-fixed font-bold flex flex-col">
+<span>File_1 (Config)</span>
+<span class="text-[9px] text-primary-container">COL 0 (ACL)</span>
+</div>
+<div class="bg-surface-container-high p-2 rounded text-primary-fixed font-bold flex flex-col">
+<span>/dev/sda (Disk)</span>
+<span class="text-[9px] text-primary-container">COL 1 (ACL)</span>
+</div>
+<div class="bg-surface-container-high p-2 rounded text-primary-fixed font-bold flex flex-col">
+<span>Printer_0</span>
+<span class="text-[9px] text-primary-container">COL 2 (ACL)</span>
+</div>
+<div class="bg-surface-container-high p-2 rounded text-primary-fixed font-bold flex flex-col">
+<span>Socket_Net</span>
+<span class="text-[9px] text-primary-container">COL 3 (ACL)</span>
+</div>
+</div>
+<!-- Row 1: Alice (Admin) -->
+<div class="grid grid-cols-5 gap-1.5 font-label-code text-[12px] mb-1.5">
+<div class="bg-surface-container-high p-2.5 rounded font-bold text-secondary flex flex-col justify-center">
+<span>Alice (Admin)</span>
+<span class="text-[9px] text-secondary-fixed-dim">CAP ROW 0</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded text-center text-tertiary font-bold flex items-center justify-center">
+            `rwx`
+          </div>
+<div class="bg-surface-container p-2.5 rounded text-center text-tertiary-fixed-dim font-bold flex items-center justify-center">
+            `rw-`
+          </div>
+<div class="bg-surface-container p-2.5 rounded text-center text-tertiary-fixed-dim font-bold flex items-center justify-center">
+            `rw-`
+          </div>
+<div class="bg-surface-container p-2.5 rounded text-center text-tertiary font-bold flex items-center justify-center">
+            `rwx`
+          </div>
+</div>
+<!-- Row 2: Bob (Student) -->
+<div class="grid grid-cols-5 gap-1.5 font-label-code text-[12px] mb-1.5">
+<div class="bg-surface-container-high p-2.5 rounded font-bold text-secondary flex flex-col justify-center">
+<span>Bob (Student)</span>
+<span class="text-[9px] text-secondary-fixed-dim">CAP ROW 1</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded text-center text-primary font-bold flex items-center justify-center">
+            `r--`
+          </div>
+<div class="bg-surface-container p-2.5 rounded text-center text-outline font-bold flex items-center justify-center">
+            `---`
+          </div>
+<div class="bg-surface-container p-2.5 rounded text-center text-primary font-bold flex items-center justify-center">
+            `r--`
+          </div>
+<div class="bg-surface-container p-2.5 rounded text-center text-tertiary-fixed-dim font-bold flex items-center justify-center">
+            `rw-`
+          </div>
+</div>
+<!-- Row 3: Guest_Proc (Sandbox) -->
+<div class="grid grid-cols-5 gap-1.5 font-label-code text-[12px] mb-space-sm">
+<div class="bg-surface-container-high p-2.5 rounded font-bold text-secondary flex flex-col justify-center">
+<span>Guest_Proc</span>
+<span class="text-[9px] text-secondary-fixed-dim">CAP ROW 2</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded text-center text-outline font-bold flex items-center justify-center">
+            `---`
+          </div>
+<div class="bg-surface-container p-2.5 rounded text-center text-outline font-bold flex items-center justify-center">
+            `---`
+          </div>
+<div class="bg-surface-container p-2.5 rounded text-center text-outline font-bold flex items-center justify-center">
+            `---`
+          </div>
+<div class="bg-surface-container p-2.5 rounded text-center text-primary font-bold flex items-center justify-center">
+            `r--`
+          </div>
+</div>
+<!-- Grid Callouts -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-xs mt-auto">
+<div class="p-space-sm bg-surface-container rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">view_column</span>
+<div>
+<span class="font-label-tag text-[10px] text-primary-container block">VERTICAL COLUMN</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">ACL Column Vector (Stored with Resource Inode)</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">table_rows</span>
+<div>
+<span class="font-label-tag text-[10px] text-secondary block">HORIZONTAL ROW</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Capability Row Token / Domain (Held by Process)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Privilege Verification Regulator -->
+<div class="xl:col-span-5 bg-surface-container-low p-space-md rounded-xl shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">tune</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">THE PRIVILEGE VERIFICATION REGULATOR</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-tag text-[10px]">HARDWARE FILTER</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Row 1: Resource-Centric ACL Column Vector -->
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-primary uppercase font-bold">Resource-Centric ACL Column Vector</span>
+<span class="font-label-code text-[10px] text-tertiary">INODE_0x44F2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Target inode access bits: <code class="text-primary-fixed bg-surface-container-lowest px-1.5 py-0.5 rounded font-label-code text-[11px]">chmod 0644 (rw-r--r--)</code>, owner UID/GID verification routine active.
+              </p>
+</div>
+<!-- Row 2: Subject-Centric Capability Row Token -->
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-secondary uppercase font-bold">Subject-Centric Capability Row Token</span>
+<span class="font-label-code text-[10px] text-secondary">UNFORGEABLE_HANDLE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Unforgeable FD handle token: <code class="text-secondary bg-surface-container-lowest px-1.5 py-0.5 rounded font-label-code text-[11px]">fd: 4 [flags: O_RDONLY, cap_hash: 0x8F91]</code>
+</p>
+</div>
+<!-- Row 3: Active Protection Domain Identity Code -->
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-tertiary uppercase font-bold">Active Protection Domain Identity Code</span>
+<span class="font-label-code text-[10px] text-tertiary">PRIV_CEILING</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Security Domain: <code class="text-tertiary-fixed bg-surface-container-lowest px-1.5 py-0.5 rounded font-label-code text-[11px]">D_USER_03 [EUID: 1000, GID: 1000, PRIV_CEILING: RING_3]</code>
+</p>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container-high rounded flex items-center justify-between">
+<span class="font-label-tag text-[11px] text-on-surface-variant">REGULATOR_GATE</span>
+<span class="font-label-code text-[11px] text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+            EVALUATION_PASS: SYS_ENTER GRANTED
+          </span>
+</div>
+</div>
+</div>
+<!-- Structural Definition Rows -->
+<div class="space-y-space-sm">
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<p class="font-body-md text-body-md text-on-surface font-semibold">
+          • The Access Control List Column Vector: Slicing the matrix vertically by columns. The security configuration lines are stored directly inside the filesystem index nodes we studied in the inode architecture chapters.
+        </p>
+<div class="bg-surface-container p-space-sm rounded">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-primary font-label-code text-label-code">💻 Real-World Application Example:</strong> A system administrator uses commands like <code class="text-primary-fixed bg-surface-container-lowest px-1 py-0.5 rounded font-label-code text-label-tag">chmod</code> or <code class="text-primary-fixed bg-surface-container-lowest px-1 py-0.5 rounded font-label-code text-label-tag">setfacl</code> to modify a folder's local ACL column vector, regulating which student accounts can submit homework assignments.
+          </p>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<p class="font-body-md text-body-md text-on-surface font-semibold">
+          • The Capability Token Row Vector: Slicing the matrix horizontally by rows. The user process holds a secure, encrypted handle descriptor that it presents to the kernel referee like a coupon ticket.
+        </p>
+<div class="bg-surface-container p-space-sm rounded">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-secondary font-label-code text-label-code">💻 Real-World Application Example:</strong> When an app like Spotify opens an audio channel, the kernel hands it a secure File Descriptor token. Spotify holds onto this capability handle to stream music bytes without re-checking permissions.
+          </p>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<p class="font-body-md text-body-md text-on-surface font-semibold">
+          • Protection Domain Boundary: The absolute maximum ceiling of system privileges an application process can invoke while running inside its current execution context loop.
+        </p>
+<div class="bg-surface-container p-space-sm rounded">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-tertiary font-label-code text-label-code">💻 Real-World Application Example:</strong> Web browsers sandbox separate tab processes inside a tight, low-privilege protection domain row, blocking them from accessing your system's hard drive files or password keys.
+          </p>
+</div>
+</div>
+</div>
+<!-- Bottom Footer Note -->
+<div class="bg-surface-container p-space-md rounded-xl flex items-start gap-space-sm shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[24px] mt-0.5">school</span>
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">🎒 Everyday Example</span>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Let's complete the school office comparison! The master matrix is a giant chart on the principal's chalkboard. An ACL is a sign-up sheet taped onto the science lab door listing who can go inside. A Capability is giving selected students a special metal master-key ring to carry in their pockets. The sign-up sheet stays on the wall, but the master key travels everywhere with the student!
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 3 -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-tag text-label-tag text-primary-fixed-dim uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+        CHAPTER 22.3 • SYSTEM CALL INTERCEPTION &amp; PERMISSION VALIDATION
+      </div>
+<span class="text-on-surface-variant font-label-code text-label-tag">EXEC_LOOP // 03</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+      3️⃣ Linear Operational Pipeline (The Privilege Verification Loop)
+    </h2>
+<!-- Timeline Tracker -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-primary font-bold">
+          1. Access Request Issuance ➔ 2. Matrix Matrix Lookup ➔ 3. Security Boundary Match ➔ 4. Safe Resource Handoff
+        </span>
+<span class="font-label-tag text-label-tag text-tertiary">REALTIME INTERCEPTION</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<!-- Step 1 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-code text-label-tag text-primary">PHASE 01</span>
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary-container font-label-tag text-[10px]">Step 01 USER SPACE</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">1. Access Request Issuance</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              An active user process running inside Google Chrome requests to write a data block down to a restricted log path block.
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs font-label-code text-[11px] text-outline">
+            SYS_CALL: write(fd, buf, count)
+          </div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-code text-label-tag text-secondary">PHASE 02</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container/40 text-secondary font-label-tag text-[10px]">Step 02 KERNEL TRAP</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">2. Matrix Matrix Lookup</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              The kernel referee intercepts the system call, traps the execution into high-privilege Kernel Mode, and pulls the target resource's internal ACL matrix properties or inspects the app's capability handle.
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs font-label-code text-[11px] text-outline">
+            TRAP: INT 0x80 / SYSENTER
+          </div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-code text-label-tag text-tertiary">PHASE 03</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-tag text-[10px]">Step 03 HARDWARE MMU / SECURITY FILTER</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">3. Security Boundary Match</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              The hardware-to-software security check layer cross-references the process's current Protection Domain identity code against the allowed action bits (Read / Write / Execute). If the bits match, validation succeeds.
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs font-label-code text-[11px] text-outline">
+            MATCH: (DOMAIN.PERM &amp; REQ_BITS)
+          </div>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-code text-label-tag text-primary-fixed">PHASE 04</span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed/20 text-primary-fixed font-label-tag text-[10px]">Step 04 SECURE RESOURCE STREAM</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">4. Safe Resource Handoff</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              The referee grants access, opening the system bus lines or file descriptors to let the user-space app read or manipulate the target storage blocks safely.
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs font-label-code text-[11px] text-outline">
+            STREAM: DMA / I/O TRANSFER OK
+          </div>
+</div>
+</div>
+</div>
+<!-- Component Cards: Interactive Grid & Analogy -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Grid Activity Card -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">co_present</span>
+              💻 Matrix Verification Grid Activity
+            </span>
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-tag text-[10px]">LAB WORKSHOP</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Draw a small sample 3x3 Access Control Matrix table on the chalkboard ➔ Columns: Secret_File, Public_Folder, Printer_Node; Rows: Admin, Student_A, Guest ➔ Post a rapid-fire set of 'Can user X perform action Y' verification questions ➔ Have the class trace the cell coordinates directly from the grid to determine successes vs boundary violations ➔ Demonstrate how the operation instantly converts into an ACL column vs a Capability row.
+          </p>
+</div>
+<div class="mt-space-sm p-space-xs bg-surface-container-high rounded font-label-code text-label-tag text-tertiary">
+          [TEACHING TIP]: Ask students what happens when 1,000 new files appear—watch how ACLs scale locally while process tables stay lean!
+        </div>
+</div>
+<!-- Movie Theater Analogy Card -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-headline-sm text-headline-sm text-secondary flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">theaters</span>
+              🎒 Movie Theater Admission Pipeline
+            </span>
+<span class="px-2 py-0.5 rounded bg-secondary-container/40 text-secondary font-label-tag text-[10px]">EVERYDAY PIPELINE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            You arrive at the theater gate and ask to enter screen room 4 (Access Request) ➔ The ticket taker stops you, checking either a guest list clipboard on the wall or looking for your paper admission ticket (Matrix Lookup) ➔ The tracker verifies your ticket matches screen room 4 instructions exactly (Boundary Match) ➔ The taker steps aside, opens the velvet rope barrier line, and lets you walk into the room to watch the movie safely (Resource Handoff).
+          </p>
+</div>
+<div class="mt-space-sm p-space-xs bg-surface-container-high rounded font-label-code text-label-tag text-secondary">
+          [VELVET ROPE REF]: The usher is Ring 0 Kernel Mode; your ticket is an unforgeable Capability Handle!
+        </div>
+</div>
+</div>
+</section>
+<!-- SECTION 4 -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-tag text-label-tag text-primary-fixed-dim uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+        CHAPTER 22.4 • ACCESS CONTROL LISTS VS CAPABILITY TOKENS
+      </div>
+<span class="text-on-surface-variant font-label-code text-label-tag">PARADIGM_SYNTH // 04</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+      4️⃣ Paradigm Showdown &amp; Guardrails
+    </h2>
+<!-- Side-by-Side Comparative Table -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-lg overflow-x-auto">
+<div class="mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+          Access Control Lists (Resource-Centric Logs) vs Capability Tokens (User-Centric Passports)
+        </h3>
+</div>
+<div class="min-w-[640px] space-y-1 font-label-code text-label-code">
+<!-- Table Header -->
+<div class="grid grid-cols-12 gap-2 bg-surface-container-high p-space-sm rounded font-bold text-on-surface text-[12px] uppercase">
+<div class="col-span-3 text-on-surface-variant">ARCHITECTURAL FIELD</div>
+<div class="col-span-4 text-primary">ACCESS CONTROL LISTS (RESOURCE-CENTRIC LOGS)</div>
+<div class="col-span-5 text-secondary">CAPABILITY TOKENS (USER-CENTRIC PASSPORTS)</div>
+</div>
+<!-- Row 1 -->
+<div class="grid grid-cols-12 gap-2 bg-surface-container p-space-sm rounded items-center">
+<div class="col-span-3 text-on-surface font-semibold">Bookkeeping Target</div>
+<div class="col-span-4 text-primary-fixed-dim">Attached directly onto the file/object</div>
+<div class="col-span-5 text-secondary-fixed-dim">Carried directly by the user/process</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-12 gap-2 bg-surface-container p-space-sm rounded items-center">
+<div class="col-span-3 text-on-surface font-semibold">Revocation Speed</div>
+<div class="col-span-4 text-tertiary">Ultra-fast since deleting a user's name from the file's list instantly cuts access</div>
+<div class="col-span-5 text-error">Extremely complex since tracking down scattered keys across active apps is difficult</div>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-12 gap-2 bg-surface-container p-space-sm rounded items-center">
+<div class="col-span-3 text-on-surface font-semibold">System Implementation</div>
+<div class="col-span-4 text-on-surface-variant">Used heavily in standard filesystems like Linux rwx grids</div>
+<div class="col-span-5 text-on-surface-variant">Mandated for cloud object stores and secure file descriptor handles</div>
+</div>
+</div>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="bg-error-container/40 p-space-md rounded-xl flex items-start gap-space-md shadow-md">
+<span class="material-symbols-outlined text-error text-[32px] mt-0.5">warning</span>
+<div class="flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-error font-bold tracking-wide">
+          CRITICAL DISTINCTION // AUTHENTICATION VS AUTHORIZATION
+        </span>
+<p class="font-body-md text-body-md text-on-error-container leading-relaxed">
+          Do not confuse authentication with authorization! A very common mistake beginner students make is thinking access control is the screen where you type your login password. Typing your password is Authentication (proving who you are). Access Control is Authorization (the internal matrix referee checking what files your account is legally allowed to touch after you have already logged in successfully!)
+        </p>
+</div>
+</div>
+<!-- Systems Engineering Interview Takeaway Panel -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-md">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">terminal</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Systems Engineering Interview Takeaway Panel</span>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container text-tertiary font-label-tag text-label-tag">STAFF ENGINEER CORE</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- 1. Principle of Least Privilege -->
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary font-label-code text-[12px] flex items-center justify-center font-bold">1</span>
+<span class="font-headline-sm text-[16px] text-primary">Principle of Least Privilege</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Every program and process should operate using the bare minimum privileges necessary to complete its function.
+          </p>
+</div>
+<!-- 2. Confused Deputy Problem -->
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-code text-[12px] flex items-center justify-center font-bold">2</span>
+<span class="font-headline-sm text-[16px] text-secondary">Confused Deputy Problem</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            How capabilities prevent malicious apps from tricking privileged servers into abusing their access rights.
+          </p>
+</div>
+<!-- 3. Matrix Sparsity -->
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-tertiary text-on-tertiary font-label-code text-[12px] flex items-center justify-center font-bold">3</span>
+<span class="font-headline-sm text-[16px] text-tertiary">Matrix Sparsity</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Why storing a full N x M matrix in memory is impossible ($O(NM)$ overhead) and why modern OSes decompose it into ACLs ($O(M)$ files) or Capabilities ($O(N)$ processes).
+          </p>
+</div>
+<!-- 4. Access Control Matrix Cascade -->
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-error text-on-error font-label-code text-[12px] flex items-center justify-center font-bold">4</span>
+<span class="font-headline-sm text-[16px] text-error">Access Control Matrix Cascade</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            If access rights leak or protection domains fail to isolate, entire system security compromises cascade (just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling down!).
+          </p>
+</div>
+</div>
+</div>
+<!-- Module Completion Bar -->
+<div class="bg-surface-container-high p-space-md rounded-xl flex flex-col lg:flex-row items-center justify-between gap-space-md shadow-xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[32px]">verified</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">MODULE 22 COMPLETE</span>
+<span class="font-label-tag text-label-tag text-tertiary">100% MASTERY • CREDITS ACCREDITED</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-md py-2 rounded bg-surface-container text-on-surface hover:bg-surface-bright font-label-code text-label-code transition-all" type="button">
+          [ 📖 Review L22 Notes ]
+        </button>
+<button class="px-space-md py-2 rounded bg-primary-container text-on-primary hover:shadow-[0_0_20px_rgba(0,210,255,0.4)] font-label-code text-label-code font-bold transition-all" type="button">
+          [ 🚀 Advance to L23 Final Operating Systems Capstone Lab ➔ ]
+        </button>
+</div>
+</div>
+</section>
+</div></main></div></body></html>
