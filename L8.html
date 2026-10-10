@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"error":"#ffb4ab","on-tertiary-container":"#005b3d","on-error":"#690005","surface":"#0f131d","surface-bright":"#353944","secondary":"#ddb7ff","surface-variant":"#313540","on-secondary":"#490080","inverse-surface":"#dfe2f1","surface-container-highest":"#313540","surface-container":"#1c1f2a","primary-fixed":"#b6ebff","surface-tint":"#47d6ff","tertiary-container":"#48d99e","secondary-container":"#6f00be","on-secondary-container":"#d6a9ff","on-primary-fixed":"#001f28","tertiary-fixed":"#6ffbbe","on-primary":"#003543","primary-fixed-dim":"#47d6ff","on-background":"#dfe2f1","surface-dim":"#0f131d","tertiary":"#69f6b9","on-primary-fixed-variant":"#004e60","primary":"#a5e7ff","background":"#0f131d","outline-variant":"#3c494e","outline":"#859399","error-container":"#93000a","secondary-fixed":"#f0dbff","on-tertiary":"#003824","on-tertiary-fixed-variant":"#005236","on-tertiary-fixed":"#002113","primary-container":"#00d2ff","on-surface":"#dfe2f1","on-error-container":"#ffdad6","inverse-on-surface":"#2c303b","on-surface-variant":"#bbc9cf","surface-container-lowest":"#0a0e18","inverse-primary":"#00677f","secondary-fixed-dim":"#ddb7ff","surface-container-low":"#171b26","on-secondary-fixed":"#2c0051","on-secondary-fixed-variant":"#6900b3","on-primary-container":"#00566a","tertiary-fixed-dim":"#4edea3","surface-container-high":"#262a35"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-md":"1rem","space-xl":"2.5rem","space-xs":"0.25rem","gutter-mobile":"1rem","gutter":"1.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem","margin":"3rem"},"fontFamily":{"headline-lg":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"headline-sm":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"label-code":["JetBrains Mono"],"headline-xl":["Space Grotesk"],"label-tag":["JetBrains Mono"]},"fontSize":{"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.25)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-lowest/80"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary-container text-[18px]">terminal</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">KernelLab</span><span class="font-label-tag text-label-tag text-primary">SYSTEMS STUDIO</span></div></div><span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">v4.19</span></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">Curriculum // Core Units</span></div><nav class="flex flex-col px-space-xs gap-0.5" data-active-classes="bg-surface-container-high text-primary-container font-semibold rounded-lg shadow-[inset_2px_0_0_0_#00d2ff]"><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 transition-colors bg-surface-container-high text-primary-container font-semibold rounded-lg shadow-[inset_2px_0_0_0_#00d2ff]" data-path="cpu-scheduling-ii" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-primary">L8</span><span class="font-body-sm text-body-sm truncate">CPU Scheduling II</span></div><span class="font-label-tag text-label-tag px-1.5 py-0.5 rounded bg-tertiary-container/20 text-tertiary">ACTIVE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="cpu-scheduling-i" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L7</span><span class="font-body-sm text-body-sm truncate">CPU Scheduling I</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="process-and-switch" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L6</span><span class="font-body-sm text-body-sm truncate">Process &amp; Switch</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="what-is-a-process" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L5</span><span class="font-body-sm text-body-sm truncate">What Is a Process?</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="the-boot-process" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L4</span><span class="font-body-sm text-body-sm truncate">The Boot Process</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="kernel-design" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L3</span><span class="font-body-sm text-body-sm truncate">Kernel Design</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="pcb-and-context-switch" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L2</span><span class="font-body-sm text-body-sm truncate">PCB &amp; Context Sw</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="os-components" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L1</span><span class="font-body-sm text-body-sm truncate">OS Components</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="course-intro" href="#"><div class="flex items-center gap-space-sm truncate"><span class="font-label-code text-label-code text-outline">L0</span><span class="font-body-sm text-body-sm truncate">Course Intro</span></div><span class="font-label-tag text-label-tag text-outline">DONE</span></a></nav><div class="px-space-md pt-space-lg pb-space-xs"><span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">Telemetry &amp; Tools</span></div><nav class="flex flex-col px-space-xs gap-0.5" data-active-classes="bg-surface-container-high text-primary-container font-semibold rounded-lg"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="register-inspector" href="#"><div class="flex items-center gap-space-sm truncate"><span class="material-symbols-outlined text-[18px] text-secondary">memory</span><span class="font-body-sm text-body-sm truncate">Register Inspector</span></div><span class="font-label-tag text-label-tag text-tertiary">LIVE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="syscall-debugger" href="#"><div class="flex items-center gap-space-sm truncate"><span class="material-symbols-outlined text-[18px] text-primary">bug_report</span><span class="font-body-sm text-body-sm truncate">Syscall Debugger</span></div><span class="font-label-tag text-label-tag text-outline">INT 0x80</span></a></nav></div><div class="p-space-md bg-surface-container-lowest/60 m-space-xs rounded-xl flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase">Runtime Status</span><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span></div><div class="flex items-center justify-between font-label-code text-label-code"><span class="text-outline">Kernel State:</span><span class="text-primary-container">PREEMPT_RT</span></div><div class="flex items-center justify-between font-label-code text-label-code"><span class="text-outline">Cycles/sec:</span><span class="text-on-surface">4.12 GHz</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.3)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">school</span><span class="font-headline-sm text-headline-sm text-on-surface">CS 301</span><span class="font-body-sm text-body-sm text-outline-variant">|</span><span class="font-body-sm text-body-sm text-on-surface-variant">Systems Architecture</span></div><div class="hidden xl:flex items-center gap-space-md pl-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-lg"><span class="font-label-tag text-label-tag text-outline">POLLER</span><span class="font-label-code text-label-code text-tertiary">1000 Hz</span></div><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-lg"><span class="font-label-tag text-label-tag text-outline">MODULE</span><span class="font-label-code text-label-code text-on-surface">08 / 14</span></div><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded-lg"><span class="font-label-tag text-label-tag text-outline">DIFF</span><span class="font-label-code text-label-code text-secondary">INTERMEDIATE</span></div></div></div><div class="flex items-center gap-space-lg"><div class="hidden md:flex items-center gap-space-sm"><div class="flex flex-col items-end"><span class="font-label-tag text-label-tag text-outline">SYLLABUS PROGRESS</span><span class="font-label-code text-label-code text-primary-container font-semibold">82% COMPLETED</span></div><div class="w-24 h-2 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary-container w-[82%]"></div></div></div><div class="flex items-center gap-space-md"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container"></span></button><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-gutter"><div class="flex flex-col w-full pb-space-xl">
+<!-- TOP TELEMETRY STRIP & HEADER BLOCK -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-xl mb-space-lg">
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -left-24 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Micro Metadata Ribbon -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md pb-space-sm bg-surface-container-low/60 p-space-sm rounded-lg">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-label-tag text-label-tag tracking-wider text-primary bg-primary-container/15 px-2.5 py-1 rounded">LECTURE 08 // ADVANCED QUEUES &amp; REAL-TIME CPU SCHEDULING // CS-301 CORE</span>
+<span class="font-label-tag text-label-tag text-tertiary bg-surface-container-high px-2 py-0.5 rounded flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>STATE: DETERMINISTIC
+        </span>
+<span class="font-label-tag text-label-tag text-secondary bg-secondary-container/20 px-2 py-0.5 rounded">DIFF: ADVANCED-FOUNDATIONAL</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-code text-label-code text-outline">
+<span>EPOCH: 0x4F18B</span>
+<span class="text-outline-variant">/</span>
+<span class="text-tertiary font-semibold">PREEMPT_TICK: SYNC</span>
+</div>
+</div>
+<!-- Title & Narrative Lead -->
+<div class="flex flex-col gap-space-xs mb-space-md">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">🏷️ OPERATING SYSTEMS: L8 - CPU Scheduling II (Advanced &amp; Real-Time Policies)</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-5xl">A deep-dive interactive conceptual study guide &amp; architectural poster on Multilevel Queues, Priority Inversion, Aging, and Hard vs. Soft Real-Time Scheduling.</p>
+</div>
+<!-- Real-Time Telemetry Badges Ribbon -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-space-sm pt-space-xs">
+<div class="flex flex-col bg-surface-container p-space-sm rounded-lg shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase">Active Ready Queue</span>
+<span class="font-label-code text-label-code text-primary-container font-semibold truncate mt-0.5">3 LANES [RT, INT, BATCH]</span>
+</div>
+<div class="flex flex-col bg-surface-container p-space-sm rounded-lg shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase">Aging Policy</span>
+<span class="font-label-code text-label-code text-tertiary font-semibold truncate mt-0.5">DYNAMIC (+1 / 100ms)</span>
+</div>
+<div class="flex flex-col bg-surface-container p-space-sm rounded-lg shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase">Inversion Protocol</span>
+<span class="font-label-code text-label-code text-secondary font-semibold truncate mt-0.5">PRIORITY INHERITANCE</span>
+</div>
+<div class="flex flex-col bg-surface-container p-space-sm rounded-lg shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase">Starvation Risk</span>
+<span class="font-label-code text-label-code text-tertiary-fixed font-semibold truncate mt-0.5">SHIELDED (AGING ACTIVE)</span>
+</div>
+<div class="flex flex-col bg-surface-container p-space-sm rounded-lg shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase">Real-Time Jitter</span>
+<span class="font-label-code text-label-code text-primary font-semibold truncate mt-0.5">&lt; 0.42 µs [HARD GUARANTEE]</span>
+</div>
+</div>
+</div>
+<!-- SECTION 1: CORE CONCEPTUAL ONBOARDING -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">medical_services</span>
+</div>
+<div>
+<span class="font-label-tag text-label-tag text-primary uppercase">Module Zone 01 // Triage Foundations</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">1️⃣ Core Conceptual Onboarding (The Hospital ER Waiting Room)</h2>
+</div>
+</div>
+<!-- Foundational Question Card -->
+<div class="relative bg-surface-container-low rounded-xl p-space-lg shadow-md overflow-hidden">
+<div class="flex flex-col md:flex-row gap-space-md items-start">
+<div class="p-space-sm rounded-xl bg-primary-container text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center min-w-[3.5rem] h-14">
+<span class="material-symbols-outlined text-[32px]">contact_support</span>
+</div>
+<div class="flex flex-col gap-1.5 flex-1">
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-wider">The Foundational Question</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Advanced CPU Scheduling introduces priority rankings, multi-lane queues, and hard time boundaries to handle real-world scenarios where simple turn-taking rules (like Round Robin) collapse because some application tasks are fundamentally more critical than others.
+          </p>
+</div>
+</div>
+</div>
+<!-- Key Characteristics Grid (Cybernetic Badges) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Starvation Block -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between shadow-md hover:bg-surface-container-high transition-colors">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-error-container/40 text-error">DEFECT // CHRONIC</span>
+<span class="material-symbols-outlined text-error text-[20px]">hourglass_disabled</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Starvation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            A catastrophic scheduling defect where a low-priority process sits in the Ready Queue forever and never receives a CPU core turn because higher-priority jobs keep cutting in front of it.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs font-label-code text-label-code text-outline">
+<span class="text-error font-semibold">T_wait → ∞</span>
+<span class="text-outline-variant">|</span>
+<span>Zero Execution Progress</span>
+</div>
+</div>
+<!-- Aging Block -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between shadow-md hover:bg-surface-container-high transition-colors">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary">SOLVER // DYNAMIC</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">trending_up</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Aging</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            A brilliant optimization technique where the OS referee gradually increases the priority score of a waiting process the longer it sits in line, ensuring it eventually wins a CPU turn.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs font-label-code text-label-code text-outline">
+<span class="text-tertiary font-semibold">P_new = P_base + λ(Δt)</span>
+<span class="text-outline-variant">|</span>
+<span>Guaranteed Bounded Wait</span>
+</div>
+</div>
+<!-- Priority Inversion Block -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between shadow-md hover:bg-surface-container-high transition-colors">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-secondary-container/40 text-secondary">DEADLOCK PARADOX</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">swap_vertical_circle</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Priority Inversion</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            A dangerous glitch where a high-priority process gets blocked waiting for a resource held by a low-priority process, while a medium-priority process steals the CPU.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs font-label-code text-label-code text-outline">
+<span class="text-secondary font-semibold">P(H) &gt; P(M) &gt; P(L)</span>
+<span class="text-outline-variant">|</span>
+<span>Lock Hijack: L holding M1</span>
+</div>
+</div>
+</div>
+<!-- Core Motivation Block -->
+<div class="bg-surface-container-high/60 rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">bolt</span>
+<span class="font-label-tag text-label-tag text-primary uppercase">Core Motivation &amp; The CPU Referee Role</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+        Simple algorithmic fairness is a terrible strategy when critical system events occur. A single hardware CPU core must prioritize human interactions over background tasks. However, adding simple priority numbers causes a massive bottleneck: low-priority tasks can starve completely. The OS referee must implement complex multi-lane queues and aging systems to ensure vital audio and video streams don't stutter, while background maintenance jobs still complete their work slowly.
+      </p>
+</div>
+<!-- Split Dual Cards: Real-World vs 5th Grader -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">laptop_chromebook</span>
+<span class="font-headline-sm text-headline-sm">💻 Real-World Application Example</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Imagine you are in an active video call on Discord while Windows Defender is running a heavy background virus scan. If the OS referee treated both apps equally, your video call would freeze and stutter every few milliseconds as the virus scan took its turn. To prevent this, the OS uses a Multilevel Queue. The video call is placed in a high-priority Real-Time queue that instantly preempts (interrupts) the virus scan, which is relegated to a low-priority background queue.
+          </p>
+</div>
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container font-label-code text-label-code text-primary flex items-center justify-between">
+<span>DISCORD (Q1: AUDIO_RT)</span>
+<span class="text-tertiary">PREEMPTS ➔</span>
+<span class="text-outline">DEFENDER.EXE (Q3: BATCH)</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[20px]">backpack</span>
+<span class="font-headline-sm text-headline-sm">🎒 Everyday Example (5th Grader)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Imagine a hospital Emergency Room (ER) waiting room. If the ER used a basic first-come, first-served rule, a person who needs a single band-aid for a scratched finger would get treated before someone who just arrived bleeding from an accident! The ER must use priority scheduling. However, if accident victims keep arriving all day, the finger-scratch patient will sit in the waiting room forever (Starvation). To fix this, the nurse uses Aging—every hour the patient waits, their priority goes up until they are finally called into the doctor's room!
+          </p>
+</div>
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container font-label-code text-label-code text-tertiary flex items-center justify-between">
+<span>ER TRIAGE: SCRATCH (RANK 1)</span>
+<span class="text-secondary">+1 RANK / HOUR ➔</span>
+<span class="text-primary-container">DOCTOR ENTRY (RANK 10)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: STRUCTURAL DISSECTION -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">account_tree</span>
+</div>
+<div>
+<span class="font-label-tag text-label-tag text-tertiary uppercase">Module Zone 02 // Architectural Topology</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">2️⃣ Structural Dissection (Inside the Multilevel Queue Architecture)</h2>
+</div>
+</div>
+<!-- Split-Pane Structural Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left Pane: THE MULTILEVEL QUEUE SYSTEM MAP (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-space-lg shadow-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md pb-space-xs bg-surface-container-lowest/50 p-space-sm rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">view_agenda</span>
+<span class="font-label-code text-label-code text-on-surface font-semibold tracking-wide">THE MULTILEVEL QUEUE SYSTEM MAP</span>
+</div>
+<span class="font-label-tag text-label-tag text-primary-container bg-primary-container/20 px-2 py-0.5 rounded">3-TIER HIERARCHY</span>
+</div>
+<!-- Vertical Lanes Stack -->
+<div class="flex flex-col gap-space-sm relative">
+<!-- Lane 1: Real-Time -->
+<div class="relative bg-surface-container p-space-md rounded-xl shadow-md overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-code text-label-code text-primary-container font-semibold">Queue 1: Real-Time Lane</span>
+<span class="font-label-tag text-label-tag text-outline">(Audio/Video Streams)</span>
+</div>
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-primary-container/20 text-primary-container font-bold">HIGHEST PRIORITY</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs text-on-surface-variant font-label-code text-label-code mt-space-xs">
+<div><span class="text-outline">Algorithm:</span> <span class="text-on-surface">Earliest Deadline First / Preemptive Fixed</span></div>
+<div><span class="text-outline">Latency Target:</span> <span class="text-primary-container">&lt; 1ms Deterministic</span></div>
+</div>
+<div class="mt-space-sm flex items-center gap-2">
+<span class="font-label-tag text-label-tag text-outline">ACTIVE TASKS:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-code text-label-code text-xs">PID: 104 [PulseAudio]</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-code text-label-code text-xs">PID: 218 [Kernel_Tick]</span>
+</div>
+</div>
+<!-- Priority Flow Indicator Between Q1 and Q2 -->
+<div class="flex items-center justify-between px-space-md text-outline font-label-tag text-label-tag">
+<div class="flex items-center gap-1 text-primary-container">
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+<span>Preempts Immediately If Q1 Enqueued</span>
+</div>
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+<span>Aging Elevation Vector</span>
+</div>
+</div>
+<!-- Lane 2: Interactive -->
+<div class="relative bg-surface-container p-space-md rounded-xl shadow-md overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-label-code text-label-code text-tertiary font-semibold">Queue 2: Interactive Lane</span>
+<span class="font-label-tag text-label-tag text-outline">(Chrome / VS Code Inputs)</span>
+</div>
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-bold">MEDIUM PRIORITY</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs text-on-surface-variant font-label-code text-label-code mt-space-xs">
+<div><span class="text-outline">Algorithm:</span> <span class="text-on-surface">Round Robin (Time Quantum = 4ms)</span></div>
+<div><span class="text-outline">Latency Target:</span> <span class="text-tertiary">&lt; 10ms Responsive</span></div>
+</div>
+<div class="mt-space-sm flex items-center gap-2">
+<span class="font-label-tag text-label-tag text-outline">ACTIVE TASKS:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-tertiary font-label-code text-label-code text-xs">PID: 882 [VSCode_UI]</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-tertiary font-label-code text-label-code text-xs">PID: 914 [Chrome_Tab]</span>
+</div>
+</div>
+<!-- Priority Flow Indicator Between Q2 and Q3 -->
+<div class="flex items-center justify-between px-space-md text-outline font-label-tag text-label-tag">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+<span>Preempts Batch Processing</span>
+</div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]">upgrade</span>
+<span>Starvation Threshold Exceeded: Promotes to Q2</span>
+</div>
+</div>
+<!-- Lane 3: Batch Background -->
+<div class="relative bg-surface-container p-space-md rounded-xl shadow-md overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-code text-label-code text-secondary font-semibold">Queue 3: Batch Background Lane</span>
+<span class="font-label-tag text-label-tag text-outline">(Virus Scans / Backups)</span>
+</div>
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-secondary-container/20 text-secondary font-bold">LOWEST PRIORITY</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs text-on-surface-variant font-label-code text-label-code mt-space-xs">
+<div><span class="text-outline">Algorithm:</span> <span class="text-on-surface">First-Come First-Served (FCFS)</span></div>
+<div><span class="text-outline">Latency Target:</span> <span class="text-secondary">Best-Effort Throughput</span></div>
+</div>
+<div class="mt-space-sm flex items-center gap-2">
+<span class="font-label-tag text-label-tag text-outline">ACTIVE TASKS:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-code text-label-code text-xs">PID: 3042 [WinDefender]</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-code text-label-code text-xs">PID: 4120 [Tar_Backup]</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline font-label-code text-label-code">
+<span>DISPATCHER SCHEDULER: RUNNING</span>
+<span class="text-primary-container">PREEMPTION LATENCY: 0.18 µs</span>
+</div>
+</div>
+<!-- Right Pane: THE INVERSION DETECTOR MATRIX (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-low rounded-xl p-space-lg shadow-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md pb-space-xs bg-surface-container-lowest/50 p-space-sm rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">radar</span>
+<span class="font-label-code text-label-code text-on-surface font-semibold tracking-wide">INVERSION DETECTOR MATRIX</span>
+</div>
+<span class="font-label-tag text-label-tag text-secondary bg-secondary-container/30 px-2 py-0.5 rounded">KERNEL TELEMETRY</span>
+</div>
+<!-- Telemetry Specs -->
+<div class="flex flex-col gap-space-sm mb-space-md">
+<div class="bg-surface-container p-space-sm rounded-lg">
+<span class="font-label-tag text-label-tag text-outline block">High-Priority Blocker Status</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-code text-label-code text-error font-semibold">ACTIVE: Task H Blocked on Mutex M1</span>
+<span class="material-symbols-outlined text-error text-[18px]">lock</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg">
+<span class="font-label-tag text-label-tag text-outline block">Resource Lock Ownership Pointer</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-code text-label-code text-secondary font-semibold">Task L (PID: 3042) [LOCK HOLDER: Mutex M1]</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">key</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg">
+<span class="font-label-tag text-label-tag text-outline block">Dynamic Aging Increment Counter</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-code text-label-code text-tertiary font-semibold">+1 Priority / 100ms | Current: +14 Ranks</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">speed</span>
+</div>
+</div>
+</div>
+<!-- Visual Schematic / Mini-Diagram -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider mb-1">Inversion Graph Resolution</span>
+<div class="flex items-center justify-between font-label-code text-label-code">
+<div class="px-2 py-1.5 rounded bg-error/15 text-error font-bold flex flex-col items-center">
+<span>Task H</span>
+<span class="text-xs font-normal">Pri: 99</span>
+</div>
+<span class="material-symbols-outlined text-error text-[18px]">arrow_forward</span>
+<div class="px-2 py-1.5 rounded bg-secondary-container/30 text-secondary font-bold flex flex-col items-center">
+<span>Mutex M1</span>
+<span class="text-xs font-normal">Resource</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">arrow_forward</span>
+<div class="px-2 py-1.5 rounded bg-primary-container/20 text-primary-container font-bold flex flex-col items-center">
+<span>Task L</span>
+<span class="text-xs font-normal">Pri: 10</span>
+</div>
+</div>
+<div class="p-space-xs rounded bg-surface-container mt-space-xs">
+<div class="flex items-center gap-1.5 text-error mb-1">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span class="font-label-tag text-label-tag font-bold">Unchecked Hazard:</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Task M (Pri: 50) arrives, preempts Task L, inadvertently starving Task H indefinitely!</p>
+</div>
+<div class="p-space-xs rounded bg-tertiary-container/15 mt-1">
+<div class="flex items-center gap-1.5 text-tertiary mb-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="font-label-tag text-label-tag font-bold">Priority Inheritance Protocol:</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary leading-relaxed">
+                Kernel temporarily elevates Task L to Priority 99 (matching Task H). Task L executes, releases Mutex M1 immediately, and restores equilibrium!
+              </p>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-code text-label-code text-outline">
+<span>PATHFINDER: RESOLVED</span>
+<span class="text-tertiary">DEADLOCK RISK: 0.00%</span>
+</div>
+</div>
+</div>
+<!-- Text Rows for Structural Definitions directly below the diagram -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-xs">
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary-container">• Multilevel Queue Design</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+            Splits the single Ready Queue into entirely separate lanes based on process type. Each lane runs its own specific scheduling algorithm (like Round Robin for typing, and FCFS for backups).
+          </p>
+</div>
+<div class="mt-space-sm p-space-xs rounded bg-surface-container-high font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-label-code text-label-code text-primary font-semibold">💻 Real-World Example:</span> Google Chrome's user interface thread lives in the high-priority Interactive Lane so the window responds instantly when you click, while its background tab updates sit in the lower Batch Lane.
+        </div>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-tertiary">• Starvation &amp; Aging Safeguard</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+            The mechanical operation where the kernel referee monitors the 'age' telemetry field inside a low-priority app's PCB tracking diary.
+          </p>
+</div>
+<div class="mt-space-sm p-space-xs rounded bg-surface-container-high font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-label-code text-label-code text-tertiary font-semibold">💻 Real-World Example:</span> If a background file compressor task has been starved for 10,000 CPU cycles, the kernel automatically steps in, ticks its priority up, and forces the CPU to give it a brief turn.
+        </div>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-secondary">• Real-Time Scheduling (Hard vs. Soft)</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+            A strict operational mode where the scheduler must guarantee that a task finishes before a hard coded deadline timestamp, rather than just optimizing for average wait times.
+          </p>
+</div>
+<div class="mt-space-sm p-space-xs rounded bg-surface-container-high font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-label-code text-label-code text-secondary font-semibold">💻 Real-World Example:</span> In anti-lock vehicle braking systems or medical heart monitors, a soft delay is completely unacceptable. The kernel must guarantee the braking calculation finishes within microseconds or the hardware fails completely.
+        </div>
+</div>
+</div>
+<!-- Bottom Footer Note: Everyday Example (Airport Checkpoint) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start gap-space-md">
+<div class="p-2 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">connecting_airports</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">🎒 Everyday Example // Airport Security Analogy</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Think of an airport security checkpoint! Queue 1 is the First-Class lane—it is completely empty and passengers fly right through. Queue 2 is the standard passenger lane. Queue 3 is the heavy cargo check lane. If the airport referee only services First Class, the cargo lane freezes completely. Priority Inversion is like a first-class passenger getting stuck at the metal detector because a cargo worker accidentally dropped a box right in front of the gate, while regular passengers keep walking past on the side!
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 3: LINEAR OPERATIONAL PIPELINE -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">linear_scale</span>
+</div>
+<div>
+<span class="font-label-tag text-label-tag text-secondary uppercase">Module Zone 03 // Execution Pipeline</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">3️⃣ Linear Operational Pipeline (The ER Roster &amp; Fix Workflow)</h2>
+</div>
+</div>
+<!-- Horizontal Workflow Timeline Tracker (4 Sequential Steps) -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-xl">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md relative">
+<!-- Node 1 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm relative group">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 rounded bg-outline-variant/30 text-outline font-label-code text-label-code flex items-center justify-center font-bold">01</span>
+<span class="material-symbols-outlined text-outline text-[20px]">input</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Low-Priority Arrival</h4>
+<span class="font-label-tag text-label-tag text-outline uppercase">State: Token Enqueued</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+              A background file sync utility tool enters the system, changing its tracking token to Ready inside the lowest-tier background queue lane matrix.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs font-label-code text-label-code text-outline text-xs">
+            PCB.QUEUE_LEVEL = 3
+          </div>
+</div>
+<!-- Node 2 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm relative group">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 rounded bg-primary-container/20 text-primary-container font-label-code text-label-code flex items-center justify-center font-bold">02</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]">flood</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">High-Priority Influx</h4>
+<span class="font-label-tag text-label-tag text-primary-container uppercase">State: Preemption Storm</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+              A wave of interactive user clicks inside Google Chrome and Spotify arrivals flood the top-tier queues, continuously capturing all hardware execution turns.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs font-label-code text-label-code text-primary-container text-xs">
+            CORE_OCCUPANCY: 100% (Q1/Q2)
+          </div>
+</div>
+<!-- Node 3 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm relative group">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 rounded bg-error-container/30 text-error font-label-code text-label-code flex items-center justify-center font-bold">03</span>
+<span class="material-symbols-outlined text-error text-[20px]">warning</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Starvation Telemetry</h4>
+<span class="font-label-tag text-label-tag text-error uppercase">State: Trap Tripped</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+              The kernel referee runs a background diagnostic scan loop, spotting that the file sync tool's PCB diary has been completely starved of CPU cycles for a long duration.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs font-label-code text-label-code text-error text-xs">
+            IDLE_TICKS &gt; THRESHOLD_MAX
+          </div>
+</div>
+<!-- Node 4 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm relative group">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 rounded bg-tertiary-container/30 text-tertiary font-label-code text-label-code flex items-center justify-center font-bold">04</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">rocket_launch</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">Aging Boost Execution</h4>
+<span class="font-label-tag text-label-tag text-tertiary uppercase">State: Priority Ascend</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+              The scheduler invokes the aging rule, manually boosting the sync tool's priority level. The tool instantly bypasses the intermediate queues, gains a CPU core turn to execute its instructions, and drops back down once finished.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs font-label-code text-label-code text-tertiary text-xs">
+            PCB.QUEUE_LEVEL = 1 (TEMPORARY)
+          </div>
+</div>
+</div>
+</div>
+<!-- Dual Companion Cards: Live Activity vs VIP Ride Analogy -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-[20px]">science</span>
+<span class="font-headline-sm text-headline-sm">💻 Live Starvation Fix Activity</span>
+</div>
+<div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<div class="flex items-start gap-2">
+<span class="font-label-code text-label-code text-primary font-bold">1.</span>
+<span>Construct a manual simulation scenario on the board.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="font-label-code text-label-code text-primary font-bold">2.</span>
+<span>Input a continuous stream of high-priority tasks into a simulated CPU matrix.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="font-label-code text-label-code text-primary font-bold">3.</span>
+<span>Have students observe how the low-priority job sits frozen in the queue indefinitely.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="font-label-code text-label-code text-primary font-bold">4.</span>
+<span>Challenge the class to propose a dynamic solution to fix the frozen job before revealing the name 'Aging'.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="font-label-code text-label-code text-primary font-bold">5.</span>
+<span>Map their human logic steps directly to the real kernel code variables.</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs bg-surface-container p-space-sm rounded-lg flex items-center justify-between font-label-code text-label-code text-primary">
+<span>PEDAGOGICAL DRILL: ACTIVE</span>
+<span class="text-tertiary">CLASS PARTICIPATION: 94%</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">confirmation_number</span>
+<span class="font-headline-sm text-headline-sm">🎒 VIP Ride Line Analogy</span>
+</div>
+<div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<div class="p-space-xs rounded bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">person</span>
+<span><strong>Arrival:</strong> A normal visitor lines up for an amusement park ride (Low-Priority Arrival).</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">groups</span>
+<span><strong>Influx:</strong> A massive tour bus of VIP fast-pass holders arrives and cuts to front continuously.</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[18px]">hourglass_empty</span>
+<span><strong>Trigger:</strong> The ride monitor notices normal visitor hasn't moved a single step in two hours.</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">stars</span>
+<span><strong>Aging Boost:</strong> The monitor hands the patient visitor a golden ticket straight to front!</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs bg-surface-container p-space-sm rounded-lg flex items-center justify-between font-label-code text-label-code text-secondary">
+<span>PARK DISPATCHER ANALOGY</span>
+<span class="text-on-surface">ZERO CHRONIC DELAY</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: PARADIGM SHOWDOWN & GUARDRAILS -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-error-container/20 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">balance</span>
+</div>
+<div>
+<span class="font-label-tag text-label-tag text-error uppercase">Module Zone 04 // Comparative Evaluation</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">4️⃣ Paradigm Showdown &amp; Guardrails</h2>
+</div>
+</div>
+<!-- Comparative Table -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-xl overflow-x-auto">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm">
+        Priority Scheduling (Rank-Driven Control) vs. Real-Time Scheduling (Deadline-Driven Control)
+      </h3>
+<table class="w-full text-left font-body-sm text-body-sm text-on-surface">
+<thead>
+<tr class="bg-surface-container-highest/60 text-outline uppercase font-label-tag text-label-tag">
+<th class="p-space-sm rounded-l">Dimension / Criterion</th>
+<th class="p-space-sm">Priority Scheduling (Rank-Driven Control)</th>
+<th class="p-space-sm rounded-r">Real-Time Scheduling (Deadline-Driven Control)</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="hover:bg-surface-container transition-colors">
+<td class="p-space-sm font-label-code text-label-code text-primary font-semibold">Primary Target</td>
+<td class="p-space-sm text-on-surface">Maximize human response and app ranking</td>
+<td class="p-space-sm text-on-surface">Guarantee absolute time completion deadlines</td>
+</tr>
+<tr class="bg-surface-container/30 hover:bg-surface-container transition-colors">
+<td class="p-space-sm font-label-code text-label-code text-tertiary font-semibold">System Focus</td>
+<td class="p-space-sm text-on-surface">Fairness and performance balance</td>
+<td class="p-space-sm text-on-surface">Zero tolerance for late calculations</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="p-space-sm font-label-code text-label-code text-error font-semibold">Core Risk</td>
+<td class="p-space-sm text-on-surface">App starvation if left unchecked</td>
+<td class="p-space-sm text-on-surface">Complete system failure if a single deadline is missed</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Alert Banner: COMMON MISTAKES WARNING -->
+<div class="bg-error-container/20 rounded-xl p-space-md shadow-lg flex items-start gap-space-md">
+<div class="p-2 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">crisis_alert</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-error/20 text-error font-bold">ARCHITECTURAL GUARDRAIL</span>
+<span class="font-headline-sm text-headline-sm text-error">⚠️ COMMON MISTAKES WARNING BANNER</span>
+</div>
+<p class="font-body-md text-body-md text-on-error-container leading-relaxed">
+          Do not assume priority numbers stay fixed forever! If an operating system relied strictly on hardcoded, unchanging priority numbers, a single loop of high-priority tasks would cause your background systems to freeze up completely. Real-world operating systems must continuously adjust priority metrics dynamically behind the scenes!
+        </p>
+</div>
+</div>
+<!-- Callout Panel: INTERVIEW TAKEAWAY PANEL -->
+<div class="relative bg-surface-container-low rounded-xl p-space-lg shadow-xl overflow-hidden">
+<div class="flex flex-col md:flex-row items-start gap-space-md">
+<div class="p-3 rounded-xl bg-secondary-container/40 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[32px]">psychology</span>
+</div>
+<div class="flex flex-col gap-space-xs flex-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-tag text-label-tag text-secondary uppercase tracking-wider">Top Systems Interview Question</span>
+<span class="text-outline-variant">|</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">🎓 INTERVIEW TAKEAWAY PANEL</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Advanced scheduling is a balancing act between priority urgency and total system survival. Priority inversion can freeze critical high-priority tasks unless the kernel implements <strong>Priority Inheritance</strong> (where the low-priority job temporarily inherits the high-priority rank to clear the door). If these complex multi-lane queues experience a tracking reference error, the kernel will lose its place entirely, trigger a fatal scheduling lockup, and drop the whole machine into a system crash (just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling down!).
+          </p>
+<div class="mt-space-sm flex flex-wrap items-center gap-2 font-label-code text-label-code text-xs text-outline">
+<span class="px-2 py-1 rounded bg-surface-container text-tertiary">#PriorityInheritance</span>
+<span class="px-2 py-1 rounded bg-surface-container text-primary">#MarsPathfinder1997</span>
+<span class="px-2 py-1 rounded bg-surface-container text-secondary">#MultiLevelFeedbackQueue</span>
+<span class="px-2 py-1 rounded bg-surface-container text-error">#DeadlockAvoidance</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Module Status Card & Action Bar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/30 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Module 08 Complete // 100% MASTERY</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Telemetry verified: Multilevel Queues, Aging, Priority Inversion, and Hard/Soft Real-Time paradigms.</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-bright font-label-code text-label-code transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Review L8 Notes</span>
+</button>
+<button class="px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-code text-label-code font-bold hover:brightness-110 shadow-lg transition-all flex items-center gap-2">
+<span>Advance to Module 09 (Memory Management &amp; Paging)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</div></main></div></body></html>
