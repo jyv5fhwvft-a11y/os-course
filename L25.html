@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary":"#ddb7ff","on-background":"#dfe2f1","surface-container":"#1c1f2a","on-surface-variant":"#bbc9cf","surface":"#0f131d","primary":"#a5e7ff","surface-container-low":"#171b26","inverse-primary":"#00677f","tertiary-fixed":"#6ffbbe","on-tertiary-fixed-variant":"#005236","inverse-surface":"#dfe2f1","on-surface":"#dfe2f1","tertiary-fixed-dim":"#4edea3","outline":"#859399","secondary-fixed-dim":"#ddb7ff","on-primary":"#003543","error-container":"#93000a","on-secondary-fixed":"#2c0051","on-tertiary-container":"#005b3d","tertiary-container":"#48d99e","surface-container-high":"#262a35","on-tertiary":"#003824","on-error":"#690005","outline-variant":"#3c494e","surface-container-lowest":"#0a0e18","secondary-fixed":"#f0dbff","on-secondary-container":"#d6a9ff","primary-fixed-dim":"#47d6ff","tertiary":"#69f6b9","on-secondary":"#490080","surface-dim":"#0f131d","inverse-on-surface":"#2c303b","on-tertiary-fixed":"#002113","error":"#ffb4ab","secondary-container":"#6f00be","surface-container-highest":"#313540","on-primary-container":"#00566a","surface-bright":"#353944","on-primary-fixed-variant":"#004e60","primary-fixed":"#b6ebff","background":"#0f131d","surface-variant":"#313540","primary-container":"#00d2ff","surface-tint":"#47d6ff","on-error-container":"#ffdad6","on-secondary-fixed-variant":"#6900b3","on-primary-fixed":"#001f28"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-lg":"1.5rem","gutter":"1.5rem","space-sm":"0.5rem","space-md":"1rem","space-xs":"0.25rem","space-xl":"2.5rem","gutter-mobile":"1rem","margin":"3rem","margin-mobile":"1.25rem"},fontFamily:{"headline-lg":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-tag":["JetBrains Mono"],"headline-xl":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"label-code":["JetBrains Mono"],"headline-sm":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"]},fontSize:{"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface min-h-screen selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-50 flex flex-col border-r border-outline-variant/30 shadow-[0_0_24px_rgba(0,0,0,0.6)]"><div class="h-16 px-space-md flex items-center justify-between border-b border-outline-variant/30 bg-surface-container-low"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary-container">terminal</span><span class="font-label-tag text-label-tag text-primary-fixed uppercase tracking-wider">CS301-CORE-V2.4</span></div><span class="px-space-xs py-0.5 rounded bg-tertiary/10 border border-tertiary/40 font-label-tag text-label-tag text-tertiary">ONLINE</span></div><div class="p-space-md bg-surface-container-lowest border-b border-outline-variant/20"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase">Kernel Module Syllabus</span><span class="font-label-tag text-label-tag text-primary-fixed-dim">26 UNITS</span></div><div class="w-full bg-surface-container h-1.5 rounded overflow-hidden"><div class="bg-primary-container h-full w-[100%]"></div></div></div><nav class="flex-1 overflow-y-auto p-space-sm space-y-1" data-active-classes="bg-surface-container-high border-l-2 border-primary-container text-primary-fixed font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l00-course-setup-boot-sequence" href="#"><span>L00 Boot Seq &amp; Architecture</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l01-interrupts-traps-system-calls" href="#"><span>L01 Traps &amp; Syscalls</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l02-process-abstraction-pcb" href="#"><span>L02 Process Abstraction</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l03-thread-concurrency-locks" href="#"><span>L03 Threads &amp; Locks</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l04-cpu-scheduling-algorithms" href="#"><span>L04 CPU Schedulers</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l05-virtual-memory-paging" href="#"><span>L05 VM &amp; Paging</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l06-page-replacement-tlb" href="#"><span>L06 Page Replace &amp; TLB</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l07-ipc-pipes-shared-memory" href="#"><span>L07 IPC &amp; Shared Mem</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l08-synchronization-primitives" href="#"><span>L08 Semaphores &amp; Mutex</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l09-deadlocks-bankers-algorithm" href="#"><span>L09 Deadlock Avoidance</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l10-file-systems-inodes" href="#"><span>L10 File Systems &amp; Inodes</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l11-io-devices-driver-model" href="#"><span>L11 I/O Drivers &amp; DMA</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l12-memory-allocation-heap" href="#"><span>L12 Heap &amp; Slab Alloc</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l13-signals-asynchronous-events" href="#"><span>L13 Posix Signals</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l14-virtualization-hypervisors" href="#"><span>L14 Hardware Virt</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l15-containers-namespaces-cgroups" href="#"><span>L15 Namespaces &amp; Cgroups</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l16-network-stack-sockets" href="#"><span>L16 Sockets &amp; Epoll</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l17-real-time-operating-systems" href="#"><span>L17 RTOS Scheduling</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l18-journaling-crash-recovery" href="#"><span>L18 Journaling &amp; Ext4</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l19-microkernels-l4-mach" href="#"><span>L19 Microkernel IPC</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l20-distributed-file-systems" href="#"><span>L20 NFS &amp; Raft Sync</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l21-hardware-security-enclaves" href="#"><span>L21 SGX &amp; TPM Enclaves</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l22-access-control-and-domains" href="#"><span>L22 Access Control &amp; Domains</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l23-authentication-identity-verification" href="#"><span>L23 Auth &amp; Identity Verification</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l24-program-exploits-and-control-flow-hijacking" href="#"><span>L24 Exploits &amp; Control Flow</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 rounded transition-all bg-surface-container-high border-l-2 border-primary-container text-primary-fixed font-semibold" data-path="l25-encryption-fundamentals" href="#"><span>L25 Encryption Fundamentals</span><span class="px-1.5 py-0.5 rounded bg-primary-container/20 border border-primary-container font-label-tag text-[10px] text-primary-container">ACTIVE</span></a></nav><div class="p-space-md bg-surface-container-lowest border-t border-outline-variant/30"><div class="flex items-center justify-between text-on-surface-variant font-label-tag text-label-tag"><span>SYS_CLOCK: TSC-SYNC</span><span class="text-tertiary">4.10 GHz</span></div><div class="flex items-center justify-between text-on-surface-variant font-label-tag text-label-tag mt-1"><span>MEM_MAP: E820</span><span class="text-primary-fixed">64GB OK</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30 z-40 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high border border-outline-variant/40"><span class="material-symbols-outlined text-primary text-[18px]">memory</span><span class="font-headline-sm text-[13px] tracking-wider text-on-surface font-bold uppercase">CS 301 OPERATING SYSTEMS</span></div><div class="hidden xl:flex items-center gap-space-xs font-label-tag text-[11px]"><span class="px-2 py-0.5 rounded bg-tertiary/10 border border-tertiary/30 text-tertiary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>CRYPTO_ENGINE_ONLINE</span><span class="px-2 py-0.5 rounded bg-secondary-container/30 border border-secondary/40 text-secondary">CIPHERS: AES-256-GCM / CHACHA20-POLY1305</span><span class="px-2 py-0.5 rounded bg-surface-container border border-outline-variant/50 text-on-surface-variant">MATRIX: TLS 1.3 / ECDHE / SHA-384</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center gap-space-xs"><button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded bg-primary-container text-on-primary font-label-tag text-label-tag hover:shadow-[0_0_16px_rgba(0,210,255,0.4)] transition-all" type="button"><span class="material-symbols-outlined text-[16px]">key</span><span>Test Cipher Handshake</span></button><button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded border border-secondary/40 text-secondary hover:bg-secondary/10 font-label-tag text-label-tag transition-all" type="button"><span class="material-symbols-outlined text-[16px]">lock_reset</span><span>Rotate Ephemeral Keys</span></button></div><div class="h-6 w-px bg-outline-variant/40 mx-1"></div><div class="flex items-center gap-space-xs font-label-code text-label-code text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[20px]">tune</span><span class="hidden lg:inline text-primary-fixed">UID: 1000 (KERNEL_LAB)</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-lg py-space-md"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Field (Contained within module bounds) -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-24 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-10 right-10 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Page Header & Telemetry Canvas -->
+<header class="flex flex-col gap-space-md pb-space-lg">
+<!-- Title banner & Cybernetic Status Tag -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-4xl">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-tag text-label-tag tracking-widest uppercase">
+              LECTURE UNIT 25 • KERNEL DEFENSE
+            </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-tag text-label-tag">
+              UNDERGRAD CS CORE
+            </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            🏷️ OPERATING SYSTEMS: L25 - Encryption Fundamentals
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            An intuitive visual architectural guide for beginners: Discover how symmetric &amp; asymmetric ciphers protect operating system streams, solve key distribution dilemmas, and unite in high-speed hybrid TLS pipelines.
+          </p>
+</div>
+<!-- Interactive Control Deck -->
+<div class="flex items-center gap-space-sm flex-wrap self-start lg:self-end">
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded bg-primary-container text-on-primary font-label-tag text-label-tag shadow-lg hover:shadow-primary-container/30 transition-all cursor-pointer" id="simHandshakeBtn">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>[ ▶ ⚡ Simulate TLS Handshake &amp; Key Exchange ]</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded bg-surface-container-high text-secondary hover:bg-surface-container-highest transition-all cursor-pointer font-label-tag text-label-tag" id="resetCryptoBtn">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>[ 🔄 Reset Crypto Engine ]</span>
+</button>
+</div>
+</div>
+<!-- Real-time Cryptographic Telemetry Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xs">
+<div class="p-space-sm bg-surface-container-low rounded flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant font-label-tag text-[10px] tracking-wider uppercase">
+<span>Subsystem</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+</div>
+<div class="font-label-code text-[11px] text-primary font-semibold truncate">
+            CRYPTO ENGINE: HARDWARE AES-NI // RSA-4096 &amp; ECDHE ENGINE ACTIVE
+          </div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant font-label-tag text-[10px] tracking-wider uppercase">
+<span>Operating Mode</span>
+<span class="text-tertiary font-label-tag">AEAD</span>
+</div>
+<div class="font-label-code text-[11px] text-tertiary font-semibold truncate">
+            CIPHER MODE: GCM-256 (GALOIS/COUNTER MODE AUTHENTICATED)
+          </div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant font-label-tag text-[10px] tracking-wider uppercase">
+<span>Key Distribution</span>
+<span class="text-secondary font-label-tag">DUAL-PHASE</span>
+</div>
+<div class="font-label-code text-[11px] text-secondary font-semibold truncate">
+            KEY DISTRIBUTION: HYBRID ENCRYPTION PROTOCOL READY
+          </div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant font-label-tag text-[10px] tracking-wider uppercase">
+<span>Pipeline Benchmark</span>
+<span class="text-primary font-label-tag">0-RTT</span>
+</div>
+<div class="font-label-code text-[11px] text-primary-fixed-dim font-semibold truncate">
+            HANDSHAKE LATENCY: 1.2 ms (0-RTT TLS 1.3 SESSION RESUMPTION)
+          </div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface-variant font-label-tag text-[10px] tracking-wider uppercase">
+<span>Memory Exposure</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+</div>
+<div class="font-label-code text-[11px] text-on-surface font-semibold truncate">
+            SECURITY STATUS: CIPHERTEXT ENCRYPTED // ZERO PLAINTEXT EXPOSURE
+          </div>
+</div>
+</div>
+</header>
+<!-- SECTION 1: CORE CONCEPTUAL ONBOARDING -->
+<section class="mt-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface">
+          1️⃣ Core Conceptual Onboarding (The Shared House Key vs. The Postal Mailbox Slot)
+        </h2>
+<span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container-highest text-primary-fixed">
+          MODULE // 01 OF 04
+        </span>
+</div>
+<!-- Foundational Question Callout Banner -->
+<div class="p-space-md rounded bg-surface-container-high shadow-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[28px]">lock</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-primary-container uppercase tracking-wider">
+              The Foundational Axiom
+            </span>
+<p class="font-body-md text-body-md text-on-surface font-medium leading-relaxed">
+              Encryption is the mathematical transformation process where readable plaintext data is scrambled into unreadable ciphertext using a secret key parameter, ensuring that unauthorized interceptors cannot decipher the underlying information without the corresponding cryptographic key.
+            </p>
+</div>
+</div>
+</div>
+<!-- Key Characteristics Quad-Cards (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-xs hover:bg-surface-container-high transition-colors">
+<div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Symmetric Encryption (AES)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            • Symmetric Encryption (AES): A cipher architecture that uses the exact same shared secret key to both encrypt and decrypt data streams at lightning-fast hardware speeds.
+          </p>
+</div>
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-xs hover:bg-surface-container-high transition-colors">
+<div class="w-8 h-8 rounded bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">vpn_key</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary">Asymmetric Encryption (RSA)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            • Asymmetric Encryption (RSA): A dual-key cipher system featuring a publicly broadcasted Public Key for locking and a private, secret Private Key for unlocking.
+          </p>
+</div>
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-xs hover:bg-surface-container-high transition-colors">
+<div class="w-8 h-8 rounded bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">swap_horizontal_circle</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary">Key Exchange</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            • Key Exchange: The secure algorithmic protocol (such as Diffie-Hellman or RSA key exchange) that allows two remote machines to establish a shared secret key over an untrusted, public communication channel.
+          </p>
+</div>
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-xs hover:bg-surface-container-high transition-colors">
+<div class="w-8 h-8 rounded bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary-container">Hybrid Encryption</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            • Hybrid Encryption: A best-of-both-worlds architectural pattern that uses slow, secure asymmetric encryption to negotiate a shared temporary session key, and then immediately switches to ultra-fast symmetric encryption to stream the bulk data payload.
+          </p>
+</div>
+</div>
+<!-- Core Motivation Narrative Block -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-label-tag text-label-tag uppercase">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Core System Engineering Motivation &amp; The Paradox</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Modern computer networks and storage disks operate across untrusted boundaries. If an OS sends raw memory buffers across an open Wi-Fi network or stores files on physical drives, any eavesdropper or thief can tap the wires and read every byte. Encryption guarantees confidentiality and integrity. However, system engineers faced a fundamental paradox: symmetric ciphers are fast enough for gigabytes of streaming video and web traffic but require secretly sharing the password key beforehand—a logistical impossibility over the internet. Asymmetric ciphers solve key distribution without pre-shared secrets, but the complex modular arithmetic is far too CPU-intensive to encrypt massive file streams. Real operating systems combine both through hybrid encryption.
+        </p>
+</div>
+<!-- Side-by-Side: Technical Real-World Card vs. Analogy Card -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Technical Component -->
+<div class="p-space-md rounded bg-surface-container-high flex flex-col gap-space-sm justify-between shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-primary uppercase">Production Operating Systems</span>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-code text-[11px]">CHROME_HTTPS_KERNEL</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">terminal</span>
+              💻 Real-World Application Example
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              When you browse the web using HTTPS in Google Chrome, your browser connects to a remote server. The server hands your operating system its public RSA or ECC certificate. Your machine securely calculates a temporary random symmetric session key, encrypts it using the server's public key, and sends it back. Once the server decrypts this session key with its private key, both computers immediately switch over to hardware-accelerated AES (AES-NI instructions on your CPU) to encrypt the live video stream, webpage HTML, and downloaded files at multi-gigabit speeds!
+            </p>
+</div>
+<!-- Inline Cryptographic Visualization Bar -->
+<div class="p-space-sm bg-surface-container-lowest rounded flex items-center justify-between font-label-code text-[11px]">
+<span class="text-on-surface-variant">HW Acceleration:</span>
+<span class="text-tertiary">CPUID.AES-NI = 1 (ENABLED)</span>
+<span class="text-on-surface-variant">Throughput:</span>
+<span class="text-primary-container">6.28 GB/s (Per Core)</span>
+</div>
+</div>
+<!-- Analogy Component -->
+<div class="p-space-md rounded bg-surface-container-high flex flex-col gap-space-sm justify-between shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-secondary uppercase">Mental Models for Beginners</span>
+<span class="px-2 py-0.5 rounded bg-secondary/10 text-secondary font-label-code text-[11px]">GRADE_SCHOOL_ANALOGY</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">child_care</span>
+              🎒 Everyday Example (5th Grader)
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Imagine you and your best friend want to pass secret messages in class. A Shared House Key (Symmetric) is having two identical metal keys that open the same lockbox: locking and unlocking is super fast, but you first have to risk walking across the classroom to hand your friend the spare key! A Postal Mailbox Slot (Asymmetric) has a mail slot open to the whole world (Public Key)—anyone walking by can drop a secret letter through the slit, but only you hold the master mailbox key (Private Key) to unlock the back door and retrieve the mail! Hybrid encryption is dropping a tiny padlocked keybox into the public mailbox slot so you both can immediately use fast identical keys for all future letters!
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded flex items-center justify-between font-label-code text-[11px]">
+<span class="text-on-surface-variant">Concept:</span>
+<span class="text-secondary">Mailbox Drop = Trapdoor Function</span>
+<span class="text-tertiary">Safe Crossing Achieved</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: STRUCTURAL DISSECTION (DUAL-CIPHER MATRIX) -->
+<section class="mt-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface">
+          2️⃣ Structural Dissection (Inside the Dual-Cipher Matrix)
+        </h2>
+<span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container-highest text-secondary">
+          MODULE // 02 OF 04
+        </span>
+</div>
+<!-- Split-Pane Architectural Blueprint -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Left Pane: Symmetric Model -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary">
+              THE SYMMETRIC CIPHER MODEL (SINGLE SHARED KEY)
+            </span>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-tag text-[10px]">FAST BUFFER STREAM</span>
+</div>
+<!-- Visual Circuit Diagram -->
+<div class="p-space-md rounded bg-surface-container-lowest flex flex-col gap-space-sm items-center justify-center">
+<div class="w-full flex flex-col sm:flex-row items-center justify-between gap-2 text-center font-label-code text-xs">
+<div class="px-3 py-2 rounded bg-surface-container-high text-on-surface">
+                Plaintext<br/><span class="text-[10px] text-on-surface-variant">"Kernel Buffer"</span>
+</div>
+<span class="text-primary font-bold">➔</span>
+<div class="px-3 py-2 rounded bg-primary-container text-on-primary font-bold shadow-md">
+                [Lock with Key K]<br/><span class="text-[10px]">AES-256 Rounds</span>
+</div>
+<span class="text-primary font-bold">➔</span>
+<div class="px-3 py-2 rounded bg-surface-container-highest text-on-surface-variant truncate max-w-[120px]">
+                0x7F9B...3E4A<br/><span class="text-[10px]">Ciphertext</span>
+</div>
+<span class="text-primary font-bold">➔</span>
+<div class="px-3 py-2 rounded bg-primary-container text-on-primary font-bold shadow-md">
+                [Unlock with Key K]<br/><span class="text-[10px]">Inverse S-Box</span>
+</div>
+<span class="text-primary font-bold">➔</span>
+<div class="px-3 py-2 rounded bg-surface-container-high text-tertiary">
+                Plaintext<br/><span class="text-[10px] text-on-surface-variant">Recovered</span>
+</div>
+</div>
+<!-- Dynamic Vector Sparkline Indicating Symmetric Hardware Throughput -->
+<div class="w-full h-10 mt-2 flex items-center justify-between px-2 bg-surface-container rounded">
+<span class="font-label-tag text-[10px] text-on-surface-variant">HARDWARE LINE SPEED:</span>
+<svg class="w-32 h-6 text-primary" fill="none" viewbox="0 0 100 20">
+<path d="M0 10 L15 10 L20 3 L25 17 L30 10 L45 10 L50 2 L55 18 L60 10 L80 10 L85 4 L90 16 L95 10 L100 10" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+<span class="font-label-code text-xs text-primary font-bold">~10.4 GB/s</span>
+</div>
+</div>
+<!-- Highlight Badges -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<div class="p-space-xs rounded bg-surface-container text-center flex flex-col justify-center">
+<span class="font-label-tag text-[10px] text-on-surface-variant">Throughput</span>
+<span class="font-label-code text-xs text-tertiary font-bold">Ultra-Fast (Gigabytes/sec)</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container text-center flex flex-col justify-center">
+<span class="font-label-tag text-[10px] text-on-surface-variant">Vulnerability</span>
+<span class="font-label-code text-xs text-error font-bold">Single Point of Failure: Key Distribution Paradox</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container text-center flex flex-col justify-center">
+<span class="font-label-tag text-[10px] text-on-surface-variant">Standard</span>
+<span class="font-label-code text-xs text-primary font-bold">Standard: AES-256-GCM</span>
+</div>
+</div>
+</div>
+<!-- Right Pane: Asymmetric Model -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-headline-sm text-headline-sm text-secondary">
+              THE ASYMMETRIC CIPHER MODEL (PUBLIC / PRIVATE DUAL-KEY PAIR)
+            </span>
+<span class="px-2 py-0.5 rounded bg-secondary/10 text-secondary font-label-tag text-[10px]">SECURE HANDSHAKE</span>
+</div>
+<!-- Visual Circuit Diagram -->
+<div class="p-space-md rounded bg-surface-container-lowest flex flex-col gap-space-sm items-center justify-center">
+<div class="w-full flex flex-col sm:flex-row items-center justify-between gap-2 text-center font-label-code text-xs">
+<div class="px-3 py-2 rounded bg-surface-container-high text-on-surface">
+                Plaintext<br/><span class="text-[10px] text-on-surface-variant">"Shared Secret"</span>
+</div>
+<span class="text-secondary font-bold">➔</span>
+<div class="px-3 py-2 rounded bg-secondary text-on-secondary font-bold shadow-md">
+                [Lock with Alice's Public Key]<br/><span class="text-[10px]">Open to World</span>
+</div>
+<span class="text-secondary font-bold">➔</span>
+<div class="px-3 py-2 rounded bg-surface-container-highest text-on-surface-variant truncate max-w-[120px]">
+                0xC18F...902D<br/><span class="text-[10px]">Ciphertext</span>
+</div>
+<span class="text-secondary font-bold">➔</span>
+<div class="px-3 py-2 rounded bg-secondary text-on-secondary font-bold shadow-md">
+                [Unlock ONLY with Alice's Private Key]<br/><span class="text-[10px]">Secret Vault</span>
+</div>
+<span class="text-secondary font-bold">➔</span>
+<div class="px-3 py-2 rounded bg-surface-container-high text-tertiary">
+                Plaintext<br/><span class="text-[10px] text-on-surface-variant">Recovered</span>
+</div>
+</div>
+<!-- Modular Math Complexity Indicator -->
+<div class="w-full h-10 mt-2 flex items-center justify-between px-2 bg-surface-container rounded">
+<span class="font-label-tag text-[10px] text-on-surface-variant">MODULAR ARITHMETIC LOAD:</span>
+<div class="w-32 bg-surface-container-high rounded h-2 overflow-hidden">
+<div class="bg-secondary h-full w-[85%]"></div>
+</div>
+<span class="font-label-code text-xs text-secondary font-bold">4096-bit Trapdoor</span>
+</div>
+</div>
+<!-- Highlight Badges -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<div class="p-space-xs rounded bg-surface-container text-center flex flex-col justify-center">
+<span class="font-label-tag text-[10px] text-on-surface-variant">Throughput</span>
+<span class="font-label-code text-xs text-secondary-fixed-dim font-bold">Computationally Heavy (Kilobytes/sec)</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container text-center flex flex-col justify-center">
+<span class="font-label-tag text-[10px] text-on-surface-variant">Distribution</span>
+<span class="font-label-code text-xs text-tertiary font-bold">Solves Key Sharing: Public Key is Broadcast Openly</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container text-center flex flex-col justify-center">
+<span class="font-label-tag text-[10px] text-on-surface-variant">Standard</span>
+<span class="font-label-code text-xs text-secondary font-bold">Standard: RSA-4096 / ECC Curve25519</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Structural Deep-Dive Triad with Nested Real-World Examples -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-xs">
+<!-- Item 1 -->
+<div class="p-space-md rounded bg-surface-container flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              • Symmetric Engine Mechanics (AES)
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              • Symmetric Engine Mechanics (AES): Uses substitution-permutation network rounds and hardware registers (Intel AES-NI) to chew through huge data buffers in microseconds.
+            </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high">
+<span class="font-label-tag text-label-tag text-primary block mb-1">💻 Real-World Application Example</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Linux BitLocker and LUKS full-disk encryption use AES-XTS to encrypt and decrypt physical SSD sectors on-the-fly without slowing down your computer.
+            </p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-space-md rounded bg-surface-container flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              • Asymmetric Mathematical Foundations (RSA / ECC)
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              • Asymmetric Mathematical Foundations (RSA / ECC): Leverages prime factorization trapdoor functions or elliptic curve discrete logarithms that are easy to calculate in one direction but virtually impossible to reverse without the private exponent.
+            </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high">
+<span class="font-label-tag text-label-tag text-secondary block mb-1">💻 Real-World Application Example</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+              SSH remote terminal logins use asymmetric public-key authentication (`id_rsa.pub`) to authenticate your terminal session to cloud servers without sending passwords across the internet.
+            </p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-space-md rounded bg-surface-container flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              • The Hybrid Handshake Synthesis
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              • The Hybrid Handshake Synthesis: Merges asymmetric key exchange with symmetric session streaming, maximizing cryptographic defense while minimizing CPU cycle consumption.
+            </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high">
+<span class="font-label-tag text-label-tag text-tertiary block mb-1">💻 Real-World Application Example</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Operating system kernel VPN tunnels (WireGuard, IPsec) negotiate transient ephemeral keys with asymmetric cryptography, then stream raw network packets with symmetric ChaCha20-Poly1305 or AES-GCM.
+            </p>
+</div>
+</div>
+</div>
+<!-- Everyday Example Footer Note -->
+<div class="p-space-md rounded bg-surface-container-highest flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[26px]">pedal_bike</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-tag text-label-tag text-secondary uppercase tracking-wider">🎒 Everyday Example</span>
+<p class="font-body-md text-body-md text-on-surface">
+            Let's complete the bicycle lock comparison! If you give 50 friends duplicates of your physical bicycle key, anyone who loses their key ruins the security for everyone (Symmetric). But if you tell all 50 friends to deposit their written secret letters through your bedroom door mail-slot, nobody needs your private room key, and nobody can steal anyone else's letter (Asymmetric)!
+          </p>
+</div>
+</div>
+</section>
+<!-- SECTION 3: LINEAR OPERATIONAL PIPELINE (TLS HANDSHAKE) -->
+<section class="mt-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface">
+          3️⃣ Linear Operational Pipeline (The TLS Handshake &amp; Key Exchange Workflow)
+        </h2>
+<span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container-highest text-tertiary">
+          MODULE // 03 OF 04
+        </span>
+</div>
+<!-- Horizontal Workflow Timeline Tracker (Interactive 4-Step Track) -->
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-on-surface-variant uppercase">INTERACTIVE PROTOCOL FLOW (CLICK NODES TO INSPECT)</span>
+<span class="font-label-code text-xs text-tertiary font-bold" id="pipelineIndicator">STATE: 04_ACTIVE (BULK_PAYLOAD)</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm relative">
+<!-- Step 1 -->
+<div class="cursor-pointer p-space-sm rounded bg-surface-container flex flex-col gap-2 hover:bg-surface-container-high transition-all" id="stepCard1" onclick="selectStep(1)">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-[10px] text-primary">PHASE 01</span>
+<span class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-xs">1</span>
+</div>
+<div class="font-headline-sm text-[15px] text-on-surface leading-snug">
+              1. Client Hello &amp; Cipher Suite Negotiation
+            </div>
+<div class="font-label-code text-[11px] text-on-surface-variant truncate">
+              Params: TLS_AES_256_GCM
+            </div>
+</div>
+<!-- Step 2 -->
+<div class="cursor-pointer p-space-sm rounded bg-surface-container flex flex-col gap-2 hover:bg-surface-container-high transition-all" id="stepCard2" onclick="selectStep(2)">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-[10px] text-secondary">PHASE 02</span>
+<span class="w-6 h-6 rounded-full bg-secondary/20 text-secondary flex items-center justify-center font-bold text-xs">2</span>
+</div>
+<div class="font-headline-sm text-[15px] text-on-surface leading-snug">
+              2. Server Certificate &amp; Public Key Delivery
+            </div>
+<div class="font-label-code text-[11px] text-on-surface-variant truncate">
+              X.509 RSA/ECDSA PubKey
+            </div>
+</div>
+<!-- Step 3 -->
+<div class="cursor-pointer p-space-sm rounded bg-surface-container flex flex-col gap-2 hover:bg-surface-container-high transition-all" id="stepCard3" onclick="selectStep(3)">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-[10px] text-tertiary">PHASE 03</span>
+<span class="w-6 h-6 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center font-bold text-xs">3</span>
+</div>
+<div class="font-headline-sm text-[15px] text-on-surface leading-snug">
+              3. Pre-Master Secret Key Exchange (Asymmetric / ECDHE)
+            </div>
+<div class="font-label-code text-[11px] text-on-surface-variant truncate">
+              Diffie-Hellman Ephemeral
+            </div>
+</div>
+<!-- Step 4 -->
+<div class="cursor-pointer p-space-sm rounded bg-surface-container-high flex flex-col gap-2 transition-all" id="stepCard4" onclick="selectStep(4)">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-[10px] text-primary-container">PHASE 04</span>
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-xs">4</span>
+</div>
+<div class="font-headline-sm text-[15px] text-on-surface leading-snug">
+              4. Bulk Session Stream Activation (Symmetric AES-GCM)
+            </div>
+<div class="font-label-code text-[11px] text-tertiary font-bold truncate">
+              ⚡ AES-NI Active // High Speed
+            </div>
+</div>
+</div>
+<!-- Sequential Detailed Walkthrough Box -->
+<div class="p-space-md rounded bg-surface-container-lowest flex flex-col gap-space-sm">
+<div class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">
+            Sequential Protocol Execution Rules:
+          </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-code text-xs text-primary font-bold">1. Client Hello &amp; Cipher Suite Negotiation</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                1. Client Hello &amp; Cipher Suite Negotiation: Your browser tells the web server which cryptographic algorithms it supports (e.g., TLS_AES_256_GCM_SHA384) and sends a random client seed.
+              </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-code text-xs text-secondary font-bold">2. Server Certificate &amp; Public Key Delivery</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                2. Server Certificate &amp; Public Key Delivery: The server replies with its signed digital certificate containing its authentic Public Key (validated by trusted Certificate Authorities).
+              </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-code text-xs text-tertiary font-bold">3. Pre-Master Secret Key Exchange (Asymmetric)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                3. Pre-Master Secret Key Exchange (Asymmetric): The client generates a random secret session key, encrypts it using the server's Public Key, and transmits it over the wire. The server decrypts it using its Private Key.
+              </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-code text-xs text-primary-container font-bold">4. Bulk Session Stream Activation (Symmetric AES-GCM)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                4. Bulk Session Stream Activation (Symmetric AES-GCM): Both machines derive identical symmetric keys and switch immediately to high-speed AES encryption. All subsequent HTTP requests and data transfers are protected at line-rate speed.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Activity Component vs. Lockbox Mail Analogy -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Interactive Classroom Activity -->
+<div class="p-space-md rounded bg-surface-container-high flex flex-col justify-between gap-space-sm shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-tertiary uppercase">Classroom Laboratory Activity</span>
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-code text-[11px]">WHITEBOARD_EXERCISE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">draw</span>
+              💻 TLS Handshake Diagram &amp; Algorithm Activity
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Draw a two-column sequence diagram on the board: Client (Browser) vs. Server (Web Host) ➔ Trace the initial TCP connection handshake ➔ Label Step 2 with RSA / ECC Public Key Authentication ➔ Label Step 3 with Asymmetric Key Exchange (Diffie-Hellman / RSA encryption of the shared secret) ➔ Draw a bold green transition line labeled 'Switch to Symmetric Mode' ➔ Label Step 4 with Symmetric AES-256 Data Channel ➔ Have students highlight which specific algorithm executes which job!
+            </p>
+</div>
+<!-- Diagram Simulation Placeholder -->
+<div class="p-space-sm bg-surface-container-lowest rounded flex items-center justify-between text-on-surface-variant font-label-code text-xs">
+<span class="text-primary">Browser [TX: 0x9A]</span>
+<span class="text-tertiary">━━━━━ Switch to Symmetric Mode ━━━━━▶</span>
+<span class="text-secondary">Host [RX: 0x9A]</span>
+</div>
+</div>
+<!-- The Locked Lockbox Mail Pipeline Analogy -->
+<div class="p-space-md rounded bg-surface-container-high flex flex-col justify-between gap-space-sm shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-secondary uppercase">Conceptual Pipeline Analogy</span>
+<span class="px-2 py-0.5 rounded bg-secondary/10 text-secondary font-label-code text-[11px]">POSTAL_MODEL</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">markunread_mailbox</span>
+              🎒 The Locked Lockbox Mail Exchange Pipeline
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              You want to send a diary to a friend across the country ➔ You mail them an open padlock that only you have the key for (Server Public Key Delivery) ➔ Your friend places a secret master room key inside a lockbox, snaps your padlock shut, and mails it back (Asymmetric Key Exchange) ➔ You use your private key to pop open the padlock and take out the master key (Private Key Decryption) ➔ Now both of you have identical keys, and you can rapidly unlock and trade daily diary pages in locked containers forever (Symmetric Bulk Streaming)!
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded flex items-center justify-between text-on-surface-variant font-label-code text-xs">
+<span class="text-secondary">Open Padlock Sent</span>
+<span class="text-primary-container">Padlock Snapped Shut</span>
+<span class="text-tertiary">Shared Room Key Active</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: PARADIGM SHOWDOWN & GUARDRAILS -->
+<section class="mt-space-xl flex flex-col gap-space-md pb-space-lg">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface">
+          4️⃣ Paradigm Showdown &amp; Guardrails
+        </h2>
+<span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container-highest text-primary">
+          MODULE // 04 OF 04
+        </span>
+</div>
+<!-- Side-by-side Comparative Table -->
+<div class="overflow-x-auto rounded bg-surface-container-low shadow-sm">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-high text-on-surface font-label-tag uppercase text-[11px] tracking-wider">
+<tr>
+<th class="p-space-md">Cryptographic Metric</th>
+<th class="p-space-md text-primary">Symmetric Encryption (The Fast Workhorse / AES)</th>
+<th class="p-space-md text-secondary">Asymmetric Encryption (The Secure Handshake / RSA)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-transparent font-body-sm">
+<tr class="hover:bg-surface-container transition-colors">
+<td class="p-space-md font-semibold text-on-surface">Key Architecture</td>
+<td class="p-space-md text-primary-fixed">Single Shared Secret Key (Same key for encrypt &amp; decrypt)</td>
+<td class="p-space-md text-secondary-fixed">Key Pair (Public Key encrypts, Private Key decrypts)</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors bg-surface-container/50">
+<td class="p-space-md font-semibold text-on-surface">Execution Speed</td>
+<td class="p-space-md text-tertiary">Blazing Fast (~GB/s, hardware CPU instruction acceleration)</td>
+<td class="p-space-md text-on-surface-variant">Computationally Slow (~KB/s to MB/s, complex modular math)</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="p-space-md font-semibold text-on-surface">Key Distribution Challenge</td>
+<td class="p-space-md text-error">Fatal flaw if keys must travel over public internet</td>
+<td class="p-space-md text-tertiary">Seamless (Public key can be posted on a billboard)</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors bg-surface-container/50">
+<td class="p-space-md font-semibold text-on-surface">Primary Production Use-Case</td>
+<td class="p-space-md text-on-surface">Full-Disk Encryption, Database Storage, Bulk Web Traffic (TLS Data)</td>
+<td class="p-space-md text-on-surface">Digital Signatures, Key Exchange, Identity Certificates, SSH Logins</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Common Mistakes Warning Banner (Electric Red Alert Accent) -->
+<div class="p-space-md rounded bg-surface-container-high relative overflow-hidden shadow-md">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-error"></div>
+<div class="flex items-start gap-space-sm pl-2">
+<span class="material-symbols-outlined text-error text-[30px]">warning</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm text-error uppercase">
+              CRITICAL ARCHITECTURAL DISTINCTION // ENCRYPTION IS NOT HASHING!
+            </h3>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              Do not confuse encryption with hashing! Beginners often mix up cryptographic hashes (like SHA-256 or MD5) with encryption (like AES or RSA). Hashing is a one-way street: data is permanently collapsed into a fixed-length digest and cannot be decrypted back. Encryption is a two-way street: data is scrambled so that authorized recipients can decrypt it back into its exact original form using the secret key!
+            </p>
+</div>
+</div>
+</div>
+<!-- Systems Engineering Interview Takeaway Panel -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">psychology</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              Systems Engineering Interview Takeaway Panel
+            </h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-tag text-label-tag">
+            HIGH-FREQUENCY QUESTIONS
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-2 text-primary font-label-code text-xs font-bold">
+<span>01.</span>
+<span>Perfect Forward Secrecy (PFS)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              1. Perfect Forward Secrecy (PFS): Using ephemeral Diffie-Hellman keys ensures that even if a server's long-term private key is leaked in 10 years, past recorded sessions cannot be retroactively decrypted.
+            </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-2 text-tertiary font-label-code text-xs font-bold">
+<span>02.</span>
+<span>Authenticated Encryption (AEAD)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              2. Authenticated Encryption (AEAD): Modern protocols mandate AEAD modes like AES-GCM or ChaCha20-Poly1305 that simultaneously guarantee data confidentiality AND tamper-detection integrity.
+            </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-2 text-secondary font-label-code text-xs font-bold">
+<span>03.</span>
+<span>Quantum Threat Horizon</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              3. Quantum Threat Horizon: Symmetric AES-256 remains resilient against Grover's quantum algorithm, whereas traditional RSA/ECC asymmetric math will be broken by Shor's algorithm, driving migration to post-quantum cryptography (PQC).
+            </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-2 text-error font-label-code text-xs font-bold">
+<span>04.</span>
+<span>The Crypto Buffer Overflow Fallacy</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              4. The Crypto Buffer Overflow Fallacy: Cryptographic routines must execute in constant time; data-dependent branching leaks keys through side-channel cache attacks (just like cafeteria plates tumbling down when memory fences break!).
+            </p>
+</div>
+</div>
+</div>
+<!-- Course Completion / Syllabus Bar -->
+<div class="p-space-md rounded bg-surface-container-high flex flex-col lg:flex-row items-center justify-between gap-space-md shadow-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[24px]">workspace_premium</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-tag text-label-tag text-tertiary font-bold tracking-wider">
+              MODULE 25 COMPLETE // 100% MASTERY // CREDITS ACCREDITED // CS301 KERNEL CRYPTOGRAPHY &amp; SECURITY ARCHITECTURE
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+              Academic verification hash: 0x94A3B8E17D209FA4B
+            </span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-md py-2 rounded bg-surface-container-highest text-on-surface hover:bg-surface-bright font-label-tag text-label-tag transition-all cursor-pointer">
+            [ 📖 Review L25 Notes ]
+          </button>
+<button class="px-space-md py-2 rounded bg-primary-container text-on-primary hover:bg-primary-fixed-dim font-label-tag text-label-tag shadow-md transition-all cursor-pointer">
+            [ 🚀 Advance to Final Operating Systems Capstone Exam &amp; Lab ➔ ]
+          </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Client-side Interactive Micro-Behaviors -->
+<script>
+    function selectStep(stepIndex) {
+      const stepCards = [
+        document.getElementById('stepCard1'),
+        document.getElementById('stepCard2'),
+        document.getElementById('stepCard3'),
+        document.getElementById('stepCard4')
+      ];
+      
+      const indicator = document.getElementById('pipelineIndicator');
+      const stepNames = [
+        'STATE: 01_CLIENT_HELLO (NEGOTIATING_CIPHERS)',
+        'STATE: 02_SERVER_CERT (PUBLIC_KEY_VERIFIED)',
+        'STATE: 03_PREMASTER_SECRET (ECDHE_ASYMMETRIC_EXCHANGE)',
+        'STATE: 04_ACTIVE (BULK_PAYLOAD_AES_GCM_RUNNING)'
+      ];
+
+      stepCards.forEach((card, idx) => {
+        if (!card) return;
+        if (idx + 1 === stepIndex) {
+          card.classList.remove('bg-surface-container');
+          card.classList.add('bg-surface-container-high', 'scale-[1.02]');
+        } else {
+          card.classList.remove('bg-surface-container-high', 'scale-[1.02]');
+          card.classList.add('bg-surface-container');
+        }
+      });
+
+      if (indicator) {
+        indicator.textContent = stepNames[stepIndex - 1];
+      }
+    }
+
+    document.getElementById('simHandshakeBtn')?.addEventListener('click', function() {
+      let current = 1;
+      selectStep(current);
+      const interval = setInterval(() => {
+        current++;
+        if (current <= 4) {
+          selectStep(current);
+        } else {
+          clearInterval(interval);
+        }
+      }, 700);
+    });
+
+    document.getElementById('resetCryptoBtn')?.addEventListener('click', function() {
+      selectStep(4);
+    });
+  </script>
+</div></main></div></body></html>
