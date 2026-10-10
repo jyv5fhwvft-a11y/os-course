@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-surface": "#dfe2f1",
+          "inverse-primary": "#00677f",
+          "on-primary-fixed": "#001f28",
+          "on-secondary-fixed-variant": "#6900b3",
+          "on-primary": "#003543",
+          "tertiary-container": "#48d99e",
+          "on-tertiary-container": "#005b3d",
+          "primary-fixed": "#b6ebff",
+          "surface-dim": "#0f131d",
+          "on-tertiary-fixed-variant": "#005236",
+          "tertiary-fixed": "#6ffbbe",
+          "error-container": "#93000a",
+          "surface-container": "#1c1f2a",
+          "on-error": "#690005",
+          "on-secondary": "#490080",
+          "inverse-on-surface": "#2c303b",
+          "background": "#0f131d",
+          "outline-variant": "#3c494e",
+          "secondary": "#ddb7ff",
+          "tertiary": "#69f6b9",
+          "on-primary-container": "#00566a",
+          "primary-container": "#00d2ff",
+          "surface": "#0f131d",
+          "on-tertiary-fixed": "#002113",
+          "outline": "#859399",
+          "surface-container-high": "#262a35",
+          "surface-container-highest": "#313540",
+          "on-error-container": "#ffdad6",
+          "on-tertiary": "#003824",
+          "secondary-fixed": "#f0dbff",
+          "surface-bright": "#353944",
+          "surface-tint": "#47d6ff",
+          "on-background": "#dfe2f1",
+          "tertiary-fixed-dim": "#4edea3",
+          "error": "#ffb4ab",
+          "secondary-container": "#6f00be",
+          "on-surface-variant": "#bbc9cf",
+          "on-secondary-container": "#d6a9ff",
+          "on-secondary-fixed": "#2c0051",
+          "surface-variant": "#313540",
+          "on-primary-fixed-variant": "#004e60",
+          "primary-fixed-dim": "#47d6ff",
+          "secondary-fixed-dim": "#ddb7ff",
+          "primary": "#a5e7ff",
+          "surface-container-lowest": "#0a0e18",
+          "surface-container-low": "#171b26",
+          "inverse-surface": "#dfe2f1"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-lg": "1.5rem",
+          "space-md": "1rem",
+          "space-xl": "2.5rem",
+          "margin-mobile": "1.25rem",
+          "space-sm": "0.5rem",
+          "gutter-mobile": "1rem",
+          "space-xs": "0.25rem",
+          "margin": "3rem",
+          "gutter": "1.5rem"
+        },
+        "fontFamily": {
+          "headline-md": [
+            "Space Grotesk"
+          ],
+          "headline-xl": [
+            "Space Grotesk"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-tag": [
+            "JetBrains Mono"
+          ],
+          "headline-xl-mobile": [
+            "Space Grotesk"
+          ],
+          "label-code": [
+            "JetBrains Mono"
+          ],
+          "headline-lg-mobile": [
+            "Space Grotesk"
+          ],
+          "headline-lg": [
+            "Space Grotesk"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Space Grotesk"
+          ]
+        },
+        "fontSize": {
+          "headline-md": [
+            "1.75rem",
+            {
+              "lineHeight": "2.25rem",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl": [
+            "3.5rem",
+            {
+              "lineHeight": "4rem",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-md": [
+            "1rem",
+            {
+              "lineHeight": "1.5rem",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "1.125rem",
+            {
+              "lineHeight": "1.75rem",
+              "fontWeight": "400"
+            }
+          ],
+          "label-tag": [
+            "0.75rem",
+            {
+              "lineHeight": "1rem",
+              "letterSpacing": "0.06em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "2.25rem",
+            {
+              "lineHeight": "2.75rem",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-code": [
+            "0.875rem",
+            {
+              "lineHeight": "1.25rem",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg-mobile": [
+            "1.75rem",
+            {
+              "lineHeight": "2.25rem",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "2.5rem",
+            {
+              "lineHeight": "3rem",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "0.875rem",
+            {
+              "lineHeight": "1.25rem",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "1.25rem",
+            {
+              "lineHeight": "1.75rem",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col min-h-0 flex-1"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container"><span class="material-symbols-outlined text-[20px]">terminal</span></div><div><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary-container block leading-none">CS 301</span><span class="font-label-tag text-label-tag text-on-surface-variant block mt-space-xs">OPERATING SYSTEMS</span></div></div><div class="px-space-xs py-0.5 rounded-lg bg-secondary-container/40 text-secondary font-label-tag text-label-tag">CORE</div></div><div class="px-space-md py-space-sm bg-surface-container-low/60 flex items-center justify-between"><span class="font-label-tag text-label-tag uppercase tracking-wider text-outline">Curriculum Index</span><span class="font-label-tag text-label-tag text-tertiary">22 UNITS</span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-sm flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l00-course-intro" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L00</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">OS Primitives &amp; Architecture</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l01-kernel-boot" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L01</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">Kernel Boot &amp; Initialization</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l02-process-state" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L02</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">Process Lifecycle &amp; PCB</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l03-context-switching" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L03</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">Trap Handlers &amp; Context Switch</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l04-threads-concurrency" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L04</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">Kernel Threads &amp; Preemption</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l05-cpu-scheduling" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L05</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">Multilevel Feedback Queues</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l06-locks-mutexes" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L06</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">Spinlocks &amp; Futex Primitives</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l07-semaphores-monitors" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L07</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">Semaphores &amp; Condition Vars</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l08-deadlocks" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L08</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">Deadlock Detection &amp; Banker</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l09-physical-memory" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L09</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">Physical Allocators &amp; Buddy Sys</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l10-virtual-memory" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L10</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">Multi-Level Paging &amp; CR3</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l11-tlb-hardware" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L11</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">TLB Shootdown &amp; ASID</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l12-page-replacement" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L12</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">Demand Paging &amp; Clock Alg</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l13-segmentation-protection" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L13</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">Ring Levels &amp; Segmentation</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l14-slab-allocators" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L14</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">SLAB &amp; SLUB Allocators</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l15-file-systems-vfs" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L15</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">VFS Architecture &amp; Inodes</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l16-inode-structures" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L16</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">Ext4 B-Trees &amp; Extents</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l17-buffer-cache" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L17</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">Page Cache &amp; Writeback</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l18-io-subsystems" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L18</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">DMA Channels &amp; Hardware IRQs</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l19-disk-scheduling" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L19</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">Block Queues &amp; Elevator Sched</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="l20-ipc-mechanisms" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-outline">L20</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">UNIX Pipes &amp; Shared Memory</span></div><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 transition-all group bg-primary-container text-on-primary font-bold rounded-lg" data-path="l21-uniform-device-drivers" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-primary-container font-semibold">L21</span><span class="font-body-sm text-body-sm truncate max-w-[130px]">Uniform Device Drivers</span></div><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span></span></a></nav></div><div class="p-space-md bg-surface-container-low"><div class="p-space-sm rounded-lg bg-surface-container-high flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-tag text-label-tag text-outline">KERNEL TARGET</span><span class="font-label-tag text-label-tag text-primary-container">x86_64</span></div><div class="flex items-center justify-between"><span class="font-label-tag text-label-tag text-outline">COURSE SEMESTER</span><span class="font-label-tag text-label-tag text-on-surface">Fall 2024</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">CS 301 Kernel Lab</span><span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded-lg bg-surface-container-highest text-primary font-medium">v4.20</span></div><div class="hidden xl:flex items-center gap-space-xs"><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-surface-container-low"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="font-label-tag text-label-tag text-outline">VFS:</span><span class="font-label-tag text-label-tag text-tertiary">MOUNTED</span></div><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-surface-container-low"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span><span class="font-label-tag text-label-tag text-outline">DRIVER SUBSYS:</span><span class="font-label-tag text-label-tag text-primary-container">CHAR_DEV</span></div><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-surface-container-low"><span class="font-label-tag text-label-tag text-outline">MAJOR/MINOR:</span><span class="font-label-tag text-label-tag text-secondary">[240:0]</span></div><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-surface-container-low"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="font-label-tag text-label-tag text-outline">DEVFS:</span><span class="font-label-tag text-label-tag text-tertiary">ACTIVE</span></div></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-label-tag text-label-tag hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-all" type="button"><span class="material-symbols-outlined text-[18px]">play_arrow</span><span>Simulate Driver I/O Call</span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Ambient Telemetry Banner (Module 21 Workspace) -->
+<section class="relative px-space-lg py-space-xl bg-surface-container-lowest overflow-hidden">
+<!-- Atmospheric Cybernetic Gradient Background -->
+<div class="absolute inset-0 pointer-events-none opacity-40 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-container/15 via-secondary-container/10 to-transparent"></div>
+<div class="absolute top-0 right-1/4 w-96 h-96 bg-primary-container/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-lg">
+<!-- Breadcrumb / Course Tag -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[16px]">memory</span>
+<span class="font-label-tag text-label-tag font-semibold tracking-wider uppercase">LAB 21 WORKSPACE // VFS-DRIVER SUBSYSTEM // UNIFORM HARDWARE ABSTRACTION</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-lg bg-tertiary-container/20 text-tertiary font-label-tag text-label-tag font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+            SYS_DEVFS_ONLINE
+          </span>
+<span class="px-space-sm py-0.5 rounded-lg bg-secondary-container/30 text-secondary font-label-tag text-label-tag">RING 0 KERNEL SPACE</span>
+</div>
+</div>
+<!-- Main Module Title & Subtitle -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="max-w-4xl">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mb-space-xs flex items-center gap-3">
+<span class="text-secondary select-none">🏷️</span>
+<span>OPERATING SYSTEMS: L21 - Uniform Device Drivers &amp; Hardware Abstraction</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+            An intuitive visual architectural guide for beginners: Discover how the operating system talks to thousands of custom hardware gadgets through a single, elegant universal adapter interface.
+          </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="group flex items-center gap-space-xs px-space-lg py-3 rounded-lg bg-primary-container text-on-primary font-label-code text-label-code font-bold shadow-lg shadow-primary-container/20 hover:bg-primary-fixed-dim hover:scale-[1.02] active:scale-[0.98] transition-all" id="btn-simulate-io" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:rotate-12">bolt</span>
+<span>▶ ⚡ Simulate Driver I/O Call &amp; Syscall Translation</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-3 rounded-lg bg-surface-container-high text-on-surface font-label-code text-label-code font-medium hover:bg-surface-bright transition-all" id="btn-reset-io" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>🔄 Reset Driver Simulator</span>
+</button>
+</div>
+</div>
+<!-- Real-time Hardware Telemetry Strip -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">DRIVER ARCH</span>
+<span class="font-label-code text-label-code text-primary font-semibold truncate">UNIFORM POSIX VFS LAYER</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">SUBSYSTEM MODES</span>
+<span class="font-label-code text-label-code text-tertiary font-semibold truncate">BLOCK // CHAR // NET</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">MAJOR/MINOR CODES</span>
+<span class="font-label-code text-label-code text-secondary font-semibold truncate">/dev/sda [8, 0] // tty [5, 0]</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">IOCTL STATUS</span>
+<span class="font-label-code text-label-code text-tertiary-container font-semibold truncate">STANDBY // STABLE ABI</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">HARDWARE ADAPTER</span>
+<span class="font-label-code text-label-code text-primary-container font-semibold truncate">ACTIVE GENERIC SHIELD</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 1: Core Conceptual Onboarding -->
+<section class="px-space-lg py-space-xl bg-surface flex flex-col gap-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary-container flex items-center justify-center font-headline-sm font-bold">1</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Core Conceptual Onboarding (The Universal Power Adapter Strategy)</h2>
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-widest">CHAPTER 21.1 • HARDWARE ABSTRACTION FOUNDATIONS</span>
+</div>
+</div>
+<!-- The Foundational Question Text Box & Core Motivation -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Foundational Question Box (8 cols) -->
+<div class="lg:col-span-8 p-space-lg rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs text-primary mb-space-xs">
+<span class="material-symbols-outlined text-[20px]">psychology_alt</span>
+<span class="font-label-tag text-label-tag tracking-wider uppercase font-semibold">The Foundational Question</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+            A Device Driver is a specialized translation software module that sits inside the kernel layer, acting as a uniform buffer interface between the core operating system referee and the unique, hyper-specific electronic command codes of individual hardware manufacturers.
+          </p>
+</div>
+<!-- Key Characteristics Bullet Block -->
+<div class="p-space-md rounded-lg bg-surface-container-high flex flex-col gap-space-sm">
+<div class="flex items-center gap-2 text-secondary font-label-tag text-label-tag font-semibold">
+<span class="material-symbols-outlined text-[18px]">fact_check</span>
+<span>THREE ESSENTIAL FOUNDATIONAL DEFINITIONS</span>
+</div>
+<div class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant">
+<div class="p-space-xs rounded bg-surface-container/60">
+<strong class="text-primary font-semibold font-label-code text-label-code">• Block Device:</strong> A hardware storage device that reads and writes data strictly in fixed-size, addressable sector groups (like 4KB blocks) and supports random jumping.
+            </div>
+<div class="p-space-xs rounded bg-surface-container/60">
+<strong class="text-tertiary font-semibold font-label-code text-label-code">• Character Device:</strong> A hardware device that processes data linearly as an endless, un-buffered stream of individual character bytes (like keypresses) without any random jumping.
+            </div>
+<div class="p-space-xs rounded bg-surface-container/60">
+<strong class="text-secondary font-semibold font-label-code text-label-code">• Device Files (/dev):</strong> Specialized virtual files inside Unix-style operating systems that expose physical hardware controllers as simple text files you can read or write to directly.
+            </div>
+</div>
+</div>
+</div>
+<!-- Core Motivation Block (4 cols) -->
+<div class="lg:col-span-4 p-space-lg rounded-lg bg-surface-container-high flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+<span class="font-label-tag text-label-tag font-semibold uppercase tracking-wider">The Architectural Imperative</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Why Not Code Hardware Direct into the Kernel?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            There are thousands of global hardware companies building custom gear. If the core operating system kernel referee had to include native, bespoke code for every single manufacturer's individual model forever, the kernel file size would expand to gigabytes and break constantly. To solve this architectural bottleneck, the OS establishes a Uniform Device Driver model—demanding a stable common interface of basic commands (like read, write, open, close) and forcing manufacturers to write their own driver translators to map their hardware quirks underneath.
+          </p>
+</div>
+<div class="flex items-center gap-2 text-primary font-label-code text-label-code">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Result: Kernel remains lightweight &amp; stable</span>
+</div>
+</div>
+</div>
+<!-- Real-World & Analogy Pair -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Technical Card Component -->
+<div class="p-space-lg rounded-lg bg-surface-container flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px]">terminal</span>
+            💻 Real-World Application Example
+          </span>
+<span class="px-space-xs py-0.5 rounded bg-primary-container/20 text-primary-container font-label-tag text-label-tag">STORAGE STACK</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          When you tell an application like Microsoft VS Code to save a text file, or tell Google Chrome to stream data, the apps don't care whether you have a Western Digital HDD, a Samsung NVMe SSD, or a SanDisk USB thumb drive plugged into your motherboard. The apps issue a generic system call down to the kernel. The kernel targets the uniform block device interface, which passes the stream down to the specific manufacturer's driver. The driver handles the messy electrical voltage variations, leaving your software perfectly clean.
+        </p>
+</div>
+<!-- Analogy Card Component -->
+<div class="p-space-lg rounded-lg bg-surface-container flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-secondary flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px]">travel_explore</span>
+            🎒 Everyday Example (5th Grader)
+          </span>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container/30 text-secondary font-label-tag text-label-tag">ANALOGY MODEL</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Imagine you are traveling around the world with a laptop, a desk lamp, and a smartphone charger. Every country has completely different, messy electrical wall outlet layouts and shapes! If you had to rebuild your laptop's internal power wires for every house you visited, it would be a nightmare. Instead, you use a Universal Power Adapter! The adapter presents a single, uniform socket plug that fits your laptop perfectly, while hiding the weird, unique wall pin shapes on the back. The uniform device driver is that adapter, making every unique hardware piece look exactly the same to the computer's brain!
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Structural Dissection -->
+<section class="px-space-lg py-space-xl bg-surface-container-lowest flex flex-col gap-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/40 text-secondary flex items-center justify-center font-headline-sm font-bold">2</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Structural Dissection (The Three Classic Core Driver Categories)</h2>
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-widest">CHAPTER 21.2 • ARCHITECTURAL ROUTING &amp; DISPATCH TABLE</span>
+</div>
+</div>
+<!-- Split-Pane Structural Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left Pane: Visual Diagram Lanes (7 cols) -->
+<div class="lg:col-span-7 p-space-lg rounded-lg bg-surface-container-low flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">alt_route</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">THE UNIFORM DRIVER ARCHITECTURE LANES</span>
+</div>
+<span class="font-label-tag text-label-tag text-tertiary">3 CHANNELS ONLINE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Visual mapping of user syscall streams traversing through POSIX uniform driver interfaces directly into raw hardware controller silicons.
+        </p>
+<!-- Diagram Graphic / Three Vertical Channels -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-space-xs">
+<!-- Channel 1: Block -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col items-center text-center gap-space-sm transition-all hover:bg-surface-container-high" id="lane-block">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">save</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-tag text-label-tag text-outline">CHANNEL 01</span>
+<span class="font-label-code text-label-code font-bold text-primary">1. Block Channel</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant mt-0.5">/dev/sda (SSD/HDD)</span>
+</div>
+<div class="w-full py-1 rounded bg-surface-container-highest font-label-tag text-label-tag text-primary-container">
+              Fixed 4KB Blocks
+            </div>
+<span class="material-symbols-outlined text-primary text-[20px] animate-bounce">arrow_downward</span>
+<span class="font-label-tag text-label-tag text-outline">Buffer Cache</span>
+</div>
+<!-- Channel 2: Character -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col items-center text-center gap-space-sm transition-all hover:bg-surface-container-high" id="lane-char">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/20 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">keyboard</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-tag text-label-tag text-outline">CHANNEL 02</span>
+<span class="font-label-code text-label-code font-bold text-tertiary">2. Character Channel</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant mt-0.5">/dev/tty (Keyboard/Mouse)</span>
+</div>
+<div class="w-full py-1 rounded bg-surface-container-highest font-label-tag text-label-tag text-tertiary">
+              Sequential Byte Stream
+            </div>
+<span class="material-symbols-outlined text-tertiary text-[20px] animate-bounce">arrow_downward</span>
+<span class="font-label-tag text-label-tag text-outline">Direct Stream</span>
+</div>
+<!-- Channel 3: Network -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col items-center text-center gap-space-sm transition-all hover:bg-surface-container-high" id="lane-net">
+<div class="w-10 h-10 rounded-full bg-secondary-container/30 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">lan</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-tag text-label-tag text-outline">CHANNEL 03</span>
+<span class="font-label-code text-label-code font-bold text-secondary">3. Network Channel</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant mt-0.5">eth0 (WiFi/Ethernet)</span>
+</div>
+<div class="w-full py-1 rounded bg-surface-container-highest font-label-tag text-label-tag text-secondary">
+              Socket Packets / Sk_buff
+            </div>
+<span class="material-symbols-outlined text-secondary text-[20px] animate-bounce">arrow_downward</span>
+<span class="font-label-tag text-label-tag text-outline">TCP/IP Stack</span>
+</div>
+</div>
+<!-- Master Hardware Controller Layer Convergence -->
+<div class="p-space-md rounded-lg bg-surface-container-highest flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-primary-container text-on-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined">developer_board</span>
+</div>
+<div>
+<span class="font-label-code text-label-code font-bold text-on-surface block">All Route into the Master Hardware Controller Layer</span>
+<span class="font-label-tag text-label-tag text-outline">Physical DMA Channels • Register Busses (PCIe, NVMe, USB 3.2, SPI, I2C)</span>
+</div>
+</div>
+<span class="px-space-xs py-1 rounded bg-surface-container font-label-code text-label-code text-primary shrink-0">I/O BUS READY</span>
+</div>
+</div>
+<!-- Right Pane: The Interface Registration System Tracking Card (5 cols) -->
+<div class="lg:col-span-5 p-space-lg rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">table_chart</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">THE INTERFACE REGISTRATION SYSTEM</span>
+</div>
+<span class="font-label-tag text-label-tag text-primary-container">KERNEL VFS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            The kernel pairs files with code via the device registry table using standard function pointer jumptables.
+          </p>
+<!-- Tracking Rows -->
+<div class="flex flex-col gap-space-sm">
+<!-- Row 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-high flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code font-semibold text-primary">Device File System Index (/dev/)</span>
+<span class="font-label-tag text-label-tag px-1.5 py-0.5 rounded bg-surface-container-lowest text-tertiary">INODE BINDING</span>
+</div>
+<div class="font-label-code text-label-code text-on-surface-variant">
+                crw-rw---- 1 root dialout 5, 0 /dev/tty<br/>
+                brw-rw---- 1 root disk    8, 0 /dev/sda
+              </div>
+</div>
+<!-- Row 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-high flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code font-semibold text-secondary">Driver Function Call Pointer Array</span>
+<span class="font-label-tag text-label-tag px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary">struct file_operations</span>
+</div>
+<div class="font-label-code text-label-code text-on-surface-variant space-y-0.5">
+<div>.open  ➔ &amp;nvme_dev_open (0x7ffe04)</div>
+<div>.read  ➔ &amp;nvme_block_read (0x7ffe10)</div>
+<div>.write ➔ &amp;nvme_block_write (0x7ffe24)</div>
+<div>.ioctl ➔ &amp;nvme_ioctl_cmd (0x7ffe40)</div>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-high flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code font-semibold text-tertiary">Major/Minor Controller Identifier Codes</span>
+<span class="font-label-tag text-label-tag px-1.5 py-0.5 rounded bg-surface-container-lowest text-secondary">DISPATCH ID</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-label-code text-label-code text-primary font-bold">MAJOR (8):</span> Selects NVMe/SCSI Driver Subsystem.<br/>
+<span class="font-label-code text-label-code text-secondary font-bold">MINOR (0):</span> Indexes Disk #0 Partition Table.
+              </div>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container text-on-surface-variant font-label-tag text-label-tag flex items-center justify-between">
+<span>ABI STABILITY: POSIX.1-2017</span>
+<span class="text-tertiary">STATUS: LOCKED &amp; REGISTERED</span>
+</div>
+</div>
+</div>
+<!-- Structural Definitions Rows -->
+<div class="flex flex-col gap-space-md pt-space-xs">
+<!-- Definition 1: Block Device Lane -->
+<div class="p-space-md rounded-lg bg-surface-container-high flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="max-w-2xl">
+<div class="font-label-code text-label-code font-bold text-primary mb-1">
+            • Block Device Lane (/dev/sda): Houses addressable storage architectures that support random search seeking. Your main solid-state drive lives here, exposed as a block device file node.
+          </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+            💻 Real-World Application Example: When the Linux kernel mounts your primary storage drive, it links it to <code class="text-primary font-label-code text-label-code">/dev/sda</code>, allowing file utilities to read or partition data blocks without knowing the drive's firmware logic.
+          </div>
+</div>
+<span class="px-space-sm py-1 rounded bg-primary-container/20 text-primary-container font-label-tag text-label-tag shrink-0 font-semibold self-start md:self-auto">RANDOM ACCESS SEEK</span>
+</div>
+<!-- Definition 2: Character Device Lane -->
+<div class="p-space-md rounded-lg bg-surface-container-high flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="max-w-2xl">
+<div class="font-label-code text-label-code font-bold text-tertiary mb-1">
+            • Character Device Lane (/dev/tty): Processes serial streams where order is absolute. Serial terminal windows, input controllers, and old printer connections run here.
+          </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+            💻 Real-World Application Example: When you type characters into a terminal window app, the OS reads the stream line-by-line out of the <code class="text-tertiary font-label-code text-label-code">/dev/tty</code> character device console buffer file.
+          </div>
+</div>
+<span class="px-space-sm py-1 rounded bg-tertiary-container/20 text-tertiary font-label-tag text-label-tag shrink-0 font-semibold self-start md:self-auto">STREAM FIFO ORDER</span>
+</div>
+<!-- Definition 3: Network Interface Tier -->
+<div class="p-space-md rounded-lg bg-surface-container-high flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="max-w-2xl">
+<div class="font-label-code text-label-code font-bold text-secondary mb-1">
+            • Network Interface Tier (eth0): A unique socket-driven interface model that does not map to a standard file path, processing incoming and outgoing raw communication packet frames.
+          </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+            💻 Real-World Application Example: Applications like Discord bypass file paths entirely, binding directly to network sockets driven by your Ethernet card or WiFi adapter driver.
+          </div>
+</div>
+<span class="px-space-sm py-1 rounded bg-secondary-container/30 text-secondary font-label-tag text-label-tag shrink-0 font-semibold self-start md:self-auto">SOCKET FRAME INTERFACE</span>
+</div>
+</div>
+<!-- Bottom Footer Note: Everyday Example -->
+<div class="p-space-md rounded-lg bg-surface-container flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/30 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">🎒 Everyday Example</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Let's use a school mail room sorting comparison! Block devices are like numbered student textbook lockers—you can jump to locker 50, then locker 2, then locker 99 in any random order you want. Character devices are like a narrow ticker-tape fax stream machine—the numbers crawl out on a single thin paper ribbon line-by-line, and you can only read the letters in the exact order they crawl out. Network devices are like a walkie-talkie radio—you tune into a specific wireless channel lane to throw message packets back and forth into the air!
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Linear Operational Pipeline -->
+<section class="px-space-lg py-space-xl bg-surface flex flex-col gap-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary-container flex items-center justify-center font-headline-sm font-bold">3</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Linear Operational Pipeline (The Generic Command to Hardware Action Lifecycle)</h2>
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-widest">CHAPTER 21.3 • EXECUTION TRACE &amp; VOLTAGE GATING</span>
+</div>
+</div>
+<!-- Horizontal Workflow Timeline Tracker (Interactive 4 Nodes) -->
+<div class="p-space-lg rounded-lg bg-surface-container-low flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-outline tracking-wider uppercase font-semibold">FOUR-STAGE SYSCALL HARDWARE PIPELINE</span>
+<span class="font-label-code text-label-code px-space-xs py-0.5 rounded bg-surface-container-high text-primary" id="simulator-status-badge">STATUS: PIPELINE READY // CLICK SIMULATE</span>
+</div>
+<!-- Tracker Nodes -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm relative">
+<!-- Node 1 -->
+<div class="step-card p-space-md rounded-lg bg-surface-container transition-all flex flex-col gap-space-sm" id="sim-step-1">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 rounded-full bg-surface-container-high font-label-code text-label-code text-primary flex items-center justify-center font-bold">01</span>
+<span class="font-label-tag text-label-tag text-outline">USER SPACE</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">1. Generic Syscall Fire</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">App invokes write() file descriptor</p>
+</div>
+<div class="mt-auto pt-2 flex items-center gap-1 text-primary-container font-label-tag text-label-tag font-semibold">
+<span>posix_write(fd, buf, len)</span>
+</div>
+</div>
+<!-- Node 2 -->
+<div class="step-card p-space-md rounded-lg bg-surface-container transition-all flex flex-col gap-space-sm" id="sim-step-2">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 rounded-full bg-surface-container-high font-label-code text-label-code text-secondary flex items-center justify-center font-bold">02</span>
+<span class="font-label-tag text-label-tag text-outline">VFS CORE</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">2. VFS Driver Route</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Kernel inspects /dev/ node &amp; Major ID</p>
+</div>
+<div class="mt-auto pt-2 flex items-center gap-1 text-secondary font-label-tag text-label-tag font-semibold">
+<span>f_op-&gt;write() dispatch</span>
+</div>
+</div>
+<!-- Node 3 -->
+<div class="step-card p-space-md rounded-lg bg-surface-container transition-all flex flex-col gap-space-sm" id="sim-step-3">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 rounded-full bg-surface-container-high font-label-code text-label-code text-tertiary flex items-center justify-center font-bold">03</span>
+<span class="font-label-tag text-label-tag text-outline">DRIVER MODULE</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">3. Bespoke Code Translation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Hardware driver generates chip opcode</p>
+</div>
+<div class="mt-auto pt-2 flex items-center gap-1 text-tertiary font-label-tag text-label-tag font-semibold">
+<span>NVME_NVM_CMD_WRITE (0x01)</span>
+</div>
+</div>
+<!-- Node 4 -->
+<div class="step-card p-space-md rounded-lg bg-surface-container transition-all flex flex-col gap-space-sm" id="sim-step-4">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 rounded-full bg-surface-container-high font-label-code text-label-code text-tertiary-container flex items-center justify-center font-bold">04</span>
+<span class="font-label-tag text-label-tag text-outline">PHYSICAL CHIP</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">4. Electrical Execution</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">DMA bus fires voltage into NAND cell</p>
+</div>
+<div class="mt-auto pt-2 flex items-center gap-1 text-tertiary-container font-label-tag text-label-tag font-semibold">
+<span>Voltage Gate Pulse (3.3V)</span>
+</div>
+</div>
+</div>
+<!-- Live Simulator Console Output Terminal -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest font-label-code text-label-code text-on-surface-variant flex flex-col gap-1" id="sim-terminal">
+<div class="flex items-center justify-between text-outline pb-1">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+            SYS_TRACE // KERNEL LOG BUFFER (dmesg -w)
+          </span>
+<span class="text-label-tag">PID: 4091 [vscode-worker]</span>
+</div>
+<div class="text-on-surface leading-relaxed" id="sim-log-text">
+          &gt; Ready. Press "Simulate Driver I/O Call" in top banner to initiate user syscall transition sequence.
+        </div>
+</div>
+</div>
+<!-- Sequential Process Rules Underneath -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container-high flex flex-col gap-1">
+<div class="font-label-code text-label-code font-bold text-primary">1. Generic Syscall Fire:</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          An application loops a standard write command, sending a plain array stream down to the kernel file manager, completely blind to the hardware type.
+        </p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-high flex flex-col gap-1">
+<div class="font-label-code text-label-code font-bold text-secondary">2. VFS Driver Route:</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          The Virtual File System (VFS) referee layer catches the call, checks the file node properties inside the `/dev/` table directory, and routes it to the specific driver registered to that hardware major code number.
+        </p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-high flex flex-col gap-1">
+<div class="font-label-code text-label-code font-bold text-tertiary">3. Bespoke Code Translation:</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          The specific manufacturer's device driver unpacks the generic request, converting 'write(block 4)' into the hyper-specific binary code numbers needed by that exact hardware control register chip.
+        </p>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-high flex flex-col gap-1">
+<div class="font-label-code text-label-code font-bold text-primary-container">4. Electrical Execution:</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          The translated bits fire down the I/O connection lines, commanding the physical hardware chip to sweep an arm or flash an electronic gate cell.
+        </p>
+</div>
+</div>
+<!-- Pipeline Showcase Cards (Class Activity & Restaurant Analogy) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Activity Card Component -->
+<div class="p-space-lg rounded-lg bg-surface-container flex flex-col justify-between gap-space-md shadow-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px]">assignment</span>
+              💻 Ten-Device Classification Sorting Activity
+            </span>
+<span class="px-space-xs py-0.5 rounded bg-primary-container/20 text-primary-container font-label-tag text-label-tag">CLASSROOM LAB</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Present a raw mixed matrix array of ten real-world hardware devices on the blackboard: A web camera, an NVMe SSD, a USB keyboard, an Ethernet card, a legacy dot-matrix printer, a touchscreen panel, a virtual terminal console, a flash memory card, a computer mouse, and a digital network adapter ➔ Have the class debate, classify, and sort each item into the three driver categories: Block vs. Character vs. Network ➔ Defend why a stable common interface makes upgrading hardware completely plug-and-play.
+          </p>
+</div>
+<!-- Micro Tag Array for the 10 devices -->
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-tertiary font-label-tag text-label-tag">Web Camera [Char]</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-tag text-label-tag">NVMe SSD [Block]</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-tertiary font-label-tag text-label-tag">USB Keyboard [Char]</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-tag text-label-tag">Ethernet Card [Net]</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-tertiary font-label-tag text-label-tag">Dot-Matrix [Char]</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-tertiary font-label-tag text-label-tag">Touchscreen [Char]</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-tertiary font-label-tag text-label-tag">Virtual Console [Char]</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-tag text-label-tag">Flash Card [Block]</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-tertiary font-label-tag text-label-tag">Mouse [Char]</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-tag text-label-tag">Digital Net Adapter [Net]</span>
+</div>
+</div>
+<!-- Analogy Card Component -->
+<div class="p-space-lg rounded-lg bg-surface-container flex flex-col justify-between gap-space-md shadow-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-secondary flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px]">restaurant</span>
+              🎒 Restaurant Ordering Pipeline
+            </span>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container/30 text-secondary font-label-tag text-label-tag">KITCHEN QUEUE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            A customer circles 'Steak' on a generic table menu card (Generic Syscall) ➔ The waiter takes the sheet and slides it onto the specific kitchen window hook labeled 'Grill Station' (Driver Route) ➔ The grill cook translates the text word into specific cooking moves: light the propane flame, grab the metal tongs, and set the timer clock (Bespoke Translation) ➔ The fire heats the iron grill grate and the meat cooks safely (Electrical Execution).
+          </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high flex items-center gap-space-sm text-on-surface font-label-code text-label-code">
+<span class="material-symbols-outlined text-secondary text-[20px]">cookie</span>
+<span>Analogy takeaway: The guest never knows the brand of the grill!</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Paradigm Showdown & Guardrails -->
+<section class="px-space-lg py-space-xl bg-surface-container-lowest flex flex-col gap-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/40 text-secondary flex items-center justify-center font-headline-sm font-bold">4</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Paradigm Showdown &amp; Guardrails</h2>
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-widest">CHAPTER 21.4 • HARDWARE COMPARISON &amp; PITFALL AUDITING</span>
+</div>
+</div>
+<!-- Side-by-Side Comparative Table -->
+<div class="rounded-lg bg-surface-container-low overflow-hidden shadow-md">
+<div class="px-space-lg py-space-md bg-surface-container-high flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">balance</span>
+          Block Device Drivers (Random Seek Framework) vs Character Device Drivers (Sequential Stream Framework)
+        </h3>
+<span class="font-label-tag text-label-tag text-outline">TAXONOMY MATRIX</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="bg-surface-container font-label-tag text-label-tag text-outline uppercase tracking-wider">
+<th class="py-space-sm px-space-lg">ARCHITECTURAL FIELD</th>
+<th class="py-space-sm px-space-lg text-primary">BLOCK DEVICE DRIVERS (SEEK MATRIX)</th>
+<th class="py-space-sm px-space-lg text-tertiary">CHARACTER DEVICE DRIVERS (STREAM MATRIX)</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface-variant font-body-sm text-body-sm">
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-lg font-label-code text-label-code font-bold text-on-surface">Data Handling Unit</td>
+<td class="py-space-md px-space-lg text-on-surface">Fixed-size memory block clusters like 512B or 4KB</td>
+<td class="py-space-md px-space-lg text-on-surface">Single independent streams of sequential individual bytes</td>
+</tr>
+<tr class="bg-surface-container-low/50 hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-lg font-label-code text-label-code font-bold text-on-surface">Address Mapping</td>
+<td class="py-space-md px-space-lg text-on-surface">Fully addressable with support for jumping anywhere</td>
+<td class="py-space-md px-space-lg text-on-surface">Non-addressable queue paths with zero random seeking</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-lg font-label-code text-label-code font-bold text-on-surface">Primary Examples</td>
+<td class="py-space-md px-space-lg text-on-surface">Hard disk drives, solid-state drives, and USB memory drives</td>
+<td class="py-space-md px-space-lg text-on-surface">Keyboards, system mice, serial terminals, and sensor chips</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="p-space-lg rounded-lg bg-surface-container flex flex-col md:flex-row items-start gap-space-md shadow-md">
+<div class="w-12 h-12 rounded-lg bg-error-container/30 text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">warning</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag uppercase tracking-wider text-error font-bold">COMMON MISTAKES WARNING BANNER</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Software Abstraction Does Not Alter Silicon Physics</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Do not assume drivers prevent physical performance differences! A very common mistake computer science students make is believing that because a common driver interface makes an SSD and an HDD look identical to your software, they will perform identically. The driver abstraction only simplifies the code commands; it creates zero extra hardware speed, and cannot hide the underlying seek delays of mechanical parts!
+        </p>
+</div>
+</div>
+<!-- Interview Takeaway Panel -->
+<div class="p-space-lg rounded-lg bg-surface-container-high flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-primary-container/20 text-primary-container flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Systems Engineering Interview Takeaway Panel</h3>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-lowest text-secondary font-label-tag text-label-tag">FAANG SYSTEMS QUESTION</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<div class="p-space-sm rounded bg-surface-container-lowest flex flex-col gap-1">
+<span class="font-label-code text-label-code text-primary font-bold">1. VFS file_operations</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            A function pointer jumptable that lets userland code call standard POSIX syscalls on novel hardware without recompiling the OS.
+          </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest flex flex-col gap-1">
+<span class="font-label-code text-label-code text-secondary font-bold">2. Major vs Minor ID</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Major numbers direct the OS to the device driver code module; Minor numbers index specific partitions or multiple identical hardware units.
+          </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest flex flex-col gap-1">
+<span class="font-label-code text-label-code text-tertiary font-bold">3. Kernel Shielding</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Drivers decouple user applications from electrical specifications, providing forward hardware compatibility and software longevity.
+          </p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest flex flex-col gap-1">
+<span class="font-label-code text-label-code text-tertiary-container font-bold">4. Ioctl Fallback</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            When hardware requires non-standard commands (e.g. ejecting a tray or tuning radio channels), the ioctl() escape hatch executes vendor commands.
+          </p>
+</div>
+</div>
+</div>
+<!-- Module Completion Bar -->
+<div class="p-space-lg rounded-lg bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md w-full md:w-auto">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/20 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code font-bold text-tertiary">
+            MODULE 21 COMPLETE // 100% MASTERY • CS 301 KERNEL RUNTIME EVAL PASS
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            You have mastered Uniform Device Drivers, Character vs. Block channels, and POSIX Hardware Abstraction.
+          </span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-sm w-full md:w-auto justify-end shrink-0">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-high text-on-surface font-label-code text-label-code font-medium hover:bg-surface-bright transition-all" type="button">
+          [ 📖 Review L21 Notes ]
+        </button>
+<button class="px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary font-label-code text-label-code font-bold shadow-md shadow-primary-container/20 hover:bg-primary-fixed-dim transition-all" type="button">
+          [ 🚀 Advance to Final Operating Systems Capstone Lab ➔ ]
+        </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Inline JavaScript for Driver Syscall Simulation Micro-Interactions -->
+<script>
+  (function initDriverSimulator() {
+    const btnSimulate = document.getElementById('btn-simulate-io');
+    const btnReset = document.getElementById('btn-reset-io');
+    const statusBadge = document.getElementById('simulator-status-badge');
+    const logText = document.getElementById('sim-log-text');
+    const stepCards = [
+      document.getElementById('sim-step-1'),
+      document.getElementById('sim-step-2'),
+      document.getElementById('sim-step-3'),
+      document.getElementById('sim-step-4')
+    ];
+
+    let currentInterval = null;
+
+    function resetSimulation() {
+      if (currentInterval) clearInterval(currentInterval);
+      stepCards.forEach(c => {
+        if (!c) return;
+        c.classList.remove('bg-surface-container-highest', 'scale-[1.02]');
+        c.classList.add('bg-surface-container');
+      });
+      if (statusBadge) {
+        statusBadge.textContent = 'STATUS: PIPELINE READY // CLICK SIMULATE';
+        statusBadge.className = 'font-label-code text-label-code px-space-xs py-0.5 rounded bg-surface-container-high text-primary';
+      }
+      if (logText) {
+        logText.innerHTML = '&gt; Simulator reset. Waiting for user syscall invocation.';
+      }
+    }
+
+    function runSimulation() {
+      resetSimulation();
+      let step = 0;
+      const logs = [
+        '[USERSPACE] write(fd=3, buf="SYS_DATA", count=4096) initiated by PID 4091. Trap 0x80 dispatched.',
+        '[KERNEL VFS] sys_write() resolved inode /dev/sda1 (Major: 8, Minor: 1). Mapping to block_dev_operations jumptable.',
+        '[DEVICE DRIVER] nvme_core_driver: translating generic 4KB block payload into NVMe Command Block #0x4f2b.',
+        '[PHYSICAL HARDWARE] PCIe controller signaled. DMA buffer flushed into NAND flash controller chip. I/O complete.'
+      ];
+
+      if (statusBadge) {
+        statusBadge.textContent = 'STATUS: EXECUTING SYSCALL TRANSLATION...';
+        statusBadge.className = 'font-label-code text-label-code px-space-xs py-0.5 rounded bg-tertiary-container/20 text-tertiary animate-pulse';
+      }
+
+      currentInterval = setInterval(() => {
+        if (step < 4) {
+          stepCards.forEach(c => c && c.classList.remove('bg-surface-container-highest', 'scale-[1.02]'));
+          if (stepCards[step]) {
+            stepCards[step].classList.add('bg-surface-container-highest', 'scale-[1.02]');
+          }
+          if (logText) {
+            logText.innerHTML = `&gt; <strong>STEP ${step + 1}:</strong> ${logs[step]}`;
+          }
+          step++;
+        } else {
+          clearInterval(currentInterval);
+          if (statusBadge) {
+            statusBadge.textContent = 'STATUS: I/O TRANSACTION SUCCESSFUL (200 OK)';
+            statusBadge.className = 'font-label-code text-label-code px-space-xs py-0.5 rounded bg-tertiary-container/30 text-tertiary font-bold';
+          }
+        }
+      }, 700);
+    }
+
+    if (btnSimulate) btnSimulate.addEventListener('click', runSimulation);
+    if (btnReset) btnReset.addEventListener('click', resetSimulation);
+  })();
+</script></main></div></body></html>
