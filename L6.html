@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary-fixed":"#6ffbbe","on-background":"#dfe2f1","on-error-container":"#ffdad6","on-error":"#690005","surface-container":"#1c1f2a","on-secondary-fixed":"#2c0051","on-secondary":"#490080","on-primary-fixed-variant":"#004e60","surface":"#0f131d","surface-container-low":"#171b26","on-secondary-fixed-variant":"#6900b3","secondary-fixed":"#f0dbff","tertiary-container":"#48d99e","surface-container-lowest":"#0a0e18","primary":"#a5e7ff","outline-variant":"#3c494e","on-secondary-container":"#d6a9ff","surface-tint":"#47d6ff","surface-variant":"#313540","primary-fixed":"#b6ebff","inverse-primary":"#00677f","outline":"#859399","error-container":"#93000a","secondary-container":"#6f00be","on-primary":"#003543","surface-dim":"#0f131d","on-primary-container":"#00566a","on-tertiary-fixed":"#002113","on-surface":"#dfe2f1","inverse-on-surface":"#2c303b","error":"#ffb4ab","surface-container-highest":"#313540","background":"#0f131d","secondary":"#ddb7ff","on-surface-variant":"#bbc9cf","tertiary":"#69f6b9","on-primary-fixed":"#001f28","tertiary-fixed-dim":"#4edea3","surface-container-high":"#262a35","secondary-fixed-dim":"#ddb7ff","on-tertiary":"#003824","primary-container":"#00d2ff","inverse-surface":"#dfe2f1","on-tertiary-container":"#005b3d","surface-bright":"#353944","on-tertiary-fixed-variant":"#005236","primary-fixed-dim":"#47d6ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xs":"0.25rem","space-lg":"1.5rem","gutter":"1.5rem","space-md":"1rem","gutter-mobile":"1rem","space-xl":"2.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem","margin":"3rem"},"fontFamily":{"label-code":["JetBrains Mono"],"label-tag":["JetBrains Mono"],"headline-md":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"headline-xl":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"headline-lg":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"headline-sm":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Space Grotesk"]},"fontSize":{"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-md"><div class="px-space-md pb-space-sm"><div class="flex items-center gap-space-xs"><div class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_8px_#00d2ff]"></div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase">Kernel<span class="text-primary-container">Lab</span></span></div><div class="mt-space-xs flex items-center justify-between"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">SYSTEMS STUDIO</span><span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container text-tertiary">v3.4.1</span></div></div><div class="px-space-md"><div class="font-label-tag text-label-tag text-outline uppercase tracking-wider mb-space-xs">Course Curriculum</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_12px_rgba(0,210,255,0.3)]"><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="course-intro" href="#"><span>L0: Course Intro</span><span class="font-label-tag text-label-tag text-outline">00h</span></a><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="os-components" href="#"><span>L1: OS Components</span><span class="font-label-tag text-label-tag text-outline">01h</span></a><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pcb-and-context-switching" href="#"><span>L2: PCB &amp; Context Sw</span><span class="font-label-tag text-label-tag text-outline">02h</span></a><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="kernel-design" href="#"><span>L3: Kernel Design</span><span class="font-label-tag text-label-tag text-outline">03h</span></a><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="the-boot-process" href="#"><span>L4: The Boot Process</span><span class="font-label-tag text-label-tag text-outline">04h</span></a><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="what-is-a-process" href="#"><span>L5: What Is a Process?</span><span class="font-label-tag text-label-tag text-outline">05h</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_12px_rgba(0,210,255,0.3)]" data-path="process-creation-and-context-switching" href="#"><span>L6: Process &amp; Switch</span><span class="font-label-tag text-label-tag text-tertiary">ACTIVE</span></a></nav></div><div class="px-space-md"><div class="font-label-tag text-label-tag text-outline uppercase tracking-wider mb-space-xs">Telemetry &amp; Tools</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_12px_rgba(0,210,255,0.3)]"><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="register-inspector" href="#"><span>Register Inspector</span><span class="font-label-tag text-label-tag text-secondary">REG</span></a><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="syscall-debugger" href="#"><span>Syscall Debugger</span><span class="font-label-tag text-label-tag text-secondary">TRAP</span></a></nav></div></div><div class="px-space-md pt-space-sm"><div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase">Kernel Virtual Machine</span><div class="flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-tag text-label-tag text-tertiary">ONLINE</span></div></div><div class="flex items-center justify-between font-label-code text-label-code text-outline"><span class="text-body-sm font-body-sm text-on-surface-variant">Virtual PID</span><span class="text-primary text-label-code font-label-code font-bold">1024</span></div><div class="flex items-center justify-between font-label-code text-label-code text-outline"><span class="text-body-sm font-body-sm text-on-surface-variant">Context Cycle</span><span class="text-on-surface text-label-code font-label-code">0x8F94</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1.5 rounded-lg"><span class="font-label-tag text-label-tag text-primary uppercase font-bold tracking-wider">CS 301</span><span class="text-outline font-label-code text-label-code">/</span><span class="font-body-sm text-body-sm text-on-surface">Systems Architecture</span></div><div class="relative hidden lg:flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-[18px] text-outline pointer-events-none">search</span><input class="bg-surface-container-low text-on-surface placeholder:text-outline text-body-sm font-body-sm pl-8 pr- space-sm py-1.5 rounded-lg border-0 outline-none focus:ring-1 focus:ring-primary w-48 xl:w-64 transition-all" placeholder="Search syscalls, modules..." type="text"/></div><div class="hidden xl:flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="font-label-tag text-label-tag text-outline uppercase">Poller</span><span class="font-label-code text-label-code text-tertiary bg-surface-container-low px-2 py-0.5 rounded">1000 Hz</span></div><div class="flex items-center gap-space-xs"><span class="font-label-tag text-label-tag text-outline uppercase">Module</span><span class="font-label-code text-label-code text-primary bg-surface-container-low px-2 py-0.5 rounded font-bold">6 / 14</span></div><div class="flex items-center gap-space-xs"><span class="font-label-tag text-label-tag text-outline uppercase">Diff</span><span class="font-label-tag text-label-tag text-secondary bg-surface-container-low px-2 py-0.5 rounded tracking-wider">INTERMEDIATE</span></div></div></div><div class="flex items-center gap-space-lg"><div class="hidden md:flex flex-col gap-1 min-w-[160px]"><div class="flex items-center justify-between font-label-tag text-label-tag"><span class="text-on-surface-variant uppercase tracking-wider">Progress</span><span class="text-primary-container font-label-code text-label-code font-bold">67%</span></div><div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-primary-container rounded-full shadow-[0_0_8px_#00d2ff]" style="width: 67%;"></div></div></div><div class="flex items-center gap-space-sm"><button class="relative p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container shadow-[0_0_6px_#00d2ff]"></span></button><div class="flex items-center gap-space-xs pl-1"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden 2xl:flex flex-col text-left"><span class="font-label-code text-body-sm text-on-surface leading-tight font-semibold">usr_sysarch</span><span class="font-label-tag text-label-tag text-tertiary leading-none">STUDENT</span></div></div></div></div></div></header><main class="relative w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Command Hub & Telemetry Header -->
+<section class="w-full bg-surface-container-lowest px-space-md lg:px-margin py-space-lg shadow-xl relative overflow-hidden">
+<div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary-container/5 blur-3xl pointer-events-none"></div>
+<div class="absolute left-1/3 -bottom-20 w-80 h-80 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<!-- Breadcrumb Meta Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm font-label-tag text-label-tag">
+<div class="flex items-center gap-space-xs text-on-surface-variant flex-wrap">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary uppercase font-bold tracking-wider">LECTURE 06</span>
+<span class="text-outline font-label-code text-label-code">/</span>
+<span class="text-on-surface uppercase tracking-wide">PROCESS CREATION, FORK/EXEC &amp; HARDWARE CONTEXT SWITCHING</span>
+<span class="text-outline font-label-code text-label-code">/</span>
+<span class="text-tertiary">CS-301 CORE</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary uppercase font-label-tag text-label-tag flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+            STATE: DETERMINISTIC
+          </span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-secondary uppercase font-label-tag text-label-tag">
+            DIFF: BEGINNER-FRIENDLY
+          </span>
+</div>
+</div>
+<!-- Main Headline & Subtitle -->
+<div class="flex flex-col gap-space-xs max-w-5xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          🏷️ OPERATING SYSTEMS: L6 - Process Creation &amp; Context Switching
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          A deep-dive interactive conceptual study guide &amp; architectural poster on Process Spawning (fork/exec), Hardware CPU Register Archival, and State Save/Restore Cycles.
+        </p>
+</div>
+<!-- Top Live Telemetry Metrics Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col justify-between shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">ACTIVE PROCESSES</span>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">156</span>
+<span class="font-label-tag text-label-tag text-tertiary px-1.5 py-0.5 rounded bg-surface-container-low">RUNNING</span>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col justify-between shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">PARENT ➔ CHILD LINK</span>
+<div class="font-label-code text-label-code text-on-surface mt-1 truncate">
+<span class="text-primary font-bold">PID: 1024</span> <span class="text-on-surface-variant text-body-sm">[term]</span>
+<span class="text-tertiary mx-1">➔</span>
+<span class="text-secondary font-bold">1025</span> <span class="text-on-surface-variant text-body-sm">[exec]</span>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col justify-between shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">CONTEXT SWITCH OVERHEAD</span>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-label-code text-label-code text-primary font-bold">&lt; 1.76 µs</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant">CPU: 1.8% TAX</span>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col justify-between shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">STATE PRESERVATION</span>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-label-code text-label-code text-tertiary font-bold">ATOMIC</span>
+<span class="font-label-tag text-label-tag text-tertiary px-1 rounded bg-surface-container-low">CRC32 OK</span>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col justify-between shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">TIME QUANTUM</span>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-label-code text-label-code text-secondary font-bold">10 ms</span>
+<span class="font-label-tag text-label-tag text-outline">APIC TICK</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Layout Body -->
+<div class="w-full px-space-md lg:px-margin py-space-xl flex flex-col gap-space-xl">
+<!-- 1️⃣ Core Conceptual Onboarding Section -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-sm bg-primary-container shadow-[0_0_8px_#00d2ff]"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+          1️⃣ Core Conceptual Onboarding (Swapping Runners Mid-Relay)
+        </h2>
+</div>
+<!-- Foundational Question & Key Characteristics -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- The Foundational Question text box -->
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-md relative overflow-hidden">
+<div class="flex items-center gap-space-xs text-primary font-label-tag text-label-tag uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>The Foundational Question</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+              Process Creation is the mechanism where an existing parent process spawns a new child process using fork() and shifts its workload via exec(). A Context Switch is the actual hardware-to-software routine where the CPU stops running one active process, freezes its state inside its PCB diary, and thaws the state of another process to share hardware turns.
+            </p>
+</div>
+<!-- Core Motivation block -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-xs text-secondary font-label-tag text-label-tag uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+<span>Core Motivation &amp; Hardware Constraint</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              A physical CPU hardware core has a hard constraint: it can only run a single line of instructions from one program at any given microsecond. To run dozens of apps at once, the OS must swap them back and forth hundreds of times per second. However, processes cannot just be yanked off the chip blindly. The OS must act as a referee, pausing execution, writing down an exact bookmark snapshot, and loading the next app's saved variables without dropping the baton or mixing up memory lanes.
+            </p>
+</div>
+</div>
+<!-- Key Characteristics Block -->
+<div class="lg:col-span-5 flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-high shadow-md">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-tag text-label-tag text-tertiary uppercase tracking-wider">Architectural Primitives</span>
+<span class="font-label-code text-label-code text-outline">[SYS_CORE]</span>
+</div>
+<div class="flex flex-col gap-space-md font-body-sm text-body-sm text-on-surface">
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="font-label-code text-label-code text-primary font-bold">• Fork System Call</span>
+<p class="text-on-surface-variant">The kernel operation that duplicates an active parent process to create an exact clone child process with a matching memory map.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="font-label-code text-label-code text-secondary font-bold">• Exec System Call</span>
+<p class="text-on-surface-variant">The kernel operation that completely wipes out the clone's text segment to load and run a brand-new program binary file.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="font-label-code text-label-code text-error font-bold">• Context Switching Overhead</span>
+<p class="text-on-surface-variant">The real hardware performance tax paid in wasted CPU clock cycles while the OS referee saves and restores internal registers, during which zero actual app code is executed.</p>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>DISPATCHER TAX</span>
+<span class="text-primary font-label-code text-label-code">~1,500 CPU CYCLES</span>
+</div>
+</div>
+</div>
+<!-- Real-World Example & Analogy Dual Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Technical Real-World Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center gap-space-xs text-primary font-label-tag text-label-tag uppercase tracking-wider">
+<span class="material-symbols-outlined text-[20px]">laptop_mac</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">💻 Real-World Application Example</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            When you type a command tool like 'ls' or 'mkdir' inside your macOS Terminal or Windows PowerShell, the terminal window app acts as a parent process. It calls fork() to instantly duplicate itself into an exact clone process. That clone then calls exec(), which completely replaces the terminal code with the tool's code. While this happens, the OS rapidly triggers context switches, pausing your background Spotify music loop for a millisecond to let the new command execute on the CPU core without stuttering.
+          </p>
+<div class="mt-space-xs p-space-xs px-space-sm rounded bg-surface-container font-label-code text-label-code text-outline text-right">
+<span>sh (1024) ➔ fork() ➔ child (1025) ➔ execvp("/bin/ls")</span>
+</div>
+</div>
+<!-- Analogy 5th Grader Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center gap-space-xs text-tertiary font-label-tag text-label-tag uppercase tracking-wider">
+<span class="material-symbols-outlined text-[20px]">school</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">🎒 Everyday Example (5th Grader)</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Imagine a relay race where runners must swap turns without dropping the baton. A fork operation is like using a magic cloning mirror to instantly copy a runner so two identical twins are on the track. An exec operation is like one twin suddenly swapping out their sports jersey to start playing basketball instead. A context switch is the race referee forcing the current runner to stop, carefully write down their exact foot position on a clipboard, and hand the clipboard to the next runner before they can take a single step!
+          </p>
+<div class="mt-space-xs p-space-xs px-space-sm rounded bg-surface-container font-label-tag text-label-tag text-tertiary text-right uppercase">
+<span>Visual Concept: Mirror Clone + Jersey Swap + Referee Clipboard</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2️⃣ Structural Dissection (Inside the Save and Restore Cycle) -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-sm bg-secondary-container shadow-[0_0_8px_#6f00be]"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+            2️⃣ Structural Dissection (Inside the Save and Restore Cycle)
+          </h2>
+</div>
+<span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container text-primary uppercase">
+          HARDWARE REGISTER INTERFACE
+        </span>
+</div>
+<!-- Split Pane Structural Block -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-xl flex flex-col gap-space-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- Left Pane: THE SYSTEM REGISTERS REGISTER AREA -->
+<div class="lg:col-span-5 flex flex-col gap-space-md p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">developer_board</span>
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-wider font-bold">
+                  THE SYSTEM REGISTERS REGISTER AREA
+                </span>
+</div>
+<span class="font-label-tag text-label-tag text-tertiary px-1.5 py-0.5 rounded bg-surface-container">ON-CHIP</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Active physical CPU hardware chips holding volatile execution states for the currently dispatched program.
+            </p>
+<!-- Register Cells -->
+<div class="flex flex-col gap-space-sm mt-space-xs">
+<!-- EAX / EBX -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1 transition-all hover:bg-surface-container-high">
+<div class="flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>EAX / EBX (Math Registers)</span>
+<span class="text-primary">GENERAL PURPOSE</span>
+</div>
+<div class="font-label-code text-label-code text-primary-fixed flex items-center justify-between">
+<span>EAX: 0x0000002A</span>
+<span>EBX: 0x00A9F400</span>
+</div>
+</div>
+<!-- ESP Stack Pointer -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1 transition-all hover:bg-surface-container-high">
+<div class="flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>ESP (Stack Pointer)</span>
+<span class="text-secondary">FRAME BOUNDARY</span>
+</div>
+<div class="font-label-code text-label-code text-secondary flex items-center justify-between">
+<span>OFFSET:</span>
+<span class="font-bold">0x7FFFFFFF48</span>
+</div>
+</div>
+<!-- EIP Program Counter -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1 transition-all hover:bg-surface-container-high">
+<div class="flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>EIP (Program Counter Pointer)</span>
+<span class="text-tertiary">NEXT INSTRUCTION</span>
+</div>
+<div class="font-label-code text-label-code text-tertiary flex items-center justify-between">
+<span>ADDR:</span>
+<span class="font-bold">0x004011A8</span>
+</div>
+</div>
+</div>
+<!-- Hardware Clock Telemetry -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between font-label-code text-label-code text-outline mt-auto">
+<span>ALU CLOCK TICK: #481092</span>
+<span class="text-primary font-bold">CORE #0 [USER_MODE]</span>
+</div>
+</div>
+<!-- Middle Visual Routing Arrows Column -->
+<div class="lg:col-span-2 flex flex-col items-center justify-center gap-space-lg py-space-sm">
+<!-- Down Arrow: Save to PCB 101 -->
+<div class="w-full flex flex-col items-center gap-1 p-space-sm rounded-xl bg-surface-container-high/60 text-center">
+<span class="font-label-tag text-label-tag text-error font-bold tracking-wider uppercase">Context Switch State Save</span>
+<span class="material-symbols-outlined text-error text-[28px] animate-bounce">arrow_forward</span>
+<span class="font-label-code text-label-code text-outline text-[11px]">DUMP REGISTERS ➔ PCB 101</span>
+</div>
+<!-- Up Arrow: Restore from PCB 102 -->
+<div class="w-full flex flex-col items-center gap-1 p-space-sm rounded-xl bg-surface-container-high/60 text-center">
+<span class="material-symbols-outlined text-tertiary text-[28px] animate-pulse">arrow_back</span>
+<span class="font-label-tag text-label-tag text-tertiary font-bold tracking-wider uppercase">State Restore</span>
+<span class="font-label-code text-label-code text-outline text-[11px]">PCB 102 ➔ LOAD REGISTERS</span>
+</div>
+</div>
+<!-- Right Pane: PCB ARCHIVE SAVE LABELS -->
+<div class="lg:col-span-5 flex flex-col gap-space-md p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">folder_copy</span>
+<span class="font-label-tag text-label-tag text-secondary uppercase tracking-wider font-bold">
+                  PCB ARCHIVE SAVE LABELS
+                </span>
+</div>
+<span class="font-label-tag text-label-tag text-outline px-1.5 py-0.5 rounded bg-surface-container">KERNEL MEMORY</span>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- PCB 101 (Paused Spotify) -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface font-bold">PCB 101 (Paused Spotify)</span>
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container-high text-error">
+                    READY / PAUSED
+                  </span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs font-label-code text-label-code text-body-sm pt-1">
+<div class="p-1 px-2 rounded bg-surface-container-lowest text-on-surface-variant flex justify-between">
+<span>PID:</span> <span class="text-primary font-bold">101</span>
+</div>
+<div class="p-1 px-2 rounded bg-surface-container-lowest text-on-surface-variant flex justify-between">
+<span>Regs:</span> <span class="text-error font-bold">Saved</span>
+</div>
+<div class="col-span-2 p-1 px-2 rounded bg-surface-container-lowest text-on-surface-variant flex justify-between">
+<span>Memory Bounds:</span> <span class="text-outline">0x00400000 - 0x0078FFFF</span>
+</div>
+</div>
+</div>
+<!-- PCB 102 (Active Discord) -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface font-bold">PCB 102 (Active Discord)</span>
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container-high text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+                    RUNNING / ACTIVE
+                  </span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs font-label-code text-label-code text-body-sm pt-1">
+<div class="p-1 px-2 rounded bg-surface-container-lowest text-on-surface-variant flex justify-between">
+<span>PID:</span> <span class="text-primary font-bold">102</span>
+</div>
+<div class="p-1 px-2 rounded bg-surface-container-lowest text-on-surface-variant flex justify-between">
+<span>Regs:</span> <span class="text-tertiary font-bold">Restored</span>
+</div>
+<div class="col-span-2 p-1 px-2 rounded bg-surface-container-lowest text-on-surface-variant flex justify-between">
+<span>PC Instruction:</span> <span class="text-tertiary">Active (0x004011A8)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PCB Scheduler Note -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between font-label-tag text-label-tag text-outline mt-auto">
+<span>ROUND-ROBIN POINTER</span>
+<span class="text-secondary font-label-code text-label-code">DISPATCHER HEAD: PCB 102</span>
+</div>
+</div>
+</div>
+<!-- Structural Definitions Rows -->
+<div class="flex flex-col gap-space-md pt-space-sm">
+<!-- Item 1: Fork Memory Duplication -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs">
+<div class="font-label-code text-label-code text-primary font-bold">
+              • Fork Memory Duplication: The child process inherits an identical copy of the parent's Stack, Heap, and Data segments, but receives its own unique PID tracking number.
+            </div>
+<div class="p-space-sm rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm">
+<span class="text-primary font-bold">💻 Real-World Application Example:</span> When Google Chrome forks a new tab process, the child tab copies the main browser configuration variables instantly, but runs inside its own isolated memory room.
+            </div>
+</div>
+<!-- Item 2: The PCB State Save -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs">
+<div class="font-label-code text-label-code text-secondary font-bold">
+              • The PCB State Save: The mechanical act of taking active math values out of the physical CPU chip registers and archiving them inside the paused program's PCB tracking file.
+            </div>
+<div class="p-space-sm rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm">
+<span class="text-secondary font-bold">💻 Real-World Application Example:</span> If Spotify is paused mid-track, the OS referee copies its unfinished volume math variables out of the hardware chips and locks them safely inside Spotify's PCB 101.
+            </div>
+</div>
+<!-- Item 3: The PCB State Restore -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs">
+<div class="font-label-code text-label-code text-tertiary font-bold">
+              • The PCB State Restore: The mechanical act of reading a waiting program's PCB diary, flashing its saved pointers back onto the active CPU hardware, and waking it up.
+            </div>
+<div class="p-space-sm rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm">
+<span class="text-tertiary font-bold">💻 Real-World Application Example:</span> The CPU scheduler reads Discord's PCB 102, loads its saved message window line pointer back into the physical Program Counter chip, and hands control back to Discord.
+            </div>
+</div>
+</div>
+<!-- Everyday Example Classroom Footnote -->
+<div class="p-space-md rounded-xl bg-surface-container-high flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-tertiary font-label-tag text-label-tag uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">backpack</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">🎒 Everyday Example</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Think of a school classroom setup! The CPU registers are the physical wooden top of your desk where your active paper, pencil, and calculator sit. A State Save is like packing up all your loose scratch papers and throwing them into your personal backpack (PCB 101) because class ended. A State Restore is the next student walking up to the exact same desk, pulling their own scratch papers out of their personal backpack (PCB 102), and scattering them onto the desk surface to start their turn!
+          </p>
+</div>
+</div>
+</section>
+<!-- 3️⃣ Linear Operational Pipeline (The Fork/Exec & Switch Timeline) -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-sm bg-tertiary shadow-[0_0_8px_#69f6b9]"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+            3️⃣ Linear Operational Pipeline (The Fork/Exec &amp; Switch Timeline)
+          </h2>
+</div>
+<span class="font-label-tag text-label-tag text-outline uppercase">EXECUTION TRACE SEQUENCE</span>
+</div>
+<!-- Horizontal Workflow Timeline Tracker -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-xl flex flex-col gap-space-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md relative">
+<!-- Step 1 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm relative group hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container-low text-primary font-bold">STEP 01</span>
+<span class="material-symbols-outlined text-primary text-[20px]">call_split</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">1. Parent Fork() Call</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Clones parent process environment, duplicates file handles, sets isolated memory allocation.</p>
+<div class="mt-auto font-label-tag text-label-tag text-tertiary pt-space-xs">➔ RETVAL: PID &gt; 0 (PARENT)</div>
+</div>
+<!-- Step 2 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm relative group hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container-low text-secondary font-bold">STEP 02</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">swap_horiz</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">2. Child Exec() Swap</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Child discards old text segment. Overwrites address space with binary code payload.</p>
+<div class="mt-auto font-label-tag text-label-tag text-secondary pt-space-xs">➔ BINARY OVERWRITE</div>
+</div>
+<!-- Step 3 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm relative group hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container-low text-error font-bold">STEP 03</span>
+<span class="material-symbols-outlined text-error text-[20px]">alarm</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">3. Hardware Timer Interrupt</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Programmable APIC clock fires microsecond trigger. CPU forced into Kernel Ring 0.</p>
+<div class="mt-auto font-label-tag text-label-tag text-error pt-space-xs">➔ USER ➔ KERNEL TRAP</div>
+</div>
+<!-- Step 4 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm relative group hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container-low text-tertiary font-bold">STEP 04</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">published_with_changes</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">4. Context Switch Core Handoff</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">PCB registers synced, next thread loaded, Program Counter restored to continue computation.</p>
+<div class="mt-auto font-label-tag text-label-tag text-tertiary pt-space-xs">➔ NEW THREAD DISPATCH</div>
+</div>
+</div>
+<!-- Sequential Process Rules Explanations -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">Sequential Process Execution Rules</span>
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<p><span class="font-label-code text-label-code text-primary font-bold">1. Parent Fork() Call:</span> The parent process invokes fork(), prompting the kernel to construct an exact clone process with matching registers and an isolated memory footprint.</p>
+<p><span class="font-label-code text-label-code text-secondary font-bold">2. Child Exec() Swap:</span> The newly created child process immediately calls exec(), destroying its copied memory segments to overwrite its address space with the target binary executable code.</p>
+<p><span class="font-label-code text-label-code text-error font-bold">3. Hardware Timer Interrupt:</span> The hardware clock chip fires a microsecond interrupt signal, forcing the CPU to instantly drop out of User Mode and plunge into high-privilege Kernel Mode.</p>
+<p><span class="font-label-code text-label-code text-tertiary font-bold">4. Context Switch Core Handoff:</span> The kernel referee halts the running app, writes its register variables into its tracking PCB, flips its state token to Ready, loads the next process's PCB bookmarks, and sets the CPU executing again.</p>
+</div>
+</div>
+<!-- Interactive Pipeline Labs & Analogies -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- C Logic Activity Card -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-label-tag text-label-tag uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">code</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">💻 Live C Fork Logic Activity</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Write a short C script compiling fork() ➔ Add conditional checks tracking whether the returned value equals 0 (The Child Room) or a positive number (The Parent Room) ➔ Have students predict the duplicate text output strings before running the script ➔ Execute the code live in the terminal to observe both paths printing concurrently across context switches.
+            </p>
+<div class="p-space-xs px-space-sm rounded bg-surface-container-lowest font-label-code text-label-code text-tertiary">
+              pid_t pid = fork(); if (pid == 0) { /* child exec */ } else { /* parent wait */ }
+            </div>
+</div>
+<!-- Playground Game Tag Analogy Card -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-secondary font-label-tag text-label-tag uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">sports_esports</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">🎒 Playground Game Tag Analogy</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Two friends are playing a video game together (Parent Process) ➔ They hit a clone button to spawn an identical copy player character (Fork Step) ➔ Player 2 changes their weapon kit completely to a sword (Exec Step) ➔ A loud kitchen timer buzzer goes off (Timer Interrupt) ➔ Both players drop their controllers, save their progress files to separate game slots, swap seats, and load the alternate save files to continue playing turn-by-turn (Context Switch).
+            </p>
+<div class="p-space-xs px-space-sm rounded bg-surface-container-lowest font-label-tag text-label-tag text-secondary uppercase text-right">
+              ROUND-ROBIN CO-OP MULTIPLAYER LOOP
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4️⃣ Paradigm Showdown & Guardrails -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-sm bg-error shadow-[0_0_8px_#ffb4ab]"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+            4️⃣ Paradigm Showdown &amp; Guardrails
+          </h2>
+</div>
+<span class="font-label-tag text-label-tag text-outline uppercase">ARCHITECTURAL AUDIT</span>
+</div>
+<!-- Side-by-side Comparative Table -->
+<div class="overflow-x-auto rounded-xl bg-surface-container shadow-xl">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high">
+<th class="p-space-md font-label-tag text-label-tag text-outline uppercase tracking-wider">COMPARISON VECTOR</th>
+<th class="p-space-md font-label-tag text-label-tag text-primary uppercase tracking-wider">Fork() Operation (Process Duplicator)</th>
+<th class="p-space-md font-label-tag text-label-tag text-secondary uppercase tracking-wider">Exec() Operation (Workload Transformer)</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 font-body-sm text-body-sm">
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-label-code text-label-code text-on-surface font-semibold bg-surface-container-low">Memory Matrix</td>
+<td class="p-space-md text-on-surface-variant">Clones matching parent space</td>
+<td class="p-space-md text-on-surface-variant">Destroys and overwrites address text</td>
+</tr>
+<tr class="bg-surface-container-lowest/50 hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-label-code text-label-code text-on-surface font-semibold bg-surface-container-low">Process Identity</td>
+<td class="p-space-md text-primary font-label-code text-label-code">Generates a brand-new unique PID</td>
+<td class="p-space-md text-secondary font-label-code text-label-code">Retains the exact same PID number</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-label-code text-label-code text-on-surface font-semibold bg-surface-container-low">Execution Path</td>
+<td class="p-space-md text-on-surface-variant">Runs concurrently alongside the parent</td>
+<td class="p-space-md text-on-surface-variant">Obliterates the current program path entirely</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="p-space-lg rounded-xl bg-error-container text-on-error-container shadow-lg flex flex-col md:flex-row gap-space-md items-start">
+<span class="material-symbols-outlined text-[32px] text-error flex-shrink-0">warning</span>
+<div class="flex flex-col gap-space-xs">
+<div class="font-headline-sm text-headline-sm font-bold text-error">
+            Common Mistakes Warning Banner
+          </div>
+<p class="font-body-md text-body-md leading-relaxed text-on-error-container">
+            Context Switching is NOT free hardware magic! Do not assume your computer can swap between apps instantly. While the OS referee is performing a context switch, the CPU is blocked from executing any real student application code. If you open hundreds of background tabs in Google Chrome, the OS will waste all its processor power just swapping PCB diaries, causing your computer to lag heavily!
+          </p>
+</div>
+</div>
+<!-- Interview Takeaway Panel -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-md flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center gap-space-xs text-tertiary font-label-tag text-label-tag uppercase tracking-wider">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Interview Takeaway Panel</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Process creation and context switching represent the core engine of multitasking efficiency. If the state save/restore routine ever encounters a memory error or drops a hardware pointer register, the CPU will read the wrong execution line, trigger a fatal Kernel Panic or Segmentation Fault boundary exception error, and instantly lock up the entire machine (just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling down!).
+        </p>
+<div class="mt-space-xs flex flex-wrap items-center gap-space-sm pt-space-xs font-label-code text-label-code">
+<span class="px-2 py-1 rounded bg-surface-container text-error">SIGSEGV / FAULT_0x0B</span>
+<span class="px-2 py-1 rounded bg-surface-container text-outline">ATOMICITY ASSURANCE: MANDATORY</span>
+<span class="px-2 py-1 rounded bg-surface-container text-tertiary">KERNEL TRAP DISPATCH: OPTIMAL</span>
+</div>
+</div>
+</section>
+<!-- Module Completion Footer Bar -->
+<footer class="w-full p-space-lg rounded-xl bg-surface-container-lowest shadow-xl flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Module 06 Complete</span>
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container text-tertiary font-bold">100% MASTERY</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Telemetry verified: PCB save/restore cycle, fork() semantics, execvp() lifecycle.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-code text-label-code transition-all flex items-center justify-center gap-1.5 w-full md:w-auto">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+<span>Review Notes</span>
+</button>
+<button class="px-space-md py-2.5 rounded-lg bg-primary-container hover:bg-primary-fixed text-on-primary font-label-code text-label-code font-bold transition-all shadow-[0_0_16px_rgba(0,210,255,0.3)] flex items-center justify-center gap-1.5 w-full md:w-auto">
+<span>Advance to Module 07</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</footer>
+</div>
+</div></main></div></body></html>
