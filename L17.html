@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface":"#dfe2f1","on-error":"#690005","surface-variant":"#313540","inverse-surface":"#dfe2f1","secondary-container":"#6f00be","error":"#ffb4ab","on-tertiary-fixed-variant":"#005236","surface-container-lowest":"#0a0e18","surface-container":"#1c1f2a","on-tertiary-container":"#005b3d","tertiary-container":"#48d99e","primary-fixed-dim":"#47d6ff","outline-variant":"#3c494e","on-tertiary":"#003824","on-secondary-fixed-variant":"#6900b3","tertiary":"#69f6b9","surface-container-high":"#262a35","surface-container-highest":"#313540","secondary-fixed-dim":"#ddb7ff","on-tertiary-fixed":"#002113","tertiary-fixed":"#6ffbbe","on-primary-fixed-variant":"#004e60","primary":"#a5e7ff","primary-fixed":"#b6ebff","on-primary-container":"#00566a","surface-container-low":"#171b26","on-error-container":"#ffdad6","inverse-on-surface":"#2c303b","primary-container":"#00d2ff","on-surface-variant":"#bbc9cf","outline":"#859399","surface-dim":"#0f131d","error-container":"#93000a","secondary-fixed":"#f0dbff","background":"#0f131d","on-secondary":"#490080","on-background":"#dfe2f1","surface-bright":"#353944","on-primary-fixed":"#001f28","on-secondary-container":"#d6a9ff","surface":"#0f131d","surface-tint":"#47d6ff","on-secondary-fixed":"#2c0051","inverse-primary":"#00677f","tertiary-fixed-dim":"#4edea3","on-primary":"#003543","secondary":"#ddb7ff"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-sm":"0.5rem","margin-mobile":"1.25rem","gutter":"1.5rem","gutter-mobile":"1rem","margin":"3rem","space-lg":"1.5rem","space-md":"1rem","space-xs":"0.25rem","space-xl":"2.5rem"},fontFamily:{"headline-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"label-tag":["JetBrains Mono"],"body-sm":["Plus Jakarta Sans"],"headline-md":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"headline-xl":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"label-code":["JetBrains Mono"]},fontSize:{"headline-lg":["2.5rem",{lineHeight:"3rem",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["1.25rem",{lineHeight:"1.75rem",fontWeight:"600"}],"headline-xl-mobile":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-lg-mobile":["1.75rem",{lineHeight:"2.25rem",fontWeight:"600"}],"label-tag":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.06em",fontWeight:"600"}],"body-sm":["0.875rem",{lineHeight:"1.25rem",fontWeight:"400"}],"headline-md":["1.75rem",{lineHeight:"2.25rem",fontWeight:"600"}],"body-lg":["1.125rem",{lineHeight:"1.75rem",fontWeight:"400"}],"headline-xl":["3.5rem",{lineHeight:"4rem",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["1rem",{lineHeight:"1.5rem",fontWeight:"400"}],"label-code":["0.875rem",{lineHeight:"1.25rem",fontWeight:"500"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="h-16 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded bg-primary-container/20 flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">memory</span></div><div><span class="font-headline-sm text-headline-sm text-primary tracking-tight">KERNEL LAB</span><span class="font-label-code text-label-code text-on-surface-variant ml-space-xs">// CS 301</span></div></div><div class="hidden xl:flex items-center gap-space-xs font-label-tag text-label-tag bg-surface-container-high px-space-sm py-space-xs rounded text-outline"><span class="material-symbols-outlined text-primary text-[14px]">terminal</span><span>CORE_ARCH::RISC-V_MMU</span></div></div><div class="hidden lg:flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-tag text-label-tag text-tertiary">KERNEL OK</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container"><span class="material-symbols-outlined text-primary text-[14px]">folder_open</span><span class="font-label-code text-label-code text-on-surface">VFS::POSIX_TREE</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container"><span class="material-symbols-outlined text-secondary text-[14px]">storage</span><span class="font-label-tag text-label-tag text-secondary">UNIT 05 // STORAGE &amp; FILE SYSTEMS</span></div></div><div class="flex items-center gap-space-md"><nav class="hidden md:flex items-center gap-space-xs font-label-code text-label-code" data-active-classes="bg-surface-container-high text-primary font-bold rounded"><a class="px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="syllabus" href="#">Syllabus</a><a class="px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="interactive-poster-and-diagnostics" href="#">Lab Studio</a><a class="px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="system-telemetry" href="#">Telemetry</a><a class="px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="register-debugger" href="#">Debugger</a></nav><div class="flex items-center gap-space-sm pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-72 bg-surface-container-lowest/95 backdrop-blur-lg z-40 overflow-y-auto p-space-md"><div class="flex items-center justify-between pb-space-sm mb-space-sm"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">CURRICULUM SYLLABUS</span><span class="font-label-tag text-label-tag text-primary">L0 - L17</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-bold rounded shadow-[inset_2px_0_0_0_#00d2ff]"><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-00-system-architecture" href="#"><span class="truncate">L00 Hardware &amp; ISA</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-01-kernel-boot" href="#"><span class="truncate">L01 Bootstrapping &amp; Init</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-02-process-lifecycle" href="#"><span class="truncate">L02 Process Abstraction</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-03-context-switching" href="#"><span class="truncate">L03 Context Switching</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-04-cpu-scheduling" href="#"><span class="truncate">L04 CPU Schedulers</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-05-real-time-scheduling" href="#"><span class="truncate">L05 RTOS &amp; Multilevel</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-06-threads-concurrency" href="#"><span class="truncate">L06 POSIX Threads</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-07-synchronization" href="#"><span class="truncate">L07 Mutex &amp; Semaphores</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-08-deadlocks" href="#"><span class="truncate">L08 Deadlock &amp; Bankers</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-09-ipc" href="#"><span class="truncate">L09 IPC &amp; Shared Memory</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-10-signals-handlers" href="#"><span class="truncate">L10 Traps, Faults, Signals</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-11-memory-management" href="#"><span class="truncate">L11 Physical Addressing</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-12-segmentation" href="#"><span class="truncate">L12 Segmentation</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-13-paging-tlb" href="#"><span class="truncate">L13 Page Tables &amp; TLB</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-14-page-replacement" href="#"><span class="truncate">L14 LRU &amp; Page Replacement</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-15-virtual-memory" href="#"><span class="truncate">L15 Virtual Memory &amp; Paging</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-16-disk-geometry-and-hardware-boundaries" href="#"><span class="truncate">L16 Disk Geometry &amp; Hardware</span><span class="text-tertiary font-bold">✓</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-17-file-abstraction-and-directory-topology" href="#"><span class="truncate">L17 File &amp; Directory Topology</span><span class="text-primary font-bold">●</span></a></nav></aside><div class="pl-72"><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command Banner / Terminal Header -->
+<section class="w-full bg-surface-container-lowest border-b border-outline-variant/30 px-margin-mobile md:px-margin py-space-lg">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-md">
+<!-- Breadcrumb & Machine Meta -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-label-tag text-label-tag text-primary tracking-wider uppercase">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span>LESSON 17 // ACADEMIC RUNTIME SERIES • CS 301 CORE KERNEL LABS • RISC-V 64 ARCH // POSIX VFS &amp; FILE TOPOLOGY</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-code text-label-code text-on-surface-variant bg-surface-container px-space-sm py-0.5 rounded border border-outline-variant/40">
+<span class="text-tertiary">SYS_ARCH::RV64GC</span>
+<span class="text-outline">|</span>
+<span class="text-secondary">MMU::SV39</span>
+<span class="text-outline">|</span>
+<span class="text-primary">VFS_SUB::EXT4_REV1</span>
+</div>
+</div>
+<!-- Hero Header Title & Narrative -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="max-w-3xl">
+<h1 class="font-headline-lg text-headline-lg lg:text-headline-xl text-on-surface tracking-tight flex items-center gap-space-sm flex-wrap">
+<span class="text-primary-container">🏷️</span>
+<span>OPERATING SYSTEMS: L17 - File Abstraction &amp; Directory Topology</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">
+            An interactive primer designed for systems novices: dissecting hierarchical directory trees, path resolution, hard vs. soft links, file descriptors, and directory data records.
+          </p>
+</div>
+<!-- Action Control Group -->
+<div class="flex flex-wrap sm:flex-nowrap items-center gap-space-sm shrink-0">
+<button class="px-space-md py-space-sm rounded bg-primary-container text-on-primary font-label-code text-label-code font-bold hover:shadow-[0_0_20px_rgba(0,210,255,0.4)] transition-all flex items-center gap-space-xs active:scale-95" id="btn-step-traversal" onclick="stepTraversalAnimation()">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>[ ▶ Step Through Path Traversal ]</span>
+</button>
+<button class="px-space-md py-space-sm rounded bg-surface-container-high text-secondary hover:bg-secondary/10 border border-secondary/40 font-label-code text-label-code transition-all flex items-center gap-space-xs active:scale-95" id="btn-reset-vfs" onclick="resetVfsSimulation()">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>[ ↺ Reset VFS Simulator ]</span>
+</button>
+</div>
+</div>
+<!-- Telemetry Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-space-sm pt-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded border border-outline-variant/30 flex flex-col justify-between">
+<span class="font-label-tag text-label-tag text-outline tracking-wider uppercase">VFS ROOT MOUNT</span>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-code text-label-code font-bold text-primary">"/"</span>
+<span class="font-label-tag text-[10px] text-tertiary bg-tertiary/10 px-1 py-0.5 rounded">INODE #2 EXT4</span>
+</div>
+<span class="font-label-tag text-[10px] text-tertiary mt-1">SYS_VFS_ONLINE</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded border border-outline-variant/30 flex flex-col justify-between">
+<span class="font-label-tag text-label-tag text-outline tracking-wider uppercase">CURRENT WORKING DIR</span>
+<div class="font-label-code text-label-code font-bold text-on-surface truncate mt-1" title="/home/user/Documents">
+            /home/user/Documents
+          </div>
+<span class="font-label-tag text-[10px] text-primary mt-1">PROCESS ACTIVE FD: 3</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded border border-outline-variant/30 flex flex-col justify-between">
+<span class="font-label-tag text-label-tag text-outline tracking-wider uppercase">PATH RESOLUTION LATENCY</span>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-code text-label-code font-bold text-tertiary">~0.12 ms</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+</div>
+<span class="font-label-tag text-[10px] text-on-surface-variant mt-1">DENTRY HIT: 99.1%</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded border border-outline-variant/30 flex flex-col justify-between">
+<span class="font-label-tag text-label-tag text-outline tracking-wider uppercase">LINK TOPOLOGY</span>
+<div class="font-label-code text-label-code text-secondary font-bold mt-1">
+            REF_COUNT &gt; 1
+          </div>
+<span class="font-label-tag text-[10px] text-on-surface-variant mt-1">SYMLINKS: PATH POINTERS</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded border border-outline-variant/30 flex flex-col justify-between">
+<span class="font-label-tag text-label-tag text-outline tracking-wider uppercase">DIRECTORY ENCODING</span>
+<div class="font-label-code text-label-code text-primary font-bold mt-1 truncate">
+            NAME ➔ INODE RECORD
+          </div>
+<span class="font-label-tag text-[10px] text-tertiary mt-1">SPECIAL FILE (LINEAR / HTREE)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Central Content Stack -->
+<div class="max-w-7xl mx-auto w-full px-margin-mobile md:px-margin py-space-xl flex flex-col gap-space-xl">
+<!-- ========================================================================= -->
+<!-- SECTION 1: Core Conceptual Onboarding (The Nested Treasure Boxes Hook)     -->
+<!-- ========================================================================= -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code text-primary px-space-sm py-0.5 rounded bg-surface-container-high border border-primary/30">01 // CONCEPTS</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">1️⃣ Core Conceptual Onboarding (The Nested Treasure Boxes Hook)</h2>
+</div>
+<!-- Foundational Question Box -->
+<div class="bg-surface-container rounded-lg p-space-md border-l-4 border-primary-container shadow-md">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[24px] mt-0.5">help_outline</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-primary-container uppercase tracking-wider">The Foundational Question</span>
+<p class="font-headline-sm text-headline-sm text-on-surface font-normal">
+              File Abstraction &amp; Directory Topology is the hierarchical naming and indexing mechanism that lets humans reference storage data using readable text paths, while the operating system referee maps those names down to raw physical inode numbers and disk sectors.
+            </p>
+</div>
+</div>
+</div>
+<!-- Key Characteristics Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-low hover:bg-surface-container transition-all p-space-md rounded-lg border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">account_tree</span>
+<span class="font-label-code text-label-code font-bold">Hierarchical Directory</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              A branching tree structure organizing data into parent-child relationships, starting at the root (<code class="text-primary font-label-code text-[12px] bg-surface-container px-1 py-0.5 rounded">'/'</code>) and branching out so every file has a predictable address.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-outline-variant/20 flex items-center justify-between text-outline font-label-tag text-[10px]">
+<span>TOPOLOGY: DAG / TREE</span>
+<span class="text-tertiary">STABLE ADDR</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low hover:bg-surface-container transition-all p-space-md rounded-lg border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-tertiary mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">alt_route</span>
+<span class="font-label-code text-label-code font-bold">Path Abstraction</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              The explicit sequential roadmap string (e.g. <code class="text-primary font-label-code text-[12px] bg-surface-container px-1 py-0.5 rounded">/home/user/Documents/resume.pdf</code>) listing the exact sequence of directory boxes you must open to reach the target.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-outline-variant/20 flex items-center justify-between text-outline font-label-tag text-[10px]">
+<span>SYNTAX: POSIX_PATH</span>
+<span class="text-primary">DELIMITER: '/'</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low hover:bg-surface-container transition-all p-space-md rounded-lg border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-secondary mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+<span class="font-label-code text-label-code font-bold">File Descriptor</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              An ultra-compact integer token (e.g. <code class="text-primary font-label-code text-[12px]">0</code> stdin, <code class="text-primary font-label-code text-[12px]">1</code> stdout, <code class="text-secondary font-label-code text-[12px]">3</code> for an open file) assigned by the kernel when an app opens a file, serving as a private shortcut handle for read and write calls.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-outline-variant/20 flex items-center justify-between text-outline font-label-tag text-[10px]">
+<span>PCB INDEX TOKEN</span>
+<span class="text-secondary">SYS_TABLE PTR</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-low hover:bg-surface-container transition-all p-space-md rounded-lg border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-primary-container mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">link</span>
+<span class="font-label-code text-label-code font-bold">Hard vs. Soft Link</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              A <span class="text-primary font-semibold">Hard Link</span> is a direct second name pointing to the exact same physical inode on disk (sharing data and reference counts), while a <span class="text-secondary font-semibold">Soft Link</span> (Symlink) is a lightweight pointer file that simply stores the text string of another path.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-outline-variant/20 flex items-center justify-between text-outline font-label-tag text-[10px]">
+<span>REF_COUNT vs POINTER</span>
+<span class="text-primary-container">CROSS-FS COMPAT</span>
+</div>
+</div>
+</div>
+<!-- Core Motivation Banner -->
+<div class="bg-surface-container p-space-md rounded-lg border border-outline-variant/40 flex flex-col md:flex-row gap-space-md items-start">
+<div class="w-10 h-10 rounded bg-primary/10 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[26px]">psychology</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-wider">THE WHY // CORE MOTIVATION</span>
+<p class="font-body-md text-body-md text-on-surface">
+            Computers and storage controllers don't understand human words like <code class="text-primary font-label-code text-[13px]">'resume.pdf'</code> or <code class="text-primary font-label-code text-[13px]">'vacation_photo.png'</code>; they only comprehend raw numeric sectors and inode index tables. If humans had to remember raw block address <code class="text-tertiary font-label-code text-[13px]">0x7FA340</code> to open a document, modern computing would be impossible. The OS referee bridges this gap by presenting a friendly nested directory tree—yet behind the curtain, <span class="text-secondary font-semibold">a directory is NOT a magic container!</span> A directory is just a special file storing a simple two-column phonebook of names and inode numbers.
+          </p>
+</div>
+</div>
+<!-- Dual Pedagogy Cards: Real World vs 5th Grader Analogy -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Real-World Application Example -->
+<div class="bg-surface-container-low p-space-md rounded-lg border border-primary/20 flex flex-col gap-space-sm shadow-sm relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[160px] text-primary">terminal</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">terminal</span>
+<span class="font-label-code text-label-code text-primary font-bold">💻 Real-World Application Example</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded font-label-code text-label-code text-on-surface border border-outline-variant/30 flex items-center justify-between">
+<span class="text-tertiary">$ cat /home/user/Documents/resume.pdf</span>
+<span class="text-outline text-[11px]">POSIX open(2) invocation</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            When you type <code class="text-primary font-label-code text-[12px]">cat /home/user/Documents/resume.pdf</code> in your terminal, the OS does not jump directly to your document. It opens inode 2 (the root directory file <code class="text-primary font-label-code text-[12px]">'/'</code>), scans its internal text records for 'home', finds its inode, opens that inode to read the list containing 'user', opens 'user' to find 'Documents', and finally looks up 'resume.pdf'. Each step opens one directory file to find the next inode key, completing four sequential lookups in fractions of a millisecond.
+          </p>
+</div>
+<!-- Everyday Analogy (5th Grader) -->
+<div class="bg-surface-container-low p-space-md rounded-lg border border-secondary/20 flex flex-col gap-space-sm shadow-sm relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[160px] text-secondary">inventory_2</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">toys</span>
+<span class="font-label-code text-label-code text-secondary font-bold">🎒 Everyday Example (5th Grader) — The Russian Nesting Treasure Boxes</span>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto py-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-outline font-label-tag text-[11px]">📦 Root Box</span>
+<span class="text-outline">➔</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-tag text-[11px]">📦 home Box</span>
+<span class="text-outline">➔</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-tertiary font-label-tag text-[11px]">📦 user Box</span>
+<span class="text-outline">➔</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-tag text-[11px]">📦 Docs Box</span>
+<span class="text-outline">➔</span>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-tag text-[11px] font-bold">🪙 Prize File</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Imagine a pirate game with nested Russian Matryoshka treasure boxes! You have a gigantic brass box labeled 'Root'. Inside it sits another wooden box labeled 'home'. Inside that is a smaller velvet box labeled 'user', and inside that is a tiny tin box labeled 'Documents'. When you finally open the tin box, sitting inside is your golden prize: 'resume.pdf'! The 'Path' (/home/user/Documents/resume.pdf) is simply the written recipe of which boxes you opened in order. If you throw away the box, you just threw away the container list; the gold coin inside can still exist if you kept another link to it!
+          </p>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 2: Structural Dissection (A Directory Is Just a Special File)      -->
+<!-- ========================================================================= -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code text-primary px-space-sm py-0.5 rounded bg-surface-container-high border border-primary/30">02 // ARCHITECTURE</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">2️⃣ Structural Dissection (A Directory Is Just a Special File)</h2>
+</div>
+<!-- Split-Pane Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left Pane: Directory Inode Data Record Table (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-lg border border-primary/30 p-space-md flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-sm border-b border-outline-variant/30">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">table_rows</span>
+<span class="font-label-code text-label-code text-primary font-bold">THE DIRECTORY INODE DATA RECORD TABLE</span>
+</div>
+<span class="font-label-tag text-label-tag text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">Inside Inode 4096: /home/user</span>
+</div>
+<!-- Cybernetic Table -->
+<div class="overflow-x-auto mt-space-sm">
+<table class="w-full text-left font-label-code text-label-code">
+<thead>
+<tr class="text-outline border-b border-outline-variant/30 text-[11px] uppercase tracking-wider">
+<th class="py-2 px-3">Inode Number</th>
+<th class="py-2 px-3">Rec Len</th>
+<th class="py-2 px-3">Name Len</th>
+<th class="py-2 px-3">Type</th>
+<th class="py-2 px-3">File Name (Entry Payload)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20">
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-2 px-3 text-primary font-bold">4096</td>
+<td class="py-2 px-3 text-on-surface-variant">12</td>
+<td class="py-2 px-3 text-on-surface-variant">1</td>
+<td class="py-2 px-3"><span class="bg-primary/10 text-primary px-1.5 py-0.5 rounded text-[10px] font-bold">DIR</span></td>
+<td class="py-2 px-3 text-on-surface font-bold">"." <span class="text-outline font-normal text-[11px]">(Current Directory)</span></td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-2 px-3 text-primary font-bold">2048</td>
+<td class="py-2 px-3 text-on-surface-variant">12</td>
+<td class="py-2 px-3 text-on-surface-variant">2</td>
+<td class="py-2 px-3"><span class="bg-primary/10 text-primary px-1.5 py-0.5 rounded text-[10px] font-bold">DIR</span></td>
+<td class="py-2 px-3 text-on-surface font-bold">".." <span class="text-outline font-normal text-[11px]">(Parent Directory /home)</span></td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-2 px-3 text-tertiary font-bold">8192</td>
+<td class="py-2 px-3 text-on-surface-variant">16</td>
+<td class="py-2 px-3 text-on-surface-variant">9</td>
+<td class="py-2 px-3"><span class="bg-primary/10 text-primary px-1.5 py-0.5 rounded text-[10px] font-bold">DIR</span></td>
+<td class="py-2 px-3 text-on-surface">"Documents"</td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-2 px-3 text-tertiary font-bold">9210</td>
+<td class="py-2 px-3 text-on-surface-variant">16</td>
+<td class="py-2 px-3 text-on-surface-variant">9</td>
+<td class="py-2 px-3"><span class="bg-primary/10 text-primary px-1.5 py-0.5 rounded text-[10px] font-bold">DIR</span></td>
+<td class="py-2 px-3 text-on-surface">"Downloads"</td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-2 px-3 text-secondary font-bold">14022</td>
+<td class="py-2 px-3 text-on-surface-variant">20</td>
+<td class="py-2 px-3 text-on-surface-variant">10</td>
+<td class="py-2 px-3"><span class="bg-secondary/10 text-secondary px-1.5 py-0.5 rounded text-[10px] font-bold">REG</span></td>
+<td class="py-2 px-3 text-on-surface">"notes.txt"</td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-2 px-3 text-secondary-fixed-dim font-bold">15400</td>
+<td class="py-2 px-3 text-on-surface-variant">24</td>
+<td class="py-2 px-3 text-on-surface-variant">14</td>
+<td class="py-2 px-3"><span class="bg-tertiary/10 text-tertiary px-1.5 py-0.5 rounded text-[10px] font-bold">LNK</span></td>
+<td class="py-2 px-3 text-on-surface">"shortcut.lnk"</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-outline-variant/30 flex items-center justify-between font-label-tag text-[10px] text-outline">
+<span class="flex items-center gap-1 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+              VFS Dentry Hash Table Cached
+            </span>
+<span>LINEAR DIRECTORY BLOCK RECORD // EXT4 COMPLIANT</span>
+</div>
+</div>
+<!-- Right Pane: Hard Link vs Soft Link Diagram (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-low rounded-lg border border-secondary/30 p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm border-b border-outline-variant/30">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">hub</span>
+<span class="font-label-code text-label-code text-secondary font-bold">HARD LINK VS. SOFT (SYMBOLIC) LINK</span>
+</div>
+<span class="font-label-tag text-label-tag text-outline">TOPOLOGY</span>
+</div>
+<!-- Architectural Micro Diagram -->
+<div class="flex flex-col gap-space-md mt-space-sm font-label-code text-[12px]">
+<!-- Hard Link Topology Box -->
+<div class="p-space-sm rounded bg-surface-container border border-outline-variant/30 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold">1. HARD LINK TOPOLOGY</span>
+<span class="text-[10px] text-tertiary bg-tertiary/10 px-1 py-0.5 rounded">DIRECT INODE ALIAS</span>
+</div>
+<div class="grid grid-cols-2 gap-2 text-center text-[11px]">
+<div class="p-2 rounded bg-surface-container-high border border-primary/40 text-on-surface">
+                    Name A: <br/><strong class="text-primary">"original.txt"</strong>
+</div>
+<div class="p-2 rounded bg-surface-container-high border border-primary/40 text-on-surface">
+                    Name B: <br/><strong class="text-primary">"hardlink.txt"</strong>
+</div>
+</div>
+<div class="flex justify-center text-primary text-[10px] tracking-widest font-bold">
+                  ▼              ▼ (Both target same inode)
+                </div>
+<div class="p-2 rounded bg-primary/10 border border-primary/50 text-center text-primary font-bold text-[11px]">
+                  [ INODE 8841 ] (Link Count: 2) ➔ Data Blocks on Disk
+                </div>
+<div class="text-[11px] text-on-surface-variant">
+<span class="text-tertiary font-bold">✓ Invariant:</span> Deleting Name A leaves Inode 8841 and data 100% intact! Link count decrements to 1.
+                </div>
+</div>
+<!-- Soft Link Topology Box -->
+<div class="p-space-sm rounded bg-surface-container border border-outline-variant/30 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="text-secondary font-bold">2. SOFT LINK (SYMLINK) TOPOLOGY</span>
+<span class="text-[10px] text-secondary bg-secondary/10 px-1 py-0.5 rounded">INDEPENDENT POINTER</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high border border-secondary/40 text-center text-on-surface text-[11px]">
+                  Name C: <strong class="text-secondary">"shortcut.txt"</strong>
+</div>
+<div class="flex justify-center text-secondary text-[10px] tracking-widest font-bold">
+                  ▼ (Has its own inode)
+                </div>
+<div class="p-2 rounded bg-secondary/10 border border-secondary/50 text-center text-secondary text-[11px]">
+                  [ INODE 9912 (Type: LNK) ] ➔ Stores String <span class="text-primary underline">"/home/user/original.txt"</span>
+</div>
+<div class="text-[11px] text-on-surface-variant">
+<span class="text-error font-bold">⚠ Danger:</span> If Name A is deleted, Name C becomes a <span class="text-error font-semibold">"Dangling/Broken Symlink"</span> pointing nowhere!
+                </div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-outline-variant/30 text-right font-label-tag text-[10px] text-outline">
+            POSIX inode.i_links_count METADATA FIELD
+          </div>
+</div>
+</div>
+<!-- Structural Definitions 3-Column Strip -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container p-space-md rounded-lg border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<span class="font-label-code text-label-code text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">map</span>
+              Directory as an Inode-to-Name Map
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              A directory does not physically swallow files inside itself; it is literally a flat binary table mapping string names to inode numbers.
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs border-t border-outline-variant/20 bg-surface-container-low p-2 rounded">
+<span class="font-label-tag text-[10px] text-primary uppercase font-bold">Real-World Application Example:</span>
+<p class="font-body-sm text-[12px] text-on-surface mt-0.5">
+              When you run <code class="text-primary font-label-code">ls -la</code>, the kernel simply opens the directory file, reads its raw record rows, and prints the names alongside file metadata fetched from each inode.
+            </p>
+</div>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<span class="font-label-code text-label-code text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">sync_alt</span>
+              The '.' and '..' Invariant
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              Every directory on a POSIX file system always contains at least two hard links: <code class="text-primary font-label-code">'.'</code> pointing to itself, and <code class="text-primary font-label-code">'..'</code> pointing to its parent, making directory tree traversal mathematically bidirectional.
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs border-t border-outline-variant/20 bg-surface-container-low p-2 rounded">
+<span class="font-label-tag text-[10px] text-tertiary uppercase font-bold">Real-World Application Example:</span>
+<p class="font-body-sm text-[12px] text-on-surface mt-0.5">
+              Because every subfolder automatically hard-links '..' to its parent, a folder with 5 subdirectories will have a hard-link count of 7 (1 from its parent, 1 from '.', and 5 from each child's '..').
+            </p>
+</div>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<span class="font-label-code text-label-code text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+              Hard Link Restrictions
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              Modern operating systems forbid hard-linking directories to avoid creating infinite cyclical loops that would trap disk scanners forever.
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs border-t border-outline-variant/20 bg-surface-container-low p-2 rounded">
+<span class="font-label-tag text-[10px] text-secondary uppercase font-bold">Real-World Application Example:</span>
+<p class="font-body-sm text-[12px] text-on-surface mt-0.5">
+              Mac and Linux kernels enforce this safety fence: trying <code class="text-secondary font-label-code">ln /dirA /dirB</code> triggers an immediate "Operation not permitted" error to prevent recursive tree corruption.
+            </p>
+</div>
+</div>
+</div>
+<!-- Bottom Analogy Callout -->
+<div class="p-space-sm rounded bg-surface-container-low border border-outline-variant/20 flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">contact_phone</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-secondary font-semibold">🎒 Everyday Example:</strong> Think of a contact list in your smartphone! The contact list itself is just a note file with names and phone numbers. Deleting a person's name from your contacts doesn't destroy the person or their phone; you just erased the entry line mapping their name to their number!
+        </p>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 3: Linear Operational Pipeline (The Path Resolution Walk)          -->
+<!-- ========================================================================= -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code text-primary px-space-sm py-0.5 rounded bg-surface-container-high border border-primary/30">03 // PIPELINE</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">3️⃣ Linear Operational Pipeline (The Path Resolution Walk: /home/user/Documents/resume.pdf)</h2>
+</div>
+<span class="font-label-tag text-label-tag text-primary-container bg-primary-container/10 px-2 py-0.5 rounded">EXECUTION FLOW TRACE</span>
+</div>
+<!-- Interactive 4-Node Pipeline Visualizer -->
+<div class="bg-surface-container-low p-space-lg rounded-lg border border-primary/30 flex flex-col gap-space-lg relative overflow-hidden">
+<!-- Interactive Node Track -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md relative z-10">
+<!-- Step 1 -->
+<div class="step-card bg-surface-container p-space-md rounded border border-primary/60 transition-all cursor-pointer hover:border-primary flex flex-col justify-between" id="step-node-1" onclick="selectPipelineStep(1)">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-code text-[12px] font-bold flex items-center justify-center">1</span>
+<span class="font-label-tag text-[10px] text-tertiary">INODE #2</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-label-code text-label-code font-bold text-primary">Root Inode Inspection</div>
+<div class="font-body-sm text-[12px] text-on-surface-variant mt-1">Anchor point: Fixed Root "/" at Inode 2.</div>
+</div>
+<div class="mt-space-sm font-label-tag text-[10px] text-outline">STATUS: ACTIVE RESOLVE</div>
+</div>
+<!-- Step 2 -->
+<div class="step-card bg-surface-container-high p-space-md rounded border border-outline-variant/40 transition-all cursor-pointer hover:border-primary flex flex-col justify-between" id="step-node-2" onclick="selectPipelineStep(2)">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant font-label-code text-[12px] font-bold flex items-center justify-center">2</span>
+<span class="font-label-tag text-[10px] text-outline">TOKEN ITERATION</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-label-code text-label-code font-bold text-on-surface">Directory Entry Traversal</div>
+<div class="font-body-sm text-[12px] text-on-surface-variant mt-1">Walks tokens: 'home' ➔ 'user'.</div>
+</div>
+<div class="mt-space-sm font-label-tag text-[10px] text-outline">EXEC 'x' BIT VERIFIED</div>
+</div>
+<!-- Step 3 -->
+<div class="step-card bg-surface-container-high p-space-md rounded border border-outline-variant/40 transition-all cursor-pointer hover:border-primary flex flex-col justify-between" id="step-node-3" onclick="selectPipelineStep(3)">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant font-label-code text-[12px] font-bold flex items-center justify-center">3</span>
+<span class="font-label-tag text-[10px] text-outline">INODE #28410</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-label-code text-label-code font-bold text-on-surface">Target Inode Acquisition</div>
+<div class="font-body-sm text-[12px] text-on-surface-variant mt-1">Matches 'resume.pdf' &amp; verifies ACLs.</div>
+</div>
+<div class="mt-space-sm font-label-tag text-[10px] text-outline">PERMS: r--r--r--</div>
+</div>
+<!-- Step 4 -->
+<div class="step-card bg-surface-container-high p-space-md rounded border border-outline-variant/40 transition-all cursor-pointer hover:border-primary flex flex-col justify-between" id="step-node-4" onclick="selectPipelineStep(4)">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant font-label-code text-[12px] font-bold flex items-center justify-center">4</span>
+<span class="font-label-tag text-[10px] text-tertiary">TOKEN: FD 3</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-label-code text-label-code font-bold text-on-surface">File Descriptor Binding</div>
+<div class="font-body-sm text-[12px] text-on-surface-variant mt-1">Kernel allocates lowest int handle.</div>
+</div>
+<div class="mt-space-sm font-label-tag text-[10px] text-tertiary">VFS HANDLE RETURNED</div>
+</div>
+</div>
+<!-- Dynamic Step Deep-Dive Details Display -->
+<div class="bg-surface-container p-space-md rounded border border-outline-variant/30 flex flex-col gap-space-xs transition-all" id="pipeline-details-box">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-primary font-bold" id="detail-step-badge">STAGE 1: ROOT INODE INSPECTION</span>
+<span class="font-label-tag text-[11px] text-tertiary" id="detail-step-sys">KERNEL SYS_CALL: open("/home/user/Documents/resume.pdf", O_RDONLY)</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1 leading-relaxed" id="detail-step-desc">
+            The process system call (open) initiates at the universally fixed anchor: Inode 2 (POSIX Root '/'). The kernel reads Inode 2's data block to fetch its directory records.
+          </p>
+</div>
+<!-- 4 Sequential Explanatory Detailed Callouts Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-sm pt-space-xs text-[13px] text-on-surface-variant">
+<div class="p-space-sm bg-surface-container rounded border border-outline-variant/20">
+<strong class="text-primary font-label-code block mb-1">1. Root Inode Inspection:</strong>
+            The process system call (open) initiates at the universally fixed anchor: Inode 2 (POSIX Root '/'). The kernel reads Inode 2's data block to fetch its directory records.
+          </div>
+<div class="p-space-sm bg-surface-container rounded border border-outline-variant/20">
+<strong class="text-on-surface font-label-code block mb-1">2. Directory Entry Traversal:</strong>
+            The kernel walks the path string token by token. It scans root for 'home' (Inode 1024), checks permissions (executable 'x' search bit), loads Inode 1024 to scan for 'user' (Inode 2048), and loads 'user' to find 'Documents' (Inode 8192).
+          </div>
+<div class="p-space-sm bg-surface-container rounded border border-outline-variant/20">
+<strong class="text-on-surface font-label-code block mb-1">3. Target Inode Acquisition:</strong>
+            Inside 'Documents', the resolver matches the filename 'resume.pdf' to Inode 28410. It reads Inode 28410's metadata permissions (r--r--r--) and verifies the caller has read access.
+          </div>
+<div class="p-space-sm bg-surface-container rounded border border-outline-variant/20">
+<strong class="text-tertiary font-label-code block mb-1">4. File Descriptor Binding:</strong>
+            The kernel creates an Open File Table entry pointing to Inode 28410, allocates the lowest available integer file descriptor (e.g., FD 3) in the process's descriptor table, and hands '3' back to the program.
+          </div>
+</div>
+</div>
+<!-- Dual Pedagogy Section: In-Class Activity & Mental Model Analogy -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Technical Classroom Activity Card -->
+<div class="bg-surface-container-low p-space-md rounded-lg border border-primary/30 flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center gap-space-xs text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[22px]">draw</span>
+<span class="font-label-code text-label-code font-bold">💻 In-Class Activity: Draw Your Laptop's Home Tree From Memory!</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-on-surface-variant font-body-sm text-[12px] my-space-xs">
+<div class="p-2 bg-surface-container rounded">
+<span class="text-primary font-bold">Step 1:</span> Close your laptop, take a blank paper sheet.
+              </div>
+<div class="p-2 bg-surface-container rounded">
+<span class="text-primary font-bold">Step 2:</span> Draw the tree starting at <code class="text-primary">/Users/[name]</code> or <code class="text-primary">/home/[user]</code>.
+              </div>
+<div class="p-2 bg-surface-container rounded">
+<span class="text-primary font-bold">Step 3:</span> Run <code class="text-tertiary">tree -L 2 ~</code> or <code class="text-tertiary">find ~ -maxdepth 2 -type d</code>.
+              </div>
+<div class="p-2 bg-surface-container rounded">
+<span class="text-primary font-bold">Step 4:</span> Compare mental model vs. actual VFS reality!
+              </div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">
+              Watch students discover hidden dot-directories (<code class="text-primary">.config</code>, <code class="text-primary">.cache</code>, <code class="text-primary">.ssh</code>) that their OS GUI desktop hides by default!
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs border-t border-outline-variant/20 flex items-center justify-between text-outline font-label-tag text-[10px]">
+<span>SHELL LAB // POSIX DISCOVERY</span>
+<span class="text-tertiary">PEDAGOGICAL DRILL</span>
+</div>
+</div>
+<!-- Mental Model Analogy Card -->
+<div class="bg-surface-container-low p-space-md rounded-lg border border-tertiary/30 flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center gap-space-xs text-tertiary mb-space-sm">
+<span class="material-symbols-outlined text-[22px]">navigation</span>
+<span class="font-label-code text-label-code font-bold">🎒 GPS Road Trip Navigation Analogy</span>
+</div>
+<!-- Mini visual path -->
+<div class="p-space-sm rounded bg-surface-container font-label-code text-[11px] text-on-surface flex flex-wrap items-center gap-1.5 my-space-xs border border-outline-variant/30">
+<span class="text-primary">Highway 0 ('/')</span>
+<span class="text-outline">➔</span>
+<span class="text-on-surface">Exit 5 'home'</span>
+<span class="text-outline">➔</span>
+<span class="text-on-surface">County Rd 'user'</span>
+<span class="text-outline">➔</span>
+<span class="text-tertiary">Street 'Documents'</span>
+<span class="text-outline">➔</span>
+<span class="text-secondary font-bold">Driveway 'resume.pdf'</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mt-space-sm">
+              Entering <code class="text-primary font-label-code text-[12px]">'/home/user/Documents/resume.pdf'</code> is just like GPS step-by-step driving directions: Start at Highway Interstate 0 (Root '/') ➔ Take Exit 5 to State Highway 'home' ➔ Turn onto County Road 'user' ➔ Turn into Neighborhood Street 'Documents' ➔ Park in Driveway 'resume.pdf'.
+            </p>
+<div class="p-2 mt-2 bg-error-container/20 border border-error/30 rounded text-error text-[12px] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">no_crash</span>
+<span><strong>Guardrail:</strong> If any road in the middle is closed (permission denied on a folder), your car gets stopped dead before you ever see the house!</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs border-t border-outline-variant/20 flex items-center justify-between text-outline font-label-tag text-[10px]">
+<span>COGNITIVE HOOK // PHYSICAL INTUITION</span>
+<span class="text-tertiary">RESOLVER MECHANISM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 4: Paradigm Showdown & Guardrails                                 -->
+<!-- ========================================================================= -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code text-primary px-space-sm py-0.5 rounded bg-surface-container-high border border-primary/30">04 // SYNTHESIS</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">4️⃣ Paradigm Showdown &amp; Guardrails</h2>
+</div>
+<!-- Side-by-side Comparative Table -->
+<div class="bg-surface-container-low rounded-lg border border-outline-variant/40 p-space-md overflow-x-auto">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm border-b border-outline-variant/30">
+<span class="font-label-code text-label-code font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">compare_arrows</span>
+            Hard Links (Direct Inode Alias) vs. Soft Links (Symbolic Path Pointers)
+          </span>
+<span class="font-label-tag text-label-tag text-secondary bg-secondary/10 px-2 py-0.5 rounded">VFS SPEC COMPARISON</span>
+</div>
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="font-label-code text-label-code text-outline uppercase text-[11px] border-b border-outline-variant/30">
+<th class="py-2.5 px-3">Architectural Field</th>
+<th class="py-2.5 px-3 text-primary font-bold">Hard Links (ln target linkname)</th>
+<th class="py-2.5 px-3 text-secondary font-bold">Soft Links (ln -s target linkname)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 font-label-code text-[13px]">
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-3 font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">fingerprint</span>
+                Inode Target
+              </td>
+<td class="py-3 px-3 text-primary">
+<strong>Same Inode number</strong> as target. (Identical file metadata)
+              </td>
+<td class="py-3 px-3 text-secondary">
+<strong>Brand new independent Inode</strong> created for symlink file.
+              </td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-3 font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">storage</span>
+                File System Boundary
+              </td>
+<td class="py-3 px-3 text-error">
+<strong>Cannot cross partition boundaries.</strong> (Must reside on same physical disk).
+              </td>
+<td class="py-3 px-3 text-tertiary">
+<strong>Can freely cross</strong> different disks, network mounts (NFS), &amp; USB drives.
+              </td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-3 font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">delete</span>
+                If Original File Is Deleted
+              </td>
+<td class="py-3 px-3 text-tertiary">
+<strong>Data persists!</strong> File is fully readable until link count hits 0.
+              </td>
+<td class="py-3 px-3 text-error">
+<strong>Link breaks immediately!</strong> Becomes a "Dangling Pointer" (No such file).
+              </td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-3 font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">data_usage</span>
+                Storage Overhead
+              </td>
+<td class="py-3 px-3 text-on-surface-variant">
+<strong>0 extra bytes.</strong> Just another string entry row in a directory file.
+              </td>
+<td class="py-3 px-3 text-on-surface-variant">
+<strong>Uses small inode + data block</strong> (or fast symlink inline) to store path text.
+              </td>
+</tr>
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-3 font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">folder_zip</span>
+                Can Link Directories?
+              </td>
+<td class="py-3 px-3 text-error">
+<strong>Strictly forbidden</strong> by kernel to prevent circular graph infinite loops.
+              </td>
+<td class="py-3 px-3 text-tertiary">
+<strong>Fully allowed</strong> and commonly used for library versioning (e.g. libssl.so).
+              </td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="bg-error-container/20 border-l-4 border-error p-space-md rounded-lg flex flex-col md:flex-row gap-space-md items-start">
+<div class="w-10 h-10 rounded bg-error/20 flex items-center justify-center shrink-0 text-error">
+<span class="material-symbols-outlined text-[28px]">warning</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-error uppercase tracking-wider font-bold">COMMON MISTAKE // THE UNLINK() DISILLUSION</span>
+<p class="font-body-md text-body-md text-on-surface">
+            Do not assume deleting a file in a folder instantly zeroes out its data on disk! In UNIX/POSIX systems, the system call to delete a file is named <code class="text-error font-label-code text-[13px] font-bold">unlink()</code>. When you delete a file, you are merely removing its name from the directory record and decrementing the Inode's reference counter by 1. The physical data sectors are only freed for reuse when the link count hits <strong class="text-error font-bold">ZERO</strong> and all open file descriptors are closed!
+          </p>
+</div>
+</div>
+<!-- Interview Takeaway Panel -->
+<div class="bg-surface-container p-space-md rounded-lg border border-primary/30 flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[24px]">school</span>
+<span class="font-label-code text-label-code font-bold uppercase tracking-wider">Interview Takeaway Panel</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Hierarchical directories are human-facing semantic wrappers over raw inode graphs. A file has no inherent name—names live exclusively inside directory files. When resolving paths, the kernel incurs disk I/O for each slash <code class="text-primary font-label-code">'/'</code> token unless cached by the dentry (Directory Entry) cache. If an application opens thousands of files without closing descriptors, it leaks file descriptors until the kernel drops <code class="text-error font-label-code font-bold">'EMFILE: Too many open files'</code>, halting execution (just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling down!).
+        </p>
+<div class="flex flex-wrap items-center gap-space-sm mt-space-xs pt-space-xs border-t border-outline-variant/30 text-outline font-label-tag text-[11px]">
+<span class="text-primary font-semibold">🔑 KEY TAKEAWAYS:</span>
+<span>1. Names reside in directories, not Inodes</span>
+<span>•</span>
+<span>2. Traversal is O(N) token resolution cached via dentry</span>
+<span>•</span>
+<span>3. File descriptors are per-process integer limits (ulimit -n)</span>
+</div>
+</div>
+<!-- Module Completion Footer Bar -->
+<div class="bg-surface-container-low p-space-md rounded-lg border border-tertiary/40 flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary/20 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div>
+<div class="font-label-code text-label-code text-tertiary font-bold">
+              MODULE 17 COMPLETE // 100% MASTERY • CREDITS ACCREDITED
+            </div>
+<div class="font-label-tag text-label-tag text-on-surface-variant">
+              CS 301 KERNEL RUNTIME EVAL PASS // RISC-V 64 ARCH • EXT4/VFS FS RECOGNIZED
+            </div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto justify-end">
+<button class="px-space-md py-space-sm rounded bg-surface-container-high text-on-surface font-label-code text-label-code hover:bg-surface-container hover:text-primary border border-outline-variant/40 transition-colors">
+            📖 Review L17 Notes
+          </button>
+<button class="px-space-md py-space-sm rounded bg-primary-container text-on-primary font-label-code text-label-code font-bold hover:shadow-[0_0_20px_rgba(0,210,255,0.4)] transition-all flex items-center gap-1">
+<span>Advance to Module 18 (Inodes &amp; Superblocks)</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Interactive Simulator Micro-Logic -->
+<script>
+  let currentStep = 1;
+  const stepData = [
+    {
+      step: 1,
+      badge: "STAGE 1: ROOT INODE INSPECTION",
+      sys: 'KERNEL SYS_CALL: open("/home/user/Documents/resume.pdf", O_RDONLY)',
+      desc: "The process system call (open) initiates at the universally fixed anchor: Inode 2 (POSIX Root '/'). The kernel reads Inode 2's data block to fetch its directory records."
+    },
+    {
+      step: 2,
+      badge: "STAGE 2: DIRECTORY ENTRY TRAVERSAL",
+      sys: "VFS DENTRY LOOKUP: 'home' [INODE 1024] ➔ 'user' [INODE 2048]",
+      desc: "The kernel walks the path string token by token. It scans root for 'home' (Inode 1024), checks permissions (executable 'x' search bit), loads Inode 1024 to scan for 'user' (Inode 2048), and loads 'user' to find 'Documents' (Inode 8192)."
+    },
+    {
+      step: 3,
+      badge: "STAGE 3: TARGET INODE ACQUISITION",
+      sys: "TARGET INODE RESOLUTION: 'resume.pdf' ➔ INODE #28410",
+      desc: "Inside 'Documents', the resolver matches the filename 'resume.pdf' to Inode 28410. It reads Inode 28410's metadata permissions (r--r--r--) and verifies the caller has read access."
+    },
+    {
+      step: 4,
+      badge: "STAGE 4: FILE DESCRIPTOR VFS BINDING",
+      sys: "PROCESS PCB ASSIGNMENT: FD 3 (READ-ONLY CURSOR AT OFFSET 0)",
+      desc: "The kernel creates an Open File Table entry pointing to Inode 28410, allocates the lowest available integer file descriptor (e.g., FD 3) in the process's descriptor table, and hands '3' back to the program."
+    }
+  ];
+
+  function updateStepUI(stepIndex) {
+    currentStep = stepIndex;
+    const data = stepData[stepIndex - 1];
+
+    const badge = document.getElementById("detail-step-badge");
+    const sys = document.getElementById("detail-step-sys");
+    const desc = document.getElementById("detail-step-desc");
+
+    if (badge) badge.innerText = data.badge;
+    if (sys) sys.innerText = data.sys;
+    if (desc) desc.innerText = data.desc;
+
+    for (let i = 1; i <= 4; i++) {
+      const node = document.getElementById(`step-node-${i}`);
+      if (!node) continue;
+      const numBadge = node.querySelector("span:first-child");
+      const title = node.querySelector(".font-label-code");
+
+      if (i === stepIndex) {
+        node.className = "step-card bg-surface-container p-space-md rounded border border-primary/80 transition-all cursor-pointer shadow-[0_0_15px_rgba(0,210,255,0.2)] flex flex-col justify-between";
+        if (numBadge) {
+          numBadge.className = "w-6 h-6 rounded-full bg-primary text-on-primary font-label-code text-[12px] font-bold flex items-center justify-center";
+        }
+        if (title) {
+          title.className = "font-label-code text-label-code font-bold text-primary";
+        }
+      } else {
+        node.className = "step-card bg-surface-container-high p-space-md rounded border border-outline-variant/40 transition-all cursor-pointer hover:border-primary/50 flex flex-col justify-between";
+        if (numBadge) {
+          numBadge.className = "w-6 h-6 rounded-full bg-surface-container text-on-surface-variant font-label-code text-[12px] font-bold flex items-center justify-center";
+        }
+        if (title) {
+          title.className = "font-label-code text-label-code font-bold text-on-surface";
+        }
+      }
+    }
+  }
+
+  function selectPipelineStep(index) {
+    updateStepUI(index);
+  }
+
+  function stepTraversalAnimation() {
+    let nextStep = currentStep + 1;
+    if (nextStep > 4) nextStep = 1;
+    updateStepUI(nextStep);
+  }
+
+  function resetVfsSimulation() {
+    updateStepUI(1);
+  }
+</script></main></div></body></html>
