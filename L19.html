@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-fixed-dim":"#ddb7ff","surface-container-highest":"#313540","on-surface":"#dfe2f1","tertiary-fixed-dim":"#4edea3","surface-container-low":"#171b26","on-secondary-fixed":"#2c0051","on-tertiary-fixed-variant":"#005236","background":"#0f131d","on-primary-container":"#00566a","secondary-fixed":"#f0dbff","error-container":"#93000a","surface-container-lowest":"#0a0e18","primary-container":"#00d2ff","tertiary-fixed":"#6ffbbe","on-primary-fixed":"#001f28","on-tertiary-container":"#005b3d","surface":"#0f131d","outline-variant":"#3c494e","error":"#ffb4ab","on-background":"#dfe2f1","secondary":"#ddb7ff","tertiary-container":"#48d99e","inverse-primary":"#00677f","on-error-container":"#ffdad6","on-tertiary-fixed":"#002113","on-surface-variant":"#bbc9cf","surface-container":"#1c1f2a","on-primary":"#003543","surface-variant":"#313540","primary-fixed-dim":"#47d6ff","primary-fixed":"#b6ebff","on-secondary":"#490080","surface-dim":"#0f131d","outline":"#859399","surface-tint":"#47d6ff","surface-container-high":"#262a35","secondary-container":"#6f00be","surface-bright":"#353944","on-error":"#690005","primary":"#a5e7ff","inverse-surface":"#dfe2f1","inverse-on-surface":"#2c303b","on-tertiary":"#003824","tertiary":"#69f6b9","on-primary-fixed-variant":"#004e60","on-secondary-container":"#d6a9ff","on-secondary-fixed-variant":"#6900b3"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-xl":"2.5rem","space-xs":"0.25rem","space-lg":"1.5rem","space-md":"1rem","margin-mobile":"1.25rem","margin":"3rem","space-sm":"0.5rem","gutter-mobile":"1rem","gutter":"1.5rem"},fontFamily:{"label-code":["JetBrains Mono"],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-xl":["Space Grotesk"],"headline-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"label-tag":["JetBrains Mono"],"headline-xl-mobile":["Space Grotesk"]},fontSize:{"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-50 flex flex-col justify-between border-r border-outline-variant/30 shadow-[4px_0_24px_rgba(0,0,0,0.4)]"><div class="flex flex-col h-full overflow-hidden"><div class="h-16 px-space-md flex items-center justify-between border-b border-outline-variant/20 bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_8px_#00d2ff]"></div><div class="flex flex-col"><span class="font-label-code text-label-code font-bold text-primary tracking-wider uppercase">KERNEL LAB</span><span class="font-label-tag text-label-tag text-on-surface-variant">CS 301 // SYS-ARCH</span></div></div><span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-highest text-tertiary font-mono">v5.19</span></div><div class="px-space-md py-space-sm bg-surface-container/60 border-b border-outline-variant/10 flex items-center justify-between"><span class="font-label-tag text-label-tag uppercase text-on-surface-variant font-semibold tracking-wider">Curriculum Index</span><span class="font-label-tag text-label-tag text-primary-fixed-dim font-mono">20 UNITS</span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-sm space-y-0.5" data-active-classes="bg-surface-container-highest text-primary-container border-l-2 border-primary-container pl-3 font-semibold shadow-[inset_0_0_12px_rgba(0,210,255,0.08)]"><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l0-bootstrapping-real-mode" href="#"><span class="truncate font-mono">L00 Bootstrapping &amp; Real Mode</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l1-gdt-protected-mode" href="#"><span class="truncate font-mono">L01 GDT &amp; Protected Mode</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l2-interrupts-and-idts" href="#"><span class="truncate font-mono">L02 Interrupts &amp; IDTs</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l3-pic-and-apic-controllers" href="#"><span class="truncate font-mono">L03 PIC &amp; APIC Routing</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l4-physical-memory-buddy-allocator" href="#"><span class="truncate font-mono">L04 Physical Buddy Allocator</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l5-virtual-memory-paging-ptes" href="#"><span class="truncate font-mono">L05 Virtual Memory &amp; 4-Level Paging</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l6-tlb-invalidation-shootdowns" href="#"><span class="truncate font-mono">L06 TLB Invalidation Shootdowns</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l7-kernel-slab-allocator" href="#"><span class="truncate font-mono">L07 Kernel SLAB Cache</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l8-trapframes-and-syscall-vectors" href="#"><span class="truncate font-mono">L08 Trapframes &amp; Syscalls</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l9-process-control-blocks-pcb" href="#"><span class="truncate font-mono">L09 PCB Architecture</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l10-context-switching-register-spills" href="#"><span class="truncate font-mono">L10 Context Switch &amp; Spills</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l11-preemptive-cfs-scheduler" href="#"><span class="truncate font-mono">L11 Preemptive CFS Scheduler</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l12-spinlocks-and-disable-cli" href="#"><span class="truncate font-mono">L12 Spinlocks &amp; Interrupt Flags</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l13-mutexes-and-condition-vars" href="#"><span class="truncate font-mono">L13 Mutexes &amp; Sleeping Locks</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l14-ipc-ring-buffers" href="#"><span class="truncate font-mono">L14 IPC Lock-Free Ring Buffers</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l15-vfs-and-inode-tables" href="#"><span class="truncate font-mono">L15 VFS Layer &amp; Inodes</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l16-page-cache-and-dirty-writeback" href="#"><span class="truncate font-mono">L16 Page Cache &amp; Dirty Writeback</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l17-block-io-and-bio-queues" href="#"><span class="truncate font-mono">L17 Block I/O &amp; BIO Queues</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l18-ext2-directory-indexing" href="#"><span class="truncate font-mono">L18 EXT2 Directory Indexing</span><span class="font-label-tag text-label-tag text-tertiary-fixed-dim">DONE</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-code text-body-sm" data-path="l19-crash-consistency-and-journaling" href="#"><span class="truncate font-mono">L19 Crash Consistency &amp; Journaling</span><span class="font-label-tag text-label-tag px-1 rounded bg-primary-container text-on-primary-container font-bold">ACTIVE</span></a></nav><div class="p-space-sm bg-surface-container-low border-t border-outline-variant/20 flex flex-col gap-space-xs"><div class="flex justify-between items-center"><span class="font-label-tag text-label-tag text-on-surface-variant">Syllabus Mastery</span><span class="font-label-code text-label-code text-tertiary font-bold">95%</span></div><div class="w-full bg-surface-container-highest rounded h-1.5 overflow-hidden"><div class="bg-tertiary-container h-full w-[95%] shadow-[0_0_8px_#4edea3]"></div></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-outline-variant/20 z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-lg"><nav class="flex items-center gap-space-lg font-headline-sm text-body-sm tracking-wide" data-active-classes="text-primary-container font-semibold border-b-2 border-primary-container pb-1"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="l19-crash-consistency-and-journaling" href="#">Interactive Lab</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="kernel-debugger" href="#">QEMU GDB Terminal</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="process-scheduler-visualizer" href="#">CFS Visualizer</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="system-telemetry" href="#">Kernel Telemetry</a></nav></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container border border-outline-variant/30"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-tag text-label-tag uppercase text-on-surface-variant">QEMU x86_64:</span><span class="font-label-code text-label-tag text-tertiary font-mono">READY</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container border border-outline-variant/30"><span class="font-label-tag text-label-tag uppercase text-on-surface-variant">BUILD:</span><span class="font-label-code text-label-tag text-primary font-mono">PASS [gcc 12.2]</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container border border-outline-variant/30"><span class="font-label-tag text-label-tag uppercase text-on-surface-variant">JBD2 STATE:</span><span class="font-label-code text-label-tag text-secondary font-mono">COMMITTING</span></div><div class="h-6 w-px bg-outline-variant/30 mx-1"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_10px_rgba(165,231,255,0.35)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Crash Simulator State Script -->
+<script>
+    function triggerPowerCut() {
+      const stagePill = document.getElementById('sim-current-stage');
+      const crashBadge = document.getElementById('sim-crash-status');
+      const termLog = document.getElementById('sim-console-output');
+      const jbd2State = document.getElementById('sim-jbd2-telemetry');
+      const recoveryFlow = document.getElementById('sim-recovery-result');
+
+      // Random crash inject at either Moment A (Pre-Commit) or Moment B (Post-Commit Checkpoint)
+      const isPostCommit = Math.random() > 0.45;
+
+      stagePill.innerText = "POWER CUT DETECTED // VOLTAGE DROP 0.0V";
+      stagePill.className = "font-label-code text-label-tag px-space-sm py-1 rounded bg-error-container text-on-error-container uppercase animate-pulse";
+
+      crashBadge.innerText = "CRASH RECORDED";
+      crashBadge.className = "font-label-code text-label-tag px-space-sm py-1 rounded bg-error text-on-error font-bold";
+
+      if (isPostCommit) {
+        jbd2State.innerText = "JBD2_REPLAY_PASS";
+        jbd2State.className = "font-label-code text-label-tag text-tertiary font-mono";
+        recoveryFlow.innerHTML = `
+          <div class="p-space-sm rounded bg-surface-container-high border-l-4 border-tertiary">
+            <span class="font-label-code text-label-code text-tertiary font-bold">[MOMENT B: COMMIT BLOCK ON DISK]</span>
+            <p class="font-body-sm text-body-sm text-on-surface mt-1">Transaction #4092 found with valid checksum. <span class="text-tertiary font-mono">Status: FAST-FORWARD REPLAY.</span> Kernel writes verified metadata to primary Inode table. Drive remains 100% pristine. Zero fsck pass needed!</p>
+          </div>
+        `;
+        termLog.innerHTML += `<div class="text-error font-mono">&gt; [KERNEL PANIC] ACPI power off event triggered abruptly at sector 0x8F910.</div>
+<div class="text-primary font-mono">&gt; [REBOOT] Initializing mount /dev/sda1 (ext4)... Found uncheckpointed JBD2 Tx 4092.</div>
+<div class="text-tertiary font-mono">&gt; [JBD2] Valid Tx Commit stamp present. Fast-forwarding blocks to Inode matrix... [DONE: 1.4ms]</div>`;
+      } else {
+        jbd2State.innerText = "JBD2_TX_ABORT_CLEAN";
+        jbd2State.className = "font-label-code text-label-tag text-secondary font-mono";
+        recoveryFlow.innerHTML = `
+          <div class="p-space-sm rounded bg-surface-container-high border-l-4 border-secondary">
+            <span class="font-label-code text-label-code text-secondary font-bold">[MOMENT A: POWER CUT BEFORE COMMIT STAMP]</span>
+            <p class="font-body-sm text-body-sm text-on-surface mt-1">Incomplete Tx #4092 discovered without terminal commit block. <span class="text-secondary font-mono">Status: CLEAN TRUNCATE & ROLLBACK.</span> Orphan scratchpad logged entries discarded. Zero disk pollution!</p>
+          </div>
+        `;
+        termLog.innerHTML += `<div class="text-error font-mono">&gt; [KERNEL PANIC] Brownout hit while write-ahead log buffer was streaming!</div>
+<div class="text-primary font-mono">&gt; [REBOOT] Scanning circular journal journal_head... Tx 4092 incomplete (no commit block).</div>
+<div class="text-secondary font-mono">&gt; [JBD2] Discarding partial transaction. Rolling log pointer backwards... [CLEAN: 0.8ms]</div>`;
+      }
+      termLog.scrollTop = termLog.scrollHeight;
+    }
+
+    function resetSimulator() {
+      const stagePill = document.getElementById('sim-current-stage');
+      const crashBadge = document.getElementById('sim-crash-status');
+      const termLog = document.getElementById('sim-console-output');
+      const jbd2State = document.getElementById('sim-jbd2-telemetry');
+      const recoveryFlow = document.getElementById('sim-recovery-result');
+
+      stagePill.innerText = "STATE: ORDERED LOGGING [STEADY]";
+      stagePill.className = "font-label-code text-label-tag px-space-sm py-1 rounded bg-surface-container-highest text-primary uppercase";
+
+      crashBadge.innerText = "CLEAN";
+      crashBadge.className = "font-label-code text-label-tag px-space-sm py-1 rounded bg-surface-container-highest text-tertiary";
+
+      jbd2State.innerText = "COMMITTING";
+      jbd2State.className = "font-label-code text-label-tag text-secondary font-mono";
+
+      recoveryFlow.innerHTML = `
+        <div class="p-space-sm rounded bg-surface-container-low text-on-surface-variant font-body-sm">
+          Run the interactive simulator above to test what happens when hardware power cuts strike before vs after the JBD2 commit boundary.
+        </div>
+      `;
+
+      termLog.innerHTML = `<div class="text-on-surface-variant font-mono">&gt; JBD2 thread running on CPU core 3... write-barrier active.</div>
+<div class="text-on-surface-variant font-mono">&gt; Journal ring 128MB intact. Ready for simulated power-cut inject.</div>`;
+    }
+  </script>
+<!-- Title & Visual Billboard -->
+<div class="px-gutter pt-space-lg pb-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded font-label-tag text-label-tag bg-primary-container text-on-primary-container font-mono uppercase font-bold tracking-widest">UNIT 19 // CORE KERNEL LAB</span>
+<span class="px-space-xs py-0.5 rounded font-label-tag text-label-tag bg-surface-container-high text-tertiary font-mono">BEGINNER FRIENDLY POSTER</span>
+<span class="px-space-xs py-0.5 rounded font-label-tag text-label-tag bg-surface-container-high text-secondary font-mono">100% RECOVERY SLA</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          🏷️ OPERATING SYSTEMS: L19 - Crash Consistency &amp; Journaling Mechanics
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+          An intuitive visual architectural guide for beginners: Discover why laptops don't destroy their hard drives when their batteries abruptly die, and explore the mathematical elegance of Write-Ahead Journaling.
+        </p>
+</div>
+<!-- Action Controls -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="cursor-pointer px-space-md py-space-sm rounded font-label-code text-label-code font-bold bg-primary-container text-on-primary-container hover:bg-primary transition-all duration-200 flex items-center gap-space-xs shadow-lg shadow-primary-container/20 active:scale-95" onclick="triggerPowerCut()">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>[ ▶ ⚡ Simulate Power Cut &amp; Journal Recovery ]</span>
+</button>
+<button class="cursor-pointer px-space-md py-space-sm rounded font-label-code text-label-code font-bold bg-surface-container-high text-secondary hover:bg-surface-container-highest transition-all duration-200 flex items-center gap-space-xs active:scale-95" onclick="resetSimulator()">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>[ 🔄 Reset Crash Simulator ]</span>
+</button>
+</div>
+</div>
+<!-- Top Telemetry Status Widgets Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-sm mt-space-sm">
+<div class="p-space-sm rounded bg-surface-container-low shadow-sm flex flex-col justify-between">
+<span class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">JOURNAL ENGINE</span>
+<span class="font-label-code text-label-code text-primary font-bold mt-1">EXT4 // JBD2 ENGINE</span>
+<span class="font-label-tag text-label-tag text-tertiary-fixed-dim font-mono mt-0.5">(SYS_JBD2_ONLINE)</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low shadow-sm flex flex-col justify-between">
+<span class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">JOURNAL MODE</span>
+<span class="font-label-code text-label-code text-secondary-fixed-dim font-bold mt-1">DATA=ORDERED</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant font-mono mt-0.5">METADATA + BARRIERS</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low shadow-sm flex flex-col justify-between">
+<span class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">ATOMIC COMMIT LATENCY</span>
+<span class="font-label-code text-label-code text-tertiary font-bold mt-1">~0.84 ms</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant font-mono mt-0.5">WRITE-AHEAD LOG FENCE</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low shadow-sm flex flex-col justify-between">
+<span class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">CRASH STATE</span>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-code text-label-tag px-space-xs py-0.5 rounded bg-surface-container-highest text-tertiary font-bold" id="sim-crash-status">CLEAN</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant font-mono">FSCK BYPASSED</span>
+</div>
+<span class="font-label-tag text-label-tag text-tertiary-fixed-dim font-mono mt-0.5">&lt; 50ms QUICK RESUME</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low shadow-sm flex flex-col justify-between">
+<span class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">LOG ALLOCATION</span>
+<span class="font-label-code text-label-code text-primary font-bold mt-1">128 MB RING BUFFER</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant font-mono mt-0.5">MAX TX SIZE: 32 MB</span>
+</div>
+</div>
+</div>
+<!-- Live Lab Simulator Realtime Feedback Shelf -->
+<div class="px-gutter pb-space-lg">
+<div class="p-space-md rounded bg-surface-container shadow-md flex flex-col lg:flex-row gap-space-md items-stretch">
+<div class="w-full lg:w-1/3 flex flex-col justify-between gap-space-sm">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag uppercase text-on-surface-variant font-bold">Interactive Hardware Fault Injection</span>
+<span class="font-label-code text-label-tag text-secondary font-mono" id="sim-jbd2-telemetry">COMMITTING</span>
+</div>
+<div class="mt-2 flex items-center gap-2">
+<span class="font-label-code text-label-tag px-space-sm py-1 rounded bg-surface-container-highest text-primary uppercase" id="sim-current-stage">STATE: ORDERED LOGGING [STEADY]</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">
+            Simulate sudden battery disconnection during a block write to experience ext4 write-ahead crash-safety in real time.
+          </p>
+</div>
+<div id="sim-recovery-result">
+<div class="p-space-sm rounded bg-surface-container-low text-on-surface-variant font-body-sm">
+            Run the interactive simulator above to test what happens when hardware power cuts strike before vs after the JBD2 commit boundary.
+          </div>
+</div>
+</div>
+<div class="w-full lg:w-2/3 flex flex-col">
+<div class="flex items-center justify-between bg-surface-container-lowest px-space-sm py-1.5 rounded-t">
+<span class="font-label-tag text-label-tag font-mono text-on-surface-variant uppercase">QEMU VIRTUAL DRIVE LOG • /dev/sda1 JBD2 RUNTIME</span>
+<span class="font-label-tag text-label-tag text-tertiary font-mono">I/O ACTIVE</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-b font-label-code text-label-tag text-on-surface h-28 overflow-y-auto space-y-1" id="sim-console-output">
+<div class="text-on-surface-variant font-mono">&gt; JBD2 thread running on CPU core 3... write-barrier active.</div>
+<div class="text-on-surface-variant font-mono">&gt; Journal ring 128MB intact. Ready for simulated power-cut inject.</div>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN SECTION 1: CORE CONCEPTUAL ONBOARDING -->
+<section class="px-gutter pb-space-xl">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded bg-primary-container text-on-primary-container flex items-center justify-center font-label-code text-label-code font-bold">1</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+          1️⃣ Core Conceptual Onboarding (The Pencil Check vs. Pen Commit)
+        </h2>
+</div>
+<!-- Foundational Question Box -->
+<div class="p-space-lg rounded bg-surface-container-high shadow-lg relative overflow-hidden">
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start gap-space-md">
+<div class="p-space-sm rounded bg-surface-container-lowest text-primary">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag uppercase text-primary tracking-widest font-bold">The Foundational Question</span>
+<p class="font-headline-sm text-headline-sm text-on-surface leading-relaxed">
+              Crash Consistency is the structural state of integrity where a file system's metadata ledger and data blocks remain perfectly uncorrupted, synchronized, and valid even if a sudden hardware power loss or system crash abruptly halts the computer mid-write.
+            </p>
+</div>
+</div>
+</div>
+<!-- Motivation and Key Characteristics -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Motivation Block -->
+<div class="lg:col-span-7 p-space-lg rounded bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-secondary mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+<span class="font-label-tag text-label-tag uppercase tracking-wider font-bold">Core Motivation</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              Writing a file to disk is not an atomic operation. To save a text document inside Microsoft VS Code, the kernel referee must execute three separate actions: update the data bitmap, update the Inode pointer, and write the raw data bytes. If your laptop's battery dies right in the middle of these steps, you end up with an un-synchronized system—such as an inode pointing to garbage data blocks. Journaling solves this by creating a timeline trail, transforming raw data mutations into an ordered log that can be cleanly replayed or discarded if power drops.
+            </p>
+</div>
+<div class="mt-space-md pt-space-md flex flex-wrap gap-space-sm bg-surface-container/60 p-space-sm rounded">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-code text-label-tag text-on-surface font-mono">1. Data Bitmap Update</span>
+</div>
+<span class="text-on-surface-variant font-mono">➔</span>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-code text-label-tag text-on-surface font-mono">2. Inode Ptr Refresh</span>
+</div>
+<span class="text-on-surface-variant font-mono">➔</span>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-code text-label-tag text-on-surface font-mono">3. Payload Write</span>
+</div>
+</div>
+</div>
+<!-- Key Characteristics Bullet Block -->
+<div class="lg:col-span-5 p-space-lg rounded bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div class="flex items-center gap-space-xs text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<span class="font-label-tag text-label-tag uppercase tracking-wider font-bold">Key Characteristics</span>
+</div>
+<div class="space-y-space-sm">
+<div class="p-space-sm rounded bg-surface-container-high/60">
+<span class="font-label-code text-label-code text-primary font-bold">• Journaling (Write-Ahead Logging):</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">A brilliant protective framework where the kernel referee writes its intended file updates into a dedicated scratchpad log track on disk BEFORE modifying any real system structures.</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high/60">
+<span class="font-label-code text-label-code text-tertiary font-bold">• Atomic Commit:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">A transaction block that executes completely as one single indivisible step, ensuring a write is either 100% finished or 100% ignored with zero partial states.</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high/60">
+<span class="font-label-code text-label-code text-secondary font-bold">• File System Check (fsck):</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">An older, slow backup tool that scans the entire physical hard drive piece-by-piece after an improper shutdown to hunt down lost file tracks.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Real World & 5th Grader Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Technical Card Component -->
+<div class="p-space-lg rounded bg-surface-container shadow-md flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">terminal</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">💻 Real-World Application Example</h3>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-mono">SPOTIFY • EXT4</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mt-space-xs">
+              Imagine you are actively downloading a large cache file inside Spotify onto an old, unjournaled FAT32 USB drive, and you violently yank the drive out of the laptop mid-write. The file system metadata will become completely scrambled, locking up the folder and corrupting your other files. If you run that same operation on an ext4 file system running Journaling on Linux, a power cut is completely safe. Upon reboot, the kernel checks the journal log, rolls back the unfinished write transaction block, and keeps your drive perfectly healthy.
+            </p>
+</div>
+<div class="mt-space-md p-space-sm rounded bg-surface-container-low flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-on-surface-variant font-mono">CRASH OUTCOME:</span>
+<span class="font-label-code text-label-tag text-tertiary font-mono">ZERO METADATA CORRUPTION</span>
+</div>
+</div>
+<!-- Analogy Card Component -->
+<div class="p-space-lg rounded bg-surface-container shadow-md flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">backpack</span>
+<h3 class="font-headline-sm text-headline-sm text-secondary">🎒 Everyday Example (5th Grader)</h3>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-mono">THE PENCIL CHECK</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mt-space-xs">
+              Imagine you are writing a bank check to buy a video game. If you start writing the real check in permanent pen and your hand suddenly gets bumped mid-sentence, the check is ruined and your bank book gets scrambled. To prevent this, you use the Pencil Check strategy! You jot down the complete math transaction in a cheap scratchpad using a pencil first. Once you are 100% sure the math is perfect, you take out your pen and copy it onto the official check. If an alarm goes off while you are writing the pen check, the teacher just looks at your pencil log to see exactly what you intended to do!
+            </p>
+</div>
+<div class="mt-space-md p-space-sm rounded bg-surface-container-low flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-on-surface-variant font-mono">SCRATCHPAD ANALOGY:</span>
+<span class="font-label-code text-label-tag text-secondary-fixed-dim font-mono">PENCIL PAD = JOURNAL LOG</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MAIN SECTION 2: STRUCTURAL DISSECTION -->
+<section class="px-gutter pb-space-xl">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-code text-label-code font-bold">2</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+          2️⃣ Structural Dissection (The Journal Entry Track vs. The File System Blocks)
+        </h2>
+</div>
+<!-- Split Pane Structural Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-stretch">
+<!-- Left Side: THE DISK LOG PARTITION LAYOUT -->
+<div class="lg:col-span-6 p-space-lg rounded bg-surface-container shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">view_timeline</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">THE DISK LOG PARTITION LAYOUT</span>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-mono">SEPARATE RING DEV</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Dedicated circular track on the disk where transactional write intents are sequentially batched before checkpoint flush.
+            </p>
+<!-- Column Diagram with Flow Nodes -->
+<div class="space-y-space-sm">
+<div class="p-space-sm rounded bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code text-primary font-mono font-bold">[Journal Tx Begin]</span>
+<span class="font-body-sm text-label-tag text-on-surface-variant">Transaction header &amp; timestamp</span>
+</div>
+<span class="font-label-tag text-label-tag text-tertiary font-mono">0x00_START</span>
+</div>
+<div class="text-center font-mono text-primary text-body-sm">↓</div>
+<div class="p-space-sm rounded bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code text-secondary font-mono font-bold">[Metadata Blocks: Inode / Bitmap]</span>
+<span class="font-body-sm text-label-tag text-on-surface-variant">Allocated pointers &amp; free bitmap</span>
+</div>
+<span class="font-label-tag text-label-tag text-secondary font-mono">DESCRIPTOR</span>
+</div>
+<div class="text-center font-mono text-primary text-body-sm">↓</div>
+<div class="p-space-sm rounded bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code text-primary-fixed-dim font-mono font-bold">[Data Payload Blocks]</span>
+<span class="font-body-sm text-label-tag text-on-surface-variant">Raw binary data buffer updates</span>
+</div>
+<span class="font-label-tag text-label-tag text-primary-fixed-dim font-mono">PAYLOAD</span>
+</div>
+<div class="text-center font-mono text-tertiary text-body-sm">↓</div>
+<div class="p-space-sm rounded bg-tertiary/10 text-tertiary flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code text-tertiary font-mono font-bold">[Journal Tx Commit]</span>
+<span class="font-body-sm text-label-tag text-on-surface">Legal fence: write is sealed!</span>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-tertiary text-on-tertiary font-bold font-mono">COMMIT_FENCE</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm rounded bg-surface-container-low flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-on-surface-variant">TRANSACTION WRITE SEQUENCE:</span>
+<span class="font-label-code text-label-tag text-primary font-mono">STRICT FLUSH BARRIER ENFORCED</span>
+</div>
+</div>
+<!-- Right Side: THE MAIN STORAGE MATRIX -->
+<div class="lg:col-span-6 p-space-lg rounded bg-surface-container shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">grid_goldenratio</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">THE MAIN STORAGE MATRIX</span>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-mono">PRIMARY VOLUME</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              The primary file system real estate where physical inodes, directories, and persistent file blocks reside permanently.
+            </p>
+<!-- Three Tracking Blocks -->
+<div class="space-y-space-sm">
+<div class="p-space-md rounded bg-surface-container-high flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface font-bold">Physical Inode Table Area</span>
+<span class="font-label-tag text-label-tag text-primary font-mono">0x20000_INODES</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Holds metadata structures, ownership privileges, modification timestamps, and block address allocation maps.</p>
+</div>
+<div class="p-space-md rounded bg-surface-container-high flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface font-bold">Data Block Storage Lanes</span>
+<span class="font-label-tag text-label-tag text-secondary font-mono">0x80000_PAYLOAD</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The actual user payload clusters where application contents (e.g. photos, videos, code files) are stored.</p>
+</div>
+<div class="p-space-md rounded bg-surface-container-high flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface font-bold">The Crash Recovery Controller</span>
+<span class="font-label-tag text-label-tag text-tertiary font-mono">JBD2 REPLAY LOGIC</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The kernel monitor that checks the dirty unmount flag on boot, reads the journal ring, and triggers replay or discard.</p>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm rounded bg-surface-container-low flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-on-surface-variant">CHECKPOINT TARGET:</span>
+<span class="font-label-code text-label-tag text-tertiary font-mono">PERSISTENT PRIMARY SECTORS</span>
+</div>
+</div>
+</div>
+<!-- Structural Definitions Details Rows -->
+<div class="space-y-space-sm">
+<!-- Row 1: The Journal Transaction Block -->
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex-1">
+<span class="font-label-code text-label-code text-primary font-bold">• The Journal Transaction Block:</span>
+<p class="font-body-md text-body-md text-on-surface mt-1">A temporary isolation buffer partition where data operations are grouped together and stamped with an intent flag before moving to primary storage.</p>
+</div>
+<div class="flex-1 p-space-sm rounded bg-surface-container-high">
+<span class="font-label-tag text-label-tag text-primary font-mono font-bold block mb-1">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">When Google Chrome saves your browsing history state, the kernel packages the history update as an intent transaction inside the journal first, protecting your existing files.</p>
+</div>
+</div>
+<!-- Row 2: The Checkpointing Phase -->
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex-1">
+<span class="font-label-code text-label-code text-secondary font-bold">• The Checkpointing Phase:</span>
+<p class="font-body-md text-body-md text-on-surface mt-1">The operational step where the kernel referee safely copies the verified, committed metadata updates out of the temporary journal and writes them into the real Inode tables.</p>
+</div>
+<div class="flex-1 p-space-sm rounded bg-surface-container-high">
+<span class="font-label-tag text-label-tag text-secondary font-mono font-bold block mb-1">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Checkpointing runs silently in the background of filesystems like ext4, flushing cached log lines down to physical silicon sectors when the drive bus is idle.</p>
+</div>
+</div>
+<!-- Row 3: The Log Replay Routine -->
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex-1">
+<span class="font-label-code text-label-code text-tertiary font-bold">• The Log Replay Routine:</span>
+<p class="font-body-md text-body-md text-on-surface mt-1">The automated boot-time utility script that runs instantly if the system detects an improper shutdown flag bit.</p>
+</div>
+<div class="flex-1 p-space-sm rounded bg-surface-container-high">
+<span class="font-label-tag text-label-tag text-tertiary font-mono font-bold block mb-1">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">If your machine crashes, the filesystem reads the journal on reboot. If it finds a complete Commit block, it replays the changes to RAM; if it finds an un-committed block, it discards it cleanly.</p>
+</div>
+</div>
+</div>
+<!-- Bottom Footer Note: Everyday Example -->
+<div class="p-space-md rounded bg-surface-container-high shadow-sm flex items-start gap-space-md">
+<span class="material-symbols-outlined text-secondary text-2xl">restaurant</span>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag uppercase text-secondary font-bold tracking-wider">🎒 Everyday Example</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Think of a professional restaurant kitchen workflow tracker! The Journal is the waiter's paper order ticket pad. When you order food, the waiter writes it down completely on their pad first (Tx Commit). The Main Storage Matrix is the chef's real stove line counter. If the restaurant lights suddenly go out while the chef is frying an egg, the owner doesn't guess what happened—they just read the waiter's notepad to figure out exactly what meal was supposed to be cooked!
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- MAIN SECTION 3: LINEAR OPERATIONAL PIPELINE -->
+<section class="px-gutter pb-space-xl">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-code text-label-code font-bold">3</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+          3️⃣ Linear Operational Pipeline (The Crash Timeline &amp; Recovery Loop)
+        </h2>
+</div>
+<!-- Horizontal Workflow Timeline Tracker Layout -->
+<div class="p-space-lg rounded bg-surface-container shadow-md">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md relative">
+<!-- Step 1 -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col justify-between relative group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-space-xs py-0.5 rounded font-label-tag text-label-tag bg-primary text-on-primary font-mono font-bold">STEP 01</span>
+<span class="material-symbols-outlined text-primary text-[20px]">edit_note</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">1. Log Intent Journaling</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              The application issues a write command. The file system creates a transaction, writing the proposed Inode changes and bitmap values directly into the journal track.
+            </p>
+<div class="mt-space-md pt-space-xs font-label-tag text-label-tag text-primary font-mono">
+              STAGE: IN-FLIGHT INTENT
+            </div>
+</div>
+<!-- Step 2 -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col justify-between relative group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-space-xs py-0.5 rounded font-label-tag text-label-tag bg-tertiary text-on-tertiary font-mono font-bold">STEP 02</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">task_alt</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">2. Atomic Commit Stamp</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              The system appends a specialized 'Commit Block' to the end of the journal log. The moment this single block hits the disk disk, the operation is legally declared safe.
+            </p>
+<div class="mt-space-md pt-space-xs font-label-tag text-label-tag text-tertiary font-mono">
+              STAGE: ATOMIC THRESHOLD
+            </div>
+</div>
+<!-- Step 3 -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col justify-between relative group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-space-xs py-0.5 rounded font-label-tag text-label-tag bg-secondary text-on-secondary font-mono font-bold">STEP 03</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">sync</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">3. Checkpoint Disk Write</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              The kernel referee transfers the updates from the journal to their true home locations inside the file system's primary index blocks and storage channels.
+            </p>
+<div class="mt-space-md pt-space-xs font-label-tag text-label-tag text-secondary font-mono">
+              STAGE: BACKGROUND CHECKPOINT
+            </div>
+</div>
+<!-- Step 4 -->
+<div class="p-space-md rounded bg-surface-container-low flex flex-col justify-between relative group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-space-xs py-0.5 rounded font-label-tag text-label-tag bg-surface-container-highest text-primary-fixed font-mono font-bold">STEP 04</span>
+<span class="material-symbols-outlined text-primary-fixed text-[20px]">replay</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">4. Post-Crash Replay Selection</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+              If a power cut hits mid-step, the system reboots, scans only the tiny journal file within milliseconds, and determines whether to fast-forward the write or wipe it out.
+            </p>
+<div class="mt-space-md pt-space-xs font-label-tag text-label-tag text-primary font-mono">
+              STAGE: FAST RESUME &lt;50MS
+            </div>
+</div>
+</div>
+</div>
+<!-- Chalkboard Activity & Construction Analogy Bento -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Chalkboard Activity Card -->
+<div class="p-space-lg rounded bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">co_present</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">💻 Power Loss Moment Traversal Activity</h3>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-mono">CLASSROOM EXERCISE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mt-space-xs">
+              Present a multi-stage write scenario timeline on the chalkboard ➔ Mark Moment A: Power loss occurs before the Commit block hits the journal ➔ Have students trace why this is safe (Wipe block) ➔ Mark Moment B: Power loss hits mid-checkpoint after the Commit block is secure ➔ Have the class trace why this is safe (Replay block) ➔ Contrast this with an unjournaled filesystem to show how partial writes cause corruption.
+            </p>
+</div>
+<div class="mt-space-md p-space-sm rounded bg-surface-container flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-on-surface-variant font-mono">PEDAGOGICAL TAKEAWAY:</span>
+<span class="font-label-code text-label-tag text-tertiary font-mono">PRE-COMMIT = DISCARD // POST-COMMIT = REPLAY</span>
+</div>
+</div>
+<!-- Construction Crew Analogy Card -->
+<div class="p-space-lg rounded bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">handyman</span>
+<h3 class="font-headline-sm text-headline-sm text-secondary">🎒 Construction Crew Analogy</h3>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-mono">BLUEPRINT WORKFLOW</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mt-space-xs">
+              A contractor outlines a house building plan inside an assignment logbook (Log Intent) ➔ The inspector stamps the logbook page as approved (Atomic Commit) ➔ The workers go out to the field and build the concrete foundation block walls (Checkpoint Write) ➔ A sudden thunderstorm hits the site, forcing the supervisor to check the stamped logbook to see if they should continue pouring cement or tear down the wall (Recovery Pipeline).
+            </p>
+</div>
+<div class="mt-space-md p-space-sm rounded bg-surface-container flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-on-surface-variant font-mono">FIELD ANALOGY:</span>
+<span class="font-label-code text-label-tag text-secondary font-mono">STAMPED LOGBOOK = ATOMIC COMMIT</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MAIN SECTION 4: PARADIGM SHOWDOWN & GUARDRAILS -->
+<section class="px-gutter pb-space-xl">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded bg-surface-container-highest text-primary font-label-code text-label-code font-bold flex items-center justify-center">4</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+          4️⃣ Paradigm Showdown &amp; Guardrails
+        </h2>
+</div>
+<!-- Comparative Side-by-Side Table -->
+<div class="rounded bg-surface-container shadow-md overflow-hidden">
+<div class="p-space-md bg-surface-container-high flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Full Journaling (Maximum Safety Isolation) vs Metadata-Only Journaling (Speed/Safety Balance)</span>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-lowest text-primary font-mono">EXT4 MODES</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-low text-on-surface-variant font-label-tag text-label-tag uppercase font-mono">
+<tr>
+<th class="p-space-md">Operational Dimension</th>
+<th class="p-space-md text-secondary font-bold">Full Journaling (data=journal)</th>
+<th class="p-space-md text-primary font-bold">Metadata-Only Journaling (data=ordered)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10 text-on-surface">
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-space-md font-label-code text-label-code text-on-surface-variant font-bold">Logging Scope</td>
+<td class="p-space-md">Writes both user data content AND filesystem ledger blocks to the log</td>
+<td class="p-space-md">Writes only the tracking ledger index blocks to the log</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-space-md font-label-code text-label-code text-on-surface-variant font-bold">Performance Speed Tax</td>
+<td class="p-space-md text-error">Slow since every byte must be written to the disk drive twice</td>
+<td class="p-space-md text-tertiary">Ultra-fast since user data streams straight to storage blocks</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-space-md font-label-code text-label-code text-on-surface-variant font-bold">Data Integrity Guard</td>
+<td class="p-space-md">Guarantees your text strings will never vanish</td>
+<td class="p-space-md">Guarantees the system won't crash-corrupt but individual text lines can lose updates</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="p-space-lg rounded bg-error-container text-on-error-container shadow-md flex items-start gap-space-md">
+<span class="material-symbols-outlined text-3xl shrink-0">warning</span>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-tag text-label-tag uppercase tracking-widest font-mono font-bold">UNDERGRADUATE PITFALL</span>
+<span class="font-headline-sm text-headline-sm font-bold">Common Mistakes Warning Banner</span>
+</div>
+<p class="font-body-md text-body-md leading-relaxed mt-1">
+            Do not assume journaling backs up your deleted files! A very common mistake undergraduate students make is believing that a journaling filesystem acts like a permanent cloud backup utility. The journal does not save your old text documents; it is simply a temporary operational scratchpad designed to ensure the internal filesystem bones and index blocks don't get broken during a power cut!
+          </p>
+</div>
+</div>
+<!-- Interview Takeaway Panel -->
+<div class="p-space-lg rounded bg-surface-container-high shadow-lg flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[24px]">school</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Interview Takeaway Panel</h3>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-mono">STAFF ENGINEER QUESTION</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Crash consistency architectures dictate how modern operating systems guarantee long-term data survival against volatile physical hardware environments. By implementing write-ahead logging boundaries, filesystems scale safely without requiring hours of slow file scanning checks after a power loss. If a storage sync script bypasses these commit blocks or drops its barrier commands, it triggers a fatal filesystem metadata corruption error, locking the volume into a raw, unusable protected mode (just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling down!).
+        </p>
+</div>
+<!-- Bottom Module Completion Bar -->
+<div class="p-space-lg rounded bg-surface-container-lowest shadow-xl flex flex-col lg:flex-row items-center justify-between gap-space-md mt-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-tertiary/20 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-tertiary font-bold tracking-wide">
+              MODULE 19 COMPLETE // 100% MASTERY • CREDITS ACCREDITED
+            </span>
+<span class="font-label-tag text-label-tag text-on-surface-variant font-mono mt-0.5">
+              CS 301 KERNEL RUNTIME EVAL PASS // RISC-V 64 ARCH // EXT4 JOURNALING &amp; JBD2 CRASH CONSISTENCY VERIFIED
+            </span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="cursor-pointer px-space-md py-space-sm rounded font-label-code text-label-code bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>[ 📖 Review L19 Notes ]</span>
+</button>
+<button class="cursor-pointer px-space-md py-space-sm rounded font-label-code text-label-code font-bold bg-primary-container text-on-primary-container hover:bg-primary transition-colors flex items-center gap-space-xs shadow-md shadow-primary-container/20">
+<span class="material-symbols-outlined text-[18px]">school</span>
+<span>[ 🎓 Advance to Capstone Lab (Operating Systems Mastery) ➔ ]</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div></main></div></body></html>
