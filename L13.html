@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed":"#2c0051","surface-container-lowest":"#0a0e18","on-secondary":"#490080","outline":"#859399","secondary-fixed-dim":"#ddb7ff","on-error":"#690005","outline-variant":"#3c494e","tertiary-fixed-dim":"#4edea3","on-surface":"#dfe2f1","primary":"#a5e7ff","background":"#0f131d","primary-container":"#00d2ff","on-primary-fixed-variant":"#004e60","tertiary-fixed":"#6ffbbe","on-surface-variant":"#bbc9cf","on-primary-container":"#00566a","tertiary-container":"#48d99e","secondary":"#ddb7ff","surface-tint":"#47d6ff","inverse-surface":"#dfe2f1","on-secondary-fixed-variant":"#6900b3","on-error-container":"#ffdad6","surface-container-high":"#262a35","on-tertiary-fixed-variant":"#005236","primary-fixed":"#b6ebff","on-tertiary-container":"#005b3d","on-primary":"#003543","on-tertiary-fixed":"#002113","surface-variant":"#313540","surface-container-low":"#171b26","surface-container":"#1c1f2a","surface-container-highest":"#313540","primary-fixed-dim":"#47d6ff","error-container":"#93000a","secondary-fixed":"#f0dbff","tertiary":"#69f6b9","on-primary-fixed":"#001f28","inverse-primary":"#00677f","inverse-on-surface":"#2c303b","surface":"#0f131d","surface-bright":"#353944","on-background":"#dfe2f1","surface-dim":"#0f131d","on-tertiary":"#003824","secondary-container":"#6f00be","error":"#ffb4ab","on-secondary-container":"#d6a9ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-mobile":"1rem","space-lg":"1.5rem","space-xl":"2.5rem","space-sm":"0.5rem","space-md":"1rem","gutter":"1.5rem","margin-mobile":"1.25rem","space-xs":"0.25rem","margin":"3rem"},"fontFamily":{"label-code":["JetBrains Mono"],"headline-xl":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"headline-sm":["Space Grotesk"],"headline-lg":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"label-tag":["JetBrains Mono"]},"fontSize":{"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-80 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center text-primary-container"><span class="material-symbols-outlined text-[18px]">memory</span></div><div class="flex flex-col"><span class="font-label-code text-label-code text-primary uppercase font-bold tracking-wider">KERNEL LAB</span><span class="font-label-tag text-label-tag text-on-surface-variant tracking-widest">SYSTEMS STUDIO</span></div></div><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-tag text-label-tag text-tertiary">LIVE</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-sm flex flex-col gap-space-md"><div class="flex flex-col gap-space-xs"><div class="px-space-sm py-space-xs flex items-center justify-between"><span class="font-label-tag text-label-tag text-on-surface-variant tracking-wider uppercase">Curriculum // Core Units</span><span class="font-label-tag text-label-tag text-primary">13 / 14</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container text-primary font-semibold shadow-[inset_0_0_0_1px_#00d2ff]"><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l0-course-intro" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L0 Course Intro</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l1-os-components" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L1 OS Components</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l2-pcb-and-context-sw" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L2 PCB &amp; Context Sw</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l3-kernel-design" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L3 Kernel Design</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l4-the-boot-process" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L4 The Boot Process</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l5-what-is-a-process" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L5 What is a Process?</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l6-process-and-switch" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L6 Process &amp; Switch</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l7-cpu-scheduling-i" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L7 CPU Scheduling I</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l8-cpu-scheduling-ii" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L8 CPU Scheduling II</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l9-threads-and-concurrency" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L9 Threads &amp; Concurrency</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l10-race-conditions" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L10 Race Conditions</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l11-deadlocks-and-sync" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L11 Deadlocks &amp; Sync</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l12-memory-relocation" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span><span class="font-label-code text-label-code">L12 Memory Relocation</span></div><span class="font-label-tag text-label-tag text-tertiary">DONE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="l13-the-paging-model-and-address-translation" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[16px]">play_circle</span><span class="font-label-code text-label-code">L13 Paging &amp; TLB</span></div><span class="font-label-tag text-label-tag bg-surface-container px-space-xs py-0.5 rounded text-primary-container shadow-[0_0_8px_rgba(0,210,255,0.4)]">ACTIVE</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group opacity-75" data-path="l14-virtual-memory" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-outline text-[16px]">lock</span><span class="font-label-code text-label-code">L14 Virtual Memory</span></div><span class="font-label-tag text-label-tag text-outline">QUEUED</span></a></nav></div><div class="flex flex-col gap-space-xs pt-space-xs"><div class="px-space-sm py-space-xs flex items-center justify-between"><span class="font-label-tag text-label-tag text-on-surface-variant tracking-wider uppercase">Telemetry &amp; Tools</span><span class="font-label-tag text-label-tag text-secondary">DEBUG</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container text-primary font-semibold shadow-[inset_0_0_0_1px_#00d2ff]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="register-inspector" href="#"><span class="material-symbols-outlined text-secondary text-[16px]">terminal</span><span class="font-label-code text-label-code">Register Inspector</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="syscall-debugger" href="#"><span class="material-symbols-outlined text-primary text-[16px]">bug_report</span><span class="font-label-code text-label-code">Syscall Debugger</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="mmu-address-bus" href="#"><span class="material-symbols-outlined text-tertiary text-[16px]">alt_route</span><span class="font-label-code text-label-code">MMU Address Bus</span></a></nav></div></div><div class="p-space-sm bg-surface-container-low"><div class="p-space-sm rounded bg-surface-container-lowest flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase">Kernel Engine</span><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="font-label-tag text-label-tag text-tertiary">ONLINE</span></div></div><div class="font-label-code text-label-code text-primary font-semibold">RISC-V 64-bit Emulator</div><div class="flex items-center justify-between text-on-surface-variant font-label-tag text-label-tag pt-space-xs"><span class="text-outline">HART: 0 [ACTIVE]</span><span class="text-tertiary">IPC: 1.42</span></div></div></div></aside><div class="pl-80"><header class="fixed top-0 left-80 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="flex items-center gap-space-lg"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">CS 301</span><span class="text-outline-variant font-label-tag text-label-tag">//</span><span class="font-label-code text-label-code text-on-surface font-semibold">Systems Architecture</span></div><span class="font-label-tag text-label-tag text-on-surface-variant uppercase">Undergraduate Core Engine</span></div><div class="hidden xl:flex items-center gap-space-md pl-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container"><span class="font-label-tag text-label-tag text-on-surface-variant">POLLER:</span><span class="font-label-code text-label-code text-primary">1000 Hz</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container"><span class="font-label-tag text-label-tag text-on-surface-variant">MODULE:</span><span class="font-label-code text-label-code text-on-surface">13 / 14</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container"><span class="font-label-tag text-label-tag text-on-surface-variant">DIFF:</span><span class="font-label-code text-label-code text-secondary">Advanced</span></div></div></div><div class="flex items-center gap-space-lg"><div class="hidden md:flex flex-col items-end gap-1"><div class="flex items-center gap-space-sm"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase">Syllabus Progress</span><span class="font-label-code text-label-code text-tertiary font-bold">92%</span></div><div class="w-36 h-1.5 rounded-full bg-surface-container overflow-hidden"><div class="h-full bg-tertiary w-[92%]"></div></div></div><div class="flex items-center gap-space-sm"><button aria-label="Notifications" class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-primary-container shadow-[0_0_6px_#00d2ff]"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 min-h-screen bg-surface px-gutter"><div class="flex flex-col w-full gap-space-xl pb-space-xl">
+<!-- Telemetry Header & Status Strip -->
+<section class="flex flex-col gap-space-md pt-space-xs">
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-lowest p-space-sm rounded-lg shadow-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-tag text-label-tag text-primary tracking-widest uppercase truncate">
+          LESSON 13 // ACADEMIC RUNTIME SERIES • CS 301 CORE KERNEL LABS • RISC-V 64 ARCH • HARDWARE MMU PAGING ACTIVE
+        </span>
+</div>
+<div class="flex items-center gap-space-xs font-label-tag text-label-tag bg-surface-container-high px-space-sm py-0.5 rounded text-tertiary">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>MMU EMULATOR: ONLINE</span>
+</div>
+</div>
+<!-- Title & Hero Narrative Banner -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-lg rounded-xl shadow-xl relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary-container/5 blur-3xl pointer-events-none"></div>
+<div class="flex flex-wrap items-center justify-between gap-space-md z-10">
+<div class="flex flex-col max-w-4xl gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-tag text-label-tag bg-secondary-container text-on-secondary-container px-space-xs py-0.5 rounded uppercase font-bold">CORE MODULE</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant">SUB-SYSTEM: MEMORY MANAGEMENT UNIT</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            🏷️ OPERATING SYSTEMS: L13 - The Paging Model &amp; Address Translation
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+            An interactive primer designed for systems novices: dissecting virtual pages, silicon physical frames, page table indexing, and hardware address translation.
+          </p>
+</div>
+</div>
+<!-- Quick Telemetry Grid (5 Columns) -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-sm pt-space-md z-10">
+<div class="bg-surface-container p-space-sm rounded flex flex-col gap-space-xs shadow-sm">
+<span class="font-label-tag text-label-tag text-on-surface-variant">TRANSLATION ENGINE</span>
+<span class="font-label-code text-label-code text-primary font-bold">PAGE TABLE ACTIVE</span>
+<span class="font-label-tag text-label-tag text-tertiary">MODE: SV39 DIRECT</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col gap-space-xs shadow-sm">
+<span class="font-label-tag text-label-tag text-on-surface-variant">PAGE SIZE</span>
+<span class="font-label-code text-label-code text-primary-container font-bold">4 KB (4096 BYTES)</span>
+<span class="font-label-tag text-label-tag text-outline">GRANULARITY</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col gap-space-xs shadow-sm">
+<span class="font-label-tag text-label-tag text-on-surface-variant">OFFSET BIT WIDTH</span>
+<span class="font-label-code text-label-code text-secondary font-bold">12 BITS [0..4095]</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant">2^12 ALIGNED</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col gap-space-xs shadow-sm">
+<span class="font-label-tag text-label-tag text-on-surface-variant">FAULT STATUS</span>
+<span class="font-label-code text-label-code text-tertiary font-bold">MMU OK / ZERO FAULT</span>
+<span class="font-label-tag text-label-tag text-tertiary-fixed-dim">INTERRUPT MASK: 0</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col gap-space-xs shadow-sm col-span-2 md:col-span-1">
+<span class="font-label-tag text-label-tag text-on-surface-variant">FRAGMENTATION</span>
+<span class="font-label-code text-label-code text-on-surface font-bold">ZERO EXTERNAL</span>
+<span class="font-label-tag text-label-tag text-secondary">INTERNAL &lt; 4KB</span>
+</div>
+</div>
+<!-- Action & Control Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-sm z-10">
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="bg-primary-container hover:bg-primary-fixed text-on-primary font-label-code text-label-code font-bold px-space-md py-space-sm rounded shadow-lg transition-all flex items-center gap-space-xs" id="step-btn">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>▶ ⚡ STEP THROUGH TRANSLATION</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-code text-label-code px-space-md py-space-sm rounded shadow transition-all flex items-center gap-space-xs" id="reset-btn">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span>↺ RESET</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-code text-label-code text-primary-fixed">STATUS NOTE: INTERACTIVE TRANSLATOR READY: V4.3 PAGING CORE RUNTIME</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 1 -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-primary">1️⃣ Core Conceptual Onboarding</span>
+<span class="font-label-tag text-label-tag text-outline-variant font-semibold">// (THE GRID NOTEBOOK MAPPING)</span>
+</div>
+<span class="font-label-tag text-label-tag text-secondary bg-surface-container px-space-xs py-0.5 rounded">THEORY &amp; ARCHITECTURE</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left Column: Definitions & Core Foundations -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- The Foundational Question -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-md flex flex-col gap-space-xs relative">
+<div class="flex items-center gap-space-xs text-primary font-label-tag text-label-tag uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">help_center</span>
+<span>The Foundational Definition</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface">
+            The Paging Model is a memory management architecture where an operating system referee slices an application's virtual address space into equal-sized blocks called Pages, mapping them dynamically into matching physical memory blocks called Frames scattered anywhere across your RAM chips.
+          </p>
+</div>
+<!-- Key Characteristics Block -->
+<div class="bg-surface-container p-space-md rounded-xl shadow-md flex flex-col gap-space-sm">
+<div class="font-label-code text-label-code text-secondary font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">dataset</span>
+<span>Key Characteristics</span>
+</div>
+<div class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant">
+<div class="p-space-xs rounded bg-surface-container-lowest">
+<span class="text-primary font-semibold font-label-code text-label-code">• Page:</span>
+<span> A fixed-size block of virtual memory instructions generated by the compiler (typically 4KB in size) representing an application's local address space.</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-lowest">
+<span class="text-tertiary font-semibold font-label-code text-label-code">• Frame:</span>
+<span> A matching, fixed-size physical slot on the actual silicon RAM chip built to hold exactly one page of data.</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-lowest">
+<span class="text-secondary font-semibold font-label-code text-label-code">• Page Table:</span>
+<span> A vital directory lookup index (just like a phonebook directory) maintained by the kernel for every unique process to map virtual page numbers directly to real physical frame slots.</span>
+</div>
+</div>
+</div>
+<!-- Core Motivation block -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col gap-space-xs">
+<div class="font-label-code text-label-code text-tertiary font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Core Motivation</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Older memory models forced the OS to place an entire application into one solid, contiguous block of RAM. If you opened and closed apps repeatedly, your memory chips would become scattered with tiny, unusable gaps—a bottleneck called External Fragmentation. Paging solves this by eliminating the requirement for solid blocks entirely. Because memory is sliced into tiny, universal grids, the OS referee can scatter a single program's pages across completely different physical frames anywhere on the chip, using a page table to keep them organized.
+          </p>
+</div>
+</div>
+<!-- Right Column: Visual Real-World & Analogy Cards -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Technical Card: Real-World Example -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col gap-space-sm flex-1">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-label-code text-label-code font-bold">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>💻 Real-World Application Example</span>
+</div>
+<span class="font-label-tag text-label-tag text-on-surface-variant">VS CODE ALLOCATION</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            When you launch a heavy application like Microsoft VS Code, it might demand 16KB of active RAM memory. Instead of hunting for one solid 16KB block of empty space, the OS slices VS Code into four separate 4KB Pages. Page 0 might be dropped into physical Frame 12 at the bottom of your RAM chip, while Page 1 is dropped into physical Frame 99 at the very top. When VS Code executes code, the processor uses the process's private Page Table to seamlessly glue these scattered frames together in the background.
+          </p>
+<!-- SVG Visual Mini Matrix -->
+<div class="mt-auto bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-around">
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-tag text-label-tag text-on-surface-variant">VS CODE (16KB)</span>
+<div class="grid grid-cols-2 gap-1">
+<div class="w-10 h-6 bg-primary/20 text-primary font-label-tag text-label-tag flex items-center justify-center rounded">P0</div>
+<div class="w-10 h-6 bg-primary/20 text-primary font-label-tag text-label-tag flex items-center justify-center rounded">P1</div>
+<div class="w-10 h-6 bg-primary/20 text-primary font-label-tag text-label-tag flex items-center justify-center rounded">P2</div>
+<div class="w-10 h-6 bg-primary/20 text-primary font-label-tag text-label-tag flex items-center justify-center rounded">P3</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary-container text-[24px]">alt_route</span>
+<div class="flex flex-col items-center gap-1">
+<span class="font-label-tag text-label-tag text-on-surface-variant">SILICON RAM</span>
+<div class="flex flex-col gap-1">
+<div class="w-16 h-4 bg-tertiary/20 text-tertiary font-label-tag text-label-tag flex items-center justify-center rounded">Frame 99 (P1)</div>
+<div class="w-16 h-3 bg-surface-container text-outline font-label-tag text-label-tag flex items-center justify-center rounded">...</div>
+<div class="w-16 h-4 bg-tertiary/20 text-tertiary font-label-tag text-label-tag flex items-center justify-center rounded">Frame 12 (P0)</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Analogy Card (5th Grader) -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col gap-space-sm flex-1">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-label-code text-label-code font-bold">
+<span class="material-symbols-outlined text-[18px]">backpack</span>
+<span>🎒 Everyday Example (5th Grader)</span>
+</div>
+<span class="font-label-tag text-label-tag text-secondary bg-surface-container-highest px-space-xs py-0.5 rounded">NOTEBOOK ANALOGY</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Imagine you are writing a long story inside a standard blank spiral notebook. If the teacher says your whole story must fit on consecutive pages without skipping lines, you waste time hunting for an empty section. Now imagine switching to a grid notebook! You slice your story up into tiny square paragraphs. You can paste paragraph 1 on page 4, paragraph 2 on page 20, and paragraph 3 on page 55. As long as you write a cheat-sheet index on the front cover tracking where you pasted each piece, you can read your story perfectly from start to finish!
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2 -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-primary">2️⃣ Structural Dissection</span>
+<span class="font-label-tag text-label-tag text-outline-variant font-semibold">// (INSIDE THE PAGE TABLE &amp; FRAME MATRIX)</span>
+</div>
+<span class="font-label-tag text-label-tag text-primary-container bg-surface-container px-space-xs py-0.5 rounded">HARDWARE ARCHITECTURE</span>
+</div>
+<!-- Split Pane: Visual Bit Translation vs Page Table Matrix -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left Pane: Visual Translation Architecture -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-xl shadow-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-primary font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">memory_alt</span>
+<span>THE VIRTUAL-TO-PHYSICAL TRANSLATION CORE</span>
+</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant font-label-code">SPLIT &amp; CONCAT PIPELINE</span>
+</div>
+<div class="font-label-code text-label-code text-on-surface bg-surface-container-lowest p-space-sm rounded text-center shadow-inner">
+          Virtual Address ➔ [ Virtual Page Number (VPN) | Offset ] ➔ (Look up VPN in Page Table) ➔ [ Physical Frame Number (PFN) | Offset ] ➔ Physical RAM
+        </div>
+<!-- Interactive Diagram Box -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-md relative overflow-hidden">
+<!-- Step 1: Virtual Address -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-tag text-label-tag text-on-surface-variant">
+<span>INPUT: VIRTUAL ADDRESS (16-BIT TEST SPEC)</span>
+<span class="text-primary-container font-label-code text-label-code font-bold" id="va-hex">0x1032 (4146)</span>
+</div>
+<div class="grid grid-cols-12 gap-1 text-center font-label-code text-label-code">
+<div class="col-span-4 bg-primary-container/20 text-primary-container p-space-sm rounded transition-all" id="box-vpn">
+<div class="font-bold">VPN: 1</div>
+<div class="font-label-tag text-label-tag opacity-75">BITS [15:12]</div>
+</div>
+<div class="col-span-8 bg-secondary-container/30 text-secondary p-space-sm rounded transition-all" id="box-offset">
+<div class="font-bold">OFFSET: 0x032 (50)</div>
+<div class="font-label-tag text-label-tag opacity-75">BITS [11:0] (4096B RANGE)</div>
+</div>
+</div>
+</div>
+<!-- Mid Connectors -->
+<div class="flex items-center justify-between px-space-md text-on-surface-variant">
+<div class="flex items-center gap-space-xs text-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">south</span>
+<span class="font-label-tag text-label-tag uppercase font-bold">Table Lookup</span>
+</div>
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[18px]">south</span>
+<span class="font-label-tag text-label-tag uppercase font-bold">Bypasses Untouched</span>
+</div>
+</div>
+<!-- Step 2: Physical Address -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-tag text-label-tag text-on-surface-variant">
+<span>OUTPUT: PHYSICAL RAM ADDRESS EMITTED</span>
+<span class="text-tertiary font-label-code text-label-code font-bold" id="pa-hex">0x2032 (8242)</span>
+</div>
+<div class="grid grid-cols-12 gap-1 text-center font-label-code text-label-code">
+<div class="col-span-4 bg-tertiary-container/30 text-tertiary p-space-sm rounded transition-all" id="box-pfn">
+<div class="font-bold">PFN: 2</div>
+<div class="font-label-tag text-label-tag opacity-75">BASE: 0x2000</div>
+</div>
+<div class="col-span-8 bg-secondary-container/30 text-secondary p-space-sm rounded transition-all" id="box-pfn-offset">
+<div class="font-bold">OFFSET: 0x032 (50)</div>
+<div class="font-label-tag text-label-tag opacity-75">EXACT BYTE WITHIN FRAME</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container p-space-sm rounded font-label-tag text-label-tag text-on-surface-variant">
+<span class="material-symbols-outlined text-primary-container text-[18px]">info</span>
+<span>Notice how the 12-bit offset (50) passes directly through without modification. Only the page index translates into the frame index.</span>
+</div>
+</div>
+<!-- Right Pane: Process Page Table Lookup -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-xl shadow-lg flex flex-col gap-space-md justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-secondary font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+<span>THE PROCESS PAGE TABLE LOOKUP</span>
+</span>
+<span class="font-label-tag text-label-tag text-tertiary">PID: 4091</span>
+</div>
+<!-- Table Data Matrix -->
+<div class="flex flex-col gap-space-xs bg-surface-container-lowest p-space-sm rounded-lg shadow-inner">
+<div class="grid grid-cols-12 font-label-tag text-label-tag text-on-surface-variant pb-space-xs">
+<span class="col-span-3">VPN INDEX</span>
+<span class="col-span-4">PFN TARGET</span>
+<span class="col-span-3">FLAGS</span>
+<span class="col-span-2 text-right">STATE</span>
+</div>
+<div class="grid grid-cols-12 items-center p-space-xs rounded bg-surface-container font-label-code text-label-code transition-all" id="row-vpn-0">
+<span class="col-span-3 text-primary font-bold">VPN 0</span>
+<span class="col-span-4 text-on-surface">Frame 5</span>
+<span class="col-span-3 font-label-tag text-label-tag text-tertiary">V=1 R/W</span>
+<span class="col-span-2 text-right font-label-tag text-label-tag text-outline">IDLE</span>
+</div>
+<div class="grid grid-cols-12 items-center p-space-xs rounded bg-surface-container font-label-code text-label-code transition-all shadow-[0_0_12px_rgba(0,210,255,0.2)]" id="row-vpn-1">
+<span class="col-span-3 text-primary-container font-bold">VPN 1</span>
+<span class="col-span-4 text-tertiary font-bold">Frame 2</span>
+<span class="col-span-3 font-label-tag text-label-tag text-tertiary">V=1 R/X</span>
+<span class="col-span-2 text-right font-label-tag text-label-tag text-primary-container font-bold">MATCH</span>
+</div>
+<div class="grid grid-cols-12 items-center p-space-xs rounded bg-surface-container font-label-code text-label-code transition-all" id="row-vpn-2">
+<span class="col-span-3 text-primary font-bold">VPN 2</span>
+<span class="col-span-4 text-on-surface">Frame 8</span>
+<span class="col-span-3 font-label-tag text-label-tag text-tertiary">V=1 R/W</span>
+<span class="col-span-2 text-right font-label-tag text-label-tag text-outline">IDLE</span>
+</div>
+<div class="grid grid-cols-12 items-center p-space-xs rounded bg-surface-container font-label-code text-label-code transition-all" id="row-vpn-3">
+<span class="col-span-3 text-outline">VPN 3</span>
+<span class="col-span-4 text-outline-variant">-- NULL --</span>
+<span class="col-span-3 font-label-tag text-label-tag text-error">V=0 [FAULT]</span>
+<span class="col-span-2 text-right font-label-tag text-label-tag text-outline">LOCKED</span>
+</div>
+</div>
+<!-- Internal Fragmentation Loss Monitor -->
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-secondary font-bold">Internal Fragmentation Loss Monitor</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant font-label-code">(Waste in final 4KB slot)</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-3 rounded-full overflow-hidden flex">
+<div class="bg-primary-container h-full w-[25%]" title="Active Data (1024 Bytes)"></div>
+<div class="bg-error/40 h-full w-[75%]" title="Internal Waste (3072 Bytes)"></div>
+</div>
+<div class="flex items-center justify-between font-label-tag text-label-tag text-on-surface-variant">
+<span class="text-primary-container font-semibold">USED: 1024 B (25%)</span>
+<span class="text-error font-semibold">WASTED (INTERNAL SLACK): 3072 B (75%)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Structural Definition Rows -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- PTE Card -->
+<div class="bg-surface-container p-space-md rounded-xl shadow-md flex flex-col gap-space-xs">
+<span class="font-label-code text-label-code text-primary font-bold">• The Page Table Entry (PTE)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          An individual record row inside the map index holding the target physical frame address alongside security bit flags.
+        </p>
+<div class="mt-auto pt-space-xs bg-surface-container-lowest p-space-xs rounded">
+<span class="font-label-tag text-label-tag text-secondary uppercase font-bold">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+            When Google Chrome attempts to read code, the CPU checks the PTE row to verify if that specific memory page is currently loaded in RAM or locked as read-only.
+          </p>
+</div>
+</div>
+<!-- Offset Card -->
+<div class="bg-surface-container p-space-md rounded-xl shadow-md flex flex-col gap-space-xs">
+<span class="font-label-code text-label-code text-secondary font-bold">• The Page Offset</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          The exact location tracking pointer inside an individual page block. The offset never changes during translation because the internal structure of the block remains identical.
+        </p>
+<div class="mt-auto pt-space-xs bg-surface-container-lowest p-space-xs rounded">
+<span class="font-label-tag text-label-tag text-secondary uppercase font-bold">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+            If a line of code sits at byte number 50 inside a VS Code page, it will sit at exactly byte number 50 inside the physical RAM frame slot once translated.
+          </p>
+</div>
+</div>
+<!-- Internal Frag Card -->
+<div class="bg-surface-container p-space-md rounded-xl shadow-md flex flex-col gap-space-xs">
+<span class="font-label-code text-label-code text-tertiary font-bold">• Internal Fragmentation</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          The tiny amount of memory space wasted at the very end of an application's final page block if its data doesn't perfectly fill a 4KB increment.
+        </p>
+<div class="mt-auto pt-space-xs bg-surface-container-lowest p-space-xs rounded">
+<span class="font-label-tag text-label-tag text-secondary uppercase font-bold">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+            If Spotify requests a 5KB memory patch, the OS must hand it two 4KB pages (8KB total). Spotify uses the first page completely, but the second page has 3KB of completely empty, unused room inside its fence.
+          </p>
+</div>
+</div>
+</div>
+<!-- Bottom Footer Note -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-label-code text-label-code font-bold">
+<span class="material-symbols-outlined text-[18px]">apartment</span>
+<span>🎒 Everyday Example</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Think of a massive apartment complex mailroom! The Virtual Page Number is the room number written on the front of a letter. The Page Table is the master chart behind the counter showing which tenant lives where. The Physical Frame Number is the actual metal mailbox slot on the wall. The Offset is the specific letter inside that mailbox—translating the room number to a mailbox doesn't change the mail itself; it just lets the mailman deliver the package safely to the right slot!
+      </p>
+</div>
+</section>
+<!-- SECTION 3 -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-primary">3️⃣ Linear Operational Pipeline</span>
+<span class="font-label-tag text-label-tag text-outline-variant font-semibold">// (THE ADDRESS TRANSLATION WORKFLOW LIFECYCLE)</span>
+</div>
+<span class="font-label-tag text-label-tag text-tertiary bg-surface-container px-space-xs py-0.5 rounded">EXECUTION FLOW</span>
+</div>
+<!-- Horizontal Workflow Timeline Tracker (4 Interactive Nodes) -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm">
+<div class="bg-surface-container p-space-md rounded-xl shadow-md flex flex-col gap-space-xs transition-all relative" id="pipe-step-1">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-primary-container font-bold">STEP 01</span>
+<span class="material-symbols-outlined text-primary text-[20px]">format_h4</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">1. CPU Issues Virtual Pointer</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          A process running in User Mode attempts to load data, requesting an operation at a specific virtual address location.
+        </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-xl shadow-md flex flex-col gap-space-xs transition-all relative" id="pipe-step-2">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-primary font-bold">STEP 02</span>
+<span class="material-symbols-outlined text-primary text-[20px]">content_paste_search</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">2. VPN Page Table Extraction</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          The hardware automatically splits the address bit tracks, isolates the Virtual Page Number (VPN), and looks up that matching index row inside the active process page table.
+        </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-xl shadow-md flex flex-col gap-space-xs transition-all relative" id="pipe-step-3">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-secondary font-bold">STEP 03</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">merge</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">3. PFN Hardware Merging</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          The hardware extracts the Physical Frame Number (PFN) from the table entry record and combines it directly with the original, untouched Page Offset bits.
+        </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-xl shadow-md flex flex-col gap-space-xs transition-all relative" id="pipe-step-4">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-tertiary font-bold">STEP 04</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">memory</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">4. Physical Frame Access</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          The newly constructed physical address lane is fired down the hardware system bus, instantly opening the electrical gates at the exact silicon RAM coordinates.
+        </p>
+</div>
+</div>
+<!-- Hand-Walk & Phonebook Dual Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Activity Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary font-label-code text-label-code font-bold">
+<span class="material-symbols-outlined text-[18px]">draw</span>
+<span>💻 Hand-Walk Address Translation Activity</span>
+</div>
+<span class="font-label-tag text-label-tag text-tertiary bg-surface-container px-space-xs py-0.5 rounded">INTERACTIVE LAB</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Draw a sample 4-row Page Table diagram on the board ➔ Input test parameters: Virtual Page 0 maps to Frame 5, Virtual Page 1 maps to Frame 2 ➔ Provide a sample virtual address split layout ➔ Have students manually walk the bits through the page table to calculate the physical frame slot location ➔ Prove how the offset remains completely unchanged throughout the mapping loop.
+        </p>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between font-label-code text-label-code">
+<span class="text-primary font-semibold">TEST: VA [VPN 1, OFFSET 50]</span>
+<span class="text-tertiary font-bold">➔ RESULT: PA [FRAME 2, OFFSET 50]</span>
+</div>
+</div>
+<!-- Analogy Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-secondary font-label-code text-label-code font-bold">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>🎒 Phonebook Analogy</span>
+</div>
+<span class="font-label-tag text-label-tag text-secondary bg-surface-container px-space-xs py-0.5 rounded">MENTAL MODEL</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          You want to call a store named 'Pizza Shop #1' (Virtual Pointer) ➔ You open your community phonebook directory index to find the entry line for that name (Page Table Extraction) ➔ You copy the real physical telephone number digits written next to the name (PFN Merging) ➔ You dial the number on your smartphone keypad to instantly ring the physical telephone device on the shop's counter (Physical Access).
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 4 -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-primary">4️⃣ Paradigm Showdown &amp; Guardrails</span>
+<span class="font-label-tag text-label-tag text-outline-variant font-semibold">// (EVALUATION MATRIX &amp; RISKS)</span>
+</div>
+<span class="font-label-tag text-label-tag text-error bg-surface-container px-space-xs py-0.5 rounded">GUARDRAILS</span>
+</div>
+<!-- Comparative Table -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-lg flex flex-col gap-space-sm overflow-hidden">
+<div class="font-label-code text-label-code text-primary font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">compare_arrows</span>
+<span>Contiguous Relocation (L12 Base-and-Bound) vs Paging Architecture (L13 Grid Matrix)</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-lowest text-on-surface-variant font-label-tag text-label-tag">
+<th class="p-space-sm">EVALUATION METRIC</th>
+<th class="p-space-sm text-outline">CONTIGUOUS RELOCATION (L12)</th>
+<th class="p-space-sm text-primary-container">PAGING ARCHITECTURE (L13)</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="bg-surface-container">
+<td class="p-space-sm font-label-code text-label-code text-secondary font-bold">Memory Allocation</td>
+<td class="p-space-sm text-on-surface-variant">Must allocate one solid, continuous block of RAM</td>
+<td class="p-space-sm text-tertiary font-semibold">Scatters fixed-size slices anywhere across frames</td>
+</tr>
+<tr class="bg-surface-container-lowest">
+<td class="p-space-sm font-label-code text-label-code text-secondary font-bold">External Fragmentation</td>
+<td class="p-space-sm text-error">High risk of leaving dead, scattered memory gaps</td>
+<td class="p-space-sm text-tertiary font-semibold">Zero risk since any frame fits any page</td>
+</tr>
+<tr class="bg-surface-container">
+<td class="p-space-sm font-label-code text-label-code text-secondary font-bold">Management Overhead</td>
+<td class="p-space-sm text-on-surface-variant">Ultra-simple two-register check</td>
+<td class="p-space-sm text-primary-container font-semibold">Complex multi-level lookup tables stored in RAM</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="bg-error-container/20 p-space-md rounded-xl shadow-md flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-code text-label-code text-error font-bold uppercase tracking-wider">Common Mistakes Warning Banner</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Do not assume page tables are built out of hardware chips! A very common mistake beginner students make is thinking the page table is a physical chip inside the computer. Page tables are actually software arrays stored directly inside your standard RAM memory channels. Because they live in RAM, looking up a memory address requires the CPU to do a slow extra memory read step, causing a performance tax!
+        </p>
+</div>
+</div>
+<!-- Interview Takeaway Panel -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-lg flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary font-label-code text-label-code font-bold">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span>Interview Takeaway Panel</span>
+</div>
+<span class="font-label-tag text-label-tag text-primary-container bg-surface-container px-space-xs py-0.5 rounded font-label-code">FAANG / SYSTEMS INTERVIEW ESSENTIAL</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        The paging model represents the absolute gold standard for modern memory virtualization, completely eliminating the bottleneck of external fragmentation. However, because page tables occupy space in RAM, large programs require advanced multi-level page table structures to save room. If a running script encounters a missing translation entry or attempts to access a page marked invalid, the physical hardware catches the violation instantly, drops a fatal Segmentation Fault or Page Fault crash error, and terminates the unique parent PID immediately to protect your system (just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling down!).
+      </p>
+</div>
+</section>
+<!-- Module Completion Footer Bar -->
+<section class="bg-surface-container-low p-space-lg rounded-xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs text-center md:text-left">
+<div class="flex items-center gap-space-sm justify-center md:justify-start">
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold tracking-tight">MODULE 13 COMPLETE // 100% MASTERY</span>
+</div>
+<span class="font-label-tag text-label-tag text-on-surface-variant font-label-code">
+        CREDITS ACCREDITED • CS 301 KERNEL RUNTIME EVAL PASS • RECORDED TO TRANSCRIPT
+      </span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-code text-label-code px-space-md py-space-sm rounded transition-all flex items-center gap-space-xs shadow">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>📖 Review L13 Notes</span>
+</button>
+<button class="bg-primary-container hover:bg-primary text-on-primary font-label-code text-label-code font-bold px-space-md py-space-sm rounded transition-all flex items-center gap-space-xs shadow-lg">
+<span>Advance to Module 14 (Virtual Memory &amp; TLBs) ➔</span>
+</button>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    let currentStep = 0;
+    const stepBtn = document.getElementById('step-btn');
+    const resetBtn = document.getElementById('reset-btn');
+
+    const pipeCards = [
+      document.getElementById('pipe-step-1'),
+      document.getElementById('pipe-step-2'),
+      document.getElementById('pipe-step-3'),
+      document.getElementById('pipe-step-4')
+    ];
+
+    const testPairs = [
+      { vpn: 0, pfn: 5, offset: 120, vaHex: '0x0078', paHex: '0x5078', vpnRow: 'row-vpn-0' },
+      { vpn: 1, pfn: 2, offset: 50,  vaHex: '0x1032', paHex: '0x2032', vpnRow: 'row-vpn-1' },
+      { vpn: 2, pfn: 8, offset: 310, vaHex: '0x2136', paHex: '0x8136', vpnRow: 'row-vpn-2' }
+    ];
+
+    let pairIdx = 1; // default starting point matches original prompt
+
+    function updateStep(step) {
+      currentStep = step;
+      pipeCards.forEach((card, idx) => {
+        if (!card) return;
+        if (idx === step - 1) {
+          card.classList.remove('bg-surface-container');
+          card.classList.add('bg-surface-container-high', 'shadow-[0_0_15px_rgba(0,210,255,0.25)]');
+        } else {
+          card.classList.remove('bg-surface-container-high', 'shadow-[0_0_15px_rgba(0,210,255,0.25)]');
+          card.classList.add('bg-surface-container');
+        }
+      });
+
+      // Highlight corresponding matrix rows
+      const currentPair = testPairs[pairIdx];
+      ['row-vpn-0', 'row-vpn-1', 'row-vpn-2', 'row-vpn-3'].forEach(id => {
+        const row = document.getElementById(id);
+        if (!row) return;
+        if (id === currentPair.vpnRow && step >= 2) {
+          row.classList.add('bg-surface-container-high', 'text-primary-container');
+        } else {
+          row.classList.remove('bg-surface-container-high', 'text-primary-container');
+        }
+      });
+    }
+
+    if (stepBtn) {
+      stepBtn.addEventListener('click', function() {
+        let next = currentStep + 1;
+        if (next > 4) {
+          next = 1;
+          pairIdx = (pairIdx + 1) % testPairs.length;
+          const p = testPairs[pairIdx];
+          const vaHexEl = document.getElementById('va-hex');
+          const paHexEl = document.getElementById('pa-hex');
+          const boxVpn = document.getElementById('box-vpn');
+          const boxPfn = document.getElementById('box-pfn');
+          const boxOffset = document.getElementById('box-offset');
+          const boxPfnOffset = document.getElementById('box-pfn-offset');
+
+          if (vaHexEl) vaHexEl.textContent = p.vaHex + ' (' + (p.vpn * 4096 + p.offset) + ')';
+          if (paHexEl) paHexEl.textContent = p.paHex + ' (' + (p.pfn * 4096 + p.offset) + ')';
+          if (boxVpn) boxVpn.querySelector('.font-bold').textContent = 'VPN: ' + p.vpn;
+          if (boxPfn) boxPfn.querySelector('.font-bold').textContent = 'PFN: ' + p.pfn;
+          if (boxOffset) boxOffset.querySelector('.font-bold').textContent = 'OFFSET: 0x' + p.offset.toString(16) + ' (' + p.offset + ')';
+          if (boxPfnOffset) boxPfnOffset.querySelector('.font-bold').textContent = 'OFFSET: 0x' + p.offset.toString(16) + ' (' + p.offset + ')';
+        }
+        updateStep(next);
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function() {
+        pairIdx = 1;
+        updateStep(0);
+        const p = testPairs[1];
+        const vaHexEl = document.getElementById('va-hex');
+        const paHexEl = document.getElementById('pa-hex');
+        const boxVpn = document.getElementById('box-vpn');
+        const boxPfn = document.getElementById('box-pfn');
+        const boxOffset = document.getElementById('box-offset');
+        const boxPfnOffset = document.getElementById('box-pfn-offset');
+
+        if (vaHexEl) vaHexEl.textContent = p.vaHex + ' (4146)';
+        if (paHexEl) paHexEl.textContent = p.paHex + ' (8242)';
+        if (boxVpn) boxVpn.querySelector('.font-bold').textContent = 'VPN: 1';
+        if (boxPfn) boxPfn.querySelector('.font-bold').textContent = 'PFN: 2';
+        if (boxOffset) boxOffset.querySelector('.font-bold').textContent = 'OFFSET: 0x032 (50)';
+        if (boxPfnOffset) boxPfnOffset.querySelector('.font-bold').textContent = 'OFFSET: 0x032 (50)';
+      });
+    }
+  })();
+</script></main></div></body></html>
