@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-variant":"#313540","on-primary-fixed":"#001f28","primary-container":"#00d2ff","on-tertiary-fixed-variant":"#005236","secondary":"#ddb7ff","inverse-primary":"#00677f","secondary-container":"#6f00be","on-secondary-fixed":"#2c0051","outline-variant":"#3c494e","background":"#0f131d","on-primary-container":"#00566a","primary":"#a5e7ff","surface-tint":"#47d6ff","on-primary":"#003543","on-tertiary-container":"#005b3d","on-error":"#690005","surface-container-high":"#262a35","on-background":"#dfe2f1","surface-container-low":"#171b26","surface-container-lowest":"#0a0e18","outline":"#859399","surface-container":"#1c1f2a","tertiary-container":"#48d99e","on-error-container":"#ffdad6","on-secondary-container":"#d6a9ff","on-tertiary":"#003824","primary-fixed":"#b6ebff","on-secondary":"#490080","inverse-on-surface":"#2c303b","on-primary-fixed-variant":"#004e60","inverse-surface":"#dfe2f1","surface-bright":"#353944","primary-fixed-dim":"#47d6ff","surface-container-highest":"#313540","tertiary":"#69f6b9","secondary-fixed":"#f0dbff","surface":"#0f131d","error":"#ffb4ab","secondary-fixed-dim":"#ddb7ff","tertiary-fixed-dim":"#4edea3","error-container":"#93000a","surface-dim":"#0f131d","on-surface":"#dfe2f1","on-tertiary-fixed":"#002113","on-surface-variant":"#bbc9cf","tertiary-fixed":"#6ffbbe","on-secondary-fixed-variant":"#6900b3"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter-mobile":"1rem","space-md":"1rem","space-xl":"2.5rem","margin":"3rem","space-xs":"0.25rem","space-lg":"1.5rem","margin-mobile":"1.25rem","space-sm":"0.5rem","gutter":"1.5rem"},fontFamily:{"headline-md":["Space Grotesk"],"headline-xl":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-tag":["JetBrains Mono"],"headline-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"label-code":["JetBrains Mono"],"body-md":["Plus Jakarta Sans"]},fontSize:{"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}],"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded bg-primary-container flex items-center justify-center text-on-primary-fixed shadow-[0_0_12px_rgba(0,210,255,0.45)]"><span class="material-symbols-outlined text-[20px]">terminal</span></div><div><div class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">KERNEL LAB</div><div class="font-label-tag text-label-tag text-on-surface-variant tracking-wider">SYSTEMS STUDIO</div></div></div><span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">v4.2.0</span></div><div class="px-space-md pt-space-lg pb-space-xs"><div class="flex items-center justify-between mb-space-sm"><span class="font-label-tag text-label-tag tracking-wider uppercase text-on-surface-variant">Curriculum Units</span><span class="font-label-tag text-label-tag text-tertiary">10/14 ACTIVE</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_0_12px_rgba(0,210,255,0.3)]"><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 rounded transition-all group bg-primary-container text-on-primary-container font-semibold shadow-[0_0_12px_rgba(0,210,255,0.3)]" data-path="race-conditions" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-primary">L10</span><span class="font-body-sm text-body-sm truncate">Race Conditions</span></div><span class="font-label-tag text-label-tag px-1.5 py-0.5 rounded bg-primary-container/20 text-primary border border-primary/30">ACTIVE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="threads-and-concurrency" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L09</span><span class="font-body-sm text-body-sm truncate">Threads &amp; Concurrency</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="cpu-scheduling-ii" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L08</span><span class="font-body-sm text-body-sm truncate">CPU Scheduling II</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="cpu-scheduling-i" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L07</span><span class="font-body-sm text-body-sm truncate">CPU Scheduling I</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="process-and-switch" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L06</span><span class="font-body-sm text-body-sm truncate">Process &amp; Switch</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="what-is-a-process" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L05</span><span class="font-body-sm text-body-sm truncate">What Is a Process?</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="the-boot-process" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L04</span><span class="font-body-sm text-body-sm truncate">The Boot Process</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="kernel-design" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L03</span><span class="font-body-sm text-body-sm truncate">Kernel Design</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="pcb-and-context-switch" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L02</span><span class="font-body-sm text-body-sm truncate">PCB &amp; Context Sw</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="os-components" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L01</span><span class="font-body-sm text-body-sm truncate">OS Components</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="course-intro" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L00</span><span class="font-body-sm text-body-sm truncate">Course Intro</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a></nav></div><div class="px-space-md pt-space-md pb-space-xs"><div class="font-label-tag text-label-tag tracking-wider uppercase text-on-surface-variant mb-space-sm">Telemetry &amp; Tools</div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-high text-primary font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="register-inspector" href="#"><span class="material-symbols-outlined text-[18px] text-primary">developer_board</span><span class="font-body-sm text-body-sm">Register Inspector</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="syscall-debugger" href="#"><span class="material-symbols-outlined text-[18px] text-secondary">bug_report</span><span class="font-body-sm text-body-sm">Syscall Debugger</span></a></nav></div></div><div class="p-space-md bg-surface-container-low/60"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-tag text-label-tag text-on-surface-variant">KERNEL ENGINE</span><span class="flex items-center gap-1 font-label-tag text-label-tag text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>ONLINE</span></div><div class="font-label-code text-label-code text-on-surface-variant truncate">RISC-V 64-bit Emulator</div><div class="w-full bg-surface-container-high h-1 rounded mt-space-xs overflow-hidden"><div class="bg-tertiary h-full w-[79%]"></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 z-40 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[20px]">school</span><span class="font-headline-sm text-headline-sm text-on-surface">CS 301 Systems Architecture</span></div><div class="hidden xl:flex items-center gap-space-md"><span class="font-label-code text-label-code px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>POLLER 1000 Hz</span><span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant">MODULE 10 / 14</span><span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-secondary-container/30 text-secondary">DIFF: INTERMEDIATE</span></div></div><div class="flex items-center gap-space-lg"><div class="hidden md:flex items-center gap-space-sm"><div class="text-right"><div class="font-label-tag text-label-tag text-on-surface-variant">SYLLABUS PROGRESS</div><div class="font-label-code text-label-code text-tertiary font-semibold">79% COMPLETE</div></div><div class="w-24 bg-surface-container-high h-2 rounded overflow-hidden"><div class="bg-tertiary h-full w-[79%]"></div></div></div><div class="flex items-center gap-space-sm"><button class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div><div class="w-full px-gutter py-space-xs bg-surface-container-lowest/90 overflow-x-auto flex items-center gap-space-lg shadow-inner"><div class="flex items-center gap-space-xs whitespace-nowrap"><span class="material-symbols-outlined text-error text-[16px]">warning</span><span class="font-label-tag text-label-tag text-error font-semibold">DEFECT: RACE CONDITION (DATA CORRUPTION HAZARD)</span></div><div class="flex items-center gap-space-xs whitespace-nowrap"><span class="material-symbols-outlined text-primary text-[16px]">hub</span><span class="font-label-tag text-label-tag text-primary">ACTIVE THREADS: 2 SIBLING THREADS (MUTEX GUARDED)</span></div><div class="flex items-center gap-space-xs whitespace-nowrap"><span class="material-symbols-outlined text-secondary text-[16px]">data_object</span><span class="font-label-tag text-label-tag text-secondary">CRITICAL SECTION: shared_counter++ (3 ASSEMBLY OPS)</span></div><div class="flex items-center gap-space-xs whitespace-nowrap"><span class="material-symbols-outlined text-primary-fixed-dim text-[16px]">lock</span><span class="font-label-tag text-label-tag text-primary-fixed-dim">LOCK STATE: MUTEX LOCKED [THREAD A HOLDING TOKEN]</span></div><div class="flex items-center gap-space-xs whitespace-nowrap"><span class="material-symbols-outlined text-tertiary text-[16px]">verified</span><span class="font-label-tag text-label-tag text-tertiary font-semibold">DATA INTEGRITY: 10,000 / 10,000 GUARANTEED</span></div></div></header><main class="relative pt-24 w-full px-gutter min-h-screen bg-surface"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Field -->
+<div class="relative w-full overflow-hidden pb-space-xl">
+<div class="absolute -top-32 left-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -top-20 right-1/4 w-80 h-80 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<!-- MODULE HEADER & CONTROL DECK -->
+<section class="relative z-10 flex flex-col gap-space-md mb-space-xl">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded bg-surface-container-high text-primary font-label-tag text-label-tag tracking-widest uppercase">
+            LESSON 10 // ACADEMIC RUNTIME SERIES
+          </span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-code text-label-code text-on-surface-variant">CS 301 CORE KERNEL LABS</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="group relative px-space-md py-2 rounded bg-primary-container text-on-primary-fixed font-label-tag text-label-tag font-bold tracking-wider hover:shadow-[0_0_20px_rgba(0,210,255,0.5)] transition-all flex items-center gap-space-xs" id="stepSimBtn" onclick="runSimulationStep()">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+<span>STEP THROUGH MUTEX SIMULATOR</span>
+</button>
+<button class="px-space-sm py-2 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-tag text-label-tag transition-colors flex items-center gap-1" onclick="resetSim()">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span>RESET</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-xl text-headline-xl tracking-tight text-on-surface">
+          🏷️ OPERATING SYSTEMS: L10 - Race Conditions &amp; Mutual Exclusion
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-4xl">
+          An interactive primer designed for systems novices: dissecting shared variables, assembly gaps, mutex locks, and synchronization guardrails.
+        </p>
+</div>
+<!-- Sub-bar metadata badges -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1 shadow-sm">
+<span class="font-label-tag text-label-tag text-outline">METRIC // THREAT</span>
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-[16px]">dangerous</span>
+<span class="font-label-code text-label-code font-bold truncate">RACE HAZARD: CRITICAL (UNPROTECTED READ/WRITE)</span>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1 shadow-sm">
+<span class="font-label-tag text-label-tag text-outline">PRIMITIVE CLASS</span>
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span class="font-label-code text-label-code font-bold truncate">ACTIVE MUTEX: PTHREAD_MUTEX_T</span>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1 shadow-sm">
+<span class="font-label-tag text-label-tag text-outline">MUTEX TOKEN DISPATCH</span>
+<div class="flex items-center gap-1.5 text-tertiary">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-code text-label-code font-bold truncate">LOCK STATE: ACQUIRED [THREAD_0]</span>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1 shadow-sm">
+<span class="font-label-tag text-label-tag text-outline">GUARDED MEMORY BLOCK</span>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">memory</span>
+<span class="font-label-code text-label-code font-bold truncate">CRITICAL REGION: SHARED_COUNTER++</span>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1 shadow-sm col-span-2 md:col-span-1">
+<span class="font-label-tag text-label-tag text-outline">HARDWARE PRIMITIVE</span>
+<div class="flex items-center gap-1.5 text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span class="font-label-code text-label-code font-bold truncate">ATOMICITY: HARDWARE TEST-AND-SET ENABLED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 1: CORE CONCEPTUAL ONBOARDING -->
+<section class="flex flex-col gap-space-lg mb-space-xl">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-primary font-bold">1️⃣</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Core Conceptual Onboarding (The Shared Piggy Bank Conundrum)</h2>
+</div>
+<span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container text-on-surface-variant uppercase tracking-wider">FOUNDATIONAL ABSTRACTION</span>
+</div>
+<!-- The Foundational Question Alert Box -->
+<div class="relative overflow-hidden p-space-lg rounded-xl bg-surface-container-low shadow-md">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-error"></div>
+<div class="flex flex-col md:flex-row items-start md:items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-error-container/40 text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">crisis_alert</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-tag text-label-tag tracking-wider text-error font-bold uppercase">The Foundational Question</span>
+<p class="font-body-lg text-body-lg text-on-surface">
+              "A Race Condition is a dangerous concurrency defect where the final data outcome of an application depends entirely on the unpredictable execution order and millisecond timing of sibling threads accessing a shared variable simultaneously."
+            </p>
+</div>
+</div>
+</div>
+<!-- Key Characteristics & Core Motivation Bento -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Key Characteristics Block -->
+<div class="lg:col-span-5 p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center gap-space-sm mb-space-md">
+<span class="material-symbols-outlined text-primary text-[22px]">checklist</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Key Characteristics</h3>
+</div>
+<ul class="flex flex-col gap-space-md">
+<li class="flex items-start gap-space-sm p-space-sm rounded bg-surface-container">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">shield</span>
+<div class="font-body-md text-body-md text-on-surface">
+<strong class="text-secondary font-semibold font-label-code">Critical Section:</strong> The exact block of raw source code lines that accesses and modifies a shared memory variable, requiring absolute protection.
+                </div>
+</li>
+<li class="flex items-start gap-space-sm p-space-sm rounded bg-surface-container">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">key</span>
+<div class="font-body-md text-body-md text-on-surface">
+<strong class="text-primary font-semibold font-label-code">Mutex (Mutual Exclusion Lock):</strong> A binary software key token used by threads to lock a critical section, ensuring only one thread can touch the data at a time.
+                </div>
+</li>
+<li class="flex items-start gap-space-sm p-space-sm rounded bg-surface-container">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">layers</span>
+<div class="font-body-md text-body-md text-on-surface">
+<strong class="text-tertiary font-semibold font-label-code">Atomic Operation:</strong> An un-interruptible execution step (a single assembly line) that must execute completely as one solid block without the OS referee splitting it mid-run.
+                </div>
+</li>
+</ul>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>MUTUAL EXCLUSION PRINCIPLES</span>
+<span class="text-tertiary">3 / 3 COMPLIANT</span>
+</div>
+</div>
+<!-- Core Motivation block -->
+<div class="lg:col-span-7 p-space-lg rounded-xl bg-surface-container-high flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="absolute -right-12 -bottom-12 w-48 h-48 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[22px]">psychology</span>
+<span class="font-label-tag text-label-tag text-primary-container tracking-wider uppercase font-bold">Hardware Reality &amp; Concurrency Engine</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm">Why Do Race Hazards Occur?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+              "Because sibling threads drop their protective walls to share the same Heap and Data space for blazing speed, they can look at the same variable at the same time. At the assembly code level, an action as simple as adding a number is not atomic—the CPU must read the value into a hardware chip register, add the number, and write the new value back to RAM memory cells. If the OS scheduler referee triggers a context switch right in the gap between the read and the write, sibling threads will overwrite and destroy each other's calculations."
+            </p>
+</div>
+<!-- Micro visual assembly split breakdown -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest grid grid-cols-3 gap-space-xs font-label-code text-label-code text-center">
+<div class="p-2 rounded bg-surface-container-low flex flex-col">
+<span class="text-primary font-bold">1. READ</span>
+<span class="text-outline text-label-tag">MOV EAX, [ptr]</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low flex flex-col">
+<span class="text-secondary font-bold">2. MODIFY</span>
+<span class="text-outline text-label-tag">ADD EAX, 1</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low flex flex-col">
+<span class="text-tertiary font-bold">3. WRITE</span>
+<span class="text-outline text-label-tag">MOV [ptr], EAX</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Application vs Analogy Parallel Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Technical Card Component -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm text-primary">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">💻 Real-World Application Example</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              "Imagine an online ticketing application running inside Google Chrome where two separate checkout threads simultaneously attempt to buy the absolute last available seat for a concert. If Thread 1 reads the database count (Seats Left = 1) and gets paused by a context switch before updating it, Thread 2 will barge in, read the exact same count (Seats Left = 1), and sell the seat. Both threads will write the count down to 0, resulting in a severe over-allocation error where two people are mistakenly sold the exact same physical seat."
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-label-tag font-label-tag text-outline">SYSTEM: TICKETMASTER CORE</span>
+<span class="px-2 py-0.5 rounded bg-error-container/30 text-label-tag font-label-tag text-error">HAZARD: DOUBLE SPEND</span>
+</div>
+</div>
+<!-- Analogy Card Component -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm text-tertiary">
+<span class="material-symbols-outlined text-[24px]">savings</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">🎒 Everyday Example (5th Grader)</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              "Imagine two kids sharing a single physical piggy bank that holds 10 dollars. Both kids decide to add 1 dollar to the bank at the exact same instant. Kid A looks inside, reads the balance (It has 10 dollars), and turns around to grab a dollar from their pocket. Before Kid A can drop the dollar in, Kid B barges in, looks inside, reads the exact same balance (It has 10 dollars), and grabs a dollar from their pocket. Both kids drop their dollars in and shout: 'The new total is 11 dollars!' The bank ends up short by a dollar because Kid B stepped into the gap before Kid A could update the total!"
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-label-tag font-label-tag text-outline">METAPHOR: PIGGY BANK</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-container/30 text-label-tag font-label-tag text-tertiary">LOST INCREMENT: -$1.00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: STRUCTURAL DISSECTION -->
+<section class="flex flex-col gap-space-lg mb-space-xl">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-primary font-bold">2️⃣</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Structural Dissection (Inside the Counter Code Loop &amp; The Lock Key)</h2>
+</div>
+<span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container text-on-surface-variant uppercase tracking-wider">HARDWARE &amp; MUTEX ENGINE</span>
+</div>
+<!-- Split-pane block: Assembly Gap vs Mutex Lock Switch State -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left: Assembly Gap Breakdown -->
+<div class="lg:col-span-6 p-space-lg rounded-xl bg-surface-container-low shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[20px]">code_blocks</span>
+<span class="font-label-tag text-label-tag text-error font-bold uppercase tracking-wider">THE CRITICAL SECTION BREAKDOWN</span>
+</div>
+<span class="font-label-code text-label-code text-outline">NON-ATOMIC EXPANSION</span>
+</div>
+<div class="flex items-center gap-space-xs p-space-sm rounded bg-surface-container mb-space-md font-label-tag text-label-tag text-primary">
+<span>1. Read Global Counter</span>
+<span>➔</span>
+<span>2. Increment Local Register</span>
+<span>➔</span>
+<span>3. Write Counter to RAM</span>
+</div>
+<!-- Assembly Operations Stack -->
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-sm rounded bg-surface-container-high flex items-center justify-between font-label-code text-label-code">
+<div class="flex items-center gap-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-primary text-label-tag">OP 1</span>
+<span class="text-on-surface font-bold">MOV EAX, [counter]</span>
+</div>
+<span class="text-on-surface-variant text-label-tag">Fetch shared RAM value into CPU Register EAX</span>
+</div>
+<!-- Dangerous Context Switch Window Marker -->
+<div class="relative py-2 px-space-sm rounded bg-error/10 flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-error font-label-tag text-label-tag font-bold">
+<span class="material-symbols-outlined text-[18px] animate-pulse">timer_off</span>
+<span>⚠ CRITICAL CONTEXT SWITCH WINDOW (OS CLOCK INTERRUPT RISK)</span>
+</div>
+<span class="font-label-code text-label-code text-error font-semibold">T_SWITCH HAZARD</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high flex items-center justify-between font-label-code text-label-code">
+<div class="flex items-center gap-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary text-label-tag">OP 2</span>
+<span class="text-on-surface font-bold">ADD EAX, 1</span>
+</div>
+<span class="text-on-surface-variant text-label-tag">Increment register inside ALU execution core</span>
+</div>
+<!-- Context switch risk 2 -->
+<div class="relative py-2 px-space-sm rounded bg-error/10 flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-error font-label-tag text-label-tag font-bold">
+<span class="material-symbols-outlined text-[18px] animate-pulse">timer_off</span>
+<span>⚠ SIBLING THREAD PREEMPTION WINDOW</span>
+</div>
+<span class="font-label-code text-label-code text-error font-semibold">STALE REGISTER WRITE RISK</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high flex items-center justify-between font-label-code text-label-code">
+<div class="flex items-center gap-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-tertiary text-label-tag">OP 3</span>
+<span class="text-on-surface font-bold">MOV [counter], EAX</span>
+</div>
+<span class="text-on-surface-variant text-label-tag">Commit register result back to memory address</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm rounded bg-surface-container-lowest flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>ISOLATION METRIC: 0.00% (EXPOSED)</span>
+<span class="text-error font-bold">FAILURE MODE: SILENT OVERWRITE</span>
+</div>
+</div>
+<!-- Right: The Mutex Lock Switch State -->
+<div class="lg:col-span-6 p-space-lg rounded-xl bg-surface-container-low shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">vpn_key</span>
+<span class="font-label-tag text-label-tag text-primary font-bold uppercase tracking-wider">THE MUTEX LOCK SWITCH STATE</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-bold" id="mutexStateBadge">mutex.lock() [TRUE]</span>
+</div>
+<!-- Interactive Toggle Simulator Area -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex flex-col gap-space-md mb-space-md">
+<div class="flex items-center justify-between">
+<div>
+<div class="font-label-code text-label-code text-on-surface font-bold">MUTEX GATEWAY STATUS</div>
+<div class="font-label-tag text-label-tag text-outline">Thread Status: Active Lock Owner vs. Blocked Wait Queue</div>
+</div>
+<button class="px-space-md py-1.5 rounded bg-primary text-on-primary font-label-tag text-label-tag font-bold hover:shadow-[0_0_15px_rgba(0,210,255,0.4)] transition-all" onclick="toggleMutexDemo()">
+                  TOGGLE STATE
+                </button>
+</div>
+<!-- Two Thread Lanes -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Thread A: Active Owner -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-space-xs" id="threadACard">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-tertiary font-bold">THREAD A [T0]</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]" id="threadAKey">key</span>
+</div>
+<div class="font-label-code text-label-code text-on-surface font-semibold" id="threadAStateText">CRITICAL ACCESS</div>
+<span class="font-label-tag text-label-tag text-tertiary" id="threadATokenLabel">Holding single key token</span>
+</div>
+<!-- Thread B: Blocked Queue -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-space-xs" id="threadBCard">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-secondary font-bold">THREAD B [T1]</span>
+<span class="material-symbols-outlined text-outline text-[18px]" id="threadBLockIcon">block</span>
+</div>
+<div class="font-label-code text-label-code text-on-surface font-semibold" id="threadBStateText">BLOCKED IN QUEUE</div>
+<span class="font-label-tag text-label-tag text-outline" id="threadBTokenLabel">Waiting for release signal</span>
+</div>
+</div>
+<!-- Visual Door Latch Status Indicator -->
+<div class="p-space-sm rounded bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse" id="lockStatusDot"></span>
+<span class="font-label-tag text-label-tag text-on-surface font-bold" id="lockStatusText">BARRIER CLOSED: Thread A executing shared_counter++</span>
+</div>
+<span class="font-label-code text-label-code text-outline text-label-tag">PID: 40912</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>PRIMITIVE: SPINLOCK / FUTEX SLEEP</span>
+<span class="text-primary font-bold">HARDWARE BARRIER VERIFIED</span>
+</div>
+</div>
+</div>
+<!-- Specific Structural Definitions with Real-World Applications -->
+<div class="flex flex-col gap-space-md">
+<!-- Row 1: The Critical Section Code Zone -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col md:flex-row gap-space-md items-start md:items-center justify-between shadow-sm">
+<div class="flex flex-col gap-1 max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">
+                • The Critical Section Code Zone: The specific line coordinates where shared variables are manipulated. If left completely unprotected, this area becomes a data demolition derby.
+              </span>
+</div>
+<div class="pl-4 font-body-sm text-body-sm text-on-surface-variant">
+              💻 Real-World Application Example: In an application like Spotify, the code line that increments your total track play count (<code class="text-primary font-label-code">shared_plays++</code>) is a critical section that must be protected by a synchronization framework.
+            </div>
+</div>
+<span class="px-space-sm py-1 rounded bg-surface-container font-label-tag text-label-tag text-secondary shrink-0">SPOTIFY STREAM TELEMETRY</span>
+</div>
+<!-- Row 2: The Mutex Lock Mechanism -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col md:flex-row gap-space-md items-start md:items-center justify-between shadow-sm">
+<div class="flex flex-col gap-1 max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">
+                • The Mutex Lock Mechanism: Acts as a strict physical door latch. When Thread A calls <code class="text-primary font-label-code">lock()</code>, it grabs the single software key token, forcing all sibling threads to stall and line up in a blocked queue until Thread A invokes <code class="text-primary font-label-code">unlock()</code>.
+              </span>
+</div>
+<div class="pl-4 font-body-sm text-body-sm text-on-surface-variant">
+              💻 Real-World Application Example: Multimedia editing tools use mutex variables to prevent audio rendering threads from reading memory spaces that are currently being actively written to by video rendering channels.
+            </div>
+</div>
+<span class="px-space-sm py-1 rounded bg-surface-container font-label-tag text-label-tag text-primary shrink-0">ADOBE PREMIERE ENGINE</span>
+</div>
+<!-- Row 3: Atomic Register Synchronization -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col md:flex-row gap-space-md items-start md:items-center justify-between shadow-sm">
+<div class="flex flex-col gap-1 max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">
+                • Atomic Register Synchronization: Ensuring that compilation steps complete as a single solid unit, blocking the scheduling clock from splitting the action.
+              </span>
+</div>
+<div class="pl-4 font-body-sm text-body-sm text-on-surface-variant">
+              💻 Real-World Application Example: Modern hardware processors include hardwired atomic instructions that check and flip lock bits in a single microscopic clock cycle, providing absolute safety guardrails.
+            </div>
+</div>
+<span class="px-space-sm py-1 rounded bg-surface-container font-label-tag text-label-tag text-tertiary shrink-0">RISC-V LR/SC &amp; X86 CMPXCHG</span>
+</div>
+</div>
+<!-- Bottom footer note: Bathroom stall analogy -->
+<div class="p-space-lg rounded-xl bg-surface-container-high shadow-md flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">wc</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-tertiary font-bold uppercase tracking-wider">🎒 Everyday Example</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            "Think of a single public bathroom stall in a busy school hallway! The bathroom inside is the shared Critical Section variable. The physical door bolt latch is the Mutex Lock. When a student walks inside the stall, they slide the latch shut (<code class="text-tertiary font-label-code">mutex.lock()</code>). If ten other students arrive in the hallway, they are completely blocked from entering and must wait patiently in a neat line. The person inside finishes, slides the latch open (<code class="text-tertiary font-label-code">mutex.unlock()</code>), and only the very next person in line can grab the key!"
+          </p>
+</div>
+</div>
+</section>
+<!-- SECTION 3: LINEAR OPERATIONAL PIPELINE -->
+<section class="flex flex-col gap-space-lg mb-space-xl">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-primary font-bold">3️⃣</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Linear Operational Pipeline (The Broken vs. Fixed Counter Run)</h2>
+</div>
+<span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container text-on-surface-variant uppercase tracking-wider">LIFECYCLE TRACE</span>
+</div>
+<!-- Horizontal Workflow Timeline Layout with 4 interactive nodes -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-md flex flex-col gap-space-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md relative">
+<!-- Node 1 -->
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs relative overflow-hidden group hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-primary-container/20 text-primary font-bold">STAGE 01</span>
+<span class="material-symbols-outlined text-primary text-[20px]">fork_right</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">1. Dual Thread Spawn</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Parent launches two worker threads targeting count limit of 10,000.</p>
+</div>
+<!-- Node 2 -->
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs relative overflow-hidden group hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-error-container/40 text-error font-bold">STAGE 02</span>
+<span class="material-symbols-outlined text-error text-[20px]">shuffle</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">2. Interleaved Assembly Execution</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Threads interleave mid-loop. Unprotected reads trigger silent value destruction.</p>
+</div>
+<!-- Node 3 -->
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs relative overflow-hidden group hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-secondary-container/40 text-secondary font-bold">STAGE 03</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">lock</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">3. The Mutex Synchronization Fix</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Injecting <code class="font-label-code text-secondary">mutex.lock()</code> and <code class="font-label-code text-secondary">unlock()</code> boundaries around data.</p>
+</div>
+<!-- Node 4 -->
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs relative overflow-hidden group hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-bold">STAGE 04</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">4. Valid Total Verification</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Strict mutual exclusion holds. Final output hits precisely 10,000 / 10,000.</p>
+</div>
+</div>
+<!-- Sequential Process Rules Listing (Exact Verbatim Text) -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded bg-surface-container font-body-md text-body-md text-on-surface">
+<span class="font-label-code text-primary font-bold">1. Dual Thread Spawn:</span> A parent application process compiles code inside Microsoft VS Code, launching two sibling thread paths to increment a shared global counter variable up to 10,000.
+          </div>
+<div class="p-space-sm rounded bg-surface-container font-body-md text-body-md text-on-surface">
+<span class="font-label-code text-error font-bold">2. Interleaved Assembly Execution:</span> With no lock applied, context switches occur mid-loop. Thread A reads 45, gets paused; Thread B reads 45, increments to 46, and writes. Thread A wakes up, increments its old 45 to 46, and overwrites Thread B's work. The final total reads a visibly wrong count like 7,432.
+          </div>
+<div class="p-space-sm rounded bg-surface-container font-body-md text-body-md text-on-surface">
+<span class="font-label-code text-secondary font-bold">3. The Mutex Synchronization Fix:</span> Insert a single <code class="font-label-code text-primary">mutex.lock()</code> statement right before the counter line, and a <code class="font-label-code text-primary">mutex.unlock()</code> statement immediately following it.
+          </div>
+<div class="p-space-sm rounded bg-surface-container font-body-md text-body-md text-on-surface">
+<span class="font-label-code text-tertiary font-bold">4. Valid Total Verification:</span> Sibling threads now execute the critical section in strict mutual exclusion. The CPU core runs the loop flawlessly, delivering the mathematically perfect target result of exactly 10,000.
+          </div>
+</div>
+</div>
+<!-- Dual Component Cards: Live Shared Counter Code Activity vs Concurrency Chalkboard Analogy -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Component Card: Live Shared Counter Code Activity -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm text-primary">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">💻 Live Shared Counter Code Activity</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+              "Open a code project file in the terminal ➔ Run a dual-threaded Python or C counter loop up to a high number with zero locks ➔ Watch the class react as the console prints a corrupt, visibly wrong number ➔ Add a single explicit mutex lock statement live on screen ➔ Re-run the script to demonstrate the immediate correction to a perfect integer total."
+            </p>
+<!-- Code block demonstration snippet -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest font-label-code text-label-code text-on-surface-variant flex flex-col gap-1">
+<div class="text-outline text-label-tag">// c_pthreads_hazard.c</div>
+<div><span class="text-secondary">pthread_mutex_lock</span>(&amp;lock);</div>
+<div class="pl-4 text-primary">shared_counter++; <span class="text-tertiary text-label-tag">// Protected Zone</span></div>
+<div><span class="text-secondary">pthread_mutex_unlock</span>(&amp;lock);</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>TERMINAL RUNTIME: GCC -O0 -PTHREAD</span>
+<span class="text-tertiary font-bold">OUT: 10000 / 10000</span>
+</div>
+</div>
+<!-- Component Card: Concurrency Chalkboard Analogy -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm text-tertiary">
+<span class="material-symbols-outlined text-[24px]">school</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">🎒 Concurrency Chalkboard Analogy</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+              "Two students stand at a chalkboard with pieces of chalk (Dual Thread Spawn) ➔ They are told to count how many times a bell rings and tally it on the board with no rules, crossing hands and erasing each other's marks (Interleaved Wrong Total) ➔ The teacher hands over a single physical wooden baton token (The Mutex Fix) ➔ A student must hold the baton to write on the board, ensuring only one chalk touches the slate at a time, resulting in a flawless final tally (Valid Total)."
+            </p>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">sports_cricket</span>
+<span class="font-label-tag text-label-tag text-on-surface font-semibold">BATON DISPATCH: SINGLE POSSESSION</span>
+</div>
+<span class="font-label-code text-label-code text-tertiary font-bold">ZERO TALLY DRIFT</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>PEDAGOGICAL MODEL: CHALKBOARD RACE</span>
+<span class="text-primary font-bold">STATUS: BALANCED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: PARADIGM SHOWDOWN & GUARDRAILS -->
+<section class="flex flex-col gap-space-lg mb-space-xl">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-primary font-bold">4️⃣</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Paradigm Showdown &amp; Guardrails</h2>
+</div>
+<span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container text-on-surface-variant uppercase tracking-wider">ARCHITECTURAL AUDIT</span>
+</div>
+<!-- Comparative Table -->
+<div class="overflow-x-auto rounded-xl bg-surface-container-low shadow-md">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-on-surface font-label-tag text-label-tag">
+<th class="p-space-md uppercase">METRIC / FIELD</th>
+<th class="p-space-md uppercase text-error">Unprotected Thread Racing (Chaos Lane)</th>
+<th class="p-space-md uppercase text-tertiary">Mutex-Protected Concurrency (Safe Lane)</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface divide-y divide-surface-variant/20">
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="p-space-md font-label-code text-label-code font-bold text-outline">Execution Rules</td>
+<td class="p-space-md text-error">Threads sprint concurrently with no boundaries</td>
+<td class="p-space-md text-tertiary">Threads step through critical lines one-by-one</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="p-space-md font-label-code text-label-code font-bold text-outline">Data Accuracy</td>
+<td class="p-space-md text-error">High corruption risk and wrong totals</td>
+<td class="p-space-md text-tertiary">Mathematically guaranteed perfect data integrity</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="p-space-md font-label-code text-label-code font-bold text-outline">Processing Overhead</td>
+<td class="p-space-md text-on-surface-variant">Zero lock tax but broken code</td>
+<td class="p-space-md text-primary">Minor speed tax paid while threads wait in line for the key token</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="p-space-lg rounded-xl bg-surface-container-high shadow-md relative overflow-hidden">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-error-container/40 text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">warning</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-error font-bold tracking-wider uppercase">COMMON MISTAKES WARNING // CRITICAL DESIGN DEFECT</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              "Do not lock your entire program! A very common mistake beginner developers make is putting a mutex lock around massive blocks of non-critical code. If you lock lines that don't touch shared variables, you destroy multi-threading efficiency, turn your application back into a single-threaded slow program, and cause your app to lag heavily!"
+            </p>
+</div>
+</div>
+</div>
+<!-- Interview Takeaway Panel -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-md flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">psychology_alt</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-tag text-label-tag text-secondary font-bold tracking-wider uppercase">INTERVIEW TAKEAWAY // DEADLOCK DYNAMICS</span>
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-secondary-container/20 text-secondary">BIG TECH QUESTION</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            "Race conditions represent the ultimate hazard of multi-threaded application design, producing silent data bugs that are incredibly difficult to track. While mutex locks provide a bulletproof fence for critical sections, developers must design them carefully. If Thread A holds Lock 1 and waits for Lock 2, while Thread B holds Lock 2 and waits for Lock 1, both threads will freeze forever, triggering a catastrophic condition called Deadlock (just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling down!)."
+          </p>
+</div>
+</div>
+<!-- Module Completion Footer Bar -->
+<div class="p-space-lg rounded-xl bg-surface-container-high shadow-lg flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-tag text-label-tag text-tertiary font-bold tracking-widest uppercase">Module 10 Complete // 100% MASTERY</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-label-code text-label-code text-on-surface-variant">TELEMETRY: VERIFIED ALL INVARIANTS</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">You have successfully mastered Race Conditions, Non-Atomic Assembly Windows, and Mutex Synchronization.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto">
+<button class="flex-1 md:flex-initial px-space-md py-2.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-bright font-label-tag text-label-tag transition-colors">
+            Review L10 Notes
+          </button>
+<button class="flex-1 md:flex-initial px-space-lg py-2.5 rounded bg-primary-container text-on-primary-fixed font-label-tag text-label-tag font-bold hover:shadow-[0_0_20px_rgba(0,210,255,0.4)] transition-all flex items-center justify-center gap-space-xs">
+<span>Advance to Module 11 (Semaphores &amp; Deadlock Detection)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  let isMutexLocked = true;
+  let simStep = 0;
+
+  function toggleMutexDemo() {
+    isMutexLocked = !isMutexLocked;
+    const badge = document.getElementById('mutexStateBadge');
+    const tAState = document.getElementById('threadAStateText');
+    const tALabel = document.getElementById('threadATokenLabel');
+    const tBState = document.getElementById('threadBStateText');
+    const tBLabel = document.getElementById('threadBTokenLabel');
+    const tBIcon = document.getElementById('threadBLockIcon');
+    const dot = document.getElementById('lockStatusDot');
+    const text = document.getElementById('lockStatusText');
+
+    if (isMutexLocked) {
+      badge.textContent = 'mutex.lock() [TRUE]';
+      badge.className = 'font-label-code text-label-code px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-bold';
+      tAState.textContent = 'CRITICAL ACCESS';
+      tALabel.textContent = 'Holding single key token';
+      tBState.textContent = 'BLOCKED IN QUEUE';
+      tBLabel.textContent = 'Waiting for release signal';
+      tBIcon.textContent = 'block';
+      tBIcon.className = 'material-symbols-outlined text-outline text-[18px]';
+      dot.className = 'w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse';
+      text.textContent = 'BARRIER CLOSED: Thread A executing shared_counter++';
+    } else {
+      badge.textContent = 'mutex.unlock() [FALSE]';
+      badge.className = 'font-label-code text-label-code px-2 py-0.5 rounded bg-primary-container/20 text-primary font-bold';
+      tAState.textContent = 'RELEASED LOCK';
+      tALabel.textContent = 'Relinquished key token';
+      tBState.textContent = 'ACQUIRING LOCK';
+      tBLabel.textContent = 'Dequeued, now obtaining key';
+      tBIcon.textContent = 'key';
+      tBIcon.className = 'material-symbols-outlined text-tertiary text-[18px]';
+      dot.className = 'w-2.5 h-2.5 rounded-full bg-primary animate-pulse';
+      text.textContent = 'BARRIER OPEN: Thread B moving into critical zone';
+    }
+  }
+
+  function runSimulationStep() {
+    simStep = (simStep + 1) % 4;
+    const steps = [
+      "1. Dual Thread Spawned: Both Thread A & B initialized with shared_counter = 0",
+      "2. Thread A requests mutex.lock() -> Token granted, Thread B suspended in Futex wait",
+      "3. Critical Section Execution: MOV EAX -> ADD 1 -> MOV [counter], EAX completed safely",
+      "4. Thread A executes mutex.unlock() -> Thread B awaken, target invariant 10,000 preserved"
+    ];
+    const simBtn = document.getElementById('stepSimBtn');
+    if (simBtn) {
+      simBtn.querySelector('span:last-child').textContent = `SIM STEP ${simStep + 1}/4 ACTIVE`;
+    }
+    const text = document.getElementById('lockStatusText');
+    if (text) {
+      text.textContent = steps[simStep];
+    }
+  }
+
+  function resetSim() {
+    simStep = 0;
+    isMutexLocked = true;
+    const simBtn = document.getElementById('stepSimBtn');
+    if (simBtn) {
+      simBtn.querySelector('span:last-child').textContent = "STEP THROUGH MUTEX SIMULATOR";
+    }
+    const badge = document.getElementById('mutexStateBadge');
+    if (badge) {
+      badge.textContent = 'mutex.lock() [TRUE]';
+      badge.className = 'font-label-code text-label-code px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-bold';
+    }
+    const text = document.getElementById('lockStatusText');
+    if (text) {
+      text.textContent = 'BARRIER CLOSED: Thread A executing shared_counter++';
+    }
+  }
+</script></main></div></body></html>
