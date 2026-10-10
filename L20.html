@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-surface":"#dfe2f1","inverse-on-surface":"#2c303b","on-secondary-fixed-variant":"#6900b3","surface-container-high":"#262a35","on-primary":"#003543","background":"#0f131d","secondary":"#ddb7ff","on-tertiary":"#003824","on-tertiary-fixed-variant":"#005236","on-secondary-container":"#d6a9ff","primary-fixed-dim":"#47d6ff","on-surface-variant":"#bbc9cf","secondary-container":"#6f00be","primary":"#a5e7ff","on-tertiary-container":"#005b3d","on-error":"#690005","secondary-fixed":"#f0dbff","on-surface":"#dfe2f1","primary-fixed":"#b6ebff","on-primary-fixed":"#001f28","error-container":"#93000a","tertiary-fixed-dim":"#4edea3","secondary-fixed-dim":"#ddb7ff","tertiary":"#69f6b9","on-tertiary-fixed":"#002113","surface-variant":"#313540","surface-container-lowest":"#0a0e18","on-error-container":"#ffdad6","surface":"#0f131d","tertiary-fixed":"#6ffbbe","inverse-primary":"#00677f","error":"#ffb4ab","surface-container-low":"#171b26","outline-variant":"#3c494e","on-background":"#dfe2f1","tertiary-container":"#48d99e","surface-bright":"#353944","on-primary-container":"#00566a","on-primary-fixed-variant":"#004e60","surface-tint":"#47d6ff","on-secondary":"#490080","surface-dim":"#0f131d","on-secondary-fixed":"#2c0051","primary-container":"#00d2ff","surface-container-highest":"#313540","surface-container":"#1c1f2a","outline":"#859399"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter":"1.5rem","margin-mobile":"1.25rem","margin":"3rem","space-md":"1rem","gutter-mobile":"1rem","space-xl":"2.5rem"},"fontFamily":{"headline-md":["Space Grotesk"],"headline-lg":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-xl":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"label-tag":["JetBrains Mono"],"label-code":["JetBrains Mono"]},"fontSize":{"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}],"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col h-full"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-2.5 h-2.5 rounded bg-primary-container animate-pulse"></div><div><span class="font-headline-sm text-headline-sm tracking-tight text-primary block">CS 301</span><span class="font-label-tag text-label-tag tracking-wider text-on-surface-variant block uppercase">Kernel Lab // Sys-Arch</span></div></div><span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container text-tertiary">v4.19</span></div><div class="px-space-md py-space-sm bg-surface-container-lowest flex items-center justify-between"><span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">Curriculum Index</span><span class="font-label-tag text-label-tag text-on-surface-variant">21 Modules</span></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-xs space-y-0.5" data-active-classes="bg-primary-container text-on-primary-fixed font-bold"><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l00-architecture-overview" href="#"><span class="font-label-code text-label-code">L00</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">Arch Overview &amp; ISA</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l01-registers-and-alu" href="#"><span class="font-label-code text-label-code">L01</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">Registers &amp; Integer ALU</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l02-riscv-instruction-decode" href="#"><span class="font-label-code text-label-code">L02</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">RISC-V Instruction Decode</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l03-memory-hierarchy-and-sram" href="#"><span class="font-label-code text-label-code">L03</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">Memory Hierarchy &amp; SRAM</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l04-pipeline-hazards-forwarding" href="#"><span class="font-label-code text-label-code">L04</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">Hazards &amp; Forwarding</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l05-cache-coherence-protocols" href="#"><span class="font-label-code text-label-code">L05</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">Cache Coherence &amp; MESI</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l06-tlb-and-virtual-addressing" href="#"><span class="font-label-code text-label-code">L06</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">TLB &amp; Virtual Addr</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l07-multi-level-paging" href="#"><span class="font-label-code text-label-code">L07</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">Multi-Level Paging</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l08-kernel-bootstrapping" href="#"><span class="font-label-code text-label-code">L08</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">Kernel Bootstrapping</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l09-trap-handling-interrupts" href="#"><span class="font-label-code text-label-code">L09</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">Traps &amp; IRQ Vectors</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l10-process-control-blocks" href="#"><span class="font-label-code text-label-code">L10</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">Process Control Blocks</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l11-context-switch-routines" href="#"><span class="font-label-code text-label-code">L11</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">Context Switching</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l12-preemptive-scheduling" href="#"><span class="font-label-code text-label-code">L12</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">Preemptive Schedulers</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l13-atomic-primitives-locks" href="#"><span class="font-label-code text-label-code">L13</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">Atomics &amp; Spinlocks</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l14-ipc-shared-memory" href="#"><span class="font-label-code text-label-code">L14</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">IPC &amp; Shared Memory</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l15-virtual-file-system" href="#"><span class="font-label-code text-label-code">L15</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">VFS Inodes &amp; Dentry</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l16-block-devices-drivers" href="#"><span class="font-label-code text-label-code">L16</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">Block Device Drivers</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l17-system-calls-abi" href="#"><span class="font-label-code text-label-code">L17</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">Syscalls &amp; User ABI</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l18-memory-protection-keys" href="#"><span class="font-label-code text-label-code">L18</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">Memory Protection Rings</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="l19-interrupt-controllers-plic" href="#"><span class="font-label-code text-label-code">L19</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">PLIC &amp; Device Topology</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-space-xs rounded transition-colors bg-primary-container text-on-primary-fixed font-bold" data-path="l20-dma-and-bus-mastering" href="#"><span class="font-label-code text-label-code">L20</span><span class="font-body-sm text-body-sm truncate flex-1 ml-space-sm">DMA &amp; Bus Mastering</span><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span></a></nav><div class="p-space-sm bg-surface-container-low space-y-space-xs"><div class="flex items-center justify-between text-outline"><span class="font-label-tag text-label-tag uppercase">Sysload</span><span class="font-label-tag text-label-tag text-tertiary">18.4% NOMINAL</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden"><div class="bg-tertiary h-full w-[18.4%]"></div></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl z-40 flex items-center justify-between px-gutter shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container-high text-primary tracking-wider">CORE_ARCH: RISC-V MMU</span><span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container text-tertiary tracking-wider flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>KERNEL OK</span><span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container-low text-secondary tracking-wider">I/O MATRIX V20</span></div><nav class="hidden xl:flex items-center gap-space-sm ml-space-sm" data-active-classes="bg-primary-container text-on-primary-fixed font-bold rounded"><a class="px-space-sm py-1 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="syllabus" href="#">Syllabus</a><a aria-current="page" class="px-space-sm py-1 transition-colors bg-primary-container text-on-primary-fixed font-bold rounded" data-path="l20-dma-and-bus-mastering" href="#">Lab Studio</a><a class="px-space-sm py-1 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="system-telemetry" href="#">Telemetry</a><a class="px-space-sm py-1 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="kernel-debugger" href="#">Debugger</a></nav></div><div class="flex items-center gap-space-sm"><button class="px-space-sm py-1.5 rounded font-label-code text-label-code bg-primary-container text-on-primary-fixed hover:bg-primary transition-colors flex items-center gap-1.5" type="button"><span>Simulate DMA Block Transfer</span></button><button class="px-space-sm py-1.5 rounded font-label-code text-label-code bg-surface-container-high text-secondary hover:bg-surface-container-highest hover:text-on-surface transition-colors flex items-center gap-1.5" type="button"><span>Reset Bus Simulator</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 w-full min-h-screen bg-background"><div class="flex flex-col w-full">
+<!-- Top Telemetry Banner -->
+<section class="w-full bg-surface-container-lowest px-gutter py-space-sm shadow-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm font-label-tag text-label-tag">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="text-on-surface-variant font-bold">DMA CONTROLLER:</span>
+<span class="text-primary font-label-code">INTEL 8237A / RISC-V AXI-DMA CONTROLLER // SYS_DMA_READY</span>
+</div>
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="text-on-surface-variant font-bold">BUS UTILIZATION:</span>
+<span class="font-label-code text-tertiary">CYCLE STEALING (BURST &amp; CYCLE-BY-CYCLE)</span>
+</div>
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="text-on-surface-variant font-bold">INTERRUPT LATENCY:</span>
+<span class="font-label-code text-secondary">~0.15 µs // VECTORED PLIC LINE</span>
+</div>
+<div class="flex items-center gap-space-xs text-primary-fixed-dim">
+<span class="text-on-surface-variant font-bold">TRANSFERRED BLOCKS:</span>
+<span class="font-label-code text-primary-fixed-dim" id="transferred-counter-val">64 KB BUFFER // 16-BIT COUNTER: 0x0000</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-high px-space-xs py-0.5 rounded text-tertiary">
+<span class="text-on-surface-variant">STRATEGY:</span>
+<span class="font-semibold uppercase tracking-wider">DYNAMIC DMA / ISR HYBRID MATRIX</span>
+</div>
+</div>
+</section>
+<!-- Interactive Bus Simulator Header Dock -->
+<section class="w-full bg-surface-container-low px-gutter py-space-md shadow-sm">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container text-primary uppercase">Lab 20 Workspace</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant">// AXI-Bus Arbiter Simulation Mode</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface mt-1">L20: The I/O Communication Matrix</h1>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-md py-space-sm rounded font-label-code text-label-code bg-primary-container text-on-primary-fixed hover:bg-primary shadow-sm hover:shadow-md transition-all flex items-center gap-space-xs cursor-pointer" id="btn-simulate-dma" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>[ ▶ ⚡ Simulate DMA Block Transfer &amp; Bus Cycle Steal ]</span>
+</button>
+<button class="px-space-md py-space-sm rounded font-label-code text-label-code bg-surface-container-high text-secondary hover:bg-surface-container-highest transition-all flex items-center gap-space-xs cursor-pointer" id="btn-reset-dma" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>[ 🔄 Reset Bus Simulator ]</span>
+</button>
+</div>
+</div>
+<!-- Live Telemetry Status Ticker -->
+<div class="mt-space-md grid grid-cols-2 md:grid-cols-4 gap-space-sm font-label-tag text-label-tag" id="sim-ticker-box">
+<div class="bg-surface-container p-space-sm rounded shadow-sm">
+<span class="text-on-surface-variant block uppercase text-[10px]">Bus Arbiter State</span>
+<span class="text-tertiary font-bold text-body-sm font-label-code" id="bus-arbiter-state">IDLE // CPU MASTER</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded shadow-sm">
+<span class="text-on-surface-variant block uppercase text-[10px]">Cycles Steolen</span>
+<span class="text-primary font-bold text-body-sm font-label-code" id="cycles-stolen-state">0 CYCLES</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded shadow-sm">
+<span class="text-on-surface-variant block uppercase text-[10px]">Active Transfer Mode</span>
+<span class="text-secondary font-bold text-body-sm font-label-code" id="transfer-mode-state">STANDBY</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded shadow-sm">
+<span class="text-on-surface-variant block uppercase text-[10px]">Interrupt Vector Pin</span>
+<span class="text-on-surface-variant font-bold text-body-sm font-label-code" id="irq-pin-state">PLIC LINE 0x0E (LOW)</span>
+</div>
+</div>
+</section>
+<!-- Main Body Content Grid -->
+<div class="w-full px-gutter py-space-xl space-y-space-xl">
+<!-- SECTION 1 -->
+<section class="w-full space-y-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-highest text-primary">PHASE 01</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">1️⃣ Core Conceptual Onboarding (The Mailbox, The Doorbell, and The Desk Key)</h2>
+</div>
+<!-- Foundational Question Text Box -->
+<div class="bg-surface-container p-space-lg rounded shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+<span class="font-label-tag text-label-tag uppercase tracking-wider">The Foundational Question</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+          The I/O Communication Matrix represents the core strategic architectural models that the operating system referee uses to coordinate data transfers and command instructions between the physical CPU chip and slow peripheral hardware devices.
+        </p>
+</div>
+<!-- Key Characteristics -->
+<div class="bg-surface-container-low p-space-lg rounded shadow-sm space-y-space-sm">
+<div class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">Key Architectural Characteristics</div>
+<ul class="space-y-space-sm font-body-md text-body-md text-on-surface">
+<li class="p-space-sm rounded bg-surface-container flex items-start gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-error mt-2 flex-shrink-0"></span>
+<div>
+<span class="font-bold text-primary font-headline-sm text-headline-sm">Polling (Programmed I/O):</span>
+<span class="text-on-surface ml-1">A low-efficiency strategy where the CPU continuously checks a device register loop in a tight circle, repeatedly asking if it has finished its task.</span>
+</div>
+</li>
+<li class="p-space-sm rounded bg-surface-container flex items-start gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0"></span>
+<div>
+<span class="font-bold text-secondary font-headline-sm text-headline-sm">Interrupt-Driven I/O:</span>
+<span class="text-on-surface ml-1">A reactive strategy where the CPU dispatches a device command, immediately switches to run other user apps, and waits to be tapped on the shoulder by an electronic signal wire.</span>
+</div>
+</li>
+<li class="p-space-sm rounded bg-surface-container flex items-start gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary mt-2 flex-shrink-0"></span>
+<div>
+<span class="font-bold text-tertiary font-headline-sm text-headline-sm">Direct Memory Access (DMA):</span>
+<span class="text-on-surface ml-1">A high-speed strategy where an auxiliary hardware controller takes absolute command of the data transfer, moving bytes directly between devices and RAM without touching the CPU.</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Core Motivation Block -->
+<div class="bg-surface-container-high p-space-lg rounded shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+<span class="font-label-tag text-label-tag uppercase tracking-wider">Core Motivation</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Physical hardware computing components run at blazing speeds, but peripheral I/O hardware devices (like keyboards, sound chips, or network cards) are painfully slow mechanical or external entities. If the CPU has to actively wait for a disk platter or a network packet to arrive line-by-line, it wastes millions of clock cycles doing absolutely nothing. The OS referee must apply optimal communication frameworks to shield the processor from these device speed bottlenecks, keeping system windows responsive.
+        </p>
+</div>
+<!-- Card Duo: Real-World & Everyday Example -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Technical Card -->
+<div class="bg-surface-container p-space-lg rounded shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[22px]">terminal</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">💻 Real-World Application Example</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Imagine your computer is downloading an intensive software update packet inside Google Chrome while you are talking to friends on Discord. If your network card relied on old Polling, your CPU would freeze up entirely, stuck in a loop checking the network card register until the download finished. Instead, your network chip uses Direct Memory Access (DMA). It copies incoming download bytes straight into your physical RAM tracks completely in the background, firing a single hardware interrupt to tell the CPU it is finished only when the full block is secure.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low px-space-sm py-space-xs rounded flex items-center justify-between font-label-tag text-label-tag text-primary">
+<span>NETWORK CONTROLLER: ETH_0_RX</span>
+<span>DMA BYPASS ACTIVE</span>
+</div>
+</div>
+<!-- Analogy Card -->
+<div class="bg-surface-container p-space-lg rounded shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-secondary mb-space-sm">
+<span class="material-symbols-outlined text-[22px]">backpack</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">🎒 Everyday Example (5th Grader)</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Imagine you are sitting at your desk waiting for a very important birthday package to arrive in the mail. Polling is walking out to your front yard mailbox every five minutes, opening the lid, and crying when it is empty—you waste your whole day checking. Interrupt-Driven I/O is sitting inside your living room playing video games until the mail carrier physically rings your Doorbell to wave you over. Direct Memory Access (DMA) is handing the mail carrier a key to your house door so they can walk inside and place the package right onto your bedroom desk while you keep playing your game uninterrupted!
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low px-space-sm py-space-xs rounded flex items-center justify-between font-label-tag text-label-tag text-secondary">
+<span>KEY IN DOOR ANALOGY</span>
+<span>ZERO GAME INTERRUPTION</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2 -->
+<section class="w-full space-y-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-highest text-primary">PHASE 02</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">2️⃣ Structural Dissection (Inside the Bus Lanes &amp; The DMA Controller)</h2>
+</div>
+<!-- Split-Pane Structural Block -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md">
+<!-- Left Side: Schematic Architecture Diagram -->
+<div class="xl:col-span-7 bg-surface-container p-space-lg rounded shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">lan</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">THE HARDWARE HIGHWAY BUS STRUCTURE</span>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">32-BIT SYSTEM DATA BUS</span>
+</div>
+<!-- Visual Highway Bus Architecture -->
+<div class="bg-surface-container-lowest p-space-md rounded space-y-space-md relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Top Row: CPU and System Bus Line -->
+<div class="grid grid-cols-3 gap-space-sm text-center">
+<div class="bg-surface-container-high p-space-sm rounded transition-all duration-300" id="diagram-cpu-node">
+<div class="font-label-tag text-label-tag text-primary font-bold">CPU Core Core</div>
+<div class="text-[11px] text-on-surface-variant font-label-code mt-1">Hart 0 // Exec Mode</div>
+<div class="mt-2 text-[10px] font-label-tag px-1 py-0.5 rounded bg-surface-container text-tertiary" id="diagram-cpu-status">Running Chrome</div>
+</div>
+<div class="flex flex-col items-center justify-center">
+<div class="font-label-tag text-label-tag text-on-surface-variant uppercase text-[10px]">Bus Control Grant</div>
+<div class="w-full h-1 bg-surface-container-highest my-1 relative overflow-hidden rounded" id="diagram-bus-line-indicator">
+<div class="w-1/3 h-full bg-primary-container rounded" id="diagram-bus-pulse"></div>
+</div>
+<span class="font-label-code text-[11px] text-primary">System Bus Line</span>
+</div>
+<div class="bg-surface-container-high p-space-sm rounded transition-all duration-300" id="diagram-dmac-node">
+<div class="font-label-tag text-label-tag text-tertiary font-bold">DMA Controller Unit</div>
+<div class="text-[11px] text-on-surface-variant font-label-code mt-1">Intel 8237A / AXI-DMA</div>
+<div class="mt-2 text-[10px] font-label-tag px-1 py-0.5 rounded bg-surface-container text-on-surface-variant" id="diagram-dmac-status">Master: Passive</div>
+</div>
+</div>
+<!-- Bus Line Crossway Bridge -->
+<div class="py-space-xs flex items-center justify-center">
+<div class="flex items-center gap-space-md font-label-code text-[11px] text-on-surface-variant bg-surface-container-low px-space-md py-1 rounded">
+<span class="flex items-center gap-1 text-primary"><span>⇄</span> Cycle Steal Bus Lines</span>
+<span class="text-outline">|</span>
+<span class="flex items-center gap-1 text-tertiary"><span>⚡</span> High-Speed Data Pipes</span>
+</div>
+</div>
+<!-- Bottom Row: RAM Memory Cells and Peripheral -->
+<div class="grid grid-cols-2 gap-space-md text-center">
+<div class="bg-surface-container-high p-space-sm rounded transition-all duration-300" id="diagram-ram-node">
+<div class="font-label-tag text-label-tag text-secondary font-bold">RAM Memory Cells</div>
+<div class="text-[11px] text-on-surface-variant font-label-code mt-1">DDR4 SDRAM Target Buff</div>
+<div class="mt-2 text-[10px] font-label-tag px-1 py-0.5 rounded bg-surface-container text-primary" id="diagram-ram-status">Dest: 0x80040000</div>
+</div>
+<div class="bg-surface-container-high p-space-sm rounded transition-all duration-300" id="diagram-io-node">
+<div class="font-label-tag text-label-tag text-error font-bold">Peripheral Device (Network/Disk)</div>
+<div class="text-[11px] text-on-surface-variant font-label-code mt-1">NVMe PCIe / GbE Ethernet</div>
+<div class="mt-2 text-[10px] font-label-tag px-1 py-0.5 rounded bg-surface-container text-tertiary" id="diagram-io-status">FIFO Ready</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-label-tag text-label-tag bg-surface-container-low p-space-sm rounded">
+<span>FLOW MAPPING: CPU ➔ SYSTEM BUS ➔ DMAC ➔ RAM ➔ PERIPHERAL</span>
+<span class="text-tertiary font-bold">AXI4 PROTOCOL OK</span>
+</div>
+</div>
+<!-- Right Side: Bus Controller Register Field -->
+<div class="xl:col-span-5 bg-surface-container p-space-lg rounded shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">memory</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">THE BUS CONTROLLER REGISTER FIELD</span>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-secondary">CH_0 DUMP</span>
+</div>
+<!-- Field Rows -->
+<div class="space-y-space-sm">
+<!-- Memory Address Pointers -->
+<div class="bg-surface-container-low p-space-sm rounded space-y-1">
+<div class="flex justify-between items-center font-label-tag text-label-tag">
+<span class="text-on-surface font-semibold">Memory Address Pointers</span>
+<span class="text-primary font-label-code">[0x4000_1000]</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs text-[11px] font-label-code text-on-surface-variant bg-surface-container-lowest p-space-xs rounded">
+<span>SRC_ADDR: <strong class="text-tertiary">0x1000_A000</strong></span>
+<span>DEST_ADDR: <strong class="text-primary">0x8004_0000</strong></span>
+</div>
+<div class="text-[10px] font-label-tag text-on-surface-variant">Auto-incrementing DMA buffer pointers during burst cycles</div>
+</div>
+<!-- Byte Count Down-Counter -->
+<div class="bg-surface-container-low p-space-sm rounded space-y-1">
+<div class="flex justify-between items-center font-label-tag text-label-tag">
+<span class="text-on-surface font-semibold">Byte Count Down-Counter</span>
+<span class="text-tertiary font-label-code" id="reg-byte-counter">[COUNT: 0xFFFF]</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded overflow-hidden">
+<div class="bg-tertiary h-full w-[100%] transition-all duration-300" id="reg-progress-bar"></div>
+</div>
+<div class="flex justify-between text-[11px] font-label-code text-on-surface-variant">
+<span>TRANSFER REMAINING:</span>
+<span class="text-primary font-bold" id="reg-remaining-bytes">65,535 BYTES</span>
+</div>
+</div>
+<!-- Interrupt Vector Handler Mapping Code -->
+<div class="bg-surface-container-low p-space-sm rounded space-y-1">
+<div class="flex justify-between items-center font-label-tag text-label-tag">
+<span class="text-on-surface font-semibold">Interrupt Vector Handler Mapping Code</span>
+<span class="text-secondary font-label-code">0x0000_003E</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-lowest font-label-code text-[11px] text-secondary">
+                  handler: &amp;riscv_dma_complete_isr (Vectored PLIC IRQ#62)
+                </div>
+<div class="flex justify-between text-[10px] font-label-tag text-on-surface-variant">
+<span>MASK: ENABLED</span>
+<span>PRIORITY: LEVEL 7 (HIGH)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-xs rounded bg-surface-container-high flex items-center justify-between text-[11px] font-label-code text-on-surface-variant">
+<span>STATUS FLAGS:</span>
+<span class="text-tertiary">DMA_BUS_IDLE // TRANSFER_RDY // IRQ_ARMED</span>
+</div>
+</div>
+</div>
+<!-- Specific Structural Text Rows & Examples Below Diagram -->
+<div class="space-y-space-md">
+<!-- Row 1: Programmed I/O Polling Loop -->
+<div class="bg-surface-container-low p-space-md rounded shadow-sm space-y-space-xs">
+<div class="font-headline-sm text-headline-sm text-error flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span>• Programmed I/O Polling Loop: Forces the processor into a status register check cycle, pinning a core's usage telemetry at 100% just to wait on slow hardware gates.</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded font-body-md text-body-md text-on-surface">
+<strong class="text-primary font-semibold">💻 Real-World Application Example:</strong> Simple micro-controllers or a computer reading a steady stream from a basic industrial temperature sensor use polling because the overhead task is lightweight.
+          </div>
+</div>
+<!-- Row 2: Interrupt Service Routine (ISR) -->
+<div class="bg-surface-container-low p-space-md rounded shadow-sm space-y-space-xs">
+<div class="font-headline-sm text-headline-sm text-secondary flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span>• Interrupt Service Routine (ISR): The specialized high-privilege kernel function block that wakes up instantly when a device triggers an interrupt wire, handling the incoming byte array data.</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded font-body-md text-body-md text-on-surface">
+<strong class="text-secondary font-semibold">💻 Real-World Application Example:</strong> When you move your computer mouse or type a keypress character, a hardware interrupt wire snaps, forcing the CPU to jump to the ISR handler line to draw your pointer instantly.
+          </div>
+</div>
+<!-- Row 3: The DMA Controller (DMAC) -->
+<div class="bg-surface-container-low p-space-md rounded shadow-sm space-y-space-xs">
+<div class="font-headline-sm text-headline-sm text-tertiary flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span>• The DMA Controller (DMAC): An independent mini-processor welded onto the motherboard whose sole job is to drive the memory bus lines, taking the heavy block-moving burden off the CPU.</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded font-body-md text-body-md text-on-surface">
+<strong class="text-tertiary font-semibold">💻 Real-World Application Example:</strong> High-speed graphics video streaming or audio loops inside Spotify rely completely on DMA channels to feed millions of audio sound wave bytes directly into your sound hardware card smoothly.
+          </div>
+</div>
+</div>
+<!-- Bottom Everyday Example Note -->
+<div class="bg-surface-container p-space-lg rounded shadow-sm">
+<div class="flex items-center gap-space-xs text-secondary mb-space-xs">
+<span class="material-symbols-outlined text-[20px]">apartment</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">🎒 Everyday Example</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Let's use an office workplace comparison! The CPU is the company president who makes 1,000 big decisions per second. A peripheral device is a slow delivery truck outside. Polling is the president running to the front loading dock every 2 minutes to check if boxes arrived. Interrupts are a receptionist intercom buzzer. DMA is hiring a dedicated warehouse shipping manager (The DMAC) with an off-site clipboard tracking sheet—the manager unloads the whole truck, stacks the boxes in the breakroom cabinets, and sends the president a brief email notification once the job is entirely finished!
+        </p>
+</div>
+</section>
+<!-- SECTION 3 -->
+<section class="w-full space-y-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-highest text-primary">PHASE 03</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">3️⃣ Linear Operational Pipeline (The Device to Memory Transfer Workflow)</h2>
+</div>
+<!-- Horizontal Workflow Timeline Tracker Layout -->
+<div class="bg-surface-container-low p-space-lg rounded shadow-sm space-y-space-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">Sequential Process Pipeline Sequence</span>
+<span class="font-label-tag text-label-tag text-primary">FOUR-STAGE TRANSACTION ARCHITECTURE</span>
+</div>
+<!-- 4 Step Pipeline Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Node 1 -->
+<div class="bg-surface-container p-space-md rounded shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-code text-label-code px-space-xs py-0.5 rounded bg-primary-container text-on-primary-fixed">STEP 01</span>
+<span class="material-symbols-outlined text-primary text-[20px]">send_time_extension</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">1. CPU Command Dispatch</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                1. CPU Command Dispatch: The kernel referee sets up the transaction by writing the target RAM memory cell starting address and total byte count directly into the DMA controller register fields.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t-0 text-[11px] font-label-code text-primary">
+              // WR_REG(DMAC_ADDR, 0x80040000)
+            </div>
+</div>
+<!-- Node 2 -->
+<div class="bg-surface-container p-space-md rounded shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-code text-label-code px-space-xs py-0.5 rounded bg-tertiary-container text-on-tertiary-container">STEP 02</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">sync_alt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">2. Autonomous Bus Transfer</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                2. Autonomous Bus Transfer: The CPU steps away, returning to execute user-space code lines for Chrome. The DMAC takes absolute control of the electronic hardware bus, stealing idle memory cycles to pump bytes from the device straight into RAM.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs text-[11px] font-label-code text-tertiary">
+              // BUS_CYCLE_STEAL_ACTIVE
+            </div>
+</div>
+<!-- Node 3 -->
+<div class="bg-surface-container p-space-md rounded shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-code text-label-code px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary">STEP 03</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">arrow_downward</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">3. Byte Count Depletion</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                3. Byte Count Depletion: With every individual word byte securely transferred into the memory cells, the DMAC hardware automatically ticks down its internal counter tracking register variable.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs text-[11px] font-label-code text-secondary">
+              // REG_COUNT--; IF (COUNT==0)
+            </div>
+</div>
+<!-- Node 4 -->
+<div class="bg-surface-container p-space-md rounded shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-code text-label-code px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container">STEP 04</span>
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">notification_important</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">4. Handoff Interrupt Trigger</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                4. Handoff Interrupt Trigger: The counter hits zero. The DMAC drops control of the memory bus lines and fires an electronic interrupt signal up to the CPU core, prompting the kernel to switch states and verify the fresh data.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs text-[11px] font-label-code text-secondary-fixed">
+              // PLIC_ASSERT_LINE(IRQ_DMA)
+            </div>
+</div>
+</div>
+</div>
+<!-- Activity & Analogy Cards Duo -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Ranking Activity -->
+<div class="bg-surface-container p-space-lg rounded shadow-sm">
+<div class="flex items-center gap-space-xs text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[22px]">assignment_turned_in</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">💻 Peripheral Strategy Ranking Activity</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Present three hardware entities on the blackboard matrix: A high-frequency mechanical mouse input stream, a high-speed multi-megabyte hard-disk file block transfer, and a slow industrial room temperature sensor device ➔ Have the class debate and rank which I/O communication strategy fits each target ➔ Defend why a low-latency interrupt fits a mouse, DMA fits a heavy disk block stream, and basic polling is perfectly acceptable for a slow sensor.
+          </p>
+<div class="mt-space-md grid grid-cols-3 gap-space-xs font-label-code text-[11px] text-center">
+<div class="p-space-xs bg-surface-container-high rounded text-secondary">
+<div>🖱️ Mouse</div>
+<div class="text-[10px] text-on-surface-variant mt-1">Interrupt-Driven</div>
+</div>
+<div class="p-space-xs bg-surface-container-high rounded text-tertiary">
+<div>💽 Disk Drive</div>
+<div class="text-[10px] text-on-surface-variant mt-1">DMA Block Mode</div>
+</div>
+<div class="p-space-xs bg-surface-container-high rounded text-primary">
+<div>🌡️ Temp Sensor</div>
+<div class="text-[10px] text-on-surface-variant mt-1">Light Polling</div>
+</div>
+</div>
+</div>
+<!-- Warehouse Delivery Pipeline Analogy -->
+<div class="bg-surface-container p-space-lg rounded shadow-sm">
+<div class="flex items-center gap-space-xs text-secondary mb-space-sm">
+<span class="material-symbols-outlined text-[22px]">warehouse</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">🎒 Warehouse Delivery Pipeline</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            The shop supervisor writes down a shipment order list and maps out an empty floor section area (Command Dispatch) ➔ A forklift driver unloads the shipping truck crates and stacks them onto the floor space independently (Autonomous Transfer) ➔ The driver ticks off every box on their inventory sheet line-by-line (Count Depletion) ➔ The driver rings a loud service bell to tell the supervisor the inventory is ready to use (Interrupt Trigger).
+          </p>
+<div class="mt-space-md p-space-xs bg-surface-container-low rounded text-on-surface-variant font-label-tag text-label-tag flex items-center justify-between">
+<span>SUPERVISOR: CPU</span>
+<span>FORKLIFT: DMAC</span>
+<span>FLOOR: RAM</span>
+<span>BELL: INTERRUPT</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4 -->
+<section class="w-full space-y-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-highest text-primary">PHASE 04</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">4️⃣ Paradigm Showdown &amp; Guardrails</h2>
+</div>
+<!-- Comparative Table: Interrupt-Driven vs DMA -->
+<div class="bg-surface-container-low p-space-lg rounded shadow-sm space-y-space-md overflow-x-auto">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Interrupt-Driven Communication (Tapped-on-Shoulder Mode) vs Direct Memory Access (Total CPU Bypass)</span>
+<span class="font-label-tag text-label-tag text-tertiary">PARADIGM MATRIX</span>
+</div>
+<div class="w-full min-w-[640px]">
+<div class="grid grid-cols-12 gap-space-sm bg-surface-container-highest p-space-sm rounded font-label-tag text-label-tag text-primary">
+<div class="col-span-3 uppercase">Architectural Vector</div>
+<div class="col-span-4 uppercase text-secondary">Interrupt-Driven Communication</div>
+<div class="col-span-5 uppercase text-tertiary">Direct Memory Access (DMA)</div>
+</div>
+<div class="space-y-space-xs mt-space-xs font-body-md text-body-md">
+<!-- Row 1 -->
+<div class="grid grid-cols-12 gap-space-sm bg-surface-container p-space-sm rounded items-center">
+<div class="col-span-3 font-headline-sm text-headline-sm text-on-surface">Data Transfer Drive</div>
+<div class="col-span-4 text-on-surface-variant text-body-sm font-body-sm">
+                CPU must manually copy every single individual byte from device registers into RAM
+              </div>
+<div class="col-span-5 text-tertiary text-body-sm font-body-sm">
+                Autonomous DMAC microchip handles the entire block move
+              </div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-12 gap-space-sm bg-surface-container p-space-sm rounded items-center">
+<div class="col-span-3 font-headline-sm text-headline-sm text-on-surface">Optimal Data Size</div>
+<div class="col-span-4 text-on-surface-variant text-body-sm font-body-sm">
+                Perfect for small, bursty, low-byte streaming data like mouse clicks or keyboard inputs
+              </div>
+<div class="col-span-5 text-tertiary text-body-sm font-body-sm">
+                Mandated for heavy, fast, multi-megabyte blocks like video feeds or drive sectors
+              </div>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-12 gap-space-sm bg-surface-container p-space-sm rounded items-center">
+<div class="col-span-3 font-headline-sm text-headline-sm text-on-surface">CPU Interaction Tax</div>
+<div class="col-span-4 text-on-surface-variant text-body-sm font-body-sm">
+                Interrupts the execution core for every single byte processed
+              </div>
+<div class="col-span-5 text-tertiary text-body-sm font-body-sm">
+                Interrupts the execution core exactly once per entire file block completion
+              </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="bg-error-container/20 p-space-lg rounded shadow-sm space-y-space-xs">
+<div class="flex items-center gap-space-xs text-error font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+<span>Common Mistakes Warning Banner</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Do not assume interrupts have zero cost! A very common mistake computer science students make is believing that interrupt-driven I/O is completely free hardware magic. Every single interrupt forces the CPU to violently drop its active user application, jump into high-privilege Kernel Mode, and run context switches. If a fast device blasts the CPU with millions of small interrupts per second, the processor will lock up entirely—a bottleneck called Livelock where your system completely lags!
+        </p>
+</div>
+<!-- Interview Takeaway Panel -->
+<div class="bg-surface-container p-space-lg rounded shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[22px]">psychology</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Interview Takeaway Panel</h3>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">SYS-ARCH INTERVIEW CHEATSHEET</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded space-y-space-xs">
+<div class="font-label-code text-label-code text-primary font-bold">1. I/O Bus Contention &amp; Arbitration</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              When both CPU and DMA controller vie for memory access, an arbiter decides. In <em>Burst Mode</em>, the DMAC captures the bus until the whole chunk transfers. In <em>Cycle Stealing</em>, the DMAC slips transfers into spare machine clock cycles without completely halting CPU execution threads.
+            </p>
+</div>
+<div class="bg-surface-container-low p-space-md rounded space-y-space-xs">
+<div class="font-label-code text-label-code text-tertiary font-bold">2. Interrupt Moderation &amp; Throttling</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Modern network adapters (NICs) employ adaptive interrupt coalescing. Instead of firing an interrupt for each ethernet frame, they gather packets into a DMA buffer window and trigger one interrupt periodically, completely averting interrupt livelock.
+            </p>
+</div>
+<div class="bg-surface-container-low p-space-md rounded space-y-space-xs">
+<div class="font-label-code text-label-code text-secondary font-bold">3. Cafeteria Plate Crash Cascade Analogy</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Think of interrupts like someone dropping a plate in a noisy cafeteria: everyone immediately halts their conversations to turn around and look. One dropped plate is negligible, but if ten thousand plates shatter per second, nobody can ever speak a sentence again!
+            </p>
+</div>
+</div>
+</div>
+<!-- Module Complete Status Banner -->
+<div class="bg-surface-container-high p-space-lg rounded shadow-xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">MODULE 20 COMPLETE // 100% MASTERY</span>
+</div>
+<p class="font-label-code text-label-code text-on-surface-variant">
+            CREDITS ACCREDITED // CS 301 KERNEL RUNTIME EVAL PASS // RISC-V 64 ARCH // I/O COMMUNICATION MATRIX VERIFIED
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-md py-space-sm rounded font-label-code text-label-code bg-surface-container text-on-surface hover:bg-surface-container-highest transition-colors cursor-pointer" type="button">
+            [ 📖 Review L20 Notes ]
+          </button>
+<button class="px-space-md py-space-sm rounded font-label-code text-label-code bg-primary-container text-on-primary-fixed hover:bg-primary transition-all shadow-sm cursor-pointer font-bold" type="button">
+            [ 🎓 Advance to Capstone Systems Integration Lab → ]
+          </button>
+</div>
+</div>
+</section>
+</div>
+<script>
+    (function initDmaSim() {
+      const btnSim = document.getElementById('btn-simulate-dma');
+      const btnReset = document.getElementById('btn-reset-dma');
+      const counterVal = document.getElementById('transferred-counter-val');
+      const busState = document.getElementById('bus-arbiter-state');
+      const cyclesStolen = document.getElementById('cycles-stolen-state');
+      const transferMode = document.getElementById('transfer-mode-state');
+      const irqPin = document.getElementById('irq-pin-state');
+
+      const diagramCpuStatus = document.getElementById('diagram-cpu-status');
+      const diagramDmacStatus = document.getElementById('diagram-dmac-status');
+      const regByteCounter = document.getElementById('reg-byte-counter');
+      const regProgressBar = document.getElementById('reg-progress-bar');
+      const regRemaining = document.getElementById('reg-remaining-bytes');
+      const busPulse = document.getElementById('diagram-bus-pulse');
+
+      let timer = null;
+      let active = false;
+
+      function resetSim() {
+        if (timer) clearInterval(timer);
+        active = false;
+        counterVal.textContent = "64 KB BUFFER // 16-BIT COUNTER: 0x0000";
+        busState.textContent = "IDLE // CPU MASTER";
+        busState.className = "text-tertiary font-bold text-body-sm font-label-code";
+        cyclesStolen.textContent = "0 CYCLES";
+        transferMode.textContent = "STANDBY";
+        irqPin.textContent = "PLIC LINE 0x0E (LOW)";
+        irqPin.className = "text-on-surface-variant font-bold text-body-sm font-label-code";
+
+        diagramCpuStatus.textContent = "Running Chrome";
+        diagramCpuStatus.className = "mt-2 text-[10px] font-label-tag px-1 py-0.5 rounded bg-surface-container text-tertiary";
+        diagramDmacStatus.textContent = "Master: Passive";
+        diagramDmacStatus.className = "mt-2 text-[10px] font-label-tag px-1 py-0.5 rounded bg-surface-container text-on-surface-variant";
+
+        regByteCounter.textContent = "[COUNT: 0xFFFF]";
+        regProgressBar.style.width = "100%";
+        regProgressBar.className = "bg-tertiary h-full w-[100%] transition-all duration-300";
+        regRemaining.textContent = "65,535 BYTES";
+
+        if (busPulse) {
+          busPulse.className = "w-1/3 h-full bg-primary-container rounded";
+        }
+      }
+
+      function startSim() {
+        if (active) return;
+        active = true;
+
+        let bytesLeft = 65535;
+        let cycles = 0;
+
+        busState.textContent = "DMAC BUS MASTER // CYCLE STEAL";
+        busState.className = "text-primary font-bold text-body-sm font-label-code animate-pulse";
+        transferMode.textContent = "BURST-STEAL PUMPING";
+        diagramCpuStatus.textContent = "Chrome Running (Cycles Stolen)";
+        diagramCpuStatus.className = "mt-2 text-[10px] font-label-tag px-1 py-0.5 rounded bg-surface-container text-primary";
+        diagramDmacStatus.textContent = "Active Bus Master";
+        diagramDmacStatus.className = "mt-2 text-[10px] font-label-tag px-1 py-0.5 rounded bg-surface-container text-primary font-bold";
+
+        timer = setInterval(function() {
+          const step = 4096;
+          bytesLeft = Math.max(0, bytesLeft - step);
+          cycles += 128;
+
+          const hex = "0x" + (65535 - bytesLeft).toString(16).toUpperCase().padStart(4, '0');
+          counterVal.textContent = "64 KB BUFFER // 16-BIT COUNTER: " + hex;
+          cyclesStolen.textContent = cycles + " CYCLES";
+
+          const pct = Math.max(0, Math.round((bytesLeft / 65535) * 100));
+          regProgressBar.style.width = pct + "%";
+          regByteCounter.textContent = "[COUNT: 0x" + bytesLeft.toString(16).toUpperCase().padStart(4, '0') + "]";
+          regRemaining.textContent = bytesLeft.toLocaleString() + " BYTES";
+
+          if (bytesLeft === 0) {
+            clearInterval(timer);
+            busState.textContent = "IDLE // BUS RETURNED TO CPU";
+            busState.className = "text-tertiary font-bold text-body-sm font-label-code";
+            transferMode.textContent = "BLOCK TRANSFER COMPLETE";
+            irqPin.textContent = "PLIC LINE 0x0E (HIGH // FIRED!)";
+            irqPin.className = "text-secondary font-bold text-body-sm font-label-code animate-bounce";
+            diagramDmacStatus.textContent = "Handoff IRQ Asserted";
+            diagramDmacStatus.className = "mt-2 text-[10px] font-label-tag px-1 py-0.5 rounded bg-secondary-container text-on-secondary-container";
+            diagramCpuStatus.textContent = "Jump to ISR Handler";
+            diagramCpuStatus.className = "mt-2 text-[10px] font-label-tag px-1 py-0.5 rounded bg-surface-container text-secondary";
+            regProgressBar.className = "bg-secondary h-full w-[0%] transition-all duration-300";
+          }
+        }, 80);
+      }
+
+      if (btnSim) btnSim.addEventListener('click', startSim);
+      if (btnReset) btnReset.addEventListener('click', resetSim);
+    })();
+  </script>
+</div></main></div></body></html>
