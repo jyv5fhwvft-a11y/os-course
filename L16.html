@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-fixed":"#6ffbbe","secondary-fixed":"#f0dbff","tertiary-fixed-dim":"#4edea3","inverse-surface":"#dfe2f1","on-error-container":"#ffdad6","primary":"#a5e7ff","background":"#0f131d","outline":"#859399","on-secondary-fixed":"#2c0051","on-tertiary":"#003824","error-container":"#93000a","surface-tint":"#47d6ff","surface-container-lowest":"#0a0e18","on-background":"#dfe2f1","secondary":"#ddb7ff","on-surface":"#dfe2f1","primary-container":"#00d2ff","primary-fixed":"#b6ebff","tertiary-container":"#48d99e","on-tertiary-container":"#005b3d","error":"#ffb4ab","on-tertiary-fixed":"#002113","on-surface-variant":"#bbc9cf","tertiary":"#69f6b9","outline-variant":"#3c494e","surface-container-low":"#171b26","surface-variant":"#313540","on-secondary-container":"#d6a9ff","secondary-fixed-dim":"#ddb7ff","inverse-primary":"#00677f","surface-container-highest":"#313540","on-primary-fixed-variant":"#004e60","surface-container":"#1c1f2a","on-tertiary-fixed-variant":"#005236","on-primary-container":"#00566a","surface-dim":"#0f131d","on-error":"#690005","secondary-container":"#6f00be","on-primary-fixed":"#001f28","inverse-on-surface":"#2c303b","primary-fixed-dim":"#47d6ff","surface-container-high":"#262a35","on-secondary":"#490080","surface-bright":"#353944","on-secondary-fixed-variant":"#6900b3","surface":"#0f131d","on-primary":"#003543"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-lg":"1.5rem","space-md":"1rem",margin:"3rem","margin-mobile":"1.25rem","gutter-mobile":"1rem","space-sm":"0.5rem",gutter:"1.5rem","space-xl":"2.5rem","space-xs":"0.25rem"},fontFamily:{"headline-xl":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"label-code":["JetBrains Mono"],"body-md":["Plus Jakarta Sans"],"headline-md":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"],"label-tag":["JetBrains Mono"],"body-sm":["Plus Jakarta Sans"],"headline-lg":["Space Grotesk"]},fontSize:{"headline-xl":["3.5rem",{lineHeight:"4rem",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-xl-mobile":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.01em",fontWeight:"700"}],"body-lg":["1.125rem",{lineHeight:"1.75rem",fontWeight:"400"}],"label-code":["0.875rem",{lineHeight:"1.25rem",fontWeight:"500"}],"body-md":["1rem",{lineHeight:"1.5rem",fontWeight:"400"}],"headline-md":["1.75rem",{lineHeight:"2.25rem",fontWeight:"600"}],"headline-lg-mobile":["1.75rem",{lineHeight:"2.25rem",fontWeight:"600"}],"headline-sm":["1.25rem",{lineHeight:"1.75rem",fontWeight:"600"}],"label-tag":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.06em",fontWeight:"600"}],"body-sm":["0.875rem",{lineHeight:"1.25rem",fontWeight:"400"}],"headline-lg":["2.5rem",{lineHeight:"3rem",letterSpacing:"-0.015em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="h-16 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded bg-primary-container/20 flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">memory</span></div><div><span class="font-headline-sm text-headline-sm text-primary tracking-tight">KERNEL LAB</span><span class="font-label-code text-label-code text-on-surface-variant ml-space-xs">// CS 301</span></div></div><div class="hidden xl:flex items-center gap-space-xs font-label-tag text-label-tag bg-surface-container-high px-space-sm py-space-xs rounded text-outline"><span class="material-symbols-outlined text-primary text-[14px]">terminal</span><span>CORE_ARCH::RISC-V_MMU</span></div></div><div class="hidden lg:flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-tag text-label-tag text-tertiary">KERNEL OK</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container"><span class="material-symbols-outlined text-primary text-[14px]">hard_drive</span><span class="font-label-code text-label-code text-on-surface">IOPS::128K</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container"><span class="material-symbols-outlined text-secondary text-[14px]">storage</span><span class="font-label-tag text-label-tag text-secondary">UNIT 05 // STORAGE SUBSYSTEM</span></div></div><div class="flex items-center gap-space-md"><nav class="hidden md:flex items-center gap-space-xs font-label-code text-label-code" data-active-classes="bg-surface-container-high text-primary font-bold rounded"><a class="px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="syllabus" href="#">Syllabus</a><a class="px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="interactive-poster-and-diagnostics" href="#">Lab Studio</a><a class="px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="system-telemetry" href="#">Telemetry</a><a class="px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="register-debugger" href="#">Debugger</a></nav><div class="flex items-center gap-space-sm pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-72 bg-surface-container-lowest/95 backdrop-blur-lg z-40 overflow-y-auto p-space-md"><div class="flex items-center justify-between pb-space-sm mb-space-sm"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">CURRICULUM SYLLABUS</span><span class="font-label-tag text-label-tag text-primary">L0 - L16</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-bold rounded shadow-[inset_2px_0_0_0_#00d2ff]"><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-00-system-architecture" href="#"><span class="truncate">L00 Hardware &amp; ISA</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-01-kernel-boot" href="#"><span class="truncate">L01 Bootstrapping &amp; Init</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-02-process-lifecycle" href="#"><span class="truncate">L02 Process Abstraction</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-03-context-switching" href="#"><span class="truncate">L03 Context Switching</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-04-cpu-scheduling" href="#"><span class="truncate">L04 CPU Schedulers</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-05-real-time-scheduling" href="#"><span class="truncate">L05 RTOS &amp; Multilevel</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-06-threads-concurrency" href="#"><span class="truncate">L06 POSIX Threads</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-07-synchronization" href="#"><span class="truncate">L07 Mutex &amp; Semaphores</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-08-deadlocks" href="#"><span class="truncate">L08 Deadlock &amp; Bankers</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-09-ipc" href="#"><span class="truncate">L09 IPC &amp; Shared Memory</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-10-signals-handlers" href="#"><span class="truncate">L10 Traps, Faults, Signals</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-11-memory-management" href="#"><span class="truncate">L11 Physical Addressing</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-12-segmentation" href="#"><span class="truncate">L12 Segmentation</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-13-paging-tlb" href="#"><span class="truncate">L13 Page Tables &amp; TLB</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-14-page-replacement" href="#"><span class="truncate">L14 LRU &amp; Page Replacement</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded font-label-code text-label-code text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="lecture-15-virtual-memory" href="#"><span class="truncate">L15 Virtual Memory &amp; Paging</span><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-space-xs transition-colors bg-surface-container-high text-primary font-bold rounded shadow-[inset_2px_0_0_0_#00d2ff]" data-path="lecture-16-disk-geometry-and-hardware-boundaries" href="#"><span class="truncate">L16 Disk Geometry &amp; Hardware</span><span class="material-symbols-outlined text-primary text-[16px] animate-pulse">radio_button_checked</span></a></nav></aside><div class="pl-72"><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- AMBIENT TOP RUNTIME TICKER / SUB-HEADER BANNER -->
+<div class="w-full bg-surface-container-lowest/80 backdrop-blur-md px-gutter py-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs font-label-tag text-label-tag text-on-surface-variant">
+<span class="inline-flex items-center gap-1.5 px-space-xs py-0.5 rounded bg-primary-container/15 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+        LESSON 16 // ACADEMIC RUNTIME SERIES
+      </span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface">CS 301 CORE KERNEL LABS</span>
+<span class="text-outline-variant">/</span>
+<span class="text-tertiary">RISC-V 64 ARCH</span>
+<span class="text-outline-variant">/</span>
+<span class="text-secondary">HARDWARE STORAGE CONTROLLER &amp; DISK GEOMETRY</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-tag text-label-tag px-space-sm py-0.5 rounded bg-surface-container-high text-tertiary">
+        SYS_STATUS: ACTIVE_SIMULATION
+      </span>
+<span class="font-label-code text-label-code text-primary">PORT::0x3F8</span>
+</div>
+</div>
+<!-- MAIN POSTER HERO HEADER -->
+<section class="w-full px-gutter pt-space-lg pb-space-xl bg-gradient-to-b from-surface-container-low to-background relative overflow-hidden">
+<div class="absolute -right-32 -top-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 bottom-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 max-w-7xl mx-auto flex flex-col gap-space-md">
+<!-- SUB-BADGE -->
+<div class="inline-flex items-center gap-space-xs self-start px-space-sm py-1 rounded bg-surface-container-highest shadow-sm">
+<span class="material-symbols-outlined text-primary text-[16px]">developer_board</span>
+<span class="font-label-tag text-label-tag text-primary tracking-wider uppercase">
+          CORE MODULE: SUB-SYSTEM: MASS STORAGE MANAGEMENT UNIT // DISK GEOMETRY &amp; PHYSICAL BOUNDARIES
+        </span>
+</div>
+<!-- TITLE & SUBTITLE -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="max-w-4xl space-y-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            🏷️ OPERATING SYSTEMS: L16 - Disk Geometry &amp; Physical Hardware Boundaries
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+            An interactive primer designed for systems novices: dissecting magnetic spinning platters, actuator arms, seek time taxes, rotational latency, and solid-state silicon wear leveling.
+          </p>
+</div>
+<!-- ACTION BUTTONS -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="px-space-md py-space-sm rounded bg-primary-container text-on-primary-container font-label-code text-label-code font-bold hover:shadow-[0_0_20px_rgba(0,210,255,0.4)] transition-all flex items-center gap-space-xs" id="stepPipelineBtn">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+            Step Through Disk Read Pipeline
+          </button>
+<button class="px-space-md py-space-sm rounded bg-surface-container-high text-on-surface hover:text-primary font-label-code text-label-code transition-all flex items-center gap-space-xs" id="resetSimBtn">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+            Reset Simulator
+          </button>
+</div>
+</div>
+<!-- TELEMETRY METRICS BAR -->
+<div class="mt-space-md grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-space-xs p-space-xs bg-surface-container-lowest rounded shadow-xl">
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-tag text-label-tag">STORAGE ENGINE</span>
+<span class="material-symbols-outlined text-[16px] text-primary">schema</span>
+</div>
+<div class="mt-space-xs">
+<div class="font-label-code text-label-code font-bold text-on-surface">STORAGE CONTROLLER ENGINE:</div>
+<div class="font-label-tag text-label-tag text-primary truncate">HYBRID I/O SCHEDULER // DUAL INTERFACE (SATA/NVMe)</div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-tag text-label-tag">SPINDLE DYNAMICS</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">motion_mode</span>
+</div>
+<div class="mt-space-xs">
+<div class="font-label-code text-label-code font-bold text-on-surface">MECHANICAL SPINDLE RPM:</div>
+<div class="font-label-tag text-label-tag text-tertiary">7200 RPM // AVG ROTATION: 4.17 ms</div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-tag text-label-tag">SEEK OVERHEAD</span>
+<span class="material-symbols-outlined text-[16px] text-error">speed</span>
+</div>
+<div class="mt-space-xs">
+<div class="font-label-code text-label-code font-bold text-on-surface">SEEK TAX CALIBRATION:</div>
+<div class="font-label-tag text-label-tag text-error">~8.00 ms (ACTUATOR INERTIA)</div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-tag text-label-tag">FTL WEAR LEVEL</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">memory</span>
+</div>
+<div class="mt-space-xs">
+<div class="font-label-code text-label-code font-bold text-on-surface">SOLID-STATE FTL:</div>
+<div class="font-label-tag text-label-tag text-secondary">WEAR LEVELING ACTIVE (ZERO HEAD TAX)</div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-tag text-label-tag">SECTOR ALLOCATION</span>
+<span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">view_quilt</span>
+</div>
+<div class="mt-space-xs">
+<div class="font-label-code text-label-code font-bold text-on-surface">SECTOR FORMAT:</div>
+<div class="font-label-tag text-label-tag text-primary-fixed-dim">512B NATIVE // 4KB ADVANCED FORMAT CLUSTERS</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTENT WRAPPER -->
+<div class="w-full px-gutter py-space-xl max-w-7xl mx-auto space-y-space-xl">
+<!-- ========================================================================= -->
+<!-- SECTION 1: CORE CONCEPTUAL ONBOARDING -->
+<!-- ========================================================================= -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-primary-container/20 flex items-center justify-center font-label-code text-primary font-bold">1</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            1️⃣ Core Conceptual Onboarding (The Record Player vs. The Light Switch)
+          </h2>
+</div>
+<span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container-high text-primary">THEORY 101 // SYSTEM PRIMER</span>
+</div>
+<!-- THE FOUNDATIONAL QUESTION BOX -->
+<div class="p-space-lg rounded bg-surface-container-low shadow-md relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-widest">// The Foundational Question</span>
+<p class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed">
+            Disk Geometry is the physical spatial architecture of computer storage hardware components, dictating how the operating system referee blocks out data arrangements based on whether it is reading from mechanical rotating platters or solid-state electronic chip gates.
+          </p>
+</div>
+</div>
+<!-- 3 CHARACTERISTIC CARDS -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-md rounded bg-surface-container hover:bg-surface-container-high transition-colors shadow-sm">
+<div class="flex items-center gap-space-sm mb-space-sm">
+<div class="w-8 h-8 rounded bg-error/15 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">straighten</span>
+</div>
+<span class="font-label-code text-label-code text-primary font-bold">SEEK TIME DELAY</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            • Seek Time: The physical time tax paid in milliseconds while a mechanical magnetic arm moves inward or outward to align itself directly over a target data ring track.
+          </p>
+</div>
+<div class="p-space-md rounded bg-surface-container hover:bg-surface-container-high transition-colors shadow-sm">
+<div class="flex items-center gap-space-sm mb-space-sm">
+<div class="w-8 h-8 rounded bg-tertiary/15 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</div>
+<span class="font-label-code text-label-code text-tertiary font-bold">ROTATIONAL LATENCY</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            • Rotational Latency: The delay time spent waiting for a spinning platter disk to rotate the requested data sector block right underneath the read head.
+          </p>
+</div>
+<div class="p-space-md rounded bg-surface-container hover:bg-surface-container-high transition-colors shadow-sm">
+<div class="flex items-center gap-space-sm mb-space-sm">
+<div class="w-8 h-8 rounded bg-secondary/15 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">balance</span>
+</div>
+<span class="font-label-code text-label-code text-secondary font-bold">SSD WEAR LEVELING</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            • SSD Wear Leveling: An optimization algorithm used inside flash memory to distribute writes evenly across all electronic silicon block cells to prevent them from wearing out too fast.
+          </p>
+</div>
+</div>
+<!-- CORE MOTIVATION BLOCK -->
+<div class="p-space-md rounded bg-surface-container-high shadow-inner">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px] mt-0.5">psychology</span>
+<div>
+<span class="font-label-tag text-label-tag text-primary uppercase block mb-1">CORE ARCHITECTURE MOTIVATION</span>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Operating system file systems were traditionally engineered around an aggressive physical bottleneck: moving mechanical components takes a long time, but processing electronic bits is lightning fast. A spinning Hard Disk Drive (HDD) pays a heavy physical time tax to read data scattered in different locations. Solid-State Drives (SSDs) completely skip this physical movement. The OS referee must understand these physical hardware constraints to choose file allocation policies that prevent data access lag.
+            </p>
+</div>
+</div>
+</div>
+<!-- REAL-WORLD VS EVERYDAY ANALOGY (SPLIT BENTO) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- REAL WORLD EXAMPLE CARD -->
+<div class="p-space-lg rounded bg-surface-container-low shadow-md space-y-space-sm relative">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary flex items-center gap-space-xs">
+              💻 Real-World Application Example
+            </h3>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant">CHROME LAUNCH BENCHMARK</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Imagine you are launching a massive application file like Google Chrome from an old spinning HDD. If Chrome's code sectors are fragmented (scattered in random pieces across different rings), the magnetic drive arm must violently fly back and forth, clicking audibly and causing Chrome to take 30 seconds to load. If you upgrade to a modern Samsung SSD, the drive has no moving parts. The OS fetches scattered blocks near-instantly using purely electronic memory tracking paths, slashing your load time down to a single second.
+          </p>
+<div class="pt-space-xs flex items-center gap-space-md font-label-code text-label-code text-outline">
+<div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-error"></span> HDD Seek: ~30s (Thrashing)</div>
+<div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-tertiary"></span> SSD Direct Bus: ~1s</div>
+</div>
+</div>
+<!-- EVERYDAY 5TH GRADER EXAMPLE -->
+<div class="p-space-lg rounded bg-surface-container-low shadow-md space-y-space-sm relative">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-tertiary flex items-center gap-space-xs">
+              🎒 Everyday Example (5th Grader)
+            </h3>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant">MENTAL MODEL</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Reading data from an old-school Hard Disk Drive is exactly like playing music on a vinyl Record Player. If you want to listen to track 1 and then instantly jump to track 8, you have to wait for the physical metal arm to lift up, slowly travel across the record surface, and drop its needle into the right groove. Reading data from a modern Solid-State Drive is like flipping a Light Switch! There is no arm, no spinning plate, and no travel time—you click the switch and the light turns on instantly anywhere in the room!
+          </p>
+<div class="pt-space-xs flex items-center gap-space-md font-label-code text-label-code text-outline">
+<span class="text-secondary font-bold">Turntable Needle (Arm Delay)</span>
+<span class="text-outline-variant">vs.</span>
+<span class="text-primary font-bold">Lightswitch (Speed of Light)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 2: STRUCTURAL DISSECTION -->
+<!-- ========================================================================= -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-primary-container/20 flex items-center justify-center font-label-code text-primary font-bold">2</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            2️⃣ Structural Dissection (Inside the Platter Tracks vs. Silicon Blocks)
+          </h2>
+</div>
+<span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container-high text-tertiary">PHYSICAL GEOMETRY SCHEMATIC</span>
+</div>
+<!-- SPLIT PANE HARDWARE BLUEPRINTS -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- LEFT: THE SPINNING DISK MECHANICS MAP -->
+<div class="p-space-lg rounded bg-surface-container shadow-md flex flex-col justify-between space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">disc_full</span>
+<span class="font-label-code text-label-code font-bold text-primary">THE SPINNING DISK MECHANICS MAP</span>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-highest text-tertiary">ROTATING PLATTER</span>
+</div>
+<!-- RICH INTERACTIVE SVG DISK SCHEMATIC -->
+<div class="w-full flex items-center justify-center py-space-sm bg-surface-container-lowest/60 rounded">
+<svg class="w-full max-w-sm h-auto select-none" viewbox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Platter Metallic Shimmer Gradient -->
+<radialgradient cx="45%" cy="50%" id="platterGrad" r="55%">
+<stop offset="0%" stop-color="#1e293b"></stop>
+<stop offset="60%" stop-color="#0f172a"></stop>
+<stop offset="100%" stop-color="#020617"></stop>
+</radialgradient>
+<lineargradient id="armGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#94a3b8"></stop>
+<stop offset="100%" stop-color="#475569"></stop>
+</lineargradient>
+</defs>
+<!-- Platter Base Disk -->
+<circle cx="180" cy="160" fill="url(#platterGrad)" opacity="0.8" r="130" stroke="#38bdf8" stroke-dasharray="4 2" stroke-width="1.5"></circle>
+<!-- Concentric Tracks -->
+<circle cx="180" cy="160" fill="none" opacity="0.45" r="105" stroke="#00d2ff" stroke-width="1.2"></circle>
+<circle cx="180" cy="160" fill="none" opacity="0.6" r="80" stroke="#38bdf8" stroke-width="1.2"></circle>
+<circle cx="180" cy="160" fill="none" opacity="0.75" r="55" stroke="#69f6b9" stroke-width="1.2"></circle>
+<!-- Pie-Shaped Sectors Rays -->
+<line stroke="#334155" stroke-dasharray="2 3" stroke-width="1" x1="180" x2="180" y1="30" y2="290"></line>
+<line stroke="#334155" stroke-dasharray="2 3" stroke-width="1" x1="50" x2="310" y1="160" y2="160"></line>
+<line stroke="#334155" stroke-dasharray="2 3" stroke-width="1" x1="88" x2="272" y1="68" y2="252"></line>
+<line stroke="#334155" stroke-dasharray="2 3" stroke-width="1" x1="88" x2="272" y1="252" y2="68"></line>
+<!-- Highlighted Sector Arc (Track 1) -->
+<path d="M 180,80 A 80,80 0 0,1 236.5,103.5 L 219,121.2 A 55,55 0 0,0 180,105 Z" fill="#00d2ff" fill-opacity="0.25" stroke="#00d2ff" stroke-width="1.5"></path>
+<!-- Spindle Core Pivot -->
+<circle cx="180" cy="160" fill="#090d16" r="26" stroke="#a5e7ff" stroke-width="2"></circle>
+<circle cx="180" cy="160" fill="#00d2ff" r="10"></circle>
+<circle cx="180" cy="160" fill="#ffffff" r="3"></circle>
+<!-- Actuator Base & Pivot Assembly -->
+<circle cx="340" cy="50" fill="#1e293b" r="22" stroke="#859399" stroke-width="1.5"></circle>
+<circle cx="340" cy="50" fill="#334155" r="9"></circle>
+<circle cx="340" cy="50" fill="#a5e7ff" r="4"></circle>
+<!-- Actuator Arm -->
+<polygon fill="url(#armGrad)" points="340,46 338,54 200,105 204,101" stroke="#64748b" stroke-width="1"></polygon>
+<!-- Read/Write Head Tip & Glow Over Track 1 Sector -->
+<rect fill="#69f6b9" height="7" rx="1.5" stroke="#ffffff" stroke-width="1" width="10" x="194" y="99"></rect>
+<circle cx="199" cy="102" fill="#6ffbbe" r="3">
+<animate attributename="opacity" dur="1.2s" repeatcount="indefinite" values="0.4;1;0.4"></animate>
+</circle>
+<!-- Dynamic Rotation Arrows on Platter -->
+<path d="M 180,45 A 115,115 0 0,1 275,100" fill="none" stroke="#69f6b9" stroke-linecap="round" stroke-width="2"></path>
+<polygon fill="#69f6b9" points="275,100 270,90 282,93"></polygon>
+<!-- Labels Overlay -->
+<text fill="#a5e7ff" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle" x="180" y="24">Track 0 (Outer)</text>
+<text fill="#00d2ff" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle" x="180" y="74">Track 1 (Selected)</text>
+<text fill="#dfe2f1" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle" x="180" y="150">Spindle Core</text>
+<text fill="#859399" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle" x="340" y="88">Actuator Servo</text>
+<text fill="#69f6b9" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" x="140" y="98">R/W Head Tip</text>
+</svg>
+</div>
+<!-- DISK COMPONENT PILLS -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs font-label-tag text-label-tag text-center">
+<span class="p-1.5 rounded bg-surface-container-high text-primary">[Concentric Tracks]</span>
+<span class="p-1.5 rounded bg-surface-container-high text-tertiary">[Pie-Shaped Sectors]</span>
+<span class="p-1.5 rounded bg-surface-container-high text-on-surface-variant">[Spinning Spindle Core]</span>
+<span class="p-1.5 rounded bg-surface-container-high text-secondary">[Actuator Read/Write Head Arm]</span>
+</div>
+</div>
+<!-- RIGHT: THE SOLID-STATE FLASH MATRIX -->
+<div class="p-space-lg rounded bg-surface-container shadow-md flex flex-col justify-between space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">grid_view</span>
+<span class="font-label-code text-label-code font-bold text-secondary">THE SOLID-STATE FLASH MATRIX</span>
+</div>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-highest text-primary">NAND GATE ARRAY</span>
+</div>
+<!-- FLASH SILICON MATRIX SIMULATOR DISPLAY -->
+<div class="w-full p-space-md bg-surface-container-lowest/80 rounded space-y-space-sm">
+<div class="flex items-center justify-between font-label-tag text-label-tag text-outline pb-space-xs">
+<span class="text-primary">Electronic Page Row Index</span>
+<span class="text-tertiary">Block Erase Circuit Fence</span>
+<span class="text-secondary">Wear Leveling Write-Counter Register</span>
+</div>
+<!-- SILICON BLOCKS GRID -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs">
+<!-- Block 0x01 -->
+<div class="p-space-xs rounded bg-surface-container-high hover:bg-surface-container-highest transition-colors">
+<div class="flex justify-between items-center text-[10px] font-label-code text-primary">
+<span>BLK_0x01</span>
+<span class="text-tertiary">99.8%</span>
+</div>
+<div class="font-label-code text-[12px] font-bold text-on-surface mt-1">142 writes</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+<span class="text-[9px] font-label-tag text-outline mt-1 block">PG: 0x00-0x3F</span>
+</div>
+<!-- Block 0x02 -->
+<div class="p-space-xs rounded bg-surface-container-high hover:bg-surface-container-highest transition-colors">
+<div class="flex justify-between items-center text-[10px] font-label-code text-primary">
+<span>BLK_0x02</span>
+<span class="text-tertiary">99.9%</span>
+</div>
+<div class="font-label-code text-[12px] font-bold text-on-surface mt-1">139 writes</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full w-[43%]"></div>
+</div>
+<span class="text-[9px] font-label-tag text-outline mt-1 block">PG: 0x40-0x7F</span>
+</div>
+<!-- Block 0x03 -->
+<div class="p-space-xs rounded bg-surface-container-high hover:bg-surface-container-highest transition-colors">
+<div class="flex justify-between items-center text-[10px] font-label-code text-primary">
+<span>BLK_0x03</span>
+<span class="text-tertiary">99.8%</span>
+</div>
+<div class="font-label-code text-[12px] font-bold text-on-surface mt-1">141 writes</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full w-[44%]"></div>
+</div>
+<span class="text-[9px] font-label-tag text-outline mt-1 block">PG: 0x80-0xBF</span>
+</div>
+<!-- Block 0x04 -->
+<div class="p-space-xs rounded bg-surface-container-high hover:bg-surface-container-highest transition-colors">
+<div class="flex justify-between items-center text-[10px] font-label-code text-primary">
+<span>BLK_0x04</span>
+<span class="text-tertiary">99.7%</span>
+</div>
+<div class="font-label-code text-[12px] font-bold text-on-surface mt-1">145 writes</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full w-[48%]"></div>
+</div>
+<span class="text-[9px] font-label-tag text-outline mt-1 block">PG: 0xC0-0xFF</span>
+</div>
+<!-- Block 0x05 -->
+<div class="p-space-xs rounded bg-surface-container-high hover:bg-surface-container-highest transition-colors">
+<div class="flex justify-between items-center text-[10px] font-label-code text-primary">
+<span>BLK_0x05</span>
+<span class="text-tertiary">99.9%</span>
+</div>
+<div class="font-label-code text-[12px] font-bold text-on-surface mt-1">138 writes</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-secondary h-full w-[42%]"></div>
+</div>
+<span class="text-[9px] font-label-tag text-outline mt-1 block">PG: 0x100-0x13F</span>
+</div>
+<!-- Block 0x06 (Target Active Write) -->
+<div class="p-space-xs rounded bg-surface-container-high shadow-[0_0_12px_rgba(105,246,185,0.2)]">
+<div class="flex justify-between items-center text-[10px] font-label-code text-tertiary">
+<span class="font-bold">BLK_0x06</span>
+<span class="text-tertiary animate-pulse">ACTIVE</span>
+</div>
+<div class="font-label-code text-[12px] font-bold text-tertiary mt-1">137 writes</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-tertiary h-full w-[41%]"></div>
+</div>
+<span class="text-[9px] font-label-tag text-tertiary mt-1 block">NEXT FTL TARGET</span>
+</div>
+<!-- Block 0x07 -->
+<div class="p-space-xs rounded bg-surface-container-high hover:bg-surface-container-highest transition-colors">
+<div class="flex justify-between items-center text-[10px] font-label-code text-primary">
+<span>BLK_0x07</span>
+<span class="text-tertiary">99.8%</span>
+</div>
+<div class="font-label-code text-[12px] font-bold text-on-surface mt-1">140 writes</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full w-[44%]"></div>
+</div>
+<span class="text-[9px] font-label-tag text-outline mt-1 block">PG: 0x180-0x1BF</span>
+</div>
+<!-- Block 0x08 -->
+<div class="p-space-xs rounded bg-surface-container-high hover:bg-surface-container-highest transition-colors">
+<div class="flex justify-between items-center text-[10px] font-label-code text-primary">
+<span>BLK_0x08</span>
+<span class="text-tertiary">99.8%</span>
+</div>
+<div class="font-label-code text-[12px] font-bold text-on-surface mt-1">143 writes</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full w-[46%]"></div>
+</div>
+<span class="text-[9px] font-label-tag text-outline mt-1 block">PG: 0x1C0-0x1FF</span>
+</div>
+</div>
+<!-- FTL CONTROLLER STATUS STRIP -->
+<div class="p-space-xs rounded bg-surface-container-high flex items-center justify-between font-label-tag text-[11px]">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="text-on-surface">FTL Dynamic Allocator:</span>
+<span class="text-tertiary font-bold">Wear Leveling Active</span>
+</div>
+<span class="text-outline">Variance: &lt; 2.1% across 16,384 blocks</span>
+</div>
+</div>
+<div class="font-label-tag text-label-tag text-secondary bg-surface-container-lowest px-space-sm py-space-xs rounded flex items-center justify-between">
+<span>CHIP INTERFACE: PCIE GEN4 x4 NVME</span>
+<span>CELL TOPOLOGY: 3D TLC SILICON GATES</span>
+</div>
+</div>
+</div>
+<!-- TEXT ROWS: STRUCTURAL DEFINITIONS -->
+<div class="space-y-space-sm pt-space-xs">
+<!-- ROW 1: PLATTER & SECTOR -->
+<div class="p-space-md rounded bg-surface-container-low shadow-sm space-y-space-xs">
+<p class="font-body-md text-body-md text-on-surface font-semibold">
+            • Magnetic Platter &amp; Sector: The physical metal disk coated in magnetic material that spins at high speeds (e.g., 7200 RPM), sliced into tiny 512-byte arc segments called sectors.
+          </p>
+<div class="p-space-xs rounded bg-surface-container flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">terminal</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              💻 Real-World Application Example: When an operating system creates a file system on an HDD, it groups these sectors into 4KB clusters to match the memory pages we studied in the paging modules.
+            </p>
+</div>
+</div>
+<!-- ROW 2: ACTUATOR ARM -->
+<div class="p-space-md rounded bg-surface-container-low shadow-sm space-y-space-xs">
+<p class="font-body-md text-body-md text-on-surface font-semibold">
+            • Actuator Arm Head Mechanics: The precision mechanical servo motor that sweeps the read/write tip across tracks, acting as a massive bottleneck due to inertia rules.
+          </p>
+<div class="p-space-xs rounded bg-surface-container flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">terminal</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              💻 Real-World Application Example: If a background tool like Windows Defender runs a heavy virus scan across random disk sectors, the actuator arm becomes trapped in a continuous seek loop, locking out other apps.
+            </p>
+</div>
+</div>
+<!-- ROW 3: FTL -->
+<div class="p-space-md rounded bg-surface-container-low shadow-sm space-y-space-xs">
+<p class="font-body-md text-body-md text-on-surface font-semibold">
+            • Flash Translation Layer (FTL): The specialized built-in micro-controller software inside an SSD that fools the OS kernel into thinking it is talking to a standard sector disk, while secretly remapping blocks electronically to equalize wear.
+          </p>
+<div class="p-space-xs rounded bg-surface-container flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">terminal</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              💻 Real-World Application Example: When Spotify writes temporary music cache data to an SSD, the FTL intercept redirects the write to a fresh, lightly-used silicon block to extend the life of your drive.
+            </p>
+</div>
+</div>
+</div>
+<!-- FOOTER NOTE: SCHOOL CLASSROOM LIBRARY -->
+<div class="p-space-md rounded bg-surface-container-high shadow-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded bg-tertiary-container/20 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[20px]">local_library</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-tertiary mb-1">🎒 Everyday Example</h4>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              Let's use a school classroom library comparison! An HDD platter layout is a giant rotating carousel bookrack. If the books you need are scattered on opposite sides, you have to wait for the carousel to spin around and use a ladder to reach them. An SSD flash layout is an array of personal student mail cubbies on a wall. Every cubby can be reached at the exact same millisecond by just looking at the wall, with zero waiting for a wheel to spin!
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 3: LINEAR OPERATIONAL PIPELINE -->
+<!-- ========================================================================= -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-primary-container/20 flex items-center justify-center font-label-code text-primary font-bold">3</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            3️⃣ Linear Operational Pipeline (The Total Disk Access Time Pipeline)
+          </h2>
+</div>
+<span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container-high text-primary">LATENCY BREAKDOWN // T_ACCESS</span>
+</div>
+<!-- TIMELINE TRACKER COMPONENT (INTERACTIVE) -->
+<div class="p-space-lg rounded bg-surface-container shadow-md space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<span class="font-label-code text-label-code font-bold text-primary">
+            EXECUTION PIPELINE: 1. Command Request ➔ 2. Seek Arm Alignment ➔ 3. Rotational Spin Delay ➔ 4. Data Sector Transfer
+          </span>
+<span class="font-label-tag text-label-tag px-space-sm py-0.5 rounded bg-surface-container-highest text-tertiary" id="pipelineStepIndicator">
+            STAGE 1 OF 4 ACTIVE
+          </span>
+</div>
+<!-- 4 INTERACTIVE NODES BAR -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm relative">
+<!-- Step 1 Node -->
+<div class="p-space-md rounded bg-surface-container-high transition-all shadow-md" id="stepCard-1">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-primary text-on-primary">NODE 01</span>
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">1. Command Request</div>
+<div class="font-label-code text-label-code text-outline mt-1">Kernel Driver I/O</div>
+<div class="text-[11px] font-label-tag text-tertiary mt-space-sm">OVERHEAD: ~0.05 ms</div>
+</div>
+<!-- Step 2 Node -->
+<div class="p-space-md rounded bg-surface-container-low transition-all shadow-sm" id="stepCard-2">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-highest text-outline">NODE 02</span>
+<span class="material-symbols-outlined text-error text-[18px]">tune</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">2. Seek Arm Alignment</div>
+<div class="font-label-code text-label-code text-outline mt-1">Actuator Radial Travel</div>
+<div class="text-[11px] font-label-tag text-error mt-space-sm">TAX: ~8.00 ms (PHYSICAL)</div>
+</div>
+<!-- Step 3 Node -->
+<div class="p-space-md rounded bg-surface-container-low transition-all shadow-sm" id="stepCard-3">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-highest text-outline">NODE 03</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">rotate_right</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">3. Rotational Spin Delay</div>
+<div class="font-label-code text-label-code text-outline mt-1">Wait for Sector Angle</div>
+<div class="text-[11px] font-label-tag text-secondary mt-space-sm">DELAY: ~4.17 ms (7200 RPM)</div>
+</div>
+<!-- Step 4 Node -->
+<div class="p-space-md rounded bg-surface-container-low transition-all shadow-sm" id="stepCard-4">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-highest text-outline">NODE 04</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">download_for_offline</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">4. Data Sector Transfer</div>
+<div class="font-label-code text-label-code text-outline mt-1">Magnetic Flux to Bits</div>
+<div class="text-[11px] font-label-tag text-tertiary mt-space-sm">BUS READ: ~0.10 ms</div>
+</div>
+</div>
+<!-- SEQUENTIAL PROCESS RULES -->
+<div class="p-space-md rounded bg-surface-container-lowest/80 space-y-space-sm font-body-sm text-body-sm">
+<p class="text-on-surface">
+<strong class="text-primary font-label-code">1. Command Request:</strong> An active application process requests a file block, prompting the kernel referee to translate the file name into physical sector sector block coordinates.
+          </p>
+<p class="text-on-surface">
+<strong class="text-error font-label-code">2. Seek Arm Alignment:</strong> The physical drive controller energizes the actuator arm servo, forcing the read head to slide across concentric tracks until it hovers directly above the target track ring.
+          </p>
+<p class="text-on-surface">
+<strong class="text-secondary font-label-code">3. Rotational Spin Delay:</strong> The arm sits completely stationary over the track, waiting patiently for the spindle motor to spin the target circular sector slice directly under the head tip.
+          </p>
+<p class="text-on-surface">
+<strong class="text-tertiary font-label-code">4. Data Sector Transfer:</strong> The magnetic head reads the change in electronic fields as the sector passes underneath, converting the raw waves into binary bits to pass back to User Mode.
+          </p>
+</div>
+</div>
+<!-- PERFORMANCE CALCULATION ACTIVITY & TARGET RANGE ANALOGY -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- CALCULATION CARD -->
+<div class="p-space-lg rounded bg-surface-container-low shadow-md space-y-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary flex items-center gap-space-xs">
+              💻 Disk Performance Calculation Activity
+            </h3>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container text-tertiary">CHALKBOARD LAB</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Present a live data metric matrix on the chalkboard ➔ Provide sample tracking variables for a spinning disk: Seek Time = 8ms, Rotational Speed = 7200 RPM (Average Latency = 4.17ms), Transfer Rate = 0.1ms ➔ Have students calculate total access time for a Sequential Read pattern [8 + 4.17 + 0.1 = 12.27ms for block 1, then near-zero for block 2] ➔ Contrast this with a Random Read pattern where EVERY block pays the 12.27ms tax ➔ Prove mathematically why defragmenting files was vital for old HDDs but completely useless for SSDs.
+          </p>
+<div class="p-space-sm rounded bg-surface-container font-label-code text-label-code space-y-1">
+<div class="text-primary font-bold">// FORMULA: T_Access = T_Seek + T_Rotate + T_Transfer</div>
+<div class="text-on-surface">Sequential (100 blocks): 12.27ms + (99 * 0.1ms) = ~22.17 ms total</div>
+<div class="text-error font-bold">Random (100 blocks): 100 * 12.27ms = 1,227 ms (1.23 seconds!)</div>
+</div>
+</div>
+<!-- TARGET RANGE ANALOGY CARD -->
+<div class="p-space-lg rounded bg-surface-container-low shadow-md space-y-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-secondary flex items-center gap-space-xs">
+              🎒 Target Range Analogy
+            </h3>
+<span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container text-outline">PIPELINE METAPHOR</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            A shooter loads a rifle cartridge (Command Request) ➔ The shooter swings the gun barrel horizontally to line up their scope with a moving target track (Seek Time Alignment) ➔ The shooter stops moving the gun, waiting for the rotating target wheel to spin the bullseye mark right into their crosshairs (Rotational Delay) ➔ The target hits the line and the bullet passes through the target sheet (Data Sector Transfer).
+          </p>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs font-label-tag text-label-tag">
+<div class="p-space-xs rounded bg-surface-container text-outline">
+<span class="text-primary block font-bold">Barrel Aim</span>
+<span>Seek Alignment</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container text-outline">
+<span class="text-secondary block font-bold">Wheel Rotation</span>
+<span>Rotational Delay</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 4: PARADIGM SHOWDOWN & GUARDRAILS -->
+<!-- ========================================================================= -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-primary-container/20 flex items-center justify-center font-label-code text-primary font-bold">4</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            4️⃣ Paradigm Showdown &amp; Guardrails
+          </h2>
+</div>
+<span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container-high text-error">CRITICAL ENGINEERING PROTOCOLS</span>
+</div>
+<!-- SIDE-BY-SIDE COMPARATIVE TABLE -->
+<div class="p-space-lg rounded bg-surface-container shadow-md space-y-space-md overflow-x-auto">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+            Mechanical Hard Drive (HDD Rotator) vs Solid-State Drive (SSD Flash Matrix)
+          </h3>
+<span class="font-label-tag text-label-tag px-space-sm py-1 rounded bg-surface-container-high text-primary">
+            SPECIFICATION MATRIX
+          </span>
+</div>
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-lowest text-outline font-label-code text-label-code">
+<th class="p-space-sm rounded-l">EVALUATION METRIC</th>
+<th class="p-space-sm text-primary">Mechanical Hard Drive (HDD Rotator)</th>
+<th class="p-space-sm text-secondary rounded-r">Solid-State Drive (SSD Flash Matrix)</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="bg-surface-container-high/40 hover:bg-surface-container-high transition-colors">
+<td class="p-space-sm font-label-code text-on-surface font-semibold">Moving Parts</td>
+<td class="p-space-sm text-on-surface-variant">Contains fragile mechanical arms and spinning plates</td>
+<td class="p-space-sm text-tertiary">Made entirely of silent electronic silicon gates</td>
+</tr>
+<tr class="bg-surface-container-low/40 hover:bg-surface-container-high transition-colors">
+<td class="p-space-sm font-label-code text-on-surface font-semibold">Access Time profile</td>
+<td class="p-space-sm text-error font-medium">Highly variable depending on data locations</td>
+<td class="p-space-sm text-tertiary font-medium">Consistently fast regardless of fragmentation</td>
+</tr>
+<tr class="bg-surface-container-high/40 hover:bg-surface-container-high transition-colors">
+<td class="p-space-sm font-label-code text-on-surface font-semibold">Ideal Layout Optimization</td>
+<td class="p-space-sm text-on-surface-variant">Obsesses over sequential contiguous blocks to avoid head movement</td>
+<td class="p-space-sm text-secondary">Thrives on random scattering managed by wear-leveling microchips</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- COMMON MISTAKES WARNING BANNER -->
+<div class="p-space-md rounded bg-error-container/20 shadow-md relative overflow-hidden">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded bg-error/20 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<div class="space-y-1">
+<span class="font-label-tag text-label-tag text-error uppercase font-bold tracking-wider">
+              Common Mistakes Warning Banner
+            </span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              Do not defragment a modern Solid-State Drive! A very common mistake beginner users make is running old disk defragmenter tools on their fresh SSDs. Defragmenting forces thousands of heavy, unnecessary data moves to arrange files sequentially. Since SSDs don't have a physical arm, this sequential arrangement gives you zero extra speed, and completely wastes the lifespan of your silicon block gates!
+            </p>
+</div>
+</div>
+</div>
+<!-- INTERVIEW TAKEAWAY PANEL -->
+<div class="p-space-lg rounded bg-surface-container-low shadow-md space-y-space-sm">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">school</span>
+<h3 class="font-headline-sm text-headline-sm">Interview Takeaway Panel</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Disk geometry dictates how the operating system coordinates long-term storage layout structures. Mechanical drives achieve peak performance only when data is stored in clean sequential streaks, avoiding head movement penalties. Solid-state drives deliver uniform access speeds across the entire block array, shifted entirely by the internal wear-leveling microchip layout. If a storage controller script breaks or drops its write boundary limits, it triggers a fatal disk exception write error, locking your files into a protected read-only safe state (just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling down!).
+        </p>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs font-label-tag text-label-tag text-outline">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary">#DiskGeometry</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary">#SeekTimeTax</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-secondary">#FTLWearLeveling</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-error">#ReadOnlyFallback</span>
+</div>
+</div>
+<!-- MODULE COMPLETION FOOTER BAR -->
+<div class="p-space-lg rounded bg-surface-container-lowest shadow-2xl flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div>
+<div class="font-label-code text-label-code font-bold text-tertiary">
+              MODULE 16 COMPLETE // 100% MASTERY • CREDITS ACCREDITED
+            </div>
+<div class="font-label-tag text-label-tag text-on-surface-variant">
+              CS 301 KERNEL RUNTIME EVAL PASS // RISC-V HARVARD/VON-NEUMANN STORAGE BUS OK
+            </div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm w-full md:w-auto">
+<button class="flex-1 md:flex-none px-space-md py-space-sm rounded bg-surface-container-high text-on-surface hover:text-primary font-label-code text-label-code transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+            📖 Review L16 Notes
+          </button>
+<button class="flex-1 md:flex-none px-space-md py-space-sm rounded bg-primary-container text-on-primary-container hover:shadow-[0_0_20px_rgba(0,210,255,0.4)] font-label-code text-label-code font-bold transition-all flex items-center justify-center gap-1">
+            Advance to Module 17 (File Systems &amp; Inodes) ➔
+          </button>
+</div>
+</div>
+</section>
+</div>
+<!-- CLIENT-SIDE SCRIPT FOR INTERACTIVE PIPELINE STEPPING -->
+<script>
+    (function() {
+      let currentStep = 1;
+      const totalSteps = 4;
+      const indicator = document.getElementById('pipelineStepIndicator');
+      const stepBtn = document.getElementById('stepPipelineBtn');
+      const resetBtn = document.getElementById('resetSimulatorBtn') || document.getElementById('resetSimBtn');
+
+      function updatePipelineUI() {
+        for (let i = 1; i <= totalSteps; i++) {
+          const card = document.getElementById('stepCard-' + i);
+          if (!card) continue;
+          if (i === currentStep) {
+            card.classList.remove('bg-surface-container-low', 'shadow-sm');
+            card.classList.add('bg-surface-container-high', 'shadow-[0_0_16px_-2px_rgba(0,210,255,0.25)]');
+          } else {
+            card.classList.remove('bg-surface-container-high', 'shadow-[0_0_16px_-2px_rgba(0,210,255,0.25)]');
+            card.classList.add('bg-surface-container-low', 'shadow-sm');
+          }
+        }
+        if (indicator) {
+          indicator.textContent = 'STAGE ' + currentStep + ' OF ' + totalSteps + ' ACTIVE';
+        }
+      }
+
+      if (stepBtn) {
+        stepBtn.addEventListener('click', function() {
+          currentStep = (currentStep % totalSteps) + 1;
+          updatePipelineUI();
+        });
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', function() {
+          currentStep = 1;
+          updatePipelineUI();
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>
