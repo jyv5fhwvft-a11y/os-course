@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-variant":"#313540","on-primary-fixed":"#001f28","primary-container":"#00d2ff","on-tertiary-fixed-variant":"#005236","secondary":"#ddb7ff","inverse-primary":"#00677f","secondary-container":"#6f00be","on-secondary-fixed":"#2c0051","outline-variant":"#3c494e","background":"#0f131d","on-primary-container":"#00566a","primary":"#a5e7ff","surface-tint":"#47d6ff","on-primary":"#003543","on-tertiary-container":"#005b3d","on-error":"#690005","surface-container-high":"#262a35","on-background":"#dfe2f1","surface-container-low":"#171b26","surface-container-lowest":"#0a0e18","outline":"#859399","surface-container":"#1c1f2a","tertiary-container":"#48d99e","on-error-container":"#ffdad6","on-secondary-container":"#d6a9ff","on-tertiary":"#003824","primary-fixed":"#b6ebff","on-secondary":"#490080","inverse-on-surface":"#2c303b","on-primary-fixed-variant":"#004e60","inverse-surface":"#dfe2f1","surface-bright":"#353944","primary-fixed-dim":"#47d6ff","surface-container-highest":"#313540","tertiary":"#69f6b9","secondary-fixed":"#f0dbff","surface":"#0f131d","error":"#ffb4ab","secondary-fixed-dim":"#ddb7ff","tertiary-fixed-dim":"#4edea3","error-container":"#93000a","surface-dim":"#0f131d","on-surface":"#dfe2f1","on-tertiary-fixed":"#002113","on-surface-variant":"#bbc9cf","tertiary-fixed":"#6ffbbe","on-secondary-fixed-variant":"#6900b3"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter-mobile":"1rem","space-md":"1rem","space-xl":"2.5rem","margin":"3rem","space-xs":"0.25rem","space-lg":"1.5rem","margin-mobile":"1.25rem","space-sm":"0.5rem","gutter":"1.5rem"},fontFamily:{"headline-md":["Space Grotesk"],"headline-xl":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-tag":["JetBrains Mono"],"headline-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"label-code":["JetBrains Mono"],"body-md":["Plus Jakarta Sans"]},fontSize:{"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}],"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low/40"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded bg-primary-container flex items-center justify-center text-on-primary-fixed shadow-[0_0_12px_rgba(0,210,255,0.45)]"><span class="material-symbols-outlined text-[20px]">terminal</span></div><div><div class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">KERNEL LAB</div><div class="font-label-tag text-label-tag text-on-surface-variant tracking-wider">SYSTEMS STUDIO</div></div></div><span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container-high text-tertiary">v4.2.0</span></div><div class="px-space-md pt-space-lg pb-space-xs"><div class="flex items-center justify-between mb-space-sm"><span class="font-label-tag text-label-tag tracking-wider uppercase text-on-surface-variant">Curriculum Units</span><span class="font-label-tag text-label-tag text-tertiary">11/14 ACTIVE</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_0_12px_rgba(0,210,255,0.3)]"><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 rounded transition-all group bg-primary-container text-on-primary-container font-semibold shadow-[0_0_12px_rgba(0,210,255,0.3)]" data-path="classic-synchronization-and-deadlocks" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-primary">L11</span><span class="font-body-sm text-body-sm truncate">Deadlocks &amp; Sync</span></div><span class="font-label-tag text-label-tag px-1.5 py-0.5 rounded bg-primary-container/20 text-primary border border-primary/30">ACTIVE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="race-conditions" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L10</span><span class="font-body-sm text-body-sm truncate">Race Conditions</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="threads-and-concurrency" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L09</span><span class="font-body-sm text-body-sm truncate">Threads &amp; Concurrency</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="cpu-scheduling-ii" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L08</span><span class="font-body-sm text-body-sm truncate">CPU Scheduling II</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="cpu-scheduling-i" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L07</span><span class="font-body-sm text-body-sm truncate">CPU Scheduling I</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="process-and-switch" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L06</span><span class="font-body-sm text-body-sm truncate">Process &amp; Switch</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="what-is-a-process" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L05</span><span class="font-body-sm text-body-sm truncate">What Is a Process?</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="the-boot-process" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L04</span><span class="font-body-sm text-body-sm truncate">The Boot Process</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="kernel-design" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L03</span><span class="font-body-sm text-body-sm truncate">Kernel Design</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="pcb-and-context-switch" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L02</span><span class="font-body-sm text-body-sm truncate">PCB &amp; Context Sw</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="os-components" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L01</span><span class="font-body-sm text-body-sm truncate">OS Components</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="course-intro" href="#"><div class="flex items-center gap-space-sm"><span class="font-label-code text-label-code text-on-surface-variant">L00</span><span class="font-body-sm text-body-sm truncate">Course Intro</span></div><span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span></a></nav></div><div class="px-space-md pt-space-md pb-space-xs"><div class="font-label-tag text-label-tag tracking-wider uppercase text-on-surface-variant mb-space-sm">Telemetry &amp; Tools</div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-high text-primary font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="register-inspector" href="#"><span class="material-symbols-outlined text-[18px] text-primary">developer_board</span><span class="font-body-sm text-body-sm">Register Inspector</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="syscall-debugger" href="#"><span class="material-symbols-outlined text-[18px] text-secondary">bug_report</span><span class="font-body-sm text-body-sm">Syscall Debugger</span></a></nav></div></div><div class="p-space-md bg-surface-container-low/60"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-tag text-label-tag text-on-surface-variant">KERNEL ENGINE</span><span class="flex items-center gap-1 font-label-tag text-label-tag text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>ONLINE</span></div><div class="font-label-code text-label-code text-on-surface-variant truncate">RISC-V 64-bit Emulator</div><div class="w-full bg-surface-container-high h-1 rounded mt-space-xs overflow-hidden"><div class="bg-tertiary h-full w-[85%]"></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 z-40 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[20px]">school</span><span class="font-headline-sm text-headline-sm text-on-surface">CS 301 Systems Architecture</span></div><div class="hidden xl:flex items-center gap-space-md"><span class="font-label-code text-label-code px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>POLLER 1000 Hz</span><span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant">MODULE 11 / 14</span><span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-secondary-container/30 text-secondary">DIFF: ADVANCED</span></div></div><div class="flex items-center gap-space-lg"><div class="hidden md:flex items-center gap-space-sm"><div class="text-right"><div class="font-label-tag text-label-tag text-on-surface-variant">SYLLABUS PROGRESS</div><div class="font-label-code text-label-code text-tertiary font-semibold">85% COMPLETED</div></div><div class="w-24 bg-surface-container-high h-2 rounded overflow-hidden"><div class="bg-tertiary h-full w-[85%]"></div></div></div><div class="flex items-center gap-space-sm"><button class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div><div class="w-full px-gutter py-space-xs bg-surface-container-lowest/90 overflow-x-auto flex items-center gap-space-lg shadow-inner"><div class="flex items-center gap-space-xs whitespace-nowrap"><span class="material-symbols-outlined text-error text-[16px]">warning</span><span class="font-label-tag text-label-tag text-error font-semibold">CONCURRENCY THREAT: DEADLOCK RISK (CIRCULAR WAIT)</span></div><div class="flex items-center gap-space-xs whitespace-nowrap"><span class="material-symbols-outlined text-primary text-[16px]">hub</span><span class="font-label-tag text-label-tag text-primary">ACTIVE THREADS: 5 PHILOSOPHERS</span></div><div class="flex items-center gap-space-xs whitespace-nowrap"><span class="material-symbols-outlined text-secondary text-[16px]">data_object</span><span class="font-label-tag text-label-tag text-secondary">SEMAPHORE SLOTS: [EMPTY: 3, FULL: 2]</span></div><div class="flex items-center gap-space-xs whitespace-nowrap"><span class="material-symbols-outlined text-primary-fixed-dim text-[16px]">lock</span><span class="font-label-tag text-label-tag text-primary-fixed-dim">MUTEX LOCK SET: [FORK_0..FORK_4]</span></div></div></header><main class="relative pt-24 w-full px-gutter min-h-screen bg-surface"><div class="flex flex-col w-full">
+<!-- TOP LESSON HERO & TELEMETRY BANNER -->
+<header class="relative mb-space-xl overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-xl lg:p-space-lg">
+<div class="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-gradient-to-br from-primary/10 via-secondary/5 to-transparent blur-3xl"></div>
+<div class="pointer-events-none absolute -bottom-16 -left-16 h-72 w-72 rounded-full bg-gradient-to-tr from-error/10 via-transparent to-transparent blur-2xl"></div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<!-- Tag Meta -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="h-2 w-2 rounded-full bg-primary-container"></span>
+<span class="font-label-tag text-label-tag tracking-wider text-primary">LESSON 11 // ACADEMIC RUNTIME SERIES • CS 301 CORE KERNEL LABS</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-tag text-label-tag rounded bg-surface-container-high px-space-xs py-0.5 text-on-surface-variant">RISC-V 64 ARCH</span>
+<span class="font-label-tag text-label-tag rounded bg-error-container/40 px-space-xs py-0.5 text-error">CRITICAL CONDITION</span>
+</div>
+</div>
+<!-- Title & Subtitle -->
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-lg text-headline-lg font-bold tracking-tight text-on-surface lg:text-headline-xl">
+          🏷️ OPERATING SYSTEMS: L11 - Classic Synchronization Problems &amp; Deadlocks
+        </h1>
+<p class="max-w-4xl font-body-lg text-body-lg text-on-surface-variant">
+          An interactive primer designed for systems novices: dissecting shared buffer pipelines, semaphore token signaling, the Coffman conditions matrix, and circular wait fracture protocols.
+        </p>
+</div>
+<!-- Telemetry Status Pills Ribbon -->
+<div class="grid grid-cols-1 gap-space-sm sm:grid-cols-2 lg:grid-cols-5">
+<div class="flex flex-col rounded bg-surface-container-lowest p-space-sm shadow-sm">
+<span class="font-label-tag text-label-tag text-on-surface-variant">DEADLOCK RISK</span>
+<div class="mt-1 flex items-center gap-1.5 font-label-code text-label-code font-semibold text-error">
+<span class="h-2 w-2 animate-ping rounded-full bg-error"></span>
+            CRITICAL (CIRCULAR WAIT)
+          </div>
+</div>
+<div class="flex flex-col rounded bg-surface-container-lowest p-space-sm shadow-sm">
+<span class="font-label-tag text-label-tag text-on-surface-variant">PHILOSOPHER THREADS</span>
+<div class="mt-1 flex items-center gap-1.5 font-label-code text-label-code font-semibold text-primary">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+            5 ACTIVE WORKERS
+          </div>
+</div>
+<div class="flex flex-col rounded bg-surface-container-lowest p-space-sm shadow-sm">
+<span class="font-label-tag text-label-tag text-on-surface-variant">SEMAPHORE SLOTS</span>
+<div class="mt-1 flex items-center gap-1.5 font-label-code text-label-code font-semibold text-secondary">
+<span class="material-symbols-outlined text-[16px]">traffic</span>
+            EMPTY: 3 / FULL: 2
+          </div>
+</div>
+<div class="flex flex-col rounded bg-surface-container-lowest p-space-sm shadow-sm">
+<span class="font-label-tag text-label-tag text-on-surface-variant">COFFMAN SATISFACTION</span>
+<div class="mt-1 flex items-center gap-1.5 font-label-code text-label-code font-semibold text-tertiary">
+<span class="material-symbols-outlined text-[16px]">fact_check</span>
+            4 / 4 SATISFIED
+          </div>
+</div>
+<div class="flex flex-col rounded bg-surface-container-lowest p-space-sm shadow-sm">
+<span class="font-label-tag text-label-tag text-on-surface-variant">RESOLUTION VECTOR</span>
+<div class="mt-1 flex items-center gap-1.5 font-label-code text-label-code font-semibold text-primary-fixed">
+<span class="material-symbols-outlined text-[16px]">lock_reset</span>
+            NUMERICAL LOCK ORDERING
+          </div>
+</div>
+</div>
+<!-- Action Control Ribbon -->
+<div class="mt-space-xs flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-space-xs rounded bg-primary-container px-space-md py-2 font-label-code text-label-code font-bold text-on-primary-fixed shadow-md transition-all hover:bg-primary hover:shadow-lg hover:shadow-primary-container/20" id="step-simulator-btn">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+            STEP THROUGH DEADLOCK SIMULATOR
+          </button>
+<button class="flex items-center gap-space-xs rounded bg-surface-container-high px-space-md py-2 font-label-code text-label-code font-medium text-on-surface transition-all hover:bg-surface-variant" id="reset-sim-btn">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+            RESET
+          </button>
+</div>
+<div class="flex items-center gap-space-xs font-label-tag text-label-tag text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">tune</span>
+          INTERACTIVE SIMULATOR READY: V4.2 ACTIVE RUNTIME
+        </div>
+</div>
+</div>
+</header>
+<!-- SECTION 1: CORE CONCEPTUAL ONBOARDING -->
+<section class="mb-space-xl flex flex-col gap-space-lg">
+<!-- Section Title & Anchor -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">1️⃣ Core Conceptual Onboarding</span>
+<span class="rounded bg-surface-container-high px-space-xs py-0.5 font-label-tag text-label-tag text-on-surface-variant">THE STARVING PHILOSOPHERS TRAP</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Foundational Abstraction: Building the intuitive mental model: how resource greed and circular dependencies trigger eternal computational paralysis.
+      </p>
+</div>
+<!-- The Foundational Question Text Box -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-space-md shadow-md lg:p-space-lg">
+<div class="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-error/10 blur-xl"></div>
+<div class="flex items-start gap-space-md">
+<div class="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded bg-error-container text-on-error">
+<span class="material-symbols-outlined text-[28px]">lock_clock</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag font-bold tracking-wider text-error">THE FOUNDATIONAL DEFINITION // KERNEL CRISIS STATE</span>
+<p class="font-body-lg text-body-lg font-medium leading-relaxed text-on-surface">
+            "A <span class="font-bold text-error">Deadlock</span> is a catastrophic system state where a set of active sibling threads are completely and permanently frozen because every single thread holds a resource the other thread needs, while waiting for a resource held by another thread in a continuous loop."
+          </p>
+</div>
+</div>
+</div>
+<!-- Key Characteristics Bullet Block (3 Cards) -->
+<div class="grid grid-cols-1 gap-space-md md:grid-cols-3">
+<!-- Card 1 -->
+<div class="group relative flex flex-col justify-between rounded-xl bg-surface-container-low p-space-md shadow-sm transition-all hover:bg-surface-container">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag rounded bg-surface-container-highest px-space-xs py-0.5 text-primary">PRIMITIVE 01</span>
+<span class="material-symbols-outlined text-[20px] text-primary">move_to_inbox</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">The Producer-Consumer Problem</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            A classic synchronization challenge where one thread populates a shared memory buffer container and another thread empties it, requiring careful buffer slot tracking.
+          </p>
+</div>
+<div class="mt-space-md flex items-center gap-space-xs font-label-tag text-label-tag text-primary">
+<span class="material-symbols-outlined text-[14px]">view_timeline</span>
+          SHARED SLOTS BUFFER PIPELINE
+        </div>
+</div>
+<!-- Card 2 -->
+<div class="group relative flex flex-col justify-between rounded-xl bg-surface-container-low p-space-md shadow-sm transition-all hover:bg-surface-container">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag rounded bg-surface-container-highest px-space-xs py-0.5 text-secondary">PRIMITIVE 02</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">alt_route</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Semaphore</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            An advanced integer-based software signaling flag (just like a train track signal arm) used to manage multiple matching resource slots.
+          </p>
+</div>
+<div class="mt-space-md flex items-center gap-space-xs font-label-tag text-label-tag text-secondary">
+<span class="material-symbols-outlined text-[14px]">signpost</span>
+          INTEGER SIGNAL COUNTER
+        </div>
+</div>
+<!-- Card 3 -->
+<div class="group relative flex flex-col justify-between rounded-xl bg-surface-container-low p-space-md shadow-sm transition-all hover:bg-surface-container">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag rounded bg-surface-container-highest px-space-xs py-0.5 text-error">PRIMITIVE 03</span>
+<span class="material-symbols-outlined text-[20px] text-error">report_problem</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Deadlock</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Not a code bug inside any single individual application thread, but a systemic structural trap created when four specific hardware-to-software conditions all hold true at the exact same instant.
+          </p>
+</div>
+<div class="mt-space-md flex items-center gap-space-xs font-label-tag text-label-tag text-error">
+<span class="material-symbols-outlined text-[14px]">sync_problem</span>
+          SYSTEMIC GEOMETRIC ENTRAPMENT
+        </div>
+</div>
+</div>
+<!-- Core Motivation Block -->
+<div class="relative rounded-xl bg-surface-container-high p-space-md shadow-lg lg:p-space-lg">
+<div class="mb-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+<span class="font-label-tag text-label-tag font-bold tracking-wider text-primary">SYSTEMIC GRIDLOCK // WHY INDIVIDUAL MUTEXES FAIL</span>
+</div>
+<span class="font-label-tag text-label-tag rounded bg-surface-container px-space-xs py-0.5 text-on-surface-variant">CRITICAL ARCHITECTURE NOTE</span>
+</div>
+<p class="font-body-md text-body-md leading-relaxed text-on-surface">
+        When threads share resources using mutex locks, they must wait their turn. However, if a thread needs multiple locks to finish its job, a timing conflict can emerge. If Thread A locks Resource 1 and gets interrupted, and Thread B locks Resource 2, neither thread can proceed. The OS referee cannot solve this automatically because it is legally blocked from yanking locks away from running programs. To prevent or break this freeze, the system must aggressively disrupt at least one of the four geometric deadlock criteria.
+      </p>
+</div>
+<!-- Dual Perspective Panels (Technical vs Analogy) -->
+<div class="grid grid-cols-1 gap-space-md lg:grid-cols-2">
+<!-- Technical Panel -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-md shadow-md lg:p-space-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">laptop_chromebook</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">💻 Real-World Application Example</h4>
+</div>
+<span class="font-label-tag text-label-tag rounded bg-primary-container/20 px-space-xs py-0.5 text-primary">DATABASE KERNEL</span>
+</div>
+<p class="font-body-md text-body-md leading-relaxed text-on-surface-variant">
+            Imagine two separate database transaction threads executing concurrently inside an enterprise application. Transaction Thread 1 locks Row A inside the user account database table and gets interrupted by a context switch. Transaction Thread 2 wakes up, locks Row B inside the billing table, and then attempts to access Row A. Thread 2 hits a wall and stalls. Thread 1 wakes up and attempts to access Row B. Both threads are now permanently deadlocked, freezing your application window until a database administrator manually kills one of the unique PIDs.
+          </p>
+</div>
+<div class="mt-space-md flex items-center justify-between rounded bg-surface-container-lowest p-space-sm">
+<span class="font-label-code text-label-code text-primary">POSTGRESQL / MYSQL LOCK POOL</span>
+<span class="font-label-tag text-label-tag font-bold text-error">HAZARD: MUTUAL DEADLOCK</span>
+</div>
+</div>
+<!-- Analogy Panel -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-md shadow-md lg:p-space-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">child_care</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">🎒 Everyday Example (5th Grader)</h4>
+</div>
+<span class="font-label-tag text-label-tag rounded bg-secondary-container/40 px-space-xs py-0.5 text-secondary">MENTAL MODEL</span>
+</div>
+<p class="font-body-md text-body-md leading-relaxed text-on-surface-variant">
+            Imagine five hungry philosophers sitting around a circular dinner table eating spaghetti. There are exactly five forks on the table, placed between each philosopher. To eat, a philosopher must pick up both their left fork and their right fork. Suddenly, an alarm rings, and every single philosopher grabs their left fork at the exact same millisecond. They all hold one fork, and they all look at their right fork, which is being held by their neighbor. Nobody can eat, nobody will drop their fork, and everyone starves to death because they are locked in a permanent waiting circle!
+          </p>
+</div>
+<div class="mt-space-md flex items-center justify-between rounded bg-surface-container-lowest p-space-sm">
+<span class="font-label-code text-label-code text-secondary">METAPHOR: CIRCULAR SPAGHETTI TABLE</span>
+<span class="font-label-tag text-label-tag font-bold text-error">RESULT: ETERNAL STARVATION</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: STRUCTURAL DISSECTION (THE FOUR COFFMAN CONDITIONS) -->
+<section class="mb-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">2️⃣ Structural Dissection</span>
+<span class="rounded bg-surface-container-high px-space-xs py-0.5 font-label-tag text-label-tag text-on-surface-variant">THE FOUR COFFMAN CONDITIONS MATRIX</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Geometric Anatomy: Visualizing Resource Allocation Graphs (RAG) and the four inviolable rules that enable permanent computational gridlock.
+      </p>
+</div>
+<!-- Split-Pane Block: Graph Layout vs Checklist -->
+<div class="grid grid-cols-1 gap-space-md lg:grid-cols-12">
+<!-- Left side: Resource Allocation Graph Layout Diagram (7 cols) -->
+<div class="flex flex-col rounded-xl bg-surface-container-low p-space-md shadow-md lg:col-span-7 lg:p-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">hub</span>
+<span class="font-label-tag text-label-tag font-bold tracking-wider text-primary">RESOURCE ALLOCATION GRAPH (RAG)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-tag text-label-tag rounded bg-error-container/40 px-space-xs py-0.5 text-error">CYCLE DETECTED: YES</span>
+<span class="font-label-tag text-label-tag rounded bg-surface-container px-space-xs py-0.5 text-on-surface-variant">ISOLATION: BLOCKED</span>
+</div>
+</div>
+<!-- Inline SVG Visualization for RAG Circular Loop -->
+<div class="my-space-md relative flex items-center justify-center rounded-lg bg-surface-container-lowest p-space-md">
+<svg class="h-64 w-full max-w-lg select-none" viewbox="0 0 520 260" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Glowing Marker Arrows -->
+<marker id="arrow-cyan" markerheight="8" markerwidth="8" orient="auto" refx="7" refy="4">
+<polygon fill="#00d2ff" points="0 1, 8 4, 0 7"></polygon>
+</marker>
+<marker id="arrow-crimson" markerheight="8" markerwidth="8" orient="auto" refx="7" refy="4">
+<polygon fill="#ffb4ab" points="0 1, 8 4, 0 7"></polygon>
+</marker>
+</defs>
+<!-- Background subtle track -->
+<rect fill="#171b26" height="220" opacity="0.4" rx="8" stroke="none" width="480" x="20" y="20"></rect>
+<!-- Arrow Path 1: Thread 1 Holds Lock A -->
+<!-- From Lock A (100, 190) to Thread 1 (100, 70) -->
+<path d="M 100 160 L 100 95" fill="none" marker-end="url(#arrow-cyan)" stroke="#00d2ff" stroke-dasharray="4 2" stroke-width="2.5"></path>
+<text fill="#a5e7ff" font-family="JetBrains Mono" font-size="10" font-weight="600" x="50" y="130">HOLDS</text>
+<!-- Arrow Path 2: Thread 1 Points to (Waits for) Lock B -->
+<!-- From Thread 1 (100, 70) to Lock B (420, 70) -->
+<path d="M 135 70 L 380 70" fill="none" marker-end="url(#arrow-crimson)" stroke="#ffb4ab" stroke-width="2.5"></path>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="10" font-weight="600" x="215" y="60">REQUESTS / WAITS</text>
+<!-- Arrow Path 3: Lock B is Held by Thread 2 -->
+<!-- From Lock B (420, 70) to Thread 2 (420, 190) -->
+<path d="M 420 95 L 420 160" fill="none" marker-end="url(#arrow-cyan)" stroke="#00d2ff" stroke-dasharray="4 2" stroke-width="2.5"></path>
+<text fill="#a5e7ff" font-family="JetBrains Mono" font-size="10" font-weight="600" x="430" y="130">HOLDS</text>
+<!-- Arrow Path 4: Thread 2 Points to (Waits for) Lock A -->
+<!-- From Thread 2 (420, 190) to Lock A (100, 190) -->
+<path d="M 385 190 L 140 190" fill="none" marker-end="url(#arrow-crimson)" stroke="#ffb4ab" stroke-width="2.5"></path>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="10" font-weight="600" x="215" y="210">REQUESTS / WAITS</text>
+<!-- Center Deadlock Vortex Beacon -->
+<circle cx="260" cy="130" fill="#93000a" opacity="0.3" r="30"></circle>
+<circle cx="260" cy="130" fill="#690005" r="16" stroke="none"></circle>
+<text fill="#ffb4ab" font-family="Space Grotesk" font-size="9" font-weight="700" text-anchor="middle" x="260" y="133">KNOT</text>
+<!-- Node 1: Thread 1 (Circle) -->
+<circle cx="100" cy="70" fill="#1c1f2a" r="28" stroke="none"></circle>
+<circle cx="100" cy="70" fill="#262a35" r="24" stroke="none"></circle>
+<text fill="#a5e7ff" font-family="Space Grotesk" font-size="11" font-weight="700" text-anchor="middle" x="100" y="68">Thread 1</text>
+<text fill="#69f6b9" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="100" y="80">PID: 401</text>
+<!-- Node 2: Lock B (Box) -->
+<rect fill="#1c1f2a" height="50" rx="6" stroke="none" width="70" x="385" y="45"></rect>
+<rect fill="#313540" height="40" rx="4" stroke="none" width="60" x="390" y="50"></rect>
+<text fill="#ddb7ff" font-family="Space Grotesk" font-size="11" font-weight="700" text-anchor="middle" x="420" y="67">Lock B</text>
+<text fill="#bbc9cf" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="420" y="80">MUTEX_B</text>
+<!-- Node 3: Thread 2 (Circle) -->
+<circle cx="420" cy="190" fill="#1c1f2a" r="28" stroke="none"></circle>
+<circle cx="420" cy="190" fill="#262a35" r="24" stroke="none"></circle>
+<text fill="#a5e7ff" font-family="Space Grotesk" font-size="11" font-weight="700" text-anchor="middle" x="420" y="188">Thread 2</text>
+<text fill="#69f6b9" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="420" y="200">PID: 402</text>
+<!-- Node 4: Lock A (Box) -->
+<rect fill="#1c1f2a" height="50" rx="6" stroke="none" width="70" x="65" y="165"></rect>
+<rect fill="#313540" height="40" rx="4" stroke="none" width="60" x="70" y="170"></rect>
+<text fill="#ddb7ff" font-family="Space Grotesk" font-size="11" font-weight="700" text-anchor="middle" x="100" y="187">Lock A</text>
+<text fill="#bbc9cf" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="100" y="200">MUTEX_A</text>
+</svg>
+</div>
+<div class="flex items-center justify-between rounded bg-surface-container p-space-sm font-label-code text-label-code text-on-surface-variant">
+<span>Loop Signature: Thread 1 [Holds Lock A] ➔ Lock B ➔ Thread 2 [Holds Lock B] ➔ Lock A</span>
+<span class="font-bold text-error">PARALYSIS ACTIVE</span>
+</div>
+</div>
+<!-- Right side: Checklist Card (5 cols) -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-md shadow-md lg:col-span-5 lg:p-space-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">THE DEADLOCK CRITERIA CHECKLIST</span>
+<span class="material-symbols-outlined text-secondary text-[22px]">checklist</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            A deadlock can only form if ALL FOUR Coffman conditions hold true at the exact same moment. If even one condition fails, gridlock collapses.
+          </p>
+<!-- 4 Boxes -->
+<div class="mt-space-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between rounded-lg bg-surface-container p-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex h-6 w-6 items-center justify-center rounded bg-tertiary-container text-on-tertiary-container">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">1. Mutual Exclusion</span>
+</div>
+<span class="font-label-tag text-label-tag rounded bg-surface-container-highest px-space-xs py-0.5 text-tertiary">TRUE - Non-Shareable</span>
+</div>
+<div class="flex items-center justify-between rounded-lg bg-surface-container p-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex h-6 w-6 items-center justify-center rounded bg-tertiary-container text-on-tertiary-container">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">2. Hold and Wait</span>
+</div>
+<span class="font-label-tag text-label-tag rounded bg-surface-container-highest px-space-xs py-0.5 text-tertiary">TRUE - Active Retention</span>
+</div>
+<div class="flex items-center justify-between rounded-lg bg-surface-container p-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex h-6 w-6 items-center justify-center rounded bg-tertiary-container text-on-tertiary-container">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">3. No Preemption</span>
+</div>
+<span class="font-label-tag text-label-tag rounded bg-surface-container-highest px-space-xs py-0.5 text-tertiary">TRUE - Voluntary Yield Only</span>
+</div>
+<div class="flex items-center justify-between rounded-lg bg-surface-container p-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex h-6 w-6 items-center justify-center rounded bg-tertiary-container text-on-tertiary-container">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">4. Circular Wait</span>
+</div>
+<span class="font-label-tag text-label-tag rounded bg-surface-container-highest px-space-xs py-0.5 text-tertiary">TRUE - Closed Loop Knot</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between rounded-lg bg-error-container/40 p-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[20px]">dangerous</span>
+<span class="font-label-code text-label-code font-bold text-error">DEADLOCK TRIGGER: 4 OF 4 ARMED</span>
+</div>
+<span class="font-label-tag text-label-tag rounded bg-error px-space-xs py-0.5 font-bold text-on-error">SYSTEM HALTED</span>
+</div>
+</div>
+</div>
+<!-- Specific Structural Definition Cards (4 Cards) -->
+<div class="grid grid-cols-1 gap-space-md sm:grid-cols-2">
+<!-- Def 1 -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-md shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-primary">COFFMAN RULE #1</span>
+<span class="material-symbols-outlined text-primary text-[18px]">key</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">• 1. Mutual Exclusion</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Only one single thread can legally hold a resource token at a time. If another app wants it, they are completely blocked.
+          </p>
+</div>
+<div class="mt-space-md rounded bg-surface-container p-space-sm">
+<div class="flex items-start gap-space-xs font-body-sm text-body-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span><strong class="text-on-surface">💻 Real-World Application Example:</strong> A printer spooler script or a hardware audio output channel can only stream one file at a time, enforcing hard mutual exclusion.</span>
+</div>
+</div>
+</div>
+<!-- Def 2 -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-md shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-secondary">COFFMAN RULE #2</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">front_hand</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">• 2. Hold and Wait</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            A process can hold an allocated resource lock while actively standing in line waiting to grab an additional lock.
+          </p>
+</div>
+<div class="mt-space-md rounded bg-surface-container p-space-sm">
+<div class="flex items-start gap-space-xs font-body-sm text-body-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span><strong class="text-on-surface">💻 Real-World Application Example:</strong> A video editing thread locks 4GB of RAM memory space, holds onto it tightly, and sits waiting for your graphics card GPU acceleration chip to clear.</span>
+</div>
+</div>
+</div>
+<!-- Def 3 -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-md shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-tertiary">COFFMAN RULE #3</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">gavel</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">• 3. No Preemption</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Resources cannot be violently stolen or forced away from an active thread by the OS referee; a thread must surrender its lock voluntarily.
+          </p>
+</div>
+<div class="mt-space-md rounded bg-surface-container p-space-sm">
+<div class="flex items-start gap-space-xs font-body-sm text-body-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span><strong class="text-on-surface">💻 Real-World Application Example:</strong> If the kernel randomly stripped memory locks away from Microsoft VS Code mid-save, it would corrupt your underlying text files instantly.</span>
+</div>
+</div>
+</div>
+<!-- Def 4 -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-md shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-error">COFFMAN RULE #4</span>
+<span class="material-symbols-outlined text-error text-[18px]">all_inclusive</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">• 4. Circular Wait</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Thread A waits for Thread B, who waits for Thread C, who loops all the way back to wait for Thread A, closing a geometric circle of death.
+          </p>
+</div>
+<div class="mt-space-md rounded bg-surface-container p-space-sm">
+<div class="flex items-start gap-space-xs font-body-sm text-body-sm text-error">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span><strong class="text-on-surface">💻 Real-World Application Example:</strong> App A locks the network card and wants the drive; App B locks the drive and wants the network card, creating a two-app circular trap.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Footer Note: Everyday Example -->
+<div class="flex flex-col gap-space-xs rounded-xl bg-surface-container-high p-space-md shadow-sm lg:p-space-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">toys</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">🎒 Everyday Example</span>
+<span class="font-label-tag text-label-tag rounded bg-surface-container px-space-xs py-0.5 text-on-surface-variant">THE PLAYGROUND BIKE FIGHT</span>
+</div>
+<p class="font-body-md text-body-md leading-relaxed text-on-surface-variant">
+        Let's map the four conditions to a two-kid toy fight! Condition 1 (Mutual Exclusion) is that only one kid can physically ride the bicycle at a time. Condition 2 (Hold and Wait) is Kid A sitting on the bicycle while holding out their hand demanding the helmet. Condition 3 (No Preemption) is that the teacher cannot forcefully yank the bicycle away from a crying child. Condition 4 (Circular Wait) is Kid A holding the bicycle waiting for the helmet, while Kid B is wearing the helmet waiting for the bicycle. The playground freezes!
+      </p>
+</div>
+</section>
+<!-- SECTION 3: LINEAR OPERATIONAL PIPELINE (THE DEADLOCK FRACTURE WORKFLOW) -->
+<section class="mb-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary">3️⃣ Linear Operational Pipeline</span>
+<span class="rounded bg-surface-container-high px-space-xs py-0.5 font-label-tag text-label-tag text-on-surface-variant">THE DEADLOCK FRACTURE WORKFLOW</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Lifecycle Trace: Step-by-step telemetry protocol for isolating catastrophic freeze states and shattering the dependency loop.
+      </p>
+</div>
+<!-- Horizontal Workflow Timeline Tracker (4 Nodes) -->
+<div class="grid grid-cols-1 gap-space-sm sm:grid-cols-2 lg:grid-cols-4">
+<!-- Step 1 -->
+<div class="flex flex-col rounded-xl bg-surface-container-low p-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag font-bold text-error">STAGE 01</span>
+<span class="material-symbols-outlined text-error text-[18px]">lock</span>
+</div>
+<h4 class="mt-space-xs font-headline-sm text-headline-sm text-on-surface">1. Freeze Circle Detected</h4>
+<p class="mt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+          The system applications encounter a hard execution lockup as Threads A and B enter a total deadlock loop over resource locks.
+        </p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col rounded-xl bg-surface-container-low p-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag font-bold text-primary">STAGE 02</span>
+<span class="material-symbols-outlined text-primary text-[18px]">troubleshoot</span>
+</div>
+<h4 class="mt-space-xs font-headline-sm text-headline-sm text-on-surface">2. Condition Isolation</h4>
+<p class="mt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+          The OS kernel referee reviews the system resource status tracker, verifying that all four Coffman deadlock conditions are actively holding true.
+        </p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col rounded-xl bg-surface-container-low p-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag font-bold text-secondary">STAGE 03</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">call_split</span>
+</div>
+<h4 class="mt-space-xs font-headline-sm text-headline-sm text-on-surface">3. The Structural Fracture Selection</h4>
+<p class="mt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+          The system must break the freeze by mathematically eliminating exactly one of the conditions (e.g., attacking Hold and Wait by forcing apps to grab all locks at once, or breaking Circular Wait by ordering locks numerically).
+        </p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col rounded-xl bg-surface-container-low p-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag font-bold text-tertiary">STAGE 04</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+</div>
+<h4 class="mt-space-xs font-headline-sm text-headline-sm text-on-surface">4. Safe System Resolution</h4>
+<p class="mt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+          The chosen fracture rule dissolves the circle. Threads execute code instructions in a clean linear sequence, releasing variables safely.
+        </p>
+</div>
+</div>
+<!-- Side-by-Side Interactive / Analogy Cards -->
+<div class="grid grid-cols-1 gap-space-md lg:grid-cols-2">
+<!-- Live Deadlock Fracture Activity -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-md shadow-md lg:p-space-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">psychology</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">💻 Live Deadlock Fracture Activity</h4>
+</div>
+<span class="font-label-tag text-label-tag rounded bg-primary-container/20 px-space-xs py-0.5 text-primary">CLASSROOM DRILL</span>
+</div>
+<div class="flex flex-col gap-space-xs rounded-lg bg-surface-container p-space-md font-body-md text-body-md text-on-surface-variant">
+<div class="flex items-start gap-space-xs">
+<span class="font-label-tag text-label-tag text-primary">PHASE 1 ➔</span>
+<span>Present the five starving philosophers scenario live on the board</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="font-label-tag text-label-tag text-primary">PHASE 2 ➔</span>
+<span>Challenge students to break the deadlock by removing exactly one of the four conditions</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="font-label-tag text-label-tag text-primary">PHASE 3 ➔</span>
+<span>Have the class debate which removal is the cheapest and most practical in real software engineering</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="font-label-tag text-label-tag text-tertiary">PHASE 4 ➔</span>
+<span class="text-on-surface font-semibold">Prove that breaking Circular Wait by forcing all applications to acquire locks in strict numerical order (Lock 1 then Lock 2) is the industry master fix.</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between rounded bg-surface-container-lowest p-space-sm">
+<span class="font-label-code text-label-code text-primary">PEDAGOGICAL DRILL: LIVE SYNC WORKSHOP</span>
+<span class="font-label-tag text-label-tag font-bold text-tertiary">STATUS: VERIFIED FIX</span>
+</div>
+</div>
+<!-- Toy Sharing Rule Pipeline -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-md shadow-md lg:p-space-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">family_restroom</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">🎒 Toy Sharing Rule Pipeline</h4>
+</div>
+<span class="font-label-tag text-label-tag rounded bg-secondary-container/30 px-space-xs py-0.5 text-secondary">REAL LIFE RULES</span>
+</div>
+<div class="flex flex-col gap-space-xs rounded-lg bg-surface-container p-space-md font-body-md text-body-md text-on-surface-variant">
+<div class="flex items-start gap-space-xs">
+<span class="font-label-tag text-label-tag text-secondary">RULE 1 ➔</span>
+<span>The playground monitor blows a whistle to halt the frozen toy fight (Freeze Circle Detected)</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="font-label-tag text-label-tag text-secondary">RULE 2 ➔</span>
+<span>The monitor looks at the rules being broken (Condition Isolation)</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="font-label-tag text-label-tag text-secondary">RULE 3 ➔</span>
+<span>The monitor changes the playground rules: "You are no longer allowed to hold a toy while waiting for another one" (Hold-and-Wait Fracture)</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="font-label-tag text-label-tag text-tertiary">RULE 4 ➔</span>
+<span class="text-on-surface font-semibold">The children drop their toys, take turn-by-turn lines, and play safely (Safe System Resolution).</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between rounded bg-surface-container-lowest p-space-sm">
+<span class="font-label-code text-label-code text-secondary">PLAYGROUND REGULATION: NO HOLD-AND-WAIT</span>
+<span class="font-label-tag text-label-tag font-bold text-tertiary">RESOLUTION: ZERO DEADLOCK</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: PARADIGM SHOWDOWN & GUARDRAILS -->
+<section class="mb-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm font-bold text-primary-fixed">4️⃣ Paradigm Showdown &amp; Guardrails</span>
+<span class="rounded bg-surface-container-high px-space-xs py-0.5 font-label-tag text-label-tag text-on-surface-variant">ARCHITECTURAL AUDIT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Architectural Audit: Rigorous trade-off matrix between buffer coordination and competitive resource acquisition.
+      </p>
+</div>
+<!-- Comparative Table -->
+<div class="overflow-x-auto rounded-xl bg-surface-container-low shadow-md">
+<table class="w-full text-left">
+<thead class="bg-surface-container-high font-label-tag text-label-tag text-on-surface-variant">
+<tr>
+<th class="p-space-md">COMPARISON FIELD</th>
+<th class="p-space-md text-primary">PRODUCER-CONSUMER COORDINATION (BUFFER LANE)</th>
+<th class="p-space-md text-secondary">DINING PHILOSOPHERS CONCURRENCY (DEADLOCK LANE)</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 font-body-sm text-body-sm text-on-surface">
+<tr class="bg-surface-container-low hover:bg-surface-container">
+<td class="p-space-md font-semibold text-on-surface-variant">Core Challenge</td>
+<td class="p-space-md font-medium text-on-surface">Coordinate data transfer between two separate threads</td>
+<td class="p-space-md font-medium text-on-surface">Prevent multiple locks from creating a geometric circle trap</td>
+</tr>
+<tr class="bg-surface-container/60 hover:bg-surface-container">
+<td class="p-space-md font-semibold text-on-surface-variant">Tracking Framework</td>
+<td class="p-space-md font-medium text-on-surface">Uses count semaphores to monitor empty/full slots</td>
+<td class="p-space-md font-medium text-on-surface">Uses ordered binary locks to isolate resource access</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container">
+<td class="p-space-md font-semibold text-on-surface-variant">Primary Defect</td>
+<td class="p-space-md font-medium text-error">Buffer overflow or underflow crashes</td>
+<td class="p-space-md font-medium text-error">Infinite system freeze where nothing runs</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="relative overflow-hidden rounded-xl bg-error-container/20 p-space-md shadow-md lg:p-space-lg">
+<div class="flex items-start gap-space-md">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded bg-error text-on-error shadow-sm">
+<span class="material-symbols-outlined text-[28px]">warning</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag font-bold tracking-wider text-error">COMMON MISTAKES WARNING // KERNEL ARCHITECTURE TRAP</span>
+<p class="font-body-md text-body-md font-medium leading-relaxed text-on-surface">
+            Deadlock is NOT an infinite loop bug! Do not confuse a deadlock freeze with an infinite script loop. An infinite loop is a hyperactive process spinning your CPU core at 100% speed running a broken function. A deadlock is a silent, frozen state where your application draw calls drop to absolute 0% activity, sitting completely motionless in memory!
+          </p>
+</div>
+</div>
+</div>
+<!-- Interview Takeaway Panel -->
+<div class="flex flex-col gap-space-md rounded-xl bg-surface-container p-space-md shadow-md lg:p-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">terminal</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Interview Takeaway Panel</h4>
+</div>
+<span class="font-label-tag text-label-tag rounded bg-secondary-container/40 px-space-xs py-0.5 text-secondary">SENIOR SYSTEMS CONCEPTS</span>
+</div>
+<p class="font-body-md text-body-md leading-relaxed text-on-surface-variant">
+        Deadlock prevention requires breaking the geometric circle before code compiles. Real-world platforms utilize lock ordering or timeout mechanisms to safely fracture the four conditions. If a multi-threaded system lacks these guardrails and encounters an unhandled circular wait knot, the processor will lock up entirely, triggering a total system freeze or a kernel exception panic (just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling down!).
+      </p>
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-tag text-label-tag rounded bg-surface-container-high px-space-xs py-1 text-primary">#Deadlock</span>
+<span class="font-label-tag text-label-tag rounded bg-surface-container-high px-space-xs py-1 text-secondary">#CoffmanConditions</span>
+<span class="font-label-tag text-label-tag rounded bg-surface-container-high px-space-xs py-1 text-tertiary">#DiningPhilosophers</span>
+<span class="font-label-tag text-label-tag rounded bg-surface-container-high px-space-xs py-1 text-primary-fixed">#ResourceAllocationGraph</span>
+<span class="font-label-tag text-label-tag rounded bg-surface-container-high px-space-xs py-1 text-on-surface-variant">#Semaphores</span>
+<span class="font-label-tag text-label-tag rounded bg-surface-container-high px-space-xs py-1 text-primary">#LockOrdering</span>
+</div>
+</div>
+<!-- Module Completion Bar -->
+<div class="flex flex-col items-center justify-between gap-space-md rounded-xl bg-surface-container-low p-space-md shadow-lg sm:flex-row lg:p-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded bg-tertiary text-on-tertiary">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code font-bold text-tertiary">MODULE 11 COMPLETE // 100% MASTERY</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Telemetry verified: Producer-Consumer, Semaphores, 4 Coffman Conditions, and Circular Wait Fracture.</span>
+</div>
+</div>
+<div class="flex w-full flex-wrap items-center justify-end gap-space-sm sm:w-auto">
+<button class="flex items-center gap-space-xs rounded bg-surface-container-high px-space-md py-2 font-label-code text-label-code font-medium text-on-surface transition-all hover:bg-surface-variant">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+          Review L11 Notes
+        </button>
+<button class="flex items-center gap-space-xs rounded bg-primary-container px-space-md py-2 font-label-code text-label-code font-bold text-on-primary-fixed shadow-md transition-all hover:bg-primary hover:shadow-primary-container/20">
+          Advance to Module 12 (Memory Management &amp; Virtual Memory) ➔
+        </button>
+</div>
+</div>
+</section>
+<!-- Interactive Simulator Script (Vanilla Micro-Interactions) -->
+<script>
+    (function() {
+      const stepBtn = document.getElementById('step-simulator-btn');
+      const resetBtn = document.getElementById('reset-sim-btn');
+      let stepCount = 0;
+
+      const states = [
+        "STAGE 01: All 5 philosophers hold left fork (Hold & Wait active)",
+        "STAGE 02: Every philosopher attempts to reach for right fork (Contention)",
+        "STAGE 03: Complete deadlock locked! Cycle verified in Resource Allocation Graph",
+        "STAGE 04: Order fracture applied! Philosopher #5 switches fork pickup priority to break circular wait!",
+        "STAGE 05: Deadlock broken! Linear consumption pipeline safely operational."
+      ];
+
+      if (stepBtn && resetBtn) {
+        stepBtn.addEventListener('click', function() {
+          stepCount = (stepCount + 1) % states.length;
+          stepBtn.innerHTML = `<span class="material-symbols-outlined text-[18px]">motion_photos_auto</span> STEP ${stepCount + 1}/5: ${states[stepCount].slice(0, 24)}...`;
+        });
+
+        resetBtn.addEventListener('click', function() {
+          stepCount = 0;
+          stepBtn.innerHTML = `<span class="material-symbols-outlined text-[18px]">play_arrow</span> STEP THROUGH DEADLOCK SIMULATOR`;
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>
