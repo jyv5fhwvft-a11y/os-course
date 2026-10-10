@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary-fixed":"#6ffbbe","on-background":"#dfe2f1","on-error-container":"#ffdad6","on-error":"#690005","surface-container":"#1c1f2a","on-secondary-fixed":"#2c0051","on-secondary":"#490080","on-primary-fixed-variant":"#004e60","surface":"#0f131d","surface-container-low":"#171b26","on-secondary-fixed-variant":"#6900b3","secondary-fixed":"#f0dbff","tertiary-container":"#48d99e","surface-container-lowest":"#0a0e18","primary":"#a5e7ff","outline-variant":"#3c494e","on-secondary-container":"#d6a9ff","surface-tint":"#47d6ff","surface-variant":"#313540","primary-fixed":"#b6ebff","inverse-primary":"#00677f","outline":"#859399","error-container":"#93000a","secondary-container":"#6f00be","on-primary":"#003543","surface-dim":"#0f131d","on-primary-container":"#00566a","on-tertiary-fixed":"#002113","on-surface":"#dfe2f1","inverse-on-surface":"#2c303b","error":"#ffb4ab","surface-container-highest":"#313540","background":"#0f131d","secondary":"#ddb7ff","on-surface-variant":"#bbc9cf","tertiary":"#69f6b9","on-primary-fixed":"#001f28","tertiary-fixed-dim":"#4edea3","surface-container-high":"#262a35","secondary-fixed-dim":"#ddb7ff","on-tertiary":"#003824","primary-container":"#00d2ff","inverse-surface":"#dfe2f1","on-tertiary-container":"#005b3d","surface-bright":"#353944","on-tertiary-fixed-variant":"#005236","primary-fixed-dim":"#47d6ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xs":"0.25rem","space-lg":"1.5rem","gutter":"1.5rem","space-md":"1rem","gutter-mobile":"1rem","space-xl":"2.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem","margin":"3rem"},"fontFamily":{"label-code":["JetBrains Mono"],"label-tag":["JetBrains Mono"],"headline-md":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"headline-xl":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"headline-lg":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"headline-sm":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Space Grotesk"]},"fontSize":{"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-md"><div class="px-space-md pb-space-sm"><div class="flex items-center gap-space-xs"><div class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_8px_#00d2ff]"></div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase">Kernel<span class="text-primary-container">Lab</span></span></div><div class="mt-space-xs flex items-center justify-between"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">SYSTEMS STUDIO</span><span class="font-label-tag text-label-tag px-space-xs py-0.5 rounded bg-surface-container text-tertiary">v3.4.1</span></div></div><div class="px-space-md"><div class="font-label-tag text-label-tag text-outline uppercase tracking-wider mb-space-xs">Course Curriculum</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_12px_rgba(0,210,255,0.3)]"><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="course-intro" href="#"><span>L0: Course Intro</span><span class="font-label-tag text-label-tag text-outline">00h</span></a><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="os-components" href="#"><span>L1: OS Components</span><span class="font-label-tag text-label-tag text-outline">01h</span></a><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pcb-and-context-switching" href="#"><span>L2: PCB &amp; Context Sw</span><span class="font-label-tag text-label-tag text-outline">02h</span></a><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="kernel-design" href="#"><span>L3: Kernel Design</span><span class="font-label-tag text-label-tag text-outline">03h</span></a><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="the-boot-process" href="#"><span>L4: The Boot Process</span><span class="font-label-tag text-label-tag text-outline">04h</span></a><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="what-is-a-process" href="#"><span>L5: What Is a Process?</span><span class="font-label-tag text-label-tag text-outline">05h</span></a><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="process-creation-and-context-switching" href="#"><span>L6: Process &amp; Switch</span><span class="font-label-tag text-label-tag text-outline">06h</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_12px_rgba(0,210,255,0.3)]" data-path="cpu-scheduling-i" href="#"><span>L7: CPU Scheduling I</span><span class="font-label-tag text-label-tag text-tertiary">ACTIVE</span></a></nav></div><div class="px-space-md"><div class="font-label-tag text-label-tag text-outline uppercase tracking-wider mb-space-xs">Telemetry &amp; Tools</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_12px_rgba(0,210,255,0.3)]"><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="register-inspector" href="#"><span>Register Inspector</span><span class="font-label-tag text-label-tag text-secondary">REG</span></a><a class="font-label-code text-label-code flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="syscall-debugger" href="#"><span>Syscall Debugger</span><span class="font-label-tag text-label-tag text-secondary">TRAP</span></a></nav></div></div><div class="px-space-md pt-space-sm"><div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase">Kernel Virtual Machine</span><div class="flex items-center gap-1.5"><span class="inline-block w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-tag text-label-tag text-tertiary">ONLINE</span></div></div><div class="flex items-center justify-between font-label-code text-label-code text-outline"><span class="text-body-sm font-body-sm text-on-surface-variant">Virtual PID</span><span class="text-primary text-label-code font-label-code font-bold">1024</span></div><div class="flex items-center justify-between font-label-code text-label-code text-outline"><span class="text-body-sm font-body-sm text-on-surface-variant">Context Cycle</span><span class="text-on-surface text-label-code font-label-code">0x8F94</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1.5 rounded-lg"><span class="font-label-tag text-label-tag text-primary uppercase font-bold tracking-wider">CS 301</span><span class="text-outline font-label-code text-label-code">/</span><span class="font-body-sm text-body-sm text-on-surface">Systems Architecture</span></div><div class="relative hidden lg:flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-[18px] text-outline pointer-events-none">search</span><input class="bg-surface-container-low text-on-surface placeholder:text-outline text-body-sm font-body-sm pl-8 pr-space-sm py-1.5 rounded-lg border-0 outline-none focus:ring-1 focus:ring-primary w-48 xl:w-64 transition-all" placeholder="Search syscalls, modules..." type="text"/></div><div class="hidden xl:flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="font-label-tag text-label-tag text-outline uppercase">Poller</span><span class="font-label-code text-label-code text-tertiary bg-surface-container-low px-2 py-0.5 rounded">1000 Hz</span></div><div class="flex items-center gap-space-xs"><span class="font-label-tag text-label-tag text-outline uppercase">Module</span><span class="font-label-code text-label-code text-primary bg-surface-container-low px-2 py-0.5 rounded font-bold">7 / 14</span></div><div class="flex items-center gap-space-xs"><span class="font-label-tag text-label-tag text-outline uppercase">Diff</span><span class="font-label-tag text-label-tag text-secondary bg-surface-container-low px-2 py-0.5 rounded tracking-wider">INTERMEDIATE</span></div></div></div><div class="flex items-center gap-space-lg"><div class="hidden md:flex flex-col gap-1 min-w-[160px]"><div class="flex items-center justify-between font-label-tag text-label-tag"><span class="text-on-surface-variant uppercase tracking-wider">Progress</span><span class="text-primary-container font-label-code text-label-code font-bold">75%</span></div><div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-primary-container rounded-full shadow-[0_0_8px_#00d2ff]" style="width: 75%;"></div></div></div><div class="flex items-center gap-space-sm"><button class="relative p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container shadow-[0_0_6px_#00d2ff]"></span></button><div class="flex items-center gap-space-xs pl-1"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden 2xl:flex flex-col text-left"><span class="font-label-code text-body-sm text-on-surface leading-tight font-semibold">usr_sysarch</span><span class="font-label-tag text-label-tag text-tertiary leading-none">STUDENT</span></div></div></div></div></div></header><main class="relative w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- TOP CONTEXT TICKER & METRIC STRIP -->
+<div class="px-space-lg py-space-md flex flex-col gap-space-md">
+<!-- Breadcrumb & Badges -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-label-code text-label-code text-primary tracking-wide">
+<span class="inline-block w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_#00d2ff]"></span>
+<span>LECTURE 07 // CPU SCHEDULING ALGORITHMS &amp; QUEUE MANAGEMENT // CS-301 CORE</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-tertiary font-label-tag text-label-tag shadow-sm">STATE: DETERMINISTIC</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-secondary font-label-tag text-label-tag shadow-sm">DIFF: BEGINNER-FRIENDLY</span>
+</div>
+</div>
+<!-- Poster Header Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-lg shadow-xl">
+<div class="relative z-10 flex flex-col gap-space-xs max-w-4xl">
+<div class="inline-flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-tag text-label-tag">DISPATCH_KERNEL_ARCH</span>
+<span class="text-outline font-label-tag text-label-tag">REF: SYSCALL_DISPATCHER_TICK</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          🏷️ OPERATING SYSTEMS: L7 - CPU Scheduling I
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+          A deep-dive interactive conceptual study guide &amp; architectural poster on FCFS, SJF, Round Robin (RR), Time Quantums, and Average Wait Time Optimization.
+        </p>
+</div>
+<div class="absolute -right-8 -bottom-10 opacity-10 pointer-events-none select-none text-on-surface">
+<span class="material-symbols-outlined text-[200px]">memory</span>
+</div>
+</div>
+<!-- Live Header Telemetry Stat Strip -->
+<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1 shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">Active Ready Queue</span>
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-primary font-bold">4 JOBS</span>
+<span class="font-label-tag text-label-tag px-1.5 py-0.5 rounded bg-surface-container-high text-primary-container">[A, B, C, D]</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1 shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">Active Policy</span>
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-secondary font-bold">ROUND ROBIN (RR)</span>
+<span class="inline-block w-2 h-2 rounded-full bg-secondary shadow-[0_0_6px_#ddb7ff]"></span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1 shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">Time Quantum (q)</span>
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface font-bold">2 ms</span>
+<span class="font-label-tag text-label-tag text-outline">APIC TIMER</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1 shadow-sm">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">Avg Wait Time (Min)</span>
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-tertiary font-bold">3.0 ms</span>
+<span class="font-label-tag text-label-tag text-tertiary bg-surface-container-high px-1 rounded">OPTIMAL: SJF</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1 shadow-sm col-span-2 md:col-span-1">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">Convoy Risk</span>
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-tertiary font-bold">MITIGATED</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified_user</span>
+</div>
+</div>
+</div>
+</div>
+<div class="px-space-lg flex flex-col gap-space-xl pb-space-xl">
+<!-- ============================================================ -->
+<!-- SECTION 1: Core Conceptual Onboarding (The Grocery Checkout Line) -->
+<!-- ============================================================ -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-lg bg-primary text-on-primary font-label-code text-label-code font-bold">01</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            1️⃣ Core Conceptual Onboarding (The Grocery Checkout Line)
+          </h2>
+</div>
+<span class="font-label-tag text-label-tag text-outline tracking-wider uppercase">FUNDAMENTAL ABSTRACTION</span>
+</div>
+<!-- Foundational Question Box -->
+<div class="p-space-md rounded-xl bg-surface-container-high shadow-md flex items-start gap-space-md">
+<div class="p-2 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">help_center</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-primary uppercase">The Foundational Question</span>
+<p class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed">
+            "CPU Scheduling is the algorithmic mechanism used by the operating system referee to decide exactly which process standing in the Ready Queue line gets to occupy the physical CPU hardware core next, and for how long."
+          </p>
+</div>
+</div>
+<!-- Key Characteristics Grid & Core Motivation -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left: Key Characteristics list -->
+<div class="lg:col-span-7 p-space-md rounded-xl bg-surface-container flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">Core Scheduling Paradigms</span>
+<span class="font-label-tag text-label-tag text-tertiary">DISPATCH SPEC</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-code text-label-code text-primary font-bold">First-Come, First-Served (FCFS)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                A non-preemptive scheduling policy where jobs are dispatched onto the CPU core strictly in the order they arrived. Simple, low-overhead, but highly susceptible to convoy lockup.
+              </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-code text-label-code text-tertiary font-bold">Shortest Job First (SJF)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                An optimization algorithm that selects the process with the absolute shortest processing time next to clear the line quickly. Minimizes average wait times mathematically.
+              </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-code text-label-code text-secondary font-bold">Round Robin (RR)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                A time-sliced scheduling policy where every single process gets a small, equal execution window token called a Time Quantum before being pushed back to the end of the line.
+              </p>
+</div>
+</div>
+</div>
+<!-- Right: Core Motivation -->
+<div class="lg:col-span-5 p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-label-tag text-label-tag uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">format_h4</span>
+<span>Hardware Contention Engine</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Core Motivation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              A CPU hardware core can only execute instructions from one application at any given instant. When you have dozens of apps simultaneously demanding processing time, the OS cannot let them fight over the chip. It must implement mathematical scheduling policies to manage the line. The chosen strategy directly dictates system metrics like <span class="text-primary font-semibold">Average Wait Time</span> (the mean amount of time an application spends sitting completely idle in the Ready Queue line before its calculations begin).
+            </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between text-on-surface-variant">
+<span class="font-label-code text-label-code">Single Core / Multiprog</span>
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-primary text-on-primary">ARBITRATION ACTIVE</span>
+</div>
+</div>
+</div>
+<!-- Real World & Everyday Analogy Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Technical Real-World Application Card -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">laptop_chromebook</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">💻 Real-World Application Example</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Imagine your computer is running a heavy video rendering task inside Adobe Premiere alongside everyday tools like Google Chrome and Microsoft VS Code. If the OS referee used FCFS scheduling, the video render task would hog the CPU core for an hour straight, causing Chrome and VS Code to freeze completely. To prevent this, modern desktop OS engines use dynamic Round Robin style variations, giving Chrome, VS Code, and Premiere alternating millisecond turns so the mouse and text windows stay completely responsive.
+          </p>
+</div>
+<!-- Analogy Card Component -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">🎒 Everyday Example (5th Grader)</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Imagine a grocery store checkout line with only one cash register. FCFS is serving people strictly in the order they lined up—even if the first person has a shopping cart overflowing with 100 boxes of cereal, everyone else must wait. SJF means looking down the line and letting the person with a single stick of gum go first to get them out of the way quickly. Round Robin means the cashier scans exactly 3 items for a customer, and if that customer still has more items left, they must walk all the way to the back of the line to wait for their next turn!
+          </p>
+</div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- SECTION 2: Structural Dissection (The Three Scheduling Strategies & Math Matrix) -->
+<!-- ============================================================ -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-lg bg-tertiary text-on-tertiary font-label-code text-label-code font-bold">02</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            2️⃣ Structural Dissection (The Three Scheduling Strategies &amp; Math Matrix)
+          </h2>
+</div>
+<span class="font-label-tag text-label-tag text-outline tracking-wider uppercase">GANTT TIMELINE MATRIX</span>
+</div>
+<!-- Split Pane Structural Block -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md">
+<!-- Left Pane: Visual Gantt Chart Timeline Layout -->
+<div class="xl:col-span-7 p-space-md rounded-xl bg-surface-container flex flex-col gap-space-md shadow-lg">
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div>
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-wider">Dynamic Gantt Timelines</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Sample Workload Trace (Total Burst: 14ms)</h3>
+</div>
+<!-- Job Badges -->
+<div class="flex flex-wrap gap-1">
+<span class="font-label-code text-label-code px-2 py-0.5 rounded bg-primary text-on-primary font-bold">Job A: 8ms</span>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded bg-secondary text-on-secondary font-bold">Job B: 2ms</span>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded bg-tertiary text-on-tertiary font-bold">Job C: 3ms</span>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-bold">Job D: 1ms</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-md mt-2">
+<!-- 1. FCFS Gantt -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex justify-between items-center">
+<span class="font-label-code text-label-code text-primary font-semibold">FCFS (Arrival: A ➔ B ➔ C ➔ D)</span>
+<span class="font-label-tag text-label-tag text-outline">Total 14ms</span>
+</div>
+<!-- Timeline Bar -->
+<div class="w-full h-10 rounded bg-surface flex overflow-hidden font-label-code text-label-code text-center font-bold">
+<div class="h-full bg-primary text-on-primary flex items-center justify-center" style="width: 57.14%;">
+                  A (0-8ms)
+                </div>
+<div class="h-full bg-secondary text-on-secondary flex items-center justify-center" style="width: 14.28%;">
+                  B (8-10ms)
+                </div>
+<div class="h-full bg-tertiary text-on-tertiary flex items-center justify-center" style="width: 21.43%;">
+                  C (10-13ms)
+                </div>
+<div class="h-full bg-primary-container text-on-primary-container flex items-center justify-center" style="width: 7.15%;">
+                  D (13-14ms)
+                </div>
+</div>
+<div class="flex justify-between text-outline font-label-tag text-label-tag px-1">
+<span>0ms</span>
+<span class="ml-auto mr-[35%]">8ms</span>
+<span class="mr-[21%]">10ms</span>
+<span class="mr-[6%]">13ms</span>
+<span>14ms</span>
+</div>
+</div>
+<!-- 2. SJF Gantt -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex justify-between items-center">
+<span class="font-label-code text-label-code text-tertiary font-semibold">SJF (Optimal Order: D ➔ B ➔ C ➔ A)</span>
+<span class="font-label-tag text-label-tag text-tertiary">Minimum Wait Time</span>
+</div>
+<!-- Timeline Bar -->
+<div class="w-full h-10 rounded bg-surface flex overflow-hidden font-label-code text-label-code text-center font-bold">
+<div class="h-full bg-primary-container text-on-primary-container flex items-center justify-center" style="width: 7.15%;">
+                  D
+                </div>
+<div class="h-full bg-secondary text-on-secondary flex items-center justify-center" style="width: 14.28%;">
+                  B (1-3)
+                </div>
+<div class="h-full bg-tertiary text-on-tertiary flex items-center justify-center" style="width: 21.43%;">
+                  C (3-6)
+                </div>
+<div class="h-full bg-primary text-on-primary flex items-center justify-center" style="width: 57.14%;">
+                  A (6-14ms)
+                </div>
+</div>
+<div class="flex justify-between text-outline font-label-tag text-label-tag px-1">
+<span>0ms</span>
+<span class="mr-auto ml-[6%]">1ms</span>
+<span class="mr-auto ml-[12%]">3ms</span>
+<span class="mr-auto ml-[19%]">6ms</span>
+<span>14ms</span>
+</div>
+</div>
+<!-- 3. RR (q=2ms) Gantt -->
+<div class="flex flex-col gap-1.5 p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex justify-between items-center">
+<span class="font-label-code text-label-code text-secondary font-semibold">Round Robin (q = 2ms Interleaved)</span>
+<span class="font-label-tag text-label-tag text-secondary">Preemptive Slices</span>
+</div>
+<!-- Timeline Bar -->
+<div class="w-full h-10 rounded bg-surface flex overflow-hidden font-label-code text-label-code text-center font-bold">
+<div class="h-full bg-primary text-on-primary flex items-center justify-center" style="width: 14.28%;" title="A: 0-2ms">A</div>
+<div class="h-full bg-secondary text-on-secondary flex items-center justify-center" style="width: 14.28%;" title="B: 2-4ms">B</div>
+<div class="h-full bg-tertiary text-on-tertiary flex items-center justify-center" style="width: 14.28%;" title="C: 4-6ms">C</div>
+<div class="h-full bg-primary-container text-on-primary-container flex items-center justify-center" style="width: 7.15%;" title="D: 6-7ms">D</div>
+<div class="h-full bg-primary text-on-primary flex items-center justify-center" style="width: 14.28%;" title="A: 7-9ms">A</div>
+<div class="h-full bg-tertiary text-on-tertiary flex items-center justify-center" style="width: 7.15%;" title="C: 9-10ms">C</div>
+<div class="h-full bg-primary text-on-primary flex items-center justify-center" style="width: 28.58%;" title="A: 10-14ms">A</div>
+</div>
+<div class="flex justify-between text-outline font-label-tag text-label-tag px-1">
+<span>0ms</span>
+<span>2ms</span>
+<span>4ms</span>
+<span>6ms</span>
+<span>7ms</span>
+<span>9ms</span>
+<span>10ms</span>
+<span>14ms</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Pane: Algorithm Evaluation Table -->
+<div class="xl:col-span-5 p-space-md rounded-xl bg-surface-container-high flex flex-col justify-between gap-space-md shadow-lg">
+<div>
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-wider">Metric Benchmark</span>
+<span class="font-label-code text-label-code text-outline">n = 4 Processes</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">The Algorithm Evaluation Table</h3>
+<div class="flex flex-col gap-space-sm mt-space-md">
+<!-- FCFS Card -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-primary font-bold">FCFS Execution Matrix</span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-tag text-label-tag font-semibold">CONVOY TRAP</span>
+</div>
+<p class="font-label-code text-label-code text-on-surface-variant">
+                  Job A: 0ms | Job B: 8ms | Job C: 10ms | Job D: 13ms
+                </p>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface pt-1">
+<span>Avg Wait Time:</span>
+<span class="text-error font-bold">(0+8+10+13)/4 = 7.75 ms</span>
+</div>
+</div>
+<!-- SJF Card -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-tertiary font-bold">SJF Execution Matrix</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-tag text-label-tag font-semibold">THEORETICAL OPTIMUM</span>
+</div>
+<p class="font-label-code text-label-code text-on-surface-variant">
+                  Job D: 0ms | Job B: 1ms | Job C: 3ms | Job A: 6ms
+                </p>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface pt-1">
+<span>Avg Wait Time:</span>
+<span class="text-tertiary font-bold">(0+1+3+6)/4 = 2.50 ms</span>
+</div>
+</div>
+<!-- RR Card -->
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-secondary font-bold">Round Robin Matrix (q = 2ms)</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-secondary font-label-tag text-label-tag font-semibold">TIME-SLICED FAIR</span>
+</div>
+<p class="font-label-code text-label-code text-on-surface-variant">
+                  Time-slice interleaving prevents starvation. Fair responsiveness across all workloads.
+                </p>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface pt-1">
+<span>Latency Profile:</span>
+<span class="text-secondary font-bold">Balanced Human Response</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface flex items-center justify-between font-label-tag text-label-tag text-outline">
+<span>SJF DELIVERS 67.7% REDUCTION IN WAIT OVER FCFS</span>
+<span class="text-tertiary font-bold">P = MINIMAL DELAY</span>
+</div>
+</div>
+</div>
+<!-- Structural Definitions Grid Below Diagram -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- FCFS Deep Dive -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">hourglass_bottom</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">FCFS Mechanics</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Suffers from the <strong class="text-on-surface">Convoy Effect</strong> (where a single massive, slow process blocks a long line of tiny, fast applications behind it).
+          </p>
+<div class="mt-auto p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-primary uppercase">💻 Real-World Application Example</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              If a server background backup script launches right before you click to launch Microsoft VS Code, FCFS will lock up the desk, forcing your editor window to hang until the backup completely finishes.
+            </p>
+</div>
+</div>
+<!-- SJF Deep Dive -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[20px]">flash_on</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">SJF Mechanics</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            The theoretical holy grail for minimizing Average Wait Time, but carries a major catch—the OS referee cannot perfectly predict the exact future duration of an application process burst.
+          </p>
+<div class="mt-auto p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-tertiary uppercase">💻 Real-World Application Example</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Web browsers like Google Chrome execute highly unpredictable scripts based on user clicks, making it impossible for the kernel to know exactly how many milliseconds a tab will need ahead of time.
+            </p>
+</div>
+</div>
+<!-- RR Deep Dive -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">cached</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Round Robin Mechanics</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Relies heavily on the <strong class="text-on-surface">Time Quantum</strong> (the hardcoded microsecond window measured by the hardware clock). If the quantum is set too large, it degrades into FCFS; if set too small, the system completely wastes its processing power on continuous context switches.
+          </p>
+<div class="mt-auto p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-secondary uppercase">💻 Real-World Application Example</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              In text tools like VS Code, the time quantum is optimized to ensure keypress tracking threads execute within milliseconds, giving you zero typing lag while background tasks tick slowly.
+            </p>
+</div>
+</div>
+</div>
+<!-- Bottom Footer Everyday Example Note -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-md shadow-sm">
+<div class="p-2 rounded-lg bg-tertiary text-on-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">calculate</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-tertiary uppercase font-bold tracking-wider">🎒 Everyday Example (Checkout Line Mathematics)</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Let's complete the grocery store math! Imagine four people arrive at the same time: Customer A needs 8 minutes, Customer B needs 2 minutes, Customer C needs 3 minutes, and Customer D needs 1 minute. Under FCFS, Customer D waits 8+2+3 = 13 minutes just to buy a piece of gum! Under SJF, we swap the order so Customer D goes first, then B, then C, then A. This simple switch drastically slashes the average wait time for the whole group, making the checkout line feel incredibly fast and efficient!
+          </p>
+</div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- SECTION 3: Linear Operational Pipeline (The Checkout-Line Execution Workflow) -->
+<!-- ============================================================ -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-lg bg-secondary text-on-secondary font-label-code text-label-code font-bold">03</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            3️⃣ Linear Operational Pipeline (The Checkout-Line Execution Workflow)
+          </h2>
+</div>
+<span class="font-label-tag text-label-tag text-outline tracking-wider uppercase">SEQUENTIAL DISPATCH CYCLE</span>
+</div>
+<!-- Horizontal Workflow Timeline Tracker Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Step 1 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between gap-space-md relative shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-primary font-bold">STEP 01</span>
+<span class="material-symbols-outlined text-[20px] text-primary">login</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">1. Queue Influx</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Processes A, B, C, and D enter the system concurrently, changing their tracking flags to the Ready State inside the kernel manager array.
+            </p>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low font-label-tag text-label-tag text-outline flex items-center justify-between">
+<span>FLAG: READY</span>
+<span class="text-primary font-bold">PCB_ENQUEUE</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between gap-space-md relative shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-tertiary font-bold">STEP 02</span>
+<span class="material-symbols-outlined text-[20px] text-tertiary">swap_horiz</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">2. Algorithmic Dispatch</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              The scheduler engine applies the selected rule (FCFS, SJF, or RR), loads the chosen process's PCB diary, and commands the CPU core to execute its binary lines.
+            </p>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low font-label-tag text-label-tag text-outline flex items-center justify-between">
+<span>CONTEXT_LOAD</span>
+<span class="text-tertiary font-bold">EXECUTE</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between gap-space-md relative shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-secondary font-bold">STEP 03</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">timer</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">3. Quantum Expiration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              For Round Robin, the hardware clock timer counts down. The instant the time quantum expires, a hardware interrupt halts the running app, triggers a context switch, and pushes the app to the back of the queue.
+            </p>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low font-label-tag text-label-tag text-outline flex items-center justify-between">
+<span>TIMER_INTERRUPT</span>
+<span class="text-secondary font-bold">PREEMPT</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between gap-space-md relative shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-primary-container font-bold">STEP 04</span>
+<span class="material-symbols-outlined text-[20px] text-primary-container">query_stats</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">4. Average Wait Computation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              The scheduler tracks the total idle duration for each individual process, sums the individual wait times, and divides by the total number of jobs to calculate the performance baseline metric.
+            </p>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low font-label-tag text-label-tag text-outline flex items-center justify-between">
+<span>WAIT_SUM / N</span>
+<span class="text-primary-container font-bold">TELEMETRY</span>
+</div>
+</div>
+</div>
+<!-- Practice Component & Analogy Card -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Diagnostic Activity Card -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[22px]">groups</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">💻 Physical Checkout Simulation Activity</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Split the class into a live grocery line ➔ Assign one student to act as the cash register CPU ➔ Hand four students sheets of paper representing different job burst sizes ➔ Physically run the line three times using FCFS rules, SJF rules, and Round Robin time-boxing ➔ Have students record the individual stopwatch wait durations on the board and map the raw human data directly to the scheduling math equations.
+          </p>
+<div class="mt-space-xs flex flex-wrap gap-2">
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">4 Students (A, B, C, D)</span>
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">1 Register CPU</span>
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container-high text-primary">Stopwatch Telemetry</span>
+</div>
+</div>
+<!-- Analogy Card -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[22px]">child_care</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">🎒 Playground Swing Sequence</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Four kids stand next to the swing set at the exact same moment (Queue Influx) ➔ The playground monitor checks their rule list to decide who gets on the seat (Algorithmic Dispatch) ➔ A whistle blows every 2 minutes forcing the swinger to step down and go to the back of the line (Quantum Expiration) ➔ The monitor calculates the total minutes the kids spent standing on the mulch waiting for their turn (Average Wait Computation).
+          </p>
+<div class="mt-space-xs flex flex-wrap gap-2">
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Whistle = Hardware Timer</span>
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container-high text-tertiary">Mulch Time = Ready Queue Latency</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- SECTION 4: Paradigm Showdown & Guardrails -->
+<!-- ============================================================ -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-lg bg-primary-container text-on-primary-container font-label-code text-label-code font-bold">04</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            4️⃣ Paradigm Showdown &amp; Guardrails
+          </h2>
+</div>
+<span class="font-label-tag text-label-tag text-outline tracking-wider uppercase">ARCHITECTURAL TRADE-OFF MATRIX</span>
+</div>
+<!-- Comparative Table: Preemptive vs Non-Preemptive -->
+<div class="overflow-hidden rounded-xl bg-surface-container shadow-lg">
+<div class="p-space-md bg-surface-container-high flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              Preemptive Scheduling (Round Robin) vs Non-Preemptive Scheduling (FCFS / SJF)
+            </h3>
+<span class="font-label-tag text-label-tag text-on-surface-variant">EXPLICIT INSTRUCTION INTERRUPT CAPABILITY</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">balance</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+<!-- Row 1: Disruption Rules -->
+<div class="p-space-md bg-surface-container flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-primary uppercase font-bold">Disruption Rules</span>
+<span class="font-headline-sm text-headline-sm text-on-surface text-base">Interrupt Mechanism</span>
+</div>
+<div class="p-space-md bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-code text-label-code text-secondary font-bold">Preemptive (RR)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Can violently yank an active app off the CPU mid-run via timer interrupts.
+            </p>
+</div>
+<div class="p-space-md bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-code text-label-code text-tertiary font-bold">Non-Preemptive (FCFS / SJF)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Must wait patiently for the app to voluntarily yield or finish its execution.
+            </p>
+</div>
+<!-- Row 2: Starvation Risk -->
+<div class="p-space-md bg-surface-container flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-primary uppercase font-bold">Starvation Risk</span>
+<span class="font-headline-sm text-headline-sm text-on-surface text-base">Fairness Metric</span>
+</div>
+<div class="p-space-md bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-code text-label-code text-secondary font-bold">Low / Fair</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Everyone gets a continuous turn through periodic circular queue indexing.
+            </p>
+</div>
+<div class="p-space-md bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-code text-label-code text-tertiary font-bold">High Risk</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Tiny jobs can permanently block huge jobs (convoy) or large jobs starve in SJF.
+            </p>
+</div>
+<!-- Row 3: Overhead Tax -->
+<div class="p-space-md bg-surface-container flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-primary uppercase font-bold">Overhead Tax</span>
+<span class="font-headline-sm text-headline-sm text-on-surface text-base">Kernel Cycle Cost</span>
+</div>
+<div class="p-space-md bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-code text-label-code text-secondary font-bold">High Overhead</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Frequent context switch saves: register flushing, cache evictions, PCB writes.
+            </p>
+</div>
+<div class="p-space-md bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-code text-label-code text-tertiary font-bold">Zero Interrupt Tax</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              App stays on the chip until completion, minimizing scheduler state churn.
+            </p>
+</div>
+</div>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="p-space-md rounded-xl bg-surface-container-high flex flex-col md:flex-row items-start gap-space-md shadow-md">
+<div class="p-3 rounded-lg bg-error-container text-on-error-container shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">warning</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-error-container text-on-error-container uppercase font-bold">CRITICAL WARNING</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Common Mistakes Warning Banner</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Do not assume Round Robin makes applications run faster! Round Robin actually increases the time it takes for a single heavy application to complete its work because it is constantly interrupted. Its purpose is fairness and responsiveness, ensuring small interactive apps don't get trapped behind massive background calculations!
+          </p>
+</div>
+</div>
+<!-- Interview Takeaway Panel -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm shadow-lg">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[24px]">school</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Interview Takeaway Panel</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Selecting a scheduling algorithm is an exercise in resource trade-offs. FCFS favors low overhead but risks massive convoy delays. SJF minimizes wait times but remains impossible to perfectly implement without future knowledge. Round Robin delivers excellent interactive multitasking but pays a continuous performance tax in context switch ticks. If a scheduling loop script locks up or drops its tracking queues, the CPU will freeze entirely, triggering a fatal Kernel Panic exception error (just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling down!).
+        </p>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-wrap items-center justify-between gap-space-xs text-on-surface-variant">
+<span class="font-label-code text-label-code text-primary font-semibold">CORE SUMMARY: TRADE-OFFS &gt; PERFECTION</span>
+<span class="font-label-tag text-label-tag text-tertiary">EXAM CHECKPOINT: PASSED</span>
+</div>
+</div>
+</section>
+<!-- MODULE COMPLETION FOOTER BAR -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col lg:flex-row items-center justify-between gap-space-md shadow-xl">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">check_circle</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Module 07 Complete</span>
+<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-tertiary text-on-tertiary font-bold">100% MASTERY</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Telemetry verified: FCFS, SJF, Round Robin time quantums, Convoy effect, and wait metric analysis.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full lg:w-auto justify-end">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-code text-label-code transition-all shadow-sm">
+          Review L7 Notes
+        </button>
+<button class="px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-code text-label-code font-bold hover:shadow-[0_0_16px_rgba(0,210,255,0.4)] transition-all">
+          Advance to Module 08 (CPU Scheduling II &amp; Multilevel Feedback Queues) ➔
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
