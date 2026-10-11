@@ -1,92 +1,604 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L5b - What Is a Process?</title>
-    <script src="https://jsdelivr.net"></script>
-    <style>
-        body { background-color: #0b0f19; color: #f3f4f6; font-family: sans-serif; }
-    </style>
-</head>
-<body class="p-6">
 
-    <!-- HEADER TITLE BANNER -->
-    <div class="border-2 border-blue-500 rounded-xl p-6 mb-8 bg-slate-900 shadow-lg shadow-blue-500/20">
-        <span class="text-sm font-bold tracking-widest text-blue-400">🏷️ OPERATING SYSTEMS: L5b — Process Fundamentals</span>
-        <h1 class="text-3xl font-extrabold text-white mt-1">What Is a Process? Identity, State, and the PCB Diary</h1>
-        <p class="text-emerald-400 font-semibold mt-1">✨ Static Disk Programs transformed into Live Memory Executions</p>
-    </div>
-
-    <!-- MAIN GRID CONTAINER -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        <!-- SECTION 1 -->
-        <div class="border border-slate-700 bg-slate-900 rounded-xl p-5">
-            <h2 class="text-xl font-bold text-blue-400 mb-3">1️⃣ Core Conceptual Onboarding (A Program Mid-Sentence)</h2>
-            <p class="mb-3"><strong class="text-white">The Foundational Question:</strong> A Process is an active instance of a computer program currently in execution inside your computer's RAM space. It represents the dynamic, living entity that demands active hardware resources, whereas a program is merely a passive collection of static instructions sitting dead on your storage disk.</p>
-            <ul class="space-y-2 text-sm text-slate-300 mb-4">
-                <li>🆔 <strong class="text-white">Unique Identity:</strong> Every single process is assigned a Process Identifier (PID) (just like a person's Social Security Number) by the kernel referee at birth.</li>
-                <li>🔒 <strong class="text-white">Private Address Space:</strong> Occupies an isolated, private memory room in RAM that is strictly invisible and off-limits to all other running applications.</li>
-                <li>📝 <strong class="text-white">The Execution Snapshot:</strong> Captures a program "mid-sentence"—retaining its own active line bookmarks, system math counts, and internal temporary variables.</li>
-            </ul>
-            <div class="p-3 bg-blue-950/40 rounded-lg border border-blue-800/60 mb-3">
-                <span class="font-bold text-blue-400 block text-xs">💻 REAL-WORLD APPLICATION EXAMPLE</span>
-                <p class="text-xs text-slate-300 mt-1">If you open five separate windows of Microsoft VS Code to edit five different project folders, your OS task manager will show five completely unique PIDs. They all use the exact same underlying binary program code file on your disk, but they are five entirely separate processes that cannot see or corrupt each other's memory tracks.</p>
-            </div>
-            <div class="p-3 bg-purple-950/30 rounded-lg border border-purple-800/40">
-                <span class="font-bold text-purple-400 block text-xs">🎒 EVERYDAY EXAMPLE (5TH GRADER)</span>
-                <p class="text-xs text-slate-300 mt-1">Imagine a program is like a printed movie script sitting closed on a shelf doing nothing. A process is when an actor actually takes that script down, stands on a stage, and starts reading the lines out loud. You can have five different actors (processes) reading the exact same script file at the exact same time, but each actor is at a completely different line number and remembers their own place in the story!</p>
-            </div>
-        </div>
-
-        <!-- SECTION 2 -->
-        <div class="border border-slate-700 bg-slate-900 rounded-xl p-5">
-            <h2 class="text-xl font-bold text-blue-400 mb-3">2️⃣ Structural Dissection (Inside the PCB Diary)</h2>
-            <pre class="bg-black/50 p-3 rounded-lg text-xs text-emerald-400 font-mono mb-4 text-center">
-  [ PROCESS MEMORY REGIONS ]       [ PROCESS CONTROL BLOCK ]
-+----------------------------+    +----------------------------+
-
-| Stack (Scratch Variables)  |    | Process ID: PID 4096       |
-| Heap (Dynamic Run-Time)    |    | Process State: READY       |
-| Data (Global Settings)     |    | Program Counter: Line 142  |
-| Text (Machine Instructions)|    | Saved Register Array Maps  |
-+----------------------------+    +----------------------------+</pre>
-            <ul class="space-y-3 text-xs text-slate-300">
-                <li>📊 <strong class="text-white">Text & Data Segments:</strong> Stores read-only binary codes and long-term global configurations that stay alive for the entire lifespan of the process (like premium flags inside Spotify).</li>
-                <li>🧠 <strong class="text-white">Heap & Stack Segments:</strong> Tracks dynamic memory requested on-the-fly and temporary function calculations that expand and shrink over free space.</li>
-                <li>🔖 <strong class="text-white">The Program Counter (PC):</strong> A vital tracking field inside the PCB diary that stores the exact hardware memory address of the very next instruction line the CPU needs to run.</li>
-            </ul>
-        </div>
-
-        <!-- SECTION 3 -->
-        <div class="border border-slate-700 bg-slate-900 rounded-xl p-5">
-            <h2 class="text-xl font-bold text-blue-400 mb-3">3️⃣ Linear Operational Pipeline (The Five-State Lifecycle)</h2>
-            <div class="flex items-center justify-between bg-black/30 p-2 rounded-lg text-center font-mono text-xs text-cyan-400 mb-4 border border-slate-800">
-                <span>New</span> ➔ <span>Ready</span> ➔ <span>Running</span> ➔ <span>Waiting</span> ➔ <span>Terminated</span>
-            </div>
-            <ol class="space-y-2 text-xs text-slate-300 mb-4">
-                <li><strong class="text-white">1. New:</strong> The process is currently being constructed by the kernel referee. Memory boundaries are drawn and an empty PCB diary is built.</li>
-                <li><strong class="text-white">2. Ready:</strong> The application sits entirely inside active RAM, standing in an organized wait-queue line fully prepared to jump onto a CPU core.</li>
-                <li><strong class="text-white">3. Running:</strong> The hardware scheduler dispatches the process, loads its pointers onto the actual CPU, and executes code instructions line-by-line.</li>
-                <li><strong class="text-white">4. Waiting (Blocked):</strong> The process hits a bottleneck (like waiting for a web page download) and steps out of the line, pausing execution.</li>
-                <li><strong class="text-white">5. Terminated (Closed):</strong> The application completes its code instructions or crashes. The OS reclaims all RAM boundaries and erases the PCB diary.</li>
-            </ol>
-        </div>
-
-        <!-- SECTION 4 -->
-        <div class="border border-slate-700 bg-slate-900 rounded-xl p-5">
-            <h2 class="text-xl font-bold text-blue-400 mb-3">4️⃣ Paradigm Showdown & Guardrails</h2>
-            <div class="p-3 bg-amber-950/30 border border-amber-800 rounded-lg text-xs text-slate-300 mb-4">
-                <strong class="text-amber-400 block mb-1">⚠️ COMMON MISTAKES WARNING BANNER</strong>
-                Launching three separate windows of Google Chrome or Microsoft VS Code does not copy the file on your disk. It creates three completely distinct processes with three unique PIDs and isolated memory spaces, all pointing back to the same single program file.
-            </div>
-            <div class="p-3 bg-red-950/20 border border-red-900 rounded-lg text-xs text-slate-300">
-                <strong class="text-red-400 block mb-1">🎯 INTERVIEW TAKEAWAY PANEL</strong>
-                Every time the OS referee switches between apps, it must perfectly freeze and thaw the tracking fields inside the PCB. If an application loop script runs wild and calls nested functions infinitely, it will smash past its allocated Stack boundaries, causing a fatal <strong>Segmentation Fault</strong> exception violation error, and the kernel referee will kill the PID instantly.
-            </div>
-        </div>
-
-    </div>
-</body>
-</html>
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"background":"#0f131d","surface-container-lowest":"#0a0e18","surface":"#0f131d","on-surface-variant":"#bbc9cf","surface-tint":"#47d6ff","surface-container-high":"#262a35","on-surface":"#dfe2f1","outline-variant":"#3c494e","error-container":"#93000a","on-primary-fixed":"#001f28","on-error":"#690005","tertiary-fixed":"#6ffbbe","on-tertiary-container":"#005b3d","inverse-on-surface":"#2c303b","secondary-fixed-dim":"#ddb7ff","on-secondary-container":"#d6a9ff","secondary-fixed":"#f0dbff","on-secondary":"#490080","on-error-container":"#ffdad6","surface-bright":"#353944","outline":"#859399","inverse-primary":"#00677f","on-primary-container":"#00566a","primary":"#a5e7ff","surface-container-highest":"#313540","on-tertiary":"#003824","tertiary-container":"#48d99e","on-primary-fixed-variant":"#004e60","on-secondary-fixed-variant":"#6900b3","error":"#ffb4ab","primary-container":"#00d2ff","tertiary-fixed-dim":"#4edea3","inverse-surface":"#dfe2f1","primary-fixed-dim":"#47d6ff","tertiary":"#69f6b9","on-primary":"#003543","surface-container-low":"#171b26","surface-variant":"#313540","on-tertiary-fixed-variant":"#005236","on-tertiary-fixed":"#002113","secondary":"#ddb7ff","primary-fixed":"#b6ebff","surface-dim":"#0f131d","surface-container":"#1c1f2a","on-background":"#dfe2f1","secondary-container":"#6f00be","on-secondary-fixed":"#2c0051"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"1rem","gutter":"1.5rem","space-lg":"1.5rem","space-xs":"0.25rem","margin-mobile":"1.25rem","space-xl":"2.5rem","margin":"3rem","gutter-mobile":"1rem","space-sm":"0.5rem"},"fontFamily":{"headline-sm":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"headline-xl":["Space Grotesk"],"label-code":["JetBrains Mono"],"body-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Space Grotesk"],"label-tag":["JetBrains Mono"],"headline-xl-mobile":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"headline-lg":["Space Grotesk"]},"fontSize":{"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="w-full h-16 px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-gutter"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-primary-container text-[20px]">terminal</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-wider text-primary">ACADEMIA_OS</span><span class="font-label-tag text-label-tag text-on-surface-variant uppercase tracking-widest">Kernel Edu Core</span></div></div><div class="hidden xl:flex items-center gap-space-xs font-label-code text-label-code text-on-surface-variant bg-surface-container-low px-space-md py-space-xs rounded-lg"><span class="material-symbols-outlined text-primary-container text-[16px]">memory</span><span class="text-on-surface">MODULE 02: PROCESSES &amp; SCHEDULING</span><span class="text-outline">//</span><span class="text-tertiary">LECTURE L5b</span></div></div><nav class="hidden lg:flex items-center gap-space-sm font-label-code text-label-code" data-active-classes="bg-surface-container text-primary-container font-semibold rounded-lg"><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="curriculum-outline" href="#">Curriculum Outline</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="master-matrix" href="#">Master Matrix</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="roadmap" href="#">Roadmap</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="analogy-cheat-sheet" href="#">Analogy Cheat Sheet</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="oral-defense" href="#">Oral Defense</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-full"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-tag text-label-tag text-on-surface-variant">SYS_SYNC_OK</span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="hidden md:flex flex-col text-right"><span class="font-label-code text-label-code text-on-surface leading-tight">cadet_4096</span><span class="font-label-tag text-label-tag text-on-surface-variant">Level 3 CS Eng</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-72 z-40 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.2)] flex flex-col justify-between py-space-lg overflow-y-auto"><div class="px-gutter flex flex-col gap-space-lg"><div class="flex items-center justify-between pb-space-sm"><span class="font-label-tag text-label-tag uppercase text-on-surface-variant tracking-wider">Curriculum Nav</span><span class="font-label-tag text-label-tag text-primary-container bg-surface-container px-space-xs py-space-xs rounded-DEFAULT">v2.4.0</span></div><nav class="flex flex-col gap-space-xs font-label-code text-label-code" data-active-classes="bg-surface-container text-primary-container font-semibold rounded-lg"><div class="text-[11px] uppercase tracking-wider text-outline px-space-sm pt-space-xs pb-space-xs font-label-tag">Lesson Checkpoints</div><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-surface-container text-primary-container font-semibold rounded-lg" data-path="core-onboarding" href="#"><span class="font-label-tag text-label-tag text-primary">01.</span><span>Core Onboarding</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pcb-dissection" href="#"><span class="font-label-tag text-label-tag text-primary">02.</span><span>PCB Dissection</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="five-state-pipeline" href="#"><span class="font-label-tag text-label-tag text-primary">03.</span><span>Five-State Pipeline</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="paradigm-showdown" href="#"><span class="font-label-tag text-label-tag text-primary">04.</span><span>Paradigm Showdown</span></a></nav></div><div class="px-gutter pt-space-lg flex flex-col gap-space-sm"><div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-tag text-label-tag text-on-surface-variant">CPU SCHEDULER</span><span class="font-label-tag text-label-tag text-tertiary">ROUND_ROBIN</span></div><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-primary-container h-full w-3/4"></div></div><div class="flex justify-between font-label-tag text-label-tag text-outline"><span>Time Quantum: 4ms</span><span>75% Completed</span></div></div></div></aside><div class="pl-72"><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Main Title Banner -->
+<section class="relative w-full px-gutter py-space-xl bg-surface-container-lowest overflow-hidden">
+<!-- Ambient Cyber Glows -->
+<div class="absolute -top-32 right-12 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 left-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<!-- Badge cluster -->
+<div class="flex flex-wrap items-center gap-space-xs font-label-tag text-label-tag">
+<span class="px-space-sm py-1 bg-surface-container text-primary-container rounded-DEFAULT tracking-widest uppercase">
+          MODULE 02: PROCESSES &amp; CONCURRENCY // LECTURE L5b
+        </span>
+<span class="px-space-sm py-1 bg-surface-container-high text-tertiary rounded-DEFAULT tracking-wider uppercase">
+          POSIX.1 PROCESS MODEL
+        </span>
+<span class="px-space-sm py-1 bg-surface-container text-secondary rounded-DEFAULT tracking-wider uppercase">
+          ABET CAC COMPLIANT
+        </span>
+<span class="px-space-sm py-1 bg-primary/20 text-primary rounded-DEFAULT tracking-wider uppercase">
+          INTERACTIVE POSTER EDITION
+        </span>
+</div>
+<!-- Main Headline -->
+<div class="flex flex-col gap-space-xs max-w-5xl">
+<div class="flex items-center gap-space-sm">
+<span class="text-headline-md text-primary select-none">🏷️</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            OPERATING SYSTEMS: L5b — Process Fundamentals
+          </h1>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-4xl">
+          What Is a Process? Identity, State, and the PCB Diary <span class="text-primary">(Transforming Static Disk Programs into Live Memory Executions)</span>
+</p>
+</div>
+<!-- Telemetry Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm pt-space-sm">
+<div class="p-space-md bg-surface-container-low rounded-lg shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">EXECUTION MODE</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">shield</span>
+</div>
+<span class="font-label-code text-label-code text-on-surface font-semibold">USER_SPACE (RING 3)</span>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-tertiary h-full w-full"></div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">DEFAULT SCHEDULER</span>
+<span class="material-symbols-outlined text-[16px] text-primary-container">tune</span>
+</div>
+<span class="font-label-code text-label-code text-primary-container font-semibold">CFS (COMPLETELY FAIR)</span>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-primary-container h-full w-4/5"></div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">PROCESS ENTROPY</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">memory_alt</span>
+</div>
+<span class="font-label-code text-label-code text-secondary-fixed font-semibold">ISOLATED MMU SPACE</span>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-secondary h-full w-2/3"></div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">TELEMETRY HOOK</span>
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<span class="font-label-code text-label-code text-primary font-semibold">ACTIVE_PID: 1042 // TASK_STRUCT</span>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-primary h-full w-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 1: Core Conceptual Onboarding -->
+<section class="w-full px-gutter py-space-xl bg-surface">
+<div class="flex flex-col gap-space-lg max-w-7xl mx-auto">
+<!-- Section Title -->
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-primary-container font-bold">1️⃣</span>
+<div>
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-widest">CHAPTER 01 // FOUNDATION</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Core Conceptual Onboarding (A Program Mid-Sentence)</h2>
+</div>
+</div>
+<!-- Foundational Question & Motivation Split -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Main Question & Concept block (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md bg-surface-container-low p-space-lg rounded-xl shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-primary uppercase">The Foundational Definition</span>
+<span class="font-label-code text-label-code text-tertiary">#def PROCESS_CORE</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed">
+            A <strong class="text-primary-container">Process</strong> is an active instance of a computer program currently in execution inside your computer's RAM space. It represents the dynamic, living entity that demands active hardware resources, whereas a program is merely a passive collection of static instructions sitting dead on your storage disk.
+          </p>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">Key Invariants</span>
+<div class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant">
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">fingerprint</span>
+<div>
+<strong class="text-on-surface font-semibold">Unique Identity:</strong> Every single process is assigned a Process Identifier (PID) (just like a person's Social Security Number) by the kernel referee at birth.
+                </div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">lock</span>
+<div>
+<strong class="text-on-surface font-semibold">Private Address Space:</strong> Occupies an isolated, private memory room in RAM that is strictly invisible and off-limits to all other running applications.
+                </div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">bookmark</span>
+<div>
+<strong class="text-on-surface font-semibold">The Execution Snapshot:</strong> Captures a program "mid-sentence"—retaining its own active line bookmarks, system math counts, and internal temporary variables.
+                </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Core Motivation Box (5 cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between p-space-lg bg-surface-container rounded-xl shadow-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+<span class="font-label-tag text-label-tag uppercase tracking-wider font-semibold">Core Kernel Motivation</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Your processor hardware can only talk to active memory channels, never directly to your storage hard drive. A program file on disk is completely cold. To make it run, the OS kernel must read that file, clone its binary blocks into RAM, and assign a tracking diary to it.
+            </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              This transformation from a static file into a dynamic Process allows the OS to act as a strict referee—giving apps turn-by-turn processor slots while ensuring one bug inside an app cannot take down your entire machine.
+            </p>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container-high rounded-lg flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">sports_score</span>
+<span class="font-label-code text-label-code text-on-surface">Kernel Rule #1: Isolation Guarantees System Uptime</span>
+</div>
+</div>
+</div>
+<!-- Real World vs 5th Grader Analogy Duo -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Tech Real-world Card -->
+<div class="flex flex-col gap-space-sm p-space-lg bg-surface-container-low rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">laptop_chromebook</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Real-World Application Example</h3>
+</div>
+<span class="font-label-tag text-label-tag text-primary-container bg-surface-container px-space-xs py-0.5 rounded-DEFAULT">PIDs IN ACTION</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            When you type code inside Microsoft VS Code, the app is running as a distinct process in your RAM. If you open five separate windows of VS Code to edit five different project folders, your OS task manager will show five completely unique PIDs. They all use the exact same underlying binary program code file on your disk, but they are five entirely separate processes that cannot see or corrupt each other's memory tracks.
+          </p>
+</div>
+<!-- 5th Grader Analogy Card -->
+<div class="flex flex-col gap-space-sm p-space-lg bg-surface-container-low rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">school</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Everyday Example (5th Grader)</h3>
+</div>
+<span class="font-label-tag text-label-tag text-secondary bg-surface-container px-space-xs py-0.5 rounded-DEFAULT">THE THEATER ANALOGY</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Imagine a program is like a printed movie script sitting closed on a shelf doing nothing. A process is when an actor actually takes that script down, stands on a stage, and starts reading the lines out loud. You can have five different actors (processes) reading the exact same script file at the exact same time, but each actor is at a completely different line number and remembers their own place in the story!
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Structural Dissection -->
+<section class="w-full px-gutter py-space-xl bg-surface-container-lowest">
+<div class="flex flex-col gap-space-lg max-w-7xl mx-auto">
+<!-- Section Title -->
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-primary-container font-bold">2️⃣</span>
+<div>
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-widest">CHAPTER 02 // ARCHITECTURE</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Structural Dissection (Inside the Process Control Block Diary)</h2>
+</div>
+</div>
+<!-- Split Pane Visual Diagram -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left: Virtual Address Space (6 cols) -->
+<div class="lg:col-span-6 flex flex-col gap-space-md p-space-lg bg-surface-container rounded-xl shadow-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">layers</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">PROCESS RAM MEMORY FOOTPRINT</span>
+</div>
+<span class="font-label-tag text-label-tag text-primary-container bg-surface-container-high px-space-xs py-0.5 rounded-DEFAULT">VIRTUAL MMU</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Continuous address mapping from high memory (0x7FFFFFFF) to low memory (0x00400000).</p>
+<!-- Memory Stack Graphic -->
+<div class="flex flex-col gap-space-xs pt-space-xs font-label-code text-label-code">
+<!-- 0x7FFFFFFF Stack -->
+<div class="p-space-md bg-surface-container-high rounded-lg flex flex-col gap-1 transition-all hover:bg-surface-container-highest">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span> Stack Segment (Grows Downward ↓)
+                </span>
+<span class="text-[11px] text-outline">0x7FFFFFFF [HIGH]</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface">Local function call frames, return pointers, automatic variables</span>
+</div>
+<!-- Free space indicator -->
+<div class="py-space-sm px-space-md bg-surface-container-lowest rounded-lg flex items-center justify-between text-outline text-[12px]">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">swap_vert</span> Free Memory Space / Dynamic Growth Gap
+              </span>
+<span class="font-label-tag text-label-tag">MMU GUARD PAGE</span>
+</div>
+<!-- Heap -->
+<div class="p-space-md bg-surface-container-high rounded-lg flex flex-col gap-1 transition-all hover:bg-surface-container-highest">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span> Heap Segment (Grows Upward ↑)
+                </span>
+<span class="text-[11px] text-outline">dynamic brk / mmap</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface">Dynamic runtime allocations (malloc / calloc / new objects)</span>
+</div>
+<!-- Data Segment -->
+<div class="p-space-md bg-surface-container-high rounded-lg flex flex-col gap-1 transition-all hover:bg-surface-container-highest">
+<div class="flex items-center justify-between text-primary">
+<span class="font-bold">Data Segment (.data &amp; .bss)</span>
+<span class="text-[11px] text-outline">rw-</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface">Initialized global variables, static variables, application runtime flags</span>
+</div>
+<!-- Text Segment -->
+<div class="p-space-md bg-surface-container-high rounded-lg flex flex-col gap-1 transition-all hover:bg-surface-container-highest">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-bold">Text Segment (.text)</span>
+<span class="text-[11px] text-outline">0x00400000 [LOW / r-x]</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Read-only compiled binary instructions loaded from disk</span>
+</div>
+</div>
+</div>
+<!-- Right: Process Control Block (PCB) [task_struct] (6 cols) -->
+<div class="lg:col-span-6 flex flex-col gap-space-md p-space-lg bg-surface-container rounded-xl shadow-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">assignment</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">PROCESS CONTROL BLOCK (PCB) DIARY</span>
+</div>
+<span class="font-label-tag text-label-tag text-tertiary bg-surface-container-high px-space-xs py-0.5 rounded-DEFAULT">linux: task_struct</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The kernel's central bookkeeping structure allocated in kernel memory for PID #1042.</p>
+<!-- Telemetry Tele-board -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs font-label-code text-label-code">
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-outline uppercase">PID &amp; STATUS</span>
+<span class="text-tertiary font-bold text-headline-sm">PID #1042</span>
+<div class="flex items-center gap-1 text-[11px] text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+<span>STATE: TASK_RUNNING</span>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-outline uppercase">PROGRAM COUNTER (PC)</span>
+<span class="text-primary font-bold">0x7FFF00412E80</span>
+<span class="text-[11px] text-on-surface-variant">Pointer: Next CPU instruction line</span>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col gap-1 sm:col-span-2">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-outline uppercase">SAVED CPU REGISTERS &amp; CONTEXT</span>
+<span class="text-[11px] text-primary">x86_64 arch</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 text-[12px]">
+<div class="bg-surface-container p-1 rounded text-center"><span class="text-outline">%rax:</span> 0x00000001</div>
+<div class="bg-surface-container p-1 rounded text-center"><span class="text-outline">%rbx:</span> 0x7ffd9820</div>
+<div class="bg-surface-container p-1 rounded text-center"><span class="text-outline">%rsp:</span> 0x7fffef80</div>
+<div class="bg-surface-container p-1 rounded text-center"><span class="text-outline">%rbp:</span> 0x7fffefc0</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-outline uppercase">MEMORY MMU LIMITS</span>
+<span class="text-on-surface text-[12px]">Base: 0x00400000</span>
+<span class="text-on-surface text-[12px]">Bound: 0x7FFFFFFF</span>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-outline uppercase">I/O &amp; OPEN FILE DESCRIPTORS</span>
+<span class="text-secondary text-[12px]">fd 0: /dev/stdin</span>
+<span class="text-secondary text-[12px]">fd 1: /dev/stdout [pty]</span>
+<span class="text-secondary text-[12px]">fd 2: /dev/stderr [pty]</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Structural Definitions Details Rows -->
+<div class="flex flex-col gap-space-md pt-space-sm">
+<div class="p-space-md bg-surface-container-low rounded-xl shadow-sm flex flex-col md:flex-row gap-space-md items-start justify-between">
+<div class="flex-1 flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">data_object</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Text &amp; Data Segments</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Stores read-only binary codes and long-term global configurations that stay alive for the entire lifespan of the process.
+            </p>
+</div>
+<div class="w-full md:w-1/2 p-space-sm bg-surface-container rounded-lg">
+<span class="font-label-tag text-label-tag text-primary-container">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">
+              In a media player app like Spotify, your global login validation settings (e.g., <code class="font-label-code text-tertiary">is_premium = true</code>) sit inside the Data segment, remaining active the whole time the app runs.
+            </p>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-xl shadow-sm flex flex-col md:flex-row gap-space-md items-start justify-between">
+<div class="flex-1 flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Heap &amp; Stack Segments</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Tracks dynamic memory requested on-the-fly and temporary function calculations that expand and shrink over free space.
+            </p>
+</div>
+<div class="w-full md:w-1/2 p-space-sm bg-surface-container rounded-lg">
+<span class="font-label-tag text-label-tag text-primary-container">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">
+              When you type characters into a massive text document inside Microsoft VS Code, the editor expands its Heap footprint dynamically to capture those strings.
+            </p>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-xl shadow-sm flex flex-col md:flex-row gap-space-md items-start justify-between">
+<div class="flex-1 flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[18px]">pin_invoke</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">The Program Counter (PC)</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              A vital tracking field inside the PCB diary that stores the exact hardware memory address of the very next instruction line the CPU needs to run.
+            </p>
+</div>
+<div class="w-full md:w-1/2 p-space-sm bg-surface-container rounded-lg">
+<span class="font-label-tag text-label-tag text-primary-container">💻 Real-World Application Example:</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">
+              When the OS pauses Google Chrome to give Spotify a turn, it records Chrome's exact current line number right into its PCB Program Counter field so it can pick up exactly where it left off later.
+            </p>
+</div>
+</div>
+</div>
+<!-- Bottom Analogy Card -->
+<div class="p-space-lg bg-surface-container rounded-xl shadow-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">backpack</span>
+<span class="font-label-tag text-label-tag uppercase font-semibold">🎒 Everyday Example: The Student Desk Workspace</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Let's map the whole setup to a student's school workspace! The <strong class="text-on-surface">Text segment</strong> is your printed, unchangeable school textbook. The <strong class="text-on-surface">Data segment</strong> is the lucky pencil you keep in your backpack all year. The <strong class="text-on-surface">Heap</strong> is loose binder paper you grab from the closet only when a large project demands it. The <strong class="text-on-surface">Stack</strong> is a stack of cafeteria lunch trays—the last one put on top is the first one taken off. The <strong class="text-primary-container">PCB</strong> is your official student ID badge tracking your photo, tracking number, and active class schedule!
+        </p>
+</div>
+</div>
+</section>
+<!-- Section 3: Linear Operational Pipeline -->
+<section class="w-full px-gutter py-space-xl bg-surface">
+<div class="flex flex-col gap-space-lg max-w-7xl mx-auto">
+<!-- Section Title -->
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-primary-container font-bold">3️⃣</span>
+<div>
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-widest">CHAPTER 03 // STATE MACHINE</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Linear Operational Pipeline (The Five-State Lifecycle Pipeline)</h2>
+</div>
+</div>
+<!-- Five-State Interactive Workflow Tracker -->
+<div class="p-space-lg bg-surface-container-low rounded-xl shadow-lg flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-outline uppercase tracking-wider">STATE TRANSITION MAP</span>
+<span class="font-label-code text-label-code text-primary-container">CPU_CLOCK: ACTIVE // ROUND_ROBIN TICK: 10ms</span>
+</div>
+<!-- Pipeline Nodes -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-sm relative">
+<!-- Node 1: New -->
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-space-xs transition-transform hover:-translate-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-outline">STAGE 01</span>
+<span class="material-symbols-outlined text-outline text-[18px]">add_circle</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">1. New</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+              The process is currently being constructed by the kernel referee. Memory boundaries are drawn and an empty PCB diary is built.
+            </p>
+</div>
+<!-- Node 2: Ready -->
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-space-xs transition-transform hover:-translate-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-tertiary">STAGE 02</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">timer</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-tertiary">2. Ready</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+              The application sits entirely inside active RAM, standing in an organized wait-queue line fully prepared to jump onto a CPU core the exact microsecond its turn arrives.
+            </p>
+</div>
+<!-- Node 3: Running -->
+<div class="p-space-md bg-surface-container-high rounded-lg flex flex-col gap-space-xs transition-transform hover:-translate-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-primary-container">STAGE 03</span>
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary-container">3. Running</h4>
+<p class="font-body-sm text-body-sm text-on-surface leading-normal">
+              The hardware scheduler dispatches the process, loads its pointers onto the actual CPU, and the processor executes its instructions line-by-line.
+            </p>
+</div>
+<!-- Node 4: Waiting -->
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-space-xs transition-transform hover:-translate-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-secondary">STAGE 04</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">hourglass_top</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-secondary">4. Waiting</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+              (Blocked): The process hits a bottleneck (like waiting for a web page down-stream download or a keypress) and steps out of the line, pausing execution.
+            </p>
+</div>
+<!-- Node 5: Terminated -->
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-space-xs transition-transform hover:-translate-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-outline">STAGE 05</span>
+<span class="material-symbols-outlined text-outline text-[18px]">cancel</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-outline">5. Terminated</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+              (Closed): The application completes its code instructions or crashes. The OS reclaims all RAM boundaries and erases the PCB diary from memory.
+            </p>
+</div>
+</div>
+<!-- Transition Pipeline SVG Map -->
+<div class="w-full bg-surface-container rounded-lg p-space-md overflow-x-auto">
+<svg class="w-full min-w-[650px] h-20" fill="none" viewbox="0 0 700 80" xmlns="http://www.w3.org/2000/svg">
+<!-- Node circles -->
+<circle class="fill-surface-container-high" cx="50" cy="40" r="18"></circle>
+<text class="fill-on-surface font-label-tag text-[10px]" text-anchor="middle" x="50" y="44">NEW</text>
+<path class="text-outline-variant" d="M 68 40 L 152 40" marker-end="url(#arrow)" stroke="currentColor" stroke-width="2"></path>
+<circle class="fill-surface-container-high" cx="170" cy="40" r="18"></circle>
+<text class="fill-tertiary font-label-tag text-[10px]" text-anchor="middle" x="170" y="44">READY</text>
+<path class="text-primary-container" d="M 188 35 L 312 35" stroke="currentColor" stroke-width="2"></path>
+<text class="fill-primary-container font-label-tag text-[9px]" text-anchor="middle" x="250" y="28">Scheduler Dispatch</text>
+<path class="text-outline" d="M 312 45 L 188 45" stroke="currentColor" stroke-dasharray="3 3" stroke-width="2"></path>
+<text class="fill-outline font-label-tag text-[9px]" text-anchor="middle" x="250" y="58">Interrupt / Time Slice Expired</text>
+<circle class="fill-surface-container-highest" cx="330" cy="40" r="18"></circle>
+<text class="fill-primary font-label-tag text-[10px]" text-anchor="middle" x="330" y="44">RUN</text>
+<path class="text-secondary" d="M 345 50 C 370 75, 450 75, 485 50" stroke="currentColor" stroke-width="2"></path>
+<text class="fill-secondary font-label-tag text-[9px]" text-anchor="middle" x="420" y="75">I/O or Event Wait</text>
+<circle class="fill-surface-container-high" cx="500" cy="40" r="18"></circle>
+<text class="fill-secondary font-label-tag text-[10px]" text-anchor="middle" x="500" y="44">WAIT</text>
+<path class="text-tertiary" d="M 490 28 C 440 8, 230 8, 180 28" stroke="currentColor" stroke-dasharray="3 3" stroke-width="2"></path>
+<text class="fill-tertiary font-label-tag text-[9px]" text-anchor="middle" x="330" y="14">I/O or Event Complete ➔ Back to Ready</text>
+<path class="text-outline-variant" d="M 348 40 L 632 40" stroke="currentColor" stroke-width="2"></path>
+<text class="fill-outline font-label-tag text-[9px]" text-anchor="middle" x="580" y="32">Exit / Clean</text>
+<circle class="fill-surface-container-high" cx="650" cy="40" r="18"></circle>
+<text class="fill-outline font-label-tag text-[10px]" text-anchor="middle" x="650" y="44">TERM</text>
+</svg>
+</div>
+</div>
+<!-- Activity & Roller Coaster Analogy Duo -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Live State Narration -->
+<div class="flex flex-col gap-space-sm p-space-lg bg-surface-container-low rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Live State Narration Activity</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Open your macOS Terminal or Windows PowerShell app <span class="text-primary font-bold">➔</span> Launch five separate terminal windows running the exact same shell binary program <span class="text-primary font-bold">➔</span> Type a heavy file sorting script into Window 1 <span class="text-primary font-bold">➔</span> Observe its tracking state toggle from <span class="text-tertiary">Ready</span> to <span class="text-primary-container">Running</span> <span class="text-primary font-bold">➔</span> Watch the other idle windows sit in the <span class="text-secondary">Waiting</span> state, drawing zero active CPU clock cycles.
+          </p>
+</div>
+<!-- Roller Coaster Analogy -->
+<div class="flex flex-col gap-space-sm p-space-lg bg-surface-container-low rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">qr_code_2</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Roller Coaster Analogy</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Buying your ticket outside the gate is <strong class="text-on-surface">New</strong> <span class="text-secondary font-bold">➔</span> Standing in the zig-zag maze line waiting for the next car is <strong class="text-tertiary">Ready</strong> <span class="text-secondary font-bold">➔</span> Getting buckled into the seat as the coaster flies down the track is <strong class="text-primary-container">Running</strong> <span class="text-secondary font-bold">➔</span> The ride gets stuck momentarily waiting for a track switch to open (<strong class="text-secondary">Blocked/Waiting</strong>) <span class="text-secondary font-bold">➔</span> The ride ends and you step off the platform to go home completely (<strong class="text-outline">Terminated</strong>).
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Paradigm Showdown & Guardrails -->
+<section class="w-full px-gutter py-space-xl bg-surface-container-lowest">
+<div class="flex flex-col gap-space-lg max-w-7xl mx-auto">
+<!-- Section Title -->
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-primary-container font-bold">4️⃣</span>
+<div>
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-widest">CHAPTER 04 // COMPARISON &amp; DEFENSE</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Paradigm Showdown &amp; Guardrails</h2>
+</div>
+</div>
+<!-- Comparative Table -->
+<div class="bg-surface-container rounded-xl shadow-lg overflow-hidden">
+<div class="p-space-md bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">balance</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Passive Program (Static Code File) vs Active Process (Dynamic Execution Unit)</h3>
+</div>
+<span class="font-label-tag text-label-tag text-on-surface-variant">MATRIX EVALUATION</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="bg-surface-container-low font-label-tag text-label-tag text-outline uppercase tracking-wider">
+<th class="py-space-sm px-space-md">Evaluation Metric</th>
+<th class="py-space-sm px-space-md text-on-surface">Passive Program (Static Code File)</th>
+<th class="py-space-sm px-space-md text-primary-container">Active Process (Dynamic Execution Unit)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high">
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-md font-label-code text-label-code text-on-surface-variant font-bold">Physical Location</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Storage Disk Drive (HDD / SSD / NVMe)</td>
+<td class="py-space-md px-space-md text-primary font-semibold">Active RAM Memory Channels + CPU L1/L2 Cache</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-md font-label-code text-label-code text-on-surface-variant font-bold">Lifespan</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Permanent until deleted or overwritten</td>
+<td class="py-space-md px-space-md text-primary font-semibold">Temporary from kernel fork() birth to exit() cleanup</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-md font-label-code text-label-code text-on-surface-variant font-bold">Resource Demand</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Zero CPU time, zero RAM consumption</td>
+<td class="py-space-md px-space-md text-primary font-semibold">Active Processor Slots, Stack, Heap, &amp; File Descriptors</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-md font-label-code text-label-code text-on-surface-variant font-bold">Multiplicity</td>
+<td class="py-space-md px-space-md text-on-surface-variant">One single file on disk (e.g. /usr/bin/python)</td>
+<td class="py-space-md px-space-md text-primary font-semibold">Can spawn dozens of independent running instances (each with unique PID)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Common Mistakes Warning Banner -->
+<div class="p-space-lg bg-surface-container-low rounded-xl shadow-md flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary-container text-[24px]">warning</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag text-tertiary-container uppercase tracking-wider font-bold">CRITICAL PITFALL WARNING // EXAM GUARDRAIL</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Do not confuse multiple open windows with multiple programs! Launching three separate windows of Google Chrome or Microsoft VS Code does not copy the file on your disk. It creates three completely distinct processes with three unique PIDs and isolated memory spaces, all pointing back to the same single program file.
+          </p>
+</div>
+</div>
+<!-- Interview Takeaway Panel -->
+<div class="p-space-lg bg-surface-container rounded-xl shadow-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">psychology_alt</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Systems Defense Takeaway: Context Switching &amp; Segmentation Faults</h3>
+</div>
+<span class="font-label-tag text-label-tag text-primary-container bg-surface-container-high px-space-xs py-0.5 rounded-DEFAULT">ORAL DEFENSE MASTER</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          A process cannot execute instructions without its tracking block. Every time the OS referee switches between apps, it must perfectly freeze and thaw the tracking fields inside the PCB. If an application loop script in Node.js or Python runs wild and calls nested functions infinitely, it will smash past its allocated Stack boundaries, causing a fatal <strong class="text-error font-mono">Segmentation Fault</strong> exception violation error, and the kernel referee will kill the PID instantly to protect the machine (just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling down!).
+        </p>
+</div>
+</div>
+</section>
+<!-- Bottom Navigation Dock -->
+<section class="w-full px-gutter py-space-lg bg-surface-container-lowest shadow-inner">
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-md max-w-7xl mx-auto">
+<!-- Breadcrumbs navigation buttons -->
+<div class="flex flex-wrap items-center gap-space-xs font-label-code text-label-code">
+<a class="px-space-md py-space-xs bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span> L5 - What Is a Process?
+        </a>
+<span class="px-space-md py-space-xs bg-surface-container-highest text-primary font-bold rounded-lg shadow-sm">
+          Current: L5b - Process Fundamentals
+        </span>
+<a class="px-space-md py-space-xs bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors flex items-center gap-1" href="#">
+          L6 - Creation &amp; Switching <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Action buttons -->
+<div class="flex items-center gap-space-sm font-label-code text-label-code">
+<button class="px-space-md py-space-xs bg-surface-container text-on-surface hover:bg-surface-container-high rounded-lg transition-colors flex items-center gap-space-xs" onclick="window.print()">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Print Module Notes</span>
+</button>
+<button class="px-space-md py-space-xs bg-primary-container text-on-primary-container font-semibold rounded-lg hover:shadow-lg transition-shadow flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Download Lecture PDF</span>
+</button>
+</div>
+</div>
+</section>
+</div></main></div></body></html>
