@@ -1,636 +1,753 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary":"#ddb7ff","on-background":"#dfe2f1","surface-container":"#1c1f2a","on-surface-variant":"#bbc9cf","surface":"#0f131d","primary":"#a5e7ff","surface-container-low":"#171b26","inverse-primary":"#00677f","tertiary-fixed":"#6ffbbe","on-tertiary-fixed-variant":"#005236","inverse-surface":"#dfe2f1","on-surface":"#dfe2f1","tertiary-fixed-dim":"#4edea3","outline":"#859399","secondary-fixed-dim":"#ddb7ff","on-primary":"#003543","error-container":"#93000a","on-secondary-fixed":"#2c0051","on-tertiary-container":"#005b3d","tertiary-container":"#48d99e","surface-container-high":"#262a35","on-tertiary":"#003824","on-error":"#690005","outline-variant":"#3c494e","surface-container-lowest":"#0a0e18","secondary-fixed":"#f0dbff","on-secondary-container":"#d6a9ff","primary-fixed-dim":"#47d6ff","tertiary":"#69f6b9","on-secondary":"#490080","surface-dim":"#0f131d","inverse-on-surface":"#2c303b","on-tertiary-fixed":"#002113","error":"#ffb4ab","secondary-container":"#6f00be","surface-container-highest":"#313540","on-primary-container":"#00566a","surface-bright":"#353944","on-primary-fixed-variant":"#004e60","primary-fixed":"#b6ebff","background":"#0f131d","surface-variant":"#313540","primary-container":"#00d2ff","surface-tint":"#47d6ff","on-error-container":"#ffdad6","on-secondary-fixed-variant":"#6900b3","on-primary-fixed":"#001f28"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-lg":"1.5rem","gutter":"1.5rem","space-sm":"0.5rem","space-md":"1rem","space-xs":"0.25rem","space-xl":"2.5rem","gutter-mobile":"1rem","margin":"3rem","margin-mobile":"1.25rem"},fontFamily:{"headline-lg":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-tag":["JetBrains Mono"],"headline-xl":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"label-code":["JetBrains Mono"],"headline-sm":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"]},fontSize:{"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface min-h-screen selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-50 flex flex-col border-r border-outline-variant/30 shadow-[0_0_24px_rgba(0,0,0,0.6)]"><div class="h-16 px-space-md flex items-center justify-between border-b border-outline-variant/30 bg-surface-container-low"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary-container">terminal</span><span class="font-label-tag text-label-tag text-primary-fixed uppercase tracking-wider">CS301-CORE-V2.4</span></div><span class="px-space-xs py-0.5 rounded bg-tertiary/10 border border-tertiary/40 font-label-tag text-label-tag text-tertiary">ONLINE</span></div><div class="p-space-md bg-surface-container-lowest border-b border-outline-variant/20"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-tag text-label-tag text-on-surface-variant uppercase">Kernel Module Syllabus</span><span class="font-label-tag text-label-tag text-primary-fixed-dim">25 UNITS</span></div><div class="w-full bg-surface-container h-1.5 rounded overflow-hidden"><div class="bg-primary-container h-full w-[100%]"></div></div></div><nav class="flex-1 overflow-y-auto p-space-sm space-y-1" data-active-classes="bg-surface-container-high border-l-2 border-primary-container text-primary-fixed font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l00-course-setup-boot-sequence" href="#"><span>L00 Boot Seq &amp; Architecture</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l01-interrupts-traps-system-calls" href="#"><span>L01 Traps &amp; Syscalls</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l02-process-abstraction-pcb" href="#"><span>L02 Process Abstraction</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l03-thread-concurrency-locks" href="#"><span>L03 Threads &amp; Locks</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l04-cpu-scheduling-algorithms" href="#"><span>L04 CPU Schedulers</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l05-virtual-memory-paging" href="#"><span>L05 VM &amp; Paging</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l06-page-replacement-tlb" href="#"><span>L06 Page Replace &amp; TLB</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l07-ipc-pipes-shared-memory" href="#"><span>L07 IPC &amp; Shared Mem</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l08-synchronization-primitives" href="#"><span>L08 Semaphores &amp; Mutex</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l09-deadlocks-bankers-algorithm" href="#"><span>L09 Deadlock Avoidance</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l10-file-systems-inodes" href="#"><span>L10 File Systems &amp; Inodes</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l11-io-devices-driver-model" href="#"><span>L11 I/O Drivers &amp; DMA</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l12-memory-allocation-heap" href="#"><span>L12 Heap &amp; Slab Alloc</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l13-signals-asynchronous-events" href="#"><span>L13 Posix Signals</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l14-virtualization-hypervisors" href="#"><span>L14 Hardware Virt</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l15-containers-namespaces-cgroups" href="#"><span>L15 Namespaces &amp; Cgroups</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l16-network-stack-sockets" href="#"><span>L16 Sockets &amp; Epoll</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l17-real-time-operating-systems" href="#"><span>L17 RTOS Scheduling</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l18-journaling-crash-recovery" href="#"><span>L18 Journaling &amp; Ext4</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l19-microkernels-l4-mach" href="#"><span>L19 Microkernel IPC</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l20-distributed-file-systems" href="#"><span>L20 NFS &amp; Raft Sync</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l21-hardware-security-enclaves" href="#"><span>L21 SGX &amp; TPM Enclaves</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l22-access-control-and-domains" href="#"><span>L22 Access Control &amp; Domains</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-label-code text-label-code" data-path="l23-authentication-identity-verification" href="#"><span>L23 Auth &amp; Identity Verification</span><span class="font-label-tag text-label-tag text-outline">DONE</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 rounded transition-all bg-surface-container-high border-l-2 border-primary-container text-primary-fixed font-semibold" data-path="l24-program-exploits-and-control-flow-hijacking" href="#"><span>L24 Exploits &amp; Control Flow</span><span class="px-1.5 py-0.5 rounded bg-primary-container/20 border border-primary-container font-label-tag text-[10px] text-primary-container">ACTIVE</span></a></nav><div class="p-space-md bg-surface-container-lowest border-t border-outline-variant/30"><div class="flex items-center justify-between text-on-surface-variant font-label-tag text-label-tag"><span>SYS_CLOCK: TSC-SYNC</span><span class="text-tertiary">4.10 GHz</span></div><div class="flex items-center justify-between text-on-surface-variant font-label-tag text-label-tag mt-1"><span>MEM_MAP: E820</span><span class="text-primary-fixed">64GB OK</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30 z-40 flex items-center justify-between px-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high border border-outline-variant/40"><span class="material-symbols-outlined text-primary text-[18px]">memory</span><span class="font-headline-sm text-[13px] tracking-wider text-on-surface font-bold uppercase">CS 301 OPERATING SYSTEMS</span></div><div class="hidden xl:flex items-center gap-space-xs font-label-tag text-[11px]"><span class="px-2 py-0.5 rounded bg-tertiary/10 border border-tertiary/30 text-tertiary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>SEC_SANDBOX_ACTIVE</span><span class="px-2 py-0.5 rounded bg-secondary-container/30 border border-secondary/40 text-secondary">PROTECTIONS: DEP / NX / ASLR / CANARIES</span><span class="px-2 py-0.5 rounded bg-surface-container border border-outline-variant/50 text-on-surface-variant">TARGET: ROP / CFI / SHELLCODE INJECTION</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center gap-space-xs"><button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded bg-primary-container text-on-primary font-label-tag text-label-tag hover:shadow-[0_0_16px_rgba(0,210,255,0.4)] transition-all" type="button"><span class="material-symbols-outlined text-[16px]">shield_with_house</span><span>Validate Exploit Mitigation</span></button><button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded border border-secondary/40 text-secondary hover:bg-secondary/10 font-label-tag text-label-tag transition-all" type="button"><span class="material-symbols-outlined text-[16px]">restart_alt</span><span>Reset Buffer Stack</span></button></div><div class="h-6 w-px bg-outline-variant/40 mx-1"></div><div class="flex items-center gap-space-xs font-label-code text-label-code text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[20px]">tune</span><span class="hidden lg:inline text-primary-fixed">UID: 1000 (KERNEL_LAB)</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-lg py-space-md"><div class="flex flex-col w-full space-y-space-xl text-on-surface">
-<!-- TOP TELEMETRY BAR & ACTIVE LAB CONTROLS -->
-<section class="w-full bg-surface-container-low rounded-xl p-space-md shadow-xl relative overflow-hidden">
-<div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
-<div class="absolute -left-20 -bottom-20 w-80 h-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode":"class","theme":{"extend":{"colors":{"secondary-fixed-dim":"#ddb7ff","on-tertiary-fixed":"#002113","on-tertiary-fixed-variant":"#005236","on-secondary":"#490080","on-secondary-container":"#d6a9ff","error":"#ffb4ab","tertiary":"#69f6b9","surface":"#0f131d","inverse-surface":"#dfe2f1","on-surface":"#dfe2f1","surface-container-highest":"#313540","secondary-fixed":"#f0dbff","primary-container":"#00d2ff","surface-container-high":"#262a35","tertiary-fixed-dim":"#4edea3","surface-variant":"#313540","tertiary-fixed":"#6ffbbe","inverse-primary":"#00677f","primary":"#a5e7ff","on-primary-fixed":"#001f28","on-secondary-fixed":"#2c0051","on-background":"#dfe2f1","on-tertiary-container":"#005b3d","surface-container":"#1c1f2a","surface-bright":"#353944","on-primary-container":"#00566a","surface-container-low":"#171b26","on-error-container":"#ffdad6","surface-container-lowest":"#0a0e18","tertiary-container":"#48d99e","background":"#0f131d","secondary-container":"#6f00be","on-error":"#690005","surface-tint":"#47d6ff","on-primary-fixed-variant":"#004e60","secondary":"#ddb7ff","on-tertiary":"#003824","outline-variant":"#3c494e","on-surface-variant":"#bbc9cf","on-primary":"#003543","inverse-on-surface":"#2c303b","surface-dim":"#0f131d","outline":"#859399","primary-fixed-dim":"#47d6ff","on-secondary-fixed-variant":"#6900b3","error-container":"#93000a","primary-fixed":"#b6ebff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"3rem","space-xl":"2.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem","space-md":"1rem","gutter":"1.5rem","gutter-mobile":"1rem","space-xs":"0.25rem","space-lg":"1.5rem"},"fontFamily":{"headline-sm":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"label-tag":["JetBrains Mono"],"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Space Grotesk"],"headline-xl":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"headline-lg":["Space Grotesk"],"label-code":["JetBrains Mono"],"headline-md":["Space Grotesk"]},"fontSize":{"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"label-tag":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.06em","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}],"headline-xl":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-lg":["2.5rem",{"lineHeight":"3rem","letterSpacing":"-0.015em","fontWeight":"600"}],"label-code":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-lg"><div class="px-space-md flex items-center gap-space-sm"><div class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_10px_#00d2ff]"></div><div class="flex flex-col"><span class="font-label-tag text-label-tag text-primary tracking-widest">SYSTEMS_NODE</span><span class="font-label-code text-label-code text-on-surface">v3.0.1-STABLE</span></div></div><div class="px-space-md"><div class="bg-surface-container-low px-space-md py-space-xs rounded-xl flex items-center justify-between"><span class="font-label-tag text-label-tag text-tertiary">CORE_ONLINE</span><span class="font-label-code text-label-code text-on-surface-variant">PID: 0001</span></div></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="curriculum-outline" href="#"><span class="material-symbols-outlined text-primary text-[20px]">account_tree</span><span class="font-label-code text-label-code">Outline</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all rounded-lg" data-path="master-matrix" href="#"><span class="material-symbols-outlined text-primary text-[20px]">grid_view</span><span class="font-label-code text-label-code">Matrix</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all rounded-lg" data-path="roadmap" href="#"><span class="material-symbols-outlined text-primary text-[20px]">timeline</span><span class="font-label-code text-label-code">Roadmap</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all rounded-lg" data-path="analogy-cheat-sheet" href="#"><span class="material-symbols-outlined text-primary text-[20px]">menu_book</span><span class="font-label-code text-label-code">Analogies</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all rounded-lg" data-path="oral-defense" href="#"><span class="material-symbols-outlined text-primary text-[20px]">record_voice_over</span><span class="font-label-code text-label-code">Oral Defense</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all rounded-lg" data-path="process-simulator" href="#"><span class="material-symbols-outlined text-primary text-[20px]">terminal</span><span class="font-label-code text-label-code">Kernel Sandbox</span></a></nav></div><div class="px-space-md flex flex-col gap-space-sm"><div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-space-xs"><div class="flex justify-between items-center"><span class="font-label-tag text-label-tag text-on-surface-variant">HEAP MEMORY</span><span class="font-label-code text-label-code text-primary">64%</span></div><div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden"><div class="bg-primary-container h-full w-[64%]"></div></div></div><div class="flex items-center justify-between text-on-surface-variant px-space-xs"><span class="font-label-tag text-label-tag">STATUS</span><span class="font-label-tag text-label-tag text-tertiary">READY</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">ACADEMIA_OS</span><span class="font-label-code text-label-code text-on-surface-variant">// CS-301 :: KERNEL_CORE</span></div><div class="flex items-center gap-space-xs"><span class="font-label-tag text-label-tag text-on-surface-variant">SYS</span><span class="font-label-tag text-label-tag text-outline">/</span><span class="font-label-tag text-label-tag text-primary">KERNEL</span><span class="font-label-tag text-label-tag text-outline">/</span><span class="font-label-tag text-label-tag text-on-surface">EXEC</span></div></div></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary-container font-semibold"><a aria-current="page" class="transition-colors text-primary-container font-semibold" data-path="curriculum-outline" href="#">Curriculum Outline</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" data-path="master-matrix" href="#">Master Matrix</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" data-path="roadmap" href="#">Roadmap</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" data-path="analogy-cheat-sheet" href="#">Analogy Cheat Sheet</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" data-path="oral-defense" href="#">Oral Defense</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs bg-surface-container px-space-md py-space-xs rounded-xl"><span class="material-symbols-outlined text-outline text-[18px]">search</span><span class="font-label-code text-label-code text-outline">CMD + K</span></div><button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-lg"><div class="flex flex-col w-full">
+<!-- TOP MAIN TITLE BANNER -->
+<header class="w-full bg-surface-container-lowest border-b border-primary/20 p-space-lg mb-space-lg rounded-xl shadow-2xl relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-96 h-96 bg-primary-container/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -left-12 -bottom-12 w-80 h-80 bg-secondary-container/10 rounded-full blur-3xl pointer-events-none"></div>
 <div class="relative z-10 flex flex-col gap-space-md">
-<!-- Top Row Badges -->
-<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm border-b border-outline-variant/30">
-<div class="flex items-center gap-space-xs font-label-code text-label-code text-primary-fixed">
-<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
-<span>SYS_TELEMETRY // LIVE HW REGISTERS &amp; VIRTUAL MMU</span>
+<!-- Top status badges -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-sm py-0.5 rounded-lg bg-surface-container-high border border-primary/30 text-primary font-label-tag text-label-tag flex items-center gap-1 shadow-[0_0_12px_rgba(0,210,255,0.2)]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          MODULE 08: SECURITY &amp; CRYPTO // LECTURE L24
+        </span>
+<span class="px-space-sm py-0.5 rounded-lg bg-surface-container border border-outline-variant text-on-surface-variant font-label-tag text-label-tag">
+          CPL=3 BOUNDARY PROTECTION
+        </span>
+<span class="px-space-sm py-0.5 rounded-lg bg-tertiary-container/10 border border-tertiary/40 text-tertiary font-label-tag text-label-tag">
+          EXPLOIT MITIGATION: ACTIVE (ASLR • CANARY • NX/DEP)
+        </span>
+<span class="px-space-sm py-0.5 rounded-lg bg-surface-container-low text-outline font-label-tag text-label-tag">
+          ABET CAC COMPLIANT
+        </span>
+<span class="px-space-sm py-0.5 rounded-lg bg-secondary/10 border border-secondary/30 text-secondary font-label-tag text-label-tag">
+          INTERACTIVE POSTER EDITION
+        </span>
 </div>
-<div class="font-label-tag text-label-tag text-on-surface-variant flex items-center gap-space-xs">
-<span>HOST: SEC-SANDBOX-VM</span>
-<span>•</span>
-<span class="text-tertiary">KERNEL DUMP INTERCEPTOR ON</span>
-</div>
-</div>
-<!-- Telemetry Chip Grid -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-sm">
-<!-- 1 -->
-<div class="bg-surface-container px-space-sm py-2 rounded-lg flex flex-col justify-between shadow-sm">
-<span class="font-label-tag text-[10px] text-on-surface-variant tracking-wider uppercase">MEMORY ARCH</span>
-<span class="font-label-code text-[11px] text-primary font-semibold mt-1">X86_64 VIRTUAL ADDRESS SPACE (PAGE-BASED MMU)</span>
-</div>
-<!-- 2 -->
-<div class="bg-surface-container px-space-sm py-2 rounded-lg flex flex-col justify-between shadow-sm">
-<span class="font-label-tag text-[10px] text-on-surface-variant tracking-wider uppercase">CANARY GUARD</span>
-<span class="font-label-code text-[11px] text-tertiary font-semibold mt-1">STACK_SMASHING_PROTECTOR (SSP_ACTIVE)</span>
-</div>
-<!-- 3 -->
-<div class="bg-surface-container px-space-sm py-2 rounded-lg flex flex-col justify-between shadow-sm">
-<span class="font-label-tag text-[10px] text-on-surface-variant tracking-wider uppercase">ASLR ENTROPY</span>
-<span class="font-label-code text-[11px] text-secondary font-semibold mt-1">28-BIT SCRAMBLER (EXEC_SHUFFLE_ENABLED)</span>
-</div>
-<!-- 4 -->
-<div class="bg-surface-container px-space-sm py-2 rounded-lg flex flex-col justify-between shadow-sm">
-<span class="font-label-tag text-[10px] text-on-surface-variant tracking-wider uppercase">HARDWARE DEFENSE</span>
-<span class="font-label-code text-[11px] text-primary-fixed font-semibold mt-1">AMD64 NX / INTEL XD BIT (W^X ENFORCED)</span>
-</div>
-<!-- 5 -->
-<div class="bg-surface-container px-space-sm py-2 rounded-lg flex flex-col justify-between shadow-sm">
-<span class="font-label-tag text-[10px] text-on-surface-variant tracking-wider uppercase">EXPLOIT THREAT LEVEL</span>
-<span class="font-label-code text-[11px] text-error font-semibold mt-1">CRITICAL VULNERABILITY AUDIT (CVSS 9.8)</span>
-</div>
-</div>
-<!-- Simulator Action Buttons & Status -->
-<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
-<div class="flex flex-wrap items-center gap-space-sm">
-<button class="group relative px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary font-label-code text-label-code font-bold hover:shadow-[0_0_24px_rgba(0,210,255,0.45)] transition-all flex items-center gap-2 active:scale-95" id="btn-trigger-exploit" type="button">
-<span class="material-symbols-outlined text-[18px]">bolt</span>
-<span>▶ ⚡ Simulate Buffer Overflow &amp; Canary Trigger</span>
-</button>
-<button class="px-space-md py-2.5 rounded-lg bg-surface-container-high text-secondary hover:bg-secondary-container/20 font-label-code text-label-code font-semibold transition-all flex items-center gap-2 active:scale-95" id="btn-reset-stack" type="button">
-<span class="material-symbols-outlined text-[18px]">restart_alt</span>
-<span>🔄 Reset Memory Stack Simulator</span>
-</button>
-</div>
-<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container text-tertiary font-label-code text-[12px]" id="sim-status-banner">
-<span class="material-symbols-outlined text-[16px] text-tertiary">verified_user</span>
-<span id="sim-status-text">STACK_INTEGRITY: PRISTINE (NO CORRUPTION DETECTED)</span>
-</div>
-</div>
-</div>
-</section>
-<!-- SECTION 1: CORE CONCEPTUAL ONBOARDING -->
-<section class="space-y-space-md">
+<!-- Main Titles -->
+<div class="flex flex-col gap-space-xs">
 <div class="flex items-center gap-space-sm">
-<span class="w-8 h-8 rounded-lg bg-primary-container/20 text-primary-container flex items-center justify-center font-headline-sm">1</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">1️⃣ Core Conceptual Onboarding (The Overfilled Closet Shelf)</h2>
+<span class="text-3xl">🏷️</span>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-bold">
+            OPERATING SYSTEMS: L24 — Program Exploits
+          </h1>
 </div>
-<!-- Foundational Question & Core Motivation 2-Col Grid -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
-<!-- Foundational Question (7 Cols) -->
-<div class="lg:col-span-7 bg-surface-container rounded-xl p-space-md shadow-md flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-space-xs text-primary mb-space-xs">
-<span class="material-symbols-outlined text-[20px]">help_center</span>
-<span class="font-label-tag text-label-tag uppercase tracking-wider">The Foundational Question</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-4xl">
+          Control Flow Hijacking, Stack Smashing, Shellcode Infiltration, and Modern Kernel Defenses for Beginners
+        </p>
 </div>
-<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
-            A Buffer Overflow is a critical software memory exploit that occurs when an application program writes more data into a fixed-size storage allocation block than it was built to hold, causing the extra data bytes to spill across boundaries and corrupt adjacent tracking variables.
-          </p>
+<!-- Live Telemetry Status Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-sm mt-space-xs pt-space-sm border-t border-surface-container-highest">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-0.5 border border-error/20">
+<span class="font-label-tag text-label-tag text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">crisis_alert</span> VULNERABILITY CLASS
+          </span>
+<span class="font-label-code text-label-code text-on-surface font-semibold truncate">CWE-121: Stack Buffer Overflow</span>
 </div>
-<div class="mt-space-md pt-space-sm border-t border-outline-variant/30 flex items-center justify-between text-on-surface-variant font-label-tag text-label-tag">
-<span>MEMORY VIOLATION TAXONOMY: CWE-120 / CWE-121</span>
-<span class="text-secondary font-semibold">PRIMITIVE: OUT-OF-BOUNDS WRITE</span>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-0.5 border border-primary/20">
+<span class="font-label-tag text-label-tag text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">track_changes</span> TARGET REGISTER
+          </span>
+<span class="font-label-code text-label-code text-on-surface font-semibold">RIP / EIP (Instruction Pointer)</span>
 </div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-0.5 border border-tertiary/20">
+<span class="font-label-tag text-label-tag text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">security</span> DEFENSE VECTOR
+          </span>
+<span class="font-label-code text-label-code text-on-surface font-semibold truncate">Canary [0x00AFFE02] + ASLR</span>
 </div>
-<!-- Core Motivation (5 Cols) -->
-<div class="lg:col-span-5 bg-surface-container-high rounded-xl p-space-md shadow-md flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-space-xs text-secondary mb-space-xs">
-<span class="material-symbols-outlined text-[20px]">psychology</span>
-<span class="font-label-tag text-label-tag uppercase tracking-wider">Core Motivation &amp; Silicon Reality</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            Computer processors blindly execute compiled machine lines from RAM without knowing the developer's intent. When a low-privilege application requests space on the private Stack segment to temporarily process text strings, the memory allocation sits right next to vital system pointers. At the low-level assembly language layer, if code copies inputs without validating boundaries, data will spill over its fence. Attackers weaponize this hardware constraint by deliberately crafting inputs that overwrite the Return Address pointer, forcing the physical CPU chip to redirect execution straight into malicious exploit scripts.
-          </p>
-</div>
-<div class="mt-space-sm flex items-center gap-2">
-<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-code text-[11px]">$RSP / $RBP CO-LOCATED</span>
-<span class="px-2 py-0.5 rounded bg-surface-container text-error font-label-code text-[11px]">C 0-BOUNDS-CHECK OMISSION</span>
-</div>
-</div>
-</div>
-<!-- Key Characteristics Block -->
-<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
-<div class="flex items-center gap-space-xs text-tertiary mb-space-sm">
-<span class="material-symbols-outlined text-[20px]">checklist</span>
-<span class="font-label-tag text-label-tag uppercase tracking-wider">Key Architectural Characteristics</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md font-body-sm text-body-sm text-on-surface">
-<div class="bg-surface-container p-space-sm rounded-lg">
-<div class="font-label-code text-primary font-semibold mb-1 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">bookmark</span> Return Address
-          </div>
-<p class="text-on-surface-variant">A hidden hardware instruction pointer bookmark stored inside the private Stack segment that tells the CPU exactly what line of code it must jump back to execution once a function block finishes.</p>
-</div>
-<div class="bg-surface-container p-space-sm rounded-lg">
-<div class="font-label-code text-error font-semibold mb-1 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">dangerous</span> Stack Smashing
-          </div>
-<p class="text-on-surface-variant">The malicious act of deliberately flooding a local stack buffer with excessive text characters to violently overwrite tracking variables and hijack system control.</p>
-</div>
-<div class="bg-surface-container p-space-sm rounded-lg">
-<div class="font-label-code text-secondary font-semibold mb-1 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">shuffle</span> Address Space Layout Randomization (ASLR)
-          </div>
-<p class="text-on-surface-variant">A robust operating system defense mechanism where the kernel referee randomly scrambles the starting RAM locations of an application's segments every single time it boots, making it near-impossible for attackers to guess code addresses.</p>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-0.5 border border-secondary/20">
+<span class="font-label-tag text-label-tag text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">memory</span> HARDWARE SHIELD
+          </span>
+<span class="font-label-code text-label-code text-on-surface font-semibold">AMD NX / Intel XD Bit [Active]</span>
 </div>
 </div>
 </div>
-<!-- 2 Component Cards: Technical & Analogy -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
-<!-- Technical Card -->
-<div class="bg-surface-container rounded-xl p-space-md shadow-lg flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-space-xs text-primary mb-space-xs">
-<span class="material-symbols-outlined text-[22px]">terminal</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">💻 Real-World Application Example</h3>
+</header>
+<!-- TWO-COLUMN WORKSPACE -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT SIDEBAR: Course & Exploit Telemetry Menu (~270px width equivalent) -->
+<aside class="lg:col-span-3 flex flex-col gap-space-md sticky top-20">
+<!-- Live Hook Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md border border-primary/20 shadow-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-primary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+            SYS_MONITOR_ACTIVE
+          </span>
+<span class="font-label-code text-label-code text-tertiary">x86_64</span>
 </div>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mt-space-xs">
-            Imagine a developer writes an internal profile configuration script inside an application like Spotify using an insecure legacy function like <code class="text-primary-fixed bg-surface-container-high px-1 py-0.5 rounded font-label-code text-label-code">strcpy()</code>. The script builds a fixed-size text array buffer built to hold exactly 64 characters for a user's nickname. If a malicious actor passes an engineered text string containing 80 raw characters, the trailing 16 bytes will spill past the 64-byte array fence. These extra bytes smash directly into the local Stack frame pointer, replacing the valid Return Address with a pointer that hijacks Spotify's parent PID process to run malicious code loops.
-          </p>
+<div class="p-space-xs bg-surface-container-lowest rounded-lg border border-surface-variant flex flex-col gap-1">
+<div class="flex justify-between items-center text-label-tag font-label-tag">
+<span class="text-on-surface-variant">RAM Stack Monitor</span>
+<span class="text-tertiary">99.4% Protected</span>
 </div>
-<div class="mt-space-md bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-between text-on-surface-variant font-label-tag text-[11px]">
-<span>TARGET VULNERABILITY: C_STRCPY_UNBOUNDED</span>
-<span class="text-error font-semibold">OVERRUN: +16 BYTES CRUSH</span>
-</div>
-</div>
-<!-- Analogy Card -->
-<div class="bg-surface-container-high rounded-xl p-space-md shadow-lg flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-space-xs text-secondary mb-space-xs">
-<span class="material-symbols-outlined text-[22px]">school</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">🎒 Everyday Example (5th Grader)</h3>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mt-space-xs">
-            Imagine your bedroom closet has a row of small wooden shelves, and you are strictly assigned to use 'Shelf A' to store your comic books. Right next to your shelf is 'Shelf B', where your parent keeps an expensive, vital grandfather clock. If you start aggressively packing and overfilling your shelf with hundreds of extra heavy boxes without checking the room limits, the boxes will start sliding over the edge onto your neighbor's shelf. Eventually, the spilling boxes will violently knock the expensive grandfather clock right off the shelf, breaking it entirely! A buffer overflow is an application box spilling past its assigned shelf fence and breaking something important right next to it!
-          </p>
-</div>
-<div class="mt-space-md bg-surface-container p-space-sm rounded-lg flex items-center justify-between text-on-surface-variant font-label-tag text-[11px]">
-<span>METAPHOR: COMIC BOXES OVERFILLING SHELF</span>
-<span class="text-primary font-semibold">VICTIM: GRANDFATHER CLOCK (RET ADDR)</span>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[99.4%] shadow-[0_0_8px_#69f6b9]"></div>
 </div>
 </div>
+<div class="flex items-center justify-between text-label-tag font-label-tag text-on-surface-variant px-1">
+<span>GDB Debugger:</span>
+<span class="text-primary font-label-code">Hooked (PID: 4096)</span>
 </div>
-</section>
-<!-- SECTION 2: STRUCTURAL DISSECTION -->
-<section class="space-y-space-md">
+</div>
+<!-- Module Syllabus Checkpoints -->
+<nav class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/30 flex flex-col gap-space-sm">
+<span class="font-label-tag text-label-tag text-on-surface-variant tracking-wider uppercase">Course Progression</span>
+<div class="flex flex-col gap-1 text-label-code font-label-code">
+<div class="flex items-center justify-between p-space-xs rounded-lg text-on-surface-variant/70 hover:bg-surface-container transition-all">
+<span class="truncate">M01-M07 Architecture &amp; Core</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded-lg text-on-surface-variant/70 hover:bg-surface-container transition-all">
+<span class="truncate">L22 Access Control Matrices</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded-lg text-on-surface-variant/70 hover:bg-surface-container transition-all">
+<span class="truncate">L23 Authentication Frameworks</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+</div>
+<!-- ACTIVE HIGHLIGHT -->
+<div class="flex items-center justify-between p-space-xs rounded-lg bg-primary-container text-on-primary-container font-semibold shadow-[0_0_14px_rgba(0,210,255,0.4)]">
+<span class="truncate flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">arrow_right</span> L24 Program Exploits
+            </span>
+<span class="material-symbols-outlined text-[18px]">pin_drop</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container transition-all">
+<span class="truncate">L25 Encryption &amp; Key Exchanges</span>
+<span class="text-outline text-label-tag font-label-tag">NEXT</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded-lg text-outline">
+<span class="truncate">L26 Firewalls &amp; IDS</span>
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded-lg text-outline">
+<span class="truncate">L27 Containers &amp; Namespaces</span>
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded-lg text-outline">
+<span class="truncate">L28 Grand Retrospective</span>
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</div>
+</div>
+<!-- In-Page Anchor Links -->
+<div class="mt-space-sm pt-space-sm border-t border-surface-container-high flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-primary tracking-wider uppercase">Lesson Checkpoints</span>
+<a class="p-1 rounded text-label-tag font-label-tag text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#sec-onboarding">
+<span class="text-primary">01.</span> Core Onboarding
+          </a>
+<a class="p-1 rounded text-label-tag font-label-tag text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#sec-dissection">
+<span class="text-primary">02.</span> Stack Map Dissection
+          </a>
+<a class="p-1 rounded text-label-tag font-label-tag text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#sec-pipeline">
+<span class="text-primary">03.</span> Hijack Pipeline
+          </a>
+<a class="p-1 rounded text-label-tag font-label-tag text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#sec-showdown">
+<span class="text-primary">04.</span> Paradigm Showdown
+          </a>
+<a class="p-1 rounded text-label-tag font-label-tag text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#sec-simulator">
+<span class="text-primary">05.</span> Memory Simulator
+          </a>
+<a class="p-1 rounded text-label-tag font-label-tag text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#sec-guardrails">
+<span class="text-primary">06.</span> Practical Guardrails
+          </a>
+</div>
+<div class="mt-space-xs p-space-xs rounded-lg bg-surface-container text-label-tag font-label-tag text-secondary text-center">
+          CS-301 Session: SEC_LAB_SANDBOX<br/><span class="text-tertiary">Safe Exploit Mode Active</span>
+</div>
+</nav>
+</aside>
+<!-- RIGHT CANVAS: MAIN LESSON CANVAS (6 Sections) -->
+<main class="lg:col-span-9 flex flex-col gap-space-xl">
+<!-- ================= SECTION 1: CORE ONBOARDING ================= -->
+<section class="bg-surface-container-low rounded-xl p-space-lg border border-outline-variant/30 relative flex flex-col gap-space-md shadow-lg" id="sec-onboarding">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-space-sm">
 <div class="flex items-center gap-space-sm">
-<span class="w-8 h-8 rounded-lg bg-secondary-container/30 text-secondary flex items-center justify-center font-headline-sm">2</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">2️⃣ Structural Dissection (Anatomy of a Smashing Attack Stack Map)</h2>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-tag text-label-tag border border-primary/20">SECTION 01</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+              1️⃣ Core Conceptual Onboarding (The Overfilled Closet Shelf)
+            </h2>
 </div>
-<!-- Split-Pane Structural Block -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
-<!-- Left side: Visual Stack Memory Layout (7 cols) -->
-<div class="lg:col-span-7 bg-surface-container rounded-xl p-space-md shadow-lg flex flex-col space-y-space-md">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-space-xs text-primary">
-<span class="material-symbols-outlined text-[20px]">layers</span>
-<h3 class="font-headline-sm text-headline-sm">THE PRIVATE STACK MEMORY LAYOUT</h3>
+<span class="material-symbols-outlined text-primary text-[28px]">lightbulb</span>
 </div>
-<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">GROWTH: HIGH ➔ LOW ADDR</span>
+<!-- The Foundational Question card -->
+<div class="p-space-md rounded-xl bg-surface-container border-l-4 border-primary text-on-surface flex flex-col gap-space-xs shadow-md">
+<div class="flex items-center gap-space-xs text-primary font-label-tag text-label-tag">
+<span class="material-symbols-outlined text-[16px]">help_center</span>
+            THE FOUNDATIONAL QUESTION: WHAT IS A BUFFER OVERFLOW?
+          </div>
+<p class="font-body-md text-body-md leading-relaxed">
+            A <strong class="text-primary">Buffer Overflow</strong> is a critical memory safety defect where an executing program writes more data bytes into a fixed-size memory array than it was allocated to hold, causing the excess bytes to spill over and overwrite adjacent stack variables and execution control pointers.
+          </p>
 </div>
-<!-- Before Overflow Card -->
-<div class="bg-surface-container-low rounded-lg p-space-sm space-y-space-xs">
-<div class="flex items-center justify-between font-label-tag text-label-tag">
-<span class="text-tertiary flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary"></span>NORMAL EXECUTION (BEFORE OVERFLOW)</span>
-<span class="text-on-surface-variant">ESP: 0x7FFFFFFFDE00</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-<!-- Local Buffer -->
-<div class="bg-surface-container p-2 rounded flex flex-col justify-between" id="stack-norm-buf">
-<span class="font-label-tag text-[10px] text-on-surface-variant">0x7FFFFFFFDE00 - DE40</span>
-<span class="font-label-code text-label-code text-primary font-bold">[Local Buffer: 64 Bytes]</span>
-<span class="font-label-tag text-[10px] text-on-surface-variant mt-1">char nickname[64] = "Alice"</span>
-</div>
-<!-- Saved Frame Pointer -->
-<div class="bg-surface-container p-2 rounded flex flex-col justify-between" id="stack-norm-sfp">
-<span class="font-label-tag text-[10px] text-on-surface-variant">0x7FFFFFFFDE40 - DE48</span>
-<span class="font-label-code text-label-code text-secondary font-bold">[Saved Frame Pointer]</span>
-<span class="font-label-tag text-[10px] text-on-surface-variant mt-1">$RBP = 0x7FFFFFFFDE90</span>
-</div>
-<!-- Return Address -->
-<div class="bg-surface-container p-2 rounded flex flex-col justify-between" id="stack-norm-ret">
-<span class="font-label-tag text-[10px] text-on-surface-variant">0x7FFFFFFFDE48 - DE50</span>
-<span class="font-label-code text-label-code text-tertiary font-bold">[Return Address: Points to Safe Code Line 200]</span>
-<span class="font-label-tag text-[10px] text-on-surface-variant mt-1">EIP: 0x004011AA</span>
-</div>
-</div>
-</div>
-<!-- Flow indicator -->
-<div class="flex items-center justify-center gap-2 text-on-surface-variant font-label-code text-[11px]">
-<span class="material-symbols-outlined text-[16px] text-error">south</span>
-<span>MALICIOUS INFLUX TRANSMISSION: 80 BYTES EXCEEDS 64-BYTE ALLOCATION BOUNDARY</span>
-<span class="material-symbols-outlined text-[16px] text-error">south</span>
-</div>
-<!-- After Overflow Card -->
-<div class="bg-surface-container-low rounded-lg p-space-sm space-y-space-xs">
-<div class="flex items-center justify-between font-label-tag text-label-tag">
-<span class="text-error flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-error animate-ping"></span>EXPLOIT PAYLOAD ENGAGED (AFTER OVERFLOW)</span>
-<span class="text-on-surface-variant">HEAP / STACK BOUND SMASH</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-<!-- Attack Payload -->
-<div class="bg-error-container/30 p-2 rounded flex flex-col justify-between transition-all" id="stack-corrupt-buf">
-<span class="font-label-tag text-[10px] text-error font-semibold">0x7FFFFFFFDE00 - DE40 (0x41)</span>
-<span class="font-label-code text-label-code text-error font-bold">[Attack Payload: 'AAAA...AAAA']</span>
-<span class="font-label-tag text-[10px] text-on-error-container mt-1">64 Bytes Hex Influx Fill</span>
-</div>
-<!-- Smashed Frame Pointer -->
-<div class="bg-error-container/40 p-2 rounded flex flex-col justify-between transition-all" id="stack-corrupt-sfp">
-<span class="font-label-tag text-[10px] text-error font-semibold">0x7FFFFFFFDE40 - DE48 (CORRUPT)</span>
-<span class="font-label-code text-label-code text-error font-bold">[Smashed Frame Pointer]</span>
-<span class="font-label-tag text-[10px] text-on-error-container mt-1">Smashed with 0x41414141</span>
-</div>
-<!-- Corrupted Return Address -->
-<div class="bg-error-container/50 p-2 rounded flex flex-col justify-between transition-all" id="stack-corrupt-ret">
-<span class="font-label-tag text-[10px] text-error font-semibold">0x7FFFFFFFDE48 (HIJACKED!)</span>
-<span class="font-label-code text-label-code text-error font-bold">[Corrupted Return Address: Overwritten to Point to Exploit Code Address 0x9090]</span>
-<span class="font-label-tag text-[10px] text-on-error-container mt-1">CPU JUMPS TO SHELLCODE!</span>
-</div>
-</div>
-</div>
-<!-- Byte-level indicators -->
-<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center justify-between font-label-code text-[11px] overflow-x-auto">
-<span class="text-on-surface-variant">BYTE STREAM:</span>
-<span class="text-primary">41 41 41 41 41 41 41 41</span>
-<span class="text-primary">41 41 41 41 41 41 41 41</span>
-<span class="text-error font-bold">90 90 90 90 (TARGET EXPLOIT JMP)</span>
-</div>
-</div>
-<!-- Right side: THE MEMORY DEFENSE CONTROLLER (5 cols) -->
-<div class="lg:col-span-5 bg-surface-container rounded-xl p-space-md shadow-lg flex flex-col justify-between space-y-space-sm">
-<div>
-<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/30">
-<div class="flex items-center gap-space-xs text-secondary">
-<span class="material-symbols-outlined text-[20px]">security</span>
-<h3 class="font-headline-sm text-headline-sm">THE MEMORY DEFENSE CONTROLLER</h3>
-</div>
-<span class="font-label-tag text-label-tag text-tertiary">KERNEL ENFORCED</span>
-</div>
-<div class="mt-space-md space-y-space-sm">
-<!-- Row 1: Stack Canary Security Guard Bit -->
-<div class="bg-surface-container-high p-space-sm rounded-lg space-y-1">
-<div class="flex items-center justify-between">
-<span class="font-body-sm text-body-sm font-semibold text-on-surface">Stack Canary Security Guard Bit</span>
-<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-bold" id="badge-canary">GUARD_ARMED</span>
-</div>
-<div class="flex items-center justify-between font-label-code text-[11px] text-on-surface-variant">
-<span>CANARY MAGIC VAL: <span class="text-tertiary" id="val-canary-magic">0xDEADBEEF00</span></span>
-<span>STATE: ALIVE</span>
-</div>
-<div class="w-full bg-surface-container-lowest h-1.5 rounded overflow-hidden">
-<div class="bg-tertiary h-full w-full transition-all duration-500" id="bar-canary"></div>
-</div>
-</div>
-<!-- Row 2: Active ASLR Memory Scrambler Offset Mapping -->
-<div class="bg-surface-container-high p-space-sm rounded-lg space-y-1">
-<div class="flex items-center justify-between">
-<span class="font-body-sm text-body-sm font-semibold text-on-surface">Active ASLR Memory Scrambler Offset Mapping</span>
-<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-secondary-container/40 text-secondary font-bold">28-BIT ENTROPY</span>
-</div>
-<div class="flex items-center justify-between font-label-code text-[11px] text-on-surface-variant">
-<span>BASE OFFSET: <span class="text-secondary">0x55A3F099B000</span></span>
-<span>RANDOMIZED EACH BOOT</span>
-</div>
-<div class="w-full bg-surface-container-lowest h-1.5 rounded overflow-hidden">
-<div class="bg-secondary h-full w-3/4"></div>
-</div>
-</div>
-<!-- Row 3: Hardware Non-Executable (NX) Segment Bit Status -->
-<div class="bg-surface-container-high p-space-sm rounded-lg space-y-1">
-<div class="flex items-center justify-between">
-<span class="font-body-sm text-body-sm font-semibold text-on-surface">Hardware Non-Executable (NX) Segment Bit Status</span>
-<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-primary-container/20 text-primary font-bold">W^X ACTIVE</span>
-</div>
-<div class="flex items-center justify-between font-label-code text-[11px] text-on-surface-variant">
-<span>PAGING PERM: <span class="text-primary-fixed">PAGE_READ | PAGE_WRITE (NO_EXEC)</span></span>
-<span>CPU FAULT TRAP</span>
-</div>
-<div class="w-full bg-surface-container-lowest h-1.5 rounded overflow-hidden">
-<div class="bg-primary-container h-full w-full"></div>
-</div>
-</div>
-</div>
-</div>
-<div class="bg-surface-container-lowest p-space-sm rounded-lg text-on-surface-variant font-label-tag text-[11px] flex items-center justify-between">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-tertiary">memory</span>MMU PAGE TABLE STATUS</span>
-<span class="text-tertiary">PROTECTED KERNEL BOUNDARY</span>
-</div>
-</div>
-</div>
-<!-- Below the Diagram: Structural Definitions (3 Items) -->
+<!-- Key Characteristics 3-Card Grid -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
-<!-- 1 -->
-<div class="bg-surface-container-high rounded-xl p-space-md shadow-md space-y-space-xs">
-<h4 class="font-headline-sm text-[16px] text-primary flex items-center gap-1">
-<span class="material-symbols-outlined text-[18px]">view_agenda</span>
-          • The Stack Frame Context
-        </h4>
+<div class="bg-surface-container-lowest p-space-md rounded-xl border border-primary/20 flex flex-col gap-space-xs hover:border-primary/50 transition-all">
+<span class="font-label-code text-label-code text-primary flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[18px]">turn_sharp_right</span> Return Address (RIP/EIP)
+            </span>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-          The local playground zone inside a process's memory layout where local variables and function boundaries are compiled in sequential alignment tracks.
-        </p>
-<div class="mt-space-sm bg-surface-container p-space-sm rounded-lg">
-<span class="font-label-tag text-[11px] text-primary font-semibold block mb-0.5">💻 Real-World Application Example:</span>
-<p class="font-body-sm text-[13px] text-on-surface">Every time an app like Google Chrome calls an internal validation script, it allocates a stack frame to store temporary inputs, discarding it instantly once the task finishes.</p>
+              The hidden memory pointer stored on the call stack that tells the CPU exactly which machine code instruction to execute next once the current function finishes.
+            </p>
 </div>
-</div>
-<!-- 2 -->
-<div class="bg-surface-container-high rounded-xl p-space-md shadow-md space-y-space-xs">
-<h4 class="font-headline-sm text-[16px] text-tertiary flex items-center gap-1">
-<span class="material-symbols-outlined text-[18px]">nest_cam_wired_stand</span>
-          • The Stack Canary Mitigation
-        </h4>
+<div class="bg-surface-container-lowest p-space-md rounded-xl border border-error/20 flex flex-col gap-space-xs hover:border-error/50 transition-all">
+<span class="font-label-code text-label-code text-error flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[18px]">gavel</span> Stack Smashing
+            </span>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-          A specialized security guard technique where the compiler drops a random secret number (just like a miner's canary bird) right in front of the Return Address. Before exiting, the kernel checks if the bird is dead (altered), killing the app instantly if a leak is detected.
-        </p>
-<div class="mt-space-sm bg-surface-container p-space-sm rounded-lg">
-<span class="font-label-tag text-[11px] text-tertiary font-semibold block mb-0.5">💻 Real-World Application Example:</span>
-<p class="font-body-sm text-[13px] text-on-surface">Modern code compilers automatically inject stack canary defenses into web server applications, detecting overflow spills before execution flow can be hijacked.</p>
+              The targeted exploitation technique where an attacker deliberately overruns a buffer with malicious payload bytes to overwrite the Return Address with a pointer to injected shellcode.
+            </p>
 </div>
-</div>
-<!-- 3 -->
-<div class="bg-surface-container-high rounded-xl p-space-md shadow-md space-y-space-xs">
-<h4 class="font-headline-sm text-[16px] text-secondary flex items-center gap-1">
-<span class="material-symbols-outlined text-[18px]">no_encryption</span>
-          • Non-Executable (NX / DEP) Bit
-        </h4>
+<div class="bg-surface-container-lowest p-space-md rounded-xl border border-tertiary/20 flex flex-col gap-space-xs hover:border-tertiary/50 transition-all">
+<span class="font-label-code text-label-code text-tertiary flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[18px]">shuffle</span> ASLR Defense
+            </span>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-          A hardware protective fence setting on your computer chips that marks specific sections of RAM (like the Stack and Heap) as strictly data-only zones, blocking code execution.
-        </p>
-<div class="mt-space-sm bg-surface-container p-space-sm rounded-lg">
-<span class="font-label-tag text-[11px] text-secondary font-semibold block mb-0.5">💻 Real-World Application Example:</span>
-<p class="font-body-sm text-[13px] text-on-surface">If an attacker overflows data into Microsoft VS Code's stack and tries to execute it, the CPU chip flags an NX boundary exception, terminating the program instantly.</p>
+              Address Space Layout Randomization randomizes memory positions of the stack, heap, and libraries on each boot, thwarting hardcoded jump coordinates.
+            </p>
 </div>
 </div>
+<!-- Core Motivation + Real World Example -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-surface-container-highest flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag text-secondary uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">bolt</span> Core Systems Motivation
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Languages like C and C++ prioritize direct hardware performance and raw memory pointer manipulation without automatic runtime bounds checks. While lightning-fast, an unvalidated buffer write allows memory spills, making compiler tripwires and kernel boundaries mandatory.
+            </p>
 </div>
-<!-- Bottom Footer Note -->
-<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
-<div class="flex items-center gap-space-xs text-primary mb-1">
-<span class="material-symbols-outlined text-[20px]">toys</span>
-<h4 class="font-headline-sm text-[15px] font-bold">🎒 Everyday Example</h4>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-surface-container-highest flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag text-tertiary uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">terminal</span> Real-World Application
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              The historic <strong>Morris Worm (1988)</strong> exploited the Unix <code class="text-primary font-label-code">fingerd</code> daemon using an unchecked <code class="text-primary font-label-code">gets()</code> call. Modern Remote Code Execution (RCE) flaws frequently originate from network packet parsers miscalculating payload sizes.
+            </p>
 </div>
-<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
-        Let's complete the closet shelf comparison! A Stack Canary is like placing a fragile plastic toy bird right on the dividing line between your shelf and your parent's clock. Before the teacher lets you leave the room, they check the bird. If the bird is crushed or moved, they know your boxes spilled over the line and they stop you immediately! An NX bit is like wrapping the grandfather clock in a bulletproof steel box—even if your boxes touch it, they can never scratch or activate the clock itself!
-      </p>
+</div>
+<!-- 5th Grader Analogy Card -->
+<div class="p-space-md rounded-xl bg-surface-container-high border border-primary/30 flex flex-col gap-space-xs relative overflow-hidden">
+<div class="flex items-center gap-2 text-primary font-label-tag text-label-tag">
+<span class="text-lg">🎒</span> EVERYDAY ANALOGY (5TH GRADER PERSPECTIVE)
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">The Overfilled Closet Shelf</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Imagine you have a wooden closet shelf built to hold exactly <strong>5 cardboard shoeboxes</strong>. Right behind that shelf sits the master thermostat switch controlling your entire house! If you stubbornly shove <strong>10 giant heavy boxes</strong> onto that small shelf, the boxes will spill over the edge, crash violently into the thermostat switch, and flip the heating dial to maximum!
+          </p>
+<div class="p-space-xs bg-surface-container-lowest rounded-lg border border-primary/20 flex flex-wrap gap-space-md text-label-tag font-label-tag text-on-surface-variant">
+<span>📦 <strong class="text-primary">Shelf</strong> = Buffer Array</span>
+<span>📦 <strong class="text-error">Excess Boxes</strong> = Malicious Payload</span>
+<span>🌡️ <strong class="text-tertiary">Thermostat Switch</strong> = CPU Return Address (RIP)</span>
+</div>
 </div>
 </section>
-<!-- SECTION 3: LINEAR OPERATIONAL PIPELINE -->
-<section class="space-y-space-md">
+<!-- ================= SECTION 2: STACK MAP DISSECTION ================= -->
+<section class="bg-surface-container-low rounded-xl p-space-lg border border-outline-variant/30 flex flex-col gap-space-md shadow-lg" id="sec-dissection">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-space-sm">
 <div class="flex items-center gap-space-sm">
-<span class="w-8 h-8 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center font-headline-sm">3</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">3️⃣ Linear Operational Pipeline (The Hijack &amp; Mitigation Timelines)</h2>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-tag text-label-tag border border-primary/20">SECTION 02</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+              2️⃣ Structural Dissection (Anatomy of a Smashing Attack Stack Map)
+            </h2>
 </div>
-<!-- Horizontal Workflow Timeline Tracker Layout -->
-<div class="bg-surface-container rounded-xl p-space-md shadow-lg space-y-space-md">
-<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/30">
-<span class="font-label-tag text-label-tag text-primary-fixed uppercase">INTERACTIVE TIMELINE NODES // ATTACK FLOW VS DEFENSE TRIP</span>
-<span class="font-label-code text-label-code text-tertiary">PIPELINE: 4 DISCRETE STAGES</span>
+<span class="material-symbols-outlined text-primary text-[28px]">layers</span>
 </div>
-<!-- Pipeline Track Graphic -->
+<!-- Memory Growth Hint Banner -->
+<div class="flex items-center justify-between p-space-xs px-space-md bg-surface-container rounded-lg border border-primary/20 text-label-tag font-label-tag">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">south</span> Call Stack Grows Downward (High Address ➔ Low Address)
+          </span>
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-error text-[16px]">north</span> Buffer Fills Upward (Index 0 ➔ Index N)
+          </span>
+</div>
+<!-- Dual Stack Map Comparison Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Normal Stack Frame -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-tertiary/30 flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-tertiary flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> NORMAL STACK FRAME (Pre-Overflow)
+              </span>
+<span class="font-label-code text-label-code text-outline text-[11px]">0x7FFFFFFF_E000</span>
+</div>
+<div class="flex flex-col gap-2 font-label-code text-label-code">
+<!-- High Memory -->
+<div class="p-2 bg-surface-container rounded text-center text-outline text-xs">
+                ▲ High Memory (Caller Stack Frame)
+              </div>
+<!-- Saved RIP -->
+<div class="p-3 bg-surface-container-high rounded border-2 border-primary/50 text-on-surface flex justify-between items-center">
+<span>[ Saved RIP (Return Address) ]</span>
+<span class="text-primary font-bold">0x00401156 (main)</span>
+</div>
+<!-- Saved RBP -->
+<div class="p-3 bg-surface-container rounded border border-outline-variant text-on-surface-variant flex justify-between items-center">
+<span>[ Saved Base Pointer (RBP) ]</span>
+<span class="text-outline">0x7fffffffe020</span>
+</div>
+<!-- Canary Token -->
+<div class="p-3 bg-tertiary/10 rounded border-2 border-tertiary/70 text-tertiary flex justify-between items-center shadow-[0_0_10px_rgba(105,246,185,0.2)]">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">shield</span> Stack Canary Guard
+                </span>
+<span class="font-bold">0x00AFFE02</span>
+</div>
+<!-- Local Buffer -->
+<div class="p-4 bg-surface-container-low rounded border border-primary/20 text-on-surface flex flex-col gap-1">
+<div class="flex justify-between text-xs text-primary">
+<span>char buffer[64]</span>
+<span>64 Bytes Allocated</span>
+</div>
+<div class="p-2 bg-surface-container-lowest rounded text-center text-outline text-xs tracking-widest">
+                  [ 00 00 00 00 00 00 00 00 ... EMPTY / SAFE ]
+                </div>
+</div>
+<!-- Low Memory -->
+<div class="p-2 bg-surface-container rounded text-center text-outline text-xs">
+                ▼ Low Memory (ESP/RSP Pointer)
+              </div>
+</div>
+</div>
+<!-- Smashed Stack Frame -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-error/50 flex flex-col gap-space-sm relative shadow-[0_0_20px_rgba(255,51,102,0.15)]">
+<div class="flex items-center justify-between">
+<span class="font-label-tag text-label-tag text-error flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[16px]">warning</span> SMASHED STACK (Post-Attack Infiltration)
+              </span>
+<span class="font-label-code text-label-code text-error text-[11px]">HIJACK DETECTED</span>
+</div>
+<div class="flex flex-col gap-2 font-label-code text-label-code">
+<!-- High Memory -->
+<div class="p-2 bg-surface-container rounded text-center text-outline text-xs">
+                ▲ High Memory (Caller Stack Frame)
+              </div>
+<!-- OVERWRITTEN RIP -->
+<div class="p-3 bg-error/20 rounded border-2 border-error text-error flex justify-between items-center shadow-[0_0_12px_rgba(255,51,102,0.4)] animate-pulse">
+<span class="font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">dangerous</span> OVERWRITTEN RIP!
+                </span>
+<span class="font-bold">0x7FFFFFFFD410</span>
+</div>
+<!-- OVERWRITTEN RBP -->
+<div class="p-3 bg-error-container/30 rounded border border-error text-on-error-container flex justify-between items-center">
+<span>[ CORRUPTED RBP ]</span>
+<span class="font-bold">0x41414141 ('AAAA')</span>
+</div>
+<!-- CORRUPTED CANARY -->
+<div class="p-3 bg-error/10 rounded border-2 border-dashed border-error text-error flex justify-between items-center">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">broken_image</span> CRUSHED CANARY!
+                </span>
+<span class="line-through opacity-70">0x41414141 (MISMATCH!)</span>
+</div>
+<!-- OVERFLOW PAYLOAD -->
+<div class="p-4 bg-error-container/10 rounded border border-error/40 text-on-surface flex flex-col gap-1">
+<div class="flex justify-between text-xs text-error font-bold">
+<span>EXPLOIT SHELLCODE INJECTION</span>
+<span>128 Bytes Injected</span>
+</div>
+<div class="p-2 bg-surface-container-lowest rounded text-center text-error font-bold text-xs tracking-wider">
+                  \x90\x90\x90\x90 (NOP SLED) + [EXEC_PAYLOAD] + \x41\x41...
+                </div>
+</div>
+<!-- Low Memory -->
+<div class="p-2 bg-surface-container rounded text-center text-outline text-xs">
+                ▼ Low Memory (Attacker Buffer Origin)
+              </div>
+</div>
+</div>
+</div>
+<!-- Architectural Defense Controllers -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
+<div class="p-space-sm bg-surface-container rounded-lg border-t-2 border-tertiary flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-tertiary font-bold">STACK CANARY (GS GUARD)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Secret sentinel word before the RIP. If overwritten during a buffer flood, the function epilogue immediately invokes <code class="text-primary font-label-code">__stack_chk_fail()</code>.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg border-t-2 border-primary flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-primary font-bold">NON-EXECUTABLE (NX / DEP / W^X)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Hardware page table bit enforcing: memory can be <em>Writable</em> or <em>Executable</em>, but never both. Shellcode on the stack triggers instant SIGSEGV.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg border-t-2 border-secondary flex flex-col gap-1">
+<span class="font-label-tag text-label-tag text-secondary font-bold">COMPILER SHIELDS (GCC / CLANG)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Automated flags like <code class="text-secondary font-label-code">-fstack-protector-all</code> and <code class="text-secondary font-label-code">-D_FORTIFY_SOURCE=2</code> replace unsafe primitives with safe variants.
+            </p>
+</div>
+</div>
+</section>
+<!-- ================= SECTION 3: LINEAR PIPELINE ================= -->
+<section class="bg-surface-container-low rounded-xl p-space-lg border border-outline-variant/30 flex flex-col gap-space-md shadow-lg" id="sec-pipeline">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-tag text-label-tag border border-primary/20">SECTION 03</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+              3️⃣ Linear Operational Pipeline (The Hijack &amp; Mitigation Timelines)
+            </h2>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">schema</span>
+</div>
+<!-- 4-Node Interactive Workflow Pipeline -->
 <div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm relative">
 <!-- Node 1 -->
-<div class="bg-surface-container-high rounded-xl p-space-sm relative flex flex-col justify-between">
-<div class="flex items-center justify-between mb-2">
-<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container text-primary font-bold">STAGE 01</span>
+<div class="bg-surface-container-lowest p-space-md rounded-xl border border-primary/30 flex flex-col gap-space-xs relative group">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-primary/20 text-primary font-label-tag text-label-tag flex items-center justify-center font-bold">1</span>
 <span class="material-symbols-outlined text-primary text-[18px]">input</span>
 </div>
-<h5 class="font-headline-sm text-[15px] text-on-surface font-semibold">1. Excessive Data Influx</h5>
-<span class="font-label-tag text-[10px] text-on-surface-variant mt-2">Buffer ingress flooded</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold text-base">Excessive Influx</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Application accepts untrusted input of 128 bytes into a 32-byte char array via unvalidated network read.
+            </p>
+<div class="text-[11px] font-label-code text-primary bg-primary/5 p-1 rounded">
+              Input &gt; Buffer Capacity
+            </div>
 </div>
 <!-- Node 2 -->
-<div class="bg-surface-container-high rounded-xl p-space-sm relative flex flex-col justify-between">
-<div class="flex items-center justify-between mb-2">
-<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container text-secondary font-bold">STAGE 02</span>
-<span class="material-symbols-outlined text-secondary text-[18px]">emergency</span>
+<div class="bg-surface-container-lowest p-space-md rounded-xl border border-error/30 flex flex-col gap-space-xs relative group">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-error/20 text-error font-label-tag text-label-tag flex items-center justify-center font-bold">2</span>
+<span class="material-symbols-outlined text-error text-[18px]">emergency</span>
 </div>
-<h5 class="font-headline-sm text-[15px] text-on-surface font-semibold">2. Array Boundary Breach</h5>
-<span class="font-label-tag text-[10px] text-on-surface-variant mt-2">Memory fences overrun</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold text-base">Boundary Breach</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Unchecked <code class="font-label-code text-error">strcpy()</code> writes past array index bounds into adjacent stack memory cells.
+            </p>
+<div class="text-[11px] font-label-code text-error bg-error/5 p-1 rounded">
+              Index spill past char[32]
+            </div>
 </div>
 <!-- Node 3 -->
-<div class="bg-surface-container-high rounded-xl p-space-sm relative flex flex-col justify-between">
-<div class="flex items-center justify-between mb-2">
-<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container text-error font-bold">STAGE 03</span>
-<span class="material-symbols-outlined text-error text-[18px]">running_with_errors</span>
+<div class="bg-surface-container-lowest p-space-md rounded-xl border border-secondary/30 flex flex-col gap-space-xs relative group">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-secondary/20 text-secondary font-label-tag text-label-tag flex items-center justify-center font-bold">3</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">change_circle</span>
 </div>
-<h5 class="font-headline-sm text-[15px] text-on-surface font-semibold">3. Pointer Overwrite Step</h5>
-<span class="font-label-tag text-[10px] text-on-surface-variant mt-2">Saved ret address smashed</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold text-base">Overwrite Attempt</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Payload tramples the stack canary and targets the Saved Return Address RIP pointer with malicious address.
+            </p>
+<div class="text-[11px] font-label-code text-secondary bg-secondary/5 p-1 rounded">
+              Targeting RIP Register
+            </div>
 </div>
 <!-- Node 4 -->
-<div class="bg-surface-container-high rounded-xl p-space-sm relative flex flex-col justify-between">
-<div class="flex items-center justify-between mb-2">
-<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container text-tertiary font-bold">STAGE 04</span>
-<span class="material-symbols-outlined text-tertiary text-[18px]">shield</span>
+<div class="bg-surface-container-lowest p-space-md rounded-xl border border-tertiary/40 flex flex-col gap-space-xs relative group">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-tertiary/20 text-tertiary font-label-tag text-label-tag flex items-center justify-center font-bold">4</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified_user</span>
 </div>
-<h5 class="font-headline-sm text-[15px] text-on-surface font-semibold">4. Canary Intercept / Crash Protection</h5>
-<span class="font-label-tag text-[10px] text-on-surface-variant mt-2">Panic halt &amp; SIGSEGV core dump</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold text-base">Canary Intercept</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Function epilogue tests XOR canary guard. Mismatch triggers instant kernel <code class="font-label-code text-tertiary">SIGABRT</code>, aborting hijack.
+            </p>
+<div class="text-[11px] font-label-code text-tertiary bg-tertiary/5 p-1 rounded">
+              *** Stack Smashing Detected ***
+            </div>
 </div>
 </div>
-<!-- Sequential Process Rules Explanations -->
-<div class="space-y-space-xs pt-space-xs font-body-sm text-body-sm text-on-surface">
-<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
-<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary font-label-code text-label-code font-bold whitespace-nowrap">01</span>
-<div>
-<strong class="text-primary font-headline-sm text-[14px]">1. Excessive Data Influx:</strong> An untrusted input stream containing hundreds of bytes of malicious text strings hits an insecure input prompt field inside a user-space application process.
+<!-- Whiteboard Activity Card -->
+<div class="p-space-md bg-surface-container rounded-xl border border-primary/20 flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-primary font-label-tag text-label-tag">
+<span class="material-symbols-outlined text-[18px]">draw</span> CLASSROOM WHITEBOARD EXERCISE
           </div>
-</div>
-<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
-<span class="px-2 py-0.5 rounded bg-secondary-container/40 text-secondary font-label-code text-label-code font-bold whitespace-nowrap">02</span>
-<div>
-<strong class="text-secondary font-headline-sm text-[14px]">2. Array Boundary Breach:</strong> The application copies the input using unverified string operations, filling the assigned buffer array memory tracking cells and spilling across adjacent addresses.
-          </div>
-</div>
-<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
-<span class="px-2 py-0.5 rounded bg-error-container/40 text-error font-label-code text-label-code font-bold whitespace-nowrap">03</span>
-<div>
-<strong class="text-error font-headline-sm text-[14px]">3. Pointer Overwrite Step:</strong> In an unprotected system layout, the extra character bytes overwrite the local Stack memory space, completely erasing the valid Return Address pointer register value.
-          </div>
-</div>
-<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
-<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-code text-label-code font-bold whitespace-nowrap">04</span>
-<div>
-<strong class="text-tertiary font-headline-sm text-[14px]">4. Canary Intercept / Crash Protection:</strong> The function hits its exit code line. The compiler guard detects that the Stack Canary number has been altered. The system drops into high-privilege Kernel Mode, halts execution instantly, and terminates the application.
-          </div>
-</div>
-</div>
-</div>
-<!-- 2 Sub-components: Classroom Byte Tracing Activity vs Alarm Trip Pipeline -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
-<!-- Activity Card -->
-<div class="bg-surface-container-high rounded-xl p-space-md shadow-md flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-space-xs text-primary mb-space-xs">
-<span class="material-symbols-outlined text-[20px]">draw</span>
-<h4 class="font-headline-sm text-headline-sm">💻 Exploit Diagram and Byte Tracing Activity</h4>
-</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Walking the Pointer Beyond the Cliff</h4>
 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            Draw a detailed memory block stack map on the chalkboard showing local arrays sitting next to pointers ➔ Input a sample payload character string mapping 'A' bytes (ASCII 0x41) ➔ Have the class count variables byte-by-byte to track the overflow ➔ Identify the exact byte index location that overwrites the Return Address line ➔ Walk students through injecting a stack canary bird value to demonstrate how it stops the spill from hijacking control.
+            Draw a tall vertical rectangle divided into 4 horizontal compartments: <strong>[Return Address]</strong>, <strong>[Saved RBP]</strong>, <strong>[Canary]</strong>, and <strong>[Buffer]</strong>. Give a volunteer student an index counter pointer. Have them write characters 0 through 31 safely inside the buffer compartment. Then, demand 30 more characters! Watch as the student is forced to cross the boundary line, overwriting the Canary and pointing the Return Address to the student sitting across the room!
           </p>
 </div>
-<div class="mt-space-md pt-space-xs border-t border-outline-variant/30 flex items-center justify-between font-label-tag text-label-tag text-on-surface-variant">
-<span>PEDAGOGY: HANDS-ON POINTER MATH</span>
-<span class="text-primary font-semibold">OFFSET CALCULATION: 64B + 8B + 8B</span>
+</section>
+<!-- ================= SECTION 4: PARADIGM SHOWDOWN ================= -->
+<section class="bg-surface-container-low rounded-xl p-space-lg border border-outline-variant/30 flex flex-col gap-space-md shadow-lg" id="sec-showdown">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-tag text-label-tag border border-primary/20">SECTION 04</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+              4️⃣ Paradigm Showdown: Data Corruption vs Control Flow Hijacking
+            </h2>
 </div>
+<span class="material-symbols-outlined text-primary text-[28px]">compare_arrows</span>
 </div>
-<!-- Alarm Analogy Card -->
-<div class="bg-surface-container rounded-xl p-space-md shadow-md flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-space-xs text-secondary mb-space-xs">
-<span class="material-symbols-outlined text-[20px]">notification_important</span>
-<h4 class="font-headline-sm text-headline-sm">🎒 Alarm Trip Pipeline</h4>
+<!-- High-Contrast Comparative Table -->
+<div class="overflow-x-auto rounded-xl border border-surface-container-highest">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-high font-label-tag text-label-tag text-primary uppercase tracking-wider">
+<tr>
+<th class="p-space-md">Examination Dimension</th>
+<th class="p-space-md border-l border-surface-container-highest">Standard Buffer Overflow (Data Corruption)</th>
+<th class="p-space-md border-l border-surface-container-highest bg-primary/5 text-primary">Stack Smashing (Control-Flow Hijack)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest bg-surface-container-lowest">
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="p-space-md font-label-code text-on-surface font-bold">Primary Objective</td>
+<td class="p-space-md text-on-surface-variant border-l border-surface-container-highest">
+                  Corrupt adjacent local data variables (e.g., flipping an <code class="text-tertiary font-label-code">is_admin</code> flag from 0 to 1).
+                </td>
+<td class="p-space-md text-primary font-semibold border-l border-surface-container-highest bg-primary/5">
+                  Hijack the Instruction Pointer (RIP/EIP) to redirect CPU execution to attacker-controlled shellcode or system calls.
+                </td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="p-space-md font-label-code text-on-surface font-bold">Weapon of Choice</td>
+<td class="p-space-md text-on-surface-variant border-l border-surface-container-highest">
+                  Off-by-one loop errors, missing null terminators in strings, unchecked size calculations.
+                </td>
+<td class="p-space-md text-on-surface border-l border-surface-container-highest bg-primary/5">
+                  Crafted payloads with NOP sleds (<code class="text-primary font-label-code">\x90</code>), exact canary offsets, and ROP (Return-Oriented Programming) gadgets.
+                </td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="p-space-md font-label-code text-on-surface font-bold">Execution Target</td>
+<td class="p-space-md text-on-surface-variant border-l border-surface-container-highest">
+                  Local stack variables, boolean flags, loop counters, state structs.
+                </td>
+<td class="p-space-md text-error font-semibold border-l border-surface-container-highest bg-primary/5">
+                  Saved Frame Pointer (RBP), Saved Return Address (RIP), Global Offset Table (GOT).
+                </td>
+</tr>
+<tr class="hover:bg-surface-container/50 transition-colors">
+<td class="p-space-md font-label-code text-on-surface font-bold">System Defense Shield</td>
+<td class="p-space-md text-on-surface-variant border-l border-surface-container-highest">
+                  Runtime array bounds checking, safe string APIs (<code class="text-tertiary font-label-code">strncpy</code>, <code class="text-tertiary font-label-code">snprintf</code>).
+                </td>
+<td class="p-space-md text-tertiary font-semibold border-l border-surface-container-highest bg-primary/5">
+                  Stack Canaries (GCC GS Guard), Address Space Layout Randomization (ASLR), NX Hardware bit, CFI.
+                </td>
+</tr>
+</tbody>
+</table>
 </div>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            You squeeze a massive pile of clothes into a small cubby drawer (Excessive Data Influx) ➔ The clothing spills out the back of the drawer partition into the wall gap (Boundary Breach) ➔ The spilling cloth wraps around the master alarm pull-cord wire (Pointer Overwrite) ➔ A security sensor trips, locking down the doors and turning off the power immediately to protect the vault building (Canary Intercept Protection).
-          </p>
+</section>
+<!-- ================= SECTION 5: TECHNICAL GROUNDING / SIMULATOR ================= -->
+<section class="bg-surface-container-low rounded-xl p-space-lg border border-outline-variant/30 flex flex-col gap-space-md shadow-lg" id="sec-simulator">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-tag text-label-tag border border-primary/20">SECTION 05</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+              5️⃣ Deep Technical Grounding (The Memory-Safety Code Loop)
+            </h2>
 </div>
-<div class="mt-space-md pt-space-xs border-t border-outline-variant/30 flex items-center justify-between font-label-tag text-label-tag text-on-surface-variant">
-<span>PHYSICAL ANALOGY: CLOSET WIRE INTERCEPT</span>
-<span class="text-tertiary font-semibold">ACTION: MASTER LOCKDOWN HALT</span>
+<span class="material-symbols-outlined text-primary text-[28px]">terminal</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Below is a clean educational pseudo-simulation model of an x86_64 protected stack frame. Interact with the execution buttons to witness how unsafe memory writes interact with the stack canary verification barrier.
+        </p>
+<!-- Simulator Layout: Code on Left, Terminal on Right -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Code Block (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-md border border-surface-container-highest flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container-highest">
+<span class="font-label-tag text-label-tag text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[14px]">code</span> stack_protection_sim.py
+              </span>
+<span class="font-label-code text-label-code text-primary text-[11px]">PYTHON 3.12 KERNEL</span>
+</div>
+<pre class="font-label-code text-label-code text-xs text-on-surface overflow-x-auto leading-relaxed"><span class="text-secondary font-bold">class</span> <span class="text-primary font-bold">StackFrame</span>:
+    <span class="text-secondary font-bold">def</span> <span class="text-tertiary">__init__</span>(self, size=64):
+        self.buffer = bytearray(size)
+        self.canary = <span class="text-tertiary">0xDEADBEEF</span>  <span class="text-outline"># Secret compiler guard</span>
+        self.return_address = <span class="text-primary">0x00401152</span>  <span class="text-outline"># main() return</span>
+
+    <span class="text-secondary font-bold">def</span> <span class="text-tertiary">write_input</span>(self, payload: bytes):
+        <span class="text-outline"># Unsafe unbounded copy (simulating strcpy)</span>
+        <span class="text-secondary font-bold">for</span> i, b <span class="text-secondary font-bold">in</span> enumerate(payload):
+            <span class="text-secondary font-bold">if</span> i &lt; len(self.buffer):
+                self.buffer[i] = b
+            <span class="text-secondary font-bold">elif</span> i &lt; len(self.buffer) + 4:
+                <span class="text-error"># OVERFLOW: Smashing canary guard bytes!</span>
+                self.canary = (self.canary &lt;&lt; 8 | b) &amp; 0xFFFFFFFF
+            <span class="text-secondary font-bold">else</span>:
+                <span class="text-error"># CRUSHING Return Address RIP</span>
+                self.return_address = <span class="text-error">0x7FFFFFFFD410</span>
+
+    <span class="text-secondary font-bold">def</span> <span class="text-tertiary">verify_and_return</span>(self):
+        <span class="text-secondary font-bold">if</span> self.canary != <span class="text-tertiary">0xDEADBEEF</span>:
+            <span class="text-secondary font-bold">raise</span> SecurityFault(<span class="text-error">"*** STACK SMASHING DETECTED ***"</span>)
+        <span class="text-secondary font-bold">return</span> self.return_address</pre>
+</div>
+<!-- Interactive Action Panel & Output Console (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<!-- Buttons -->
+<div class="flex flex-col gap-2">
+<button class="w-full py-2.5 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high border border-tertiary/40 text-tertiary font-label-code text-label-code font-bold flex items-center justify-between transition-all hover:shadow-[0_0_12px_rgba(105,246,185,0.2)]" id="btn-safe" onclick="runSimSafe()">
+<span>[ 1. Write Safe Input (32B) ]</span>
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</button>
+<button class="w-full py-2.5 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high border border-error/50 text-error font-label-code text-label-code font-bold flex items-center justify-between transition-all hover:shadow-[0_0_12px_rgba(255,51,102,0.3)]" id="btn-overflow" onclick="runSimOverflow()">
+<span>[ 2. Trigger Overflow (128B) ]</span>
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</button>
+<button class="w-full py-2.5 px-space-md rounded-lg bg-primary-container text-on-primary-container font-label-code text-label-code font-bold flex items-center justify-between transition-all shadow-[0_0_16px_rgba(0,210,255,0.3)] hover:brightness-110" id="btn-verify" onclick="runSimVerify()">
+<span>[ 3. Verify Canary Defense ]</span>
+<span class="material-symbols-outlined text-[18px]">security</span>
+</button>
+</div>
+<!-- Terminal Output Window -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border border-surface-container-highest flex-1 flex flex-col gap-2 min-h-[220px]">
+<div class="flex items-center justify-between border-b border-surface-container-highest pb-1">
+<span class="font-label-tag text-label-tag text-outline flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> KERNEL CONSOLE LOG
+                </span>
+<span class="font-label-tag text-label-tag text-tertiary" id="term-status">IDLE</span>
+</div>
+<div class="font-label-code text-label-code text-xs text-on-surface-variant flex flex-col gap-1 overflow-y-auto max-h-[170px]" id="sim-console">
+<p class="text-outline">&gt; gdb --quiet ./vulnerable_binary</p>
+<p class="text-outline">&gt; Canary armed at offset +64: [0xDEADBEEF]</p>
+<p class="text-primary">&gt; Ready for test execution payload...</p>
+</div>
 </div>
 </div>
 </div>
 </section>
-<!-- SECTION 4: PARADIGM SHOWDOWN & GUARDRAILS -->
-<section class="space-y-space-md">
+<!-- ================= SECTION 6: PRACTICAL GUARDRAILS ================= -->
+<section class="bg-surface-container-low rounded-xl p-space-lg border border-outline-variant/30 flex flex-col gap-space-md shadow-lg" id="sec-guardrails">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-space-sm">
 <div class="flex items-center gap-space-sm">
-<span class="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center font-headline-sm">4</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">4️⃣ Paradigm Showdown &amp; Guardrails</h2>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-tag text-label-tag border border-primary/20">SECTION 06</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+              6️⃣ Practical Guardrails &amp; Interview Takeaways
+            </h2>
 </div>
-<!-- Comparative Table -->
-<div class="bg-surface-container rounded-xl p-space-md shadow-xl overflow-x-auto">
-<div class="flex items-center justify-between mb-space-sm">
-<h3 class="font-headline-sm text-headline-sm text-on-surface">Standard Buffer Overflow (Data Overspill Chaos) vs Stack Smashing Attack (Targeted Control Hijack)</h3>
-<span class="font-label-tag text-label-tag text-primary-fixed">THREAT MATRIX AUDIT</span>
+<span class="material-symbols-outlined text-primary text-[28px]">shield_lock</span>
 </div>
-<div class="w-full min-w-[650px] space-y-2">
-<!-- Table Header -->
-<div class="grid grid-cols-12 gap-space-sm bg-surface-container-high p-space-sm rounded-lg font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider">
-<div class="col-span-3">Comparison Metric</div>
-<div class="col-span-4 text-on-surface font-semibold">Standard Buffer Overflow (Data Overspill Chaos)</div>
-<div class="col-span-5 text-primary-fixed font-semibold">Stack Smashing Attack (Targeted Control Hijack)</div>
+<!-- Language Comparison Matrix -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-tertiary/30 flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_box</span> MODERN MEMORY-SAFE LANGUAGES
+            </span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold text-lg">Rust, Java, Python, Go</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong>Rust</strong> eliminates buffer overflows entirely at compile time via its strict borrow checker and mandatory bounds checking on slices. <strong>Java/Python/Go</strong> execute inside managed runtimes that raise catchable <code class="text-tertiary font-label-code">IndexOutOfBoundsException</code> before raw memory is ever breached.
+            </p>
 </div>
-<!-- Row 1: Objective -->
-<div class="grid grid-cols-12 gap-space-sm bg-surface-container-low p-space-sm rounded-lg font-body-sm text-body-sm items-center">
-<div class="col-span-3 font-label-code text-label-code text-on-surface-variant font-bold">Exploitation Objective</div>
-<div class="col-span-4 text-on-surface-variant">Corrupts adjacent local variables by accident due to poor code</div>
-<div class="col-span-5 text-primary font-semibold">Intentionally targets and replaces the return address pointer with malicious values</div>
-</div>
-<!-- Row 2: Weapon of Choice -->
-<div class="grid grid-cols-12 gap-space-sm bg-surface-container-low p-space-sm rounded-lg font-body-sm text-body-sm items-center">
-<div class="col-span-3 font-label-code text-label-code text-on-surface-variant font-bold">Weapon of Choice</div>
-<div class="col-span-4 text-on-surface-variant">Long, unvalidated user strings</div>
-<div class="col-span-5 text-secondary font-semibold">Carefully crafted shellcode scripts containing hex memory target tracks</div>
-</div>
-<!-- Row 3: Fixes -->
-<div class="grid grid-cols-12 gap-space-sm bg-surface-container-low p-space-sm rounded-lg font-body-sm text-body-sm items-center">
-<div class="col-span-3 font-label-code text-label-code text-on-surface-variant font-bold">System Defense Fixes</div>
-<div class="col-span-4 text-on-surface-variant">Use bounds-checking safe strings like strncpy()</div>
-<div class="col-span-5 text-tertiary font-semibold">Apply compiler stack canaries, ASLR scrambling, and hardware NX bits</div>
-</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-error/30 flex flex-col gap-space-xs">
+<span class="font-label-tag text-label-tag text-error font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">warning</span> LEGACY SYSTEMS LANGUAGES
+            </span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold text-lg">C &amp; C++ (Without Guardrails)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Provides raw pointer arithmetic with zero runtime safety penalties for ultra-low latency. Without explicit compiler shields, unvalidated writes to memory pointers will silently corrupt execution state, leading directly to exploitability.
+            </p>
 </div>
 </div>
 <!-- Common Mistakes Warning Banner -->
-<div class="bg-error-container/30 rounded-xl p-space-md shadow-md flex items-start gap-space-md">
-<div class="p-2 rounded-lg bg-error-container text-error flex items-center justify-center shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[24px]">warning</span>
+<div class="p-space-md rounded-xl bg-error-container/20 border border-error/50 flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-error font-label-tag text-label-tag font-bold">
+<span class="material-symbols-outlined text-[20px]">dangerous</span> COMMON ROOKIE MISTAKE: NEVER USE GETS(), STRCPY(), OR SPRINTF()!
+          </div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            A very common misconception undergraduate students have is assuming a buffer is safe because <em>"no regular user will ever type more than 64 characters."</em> Malicious actors deliberately craft inputs with thousands of bytes! Always enforce length constraints by using bounded alternatives: <strong class="text-tertiary font-label-code">fgets()</strong>, <strong class="text-tertiary font-label-code">strncpy()</strong>, and <strong class="text-tertiary font-label-code">snprintf()</strong>!
+          </p>
 </div>
-<div class="space-y-1">
-<div class="flex items-center gap-space-xs font-label-tag text-label-tag text-error uppercase tracking-wider font-bold">
-<span>COMMON MISTAKES WARNING BANNER</span>
-<span>•</span>
-<span>SYSTEM IMPLEMENTATION PITFALL</span>
-</div>
+<!-- Architectural & Interview Takeaway Panel -->
+<div class="p-space-lg rounded-xl bg-surface-container-high border-l-4 border-primary flex flex-col gap-space-sm shadow-md">
+<span class="font-label-tag text-label-tag text-primary uppercase tracking-widest flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[18px]">school</span> Architectural &amp; Technical Interview Takeaway
+          </span>
 <p class="font-body-md text-body-md text-on-surface leading-relaxed">
-          Do not assume modern high-level memory safe languages eliminate vulnerability awareness! While languages like Rust and Python provide built-in bounds-checking, underlying OS kernel layers, C runtime libraries, device drivers, and legacy system daemons remain written in C/C++. Understanding stack frame memory mechanics is essential for systems engineering and firmware defense.
-        </p>
-</div>
-</div>
-<!-- Interview Takeaway Panel -->
-<div class="bg-surface-container-high rounded-xl p-space-md shadow-lg space-y-space-xs">
-<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/30">
-<div class="flex items-center gap-space-xs text-primary">
-<span class="material-symbols-outlined text-[22px]">contact_support</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">Architectural &amp; Technical Interview Takeaways</h3>
-</div>
-<span class="font-label-tag text-label-tag px-2 py-0.5 rounded bg-surface-container text-tertiary font-semibold">CORE PRINCIPLE</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface leading-relaxed pt-space-xs">
-        Exploit prevention highlights the fundamental hardware-software contract of modern operating systems. Defenses like ASLR, Stack Canaries, and NX bits work in synergy to eliminate deterministic execution of injected payloads. If an execution flow bypasses these guardrails, it triggers a SIGSEGV / segmentation fault trap, instantly terminating the offending process to protect system stability (just like a stack of cafeteria plates getting stacked too high and tumbling down!).
-      </p>
-<div class="pt-space-sm flex flex-wrap items-center gap-space-sm font-label-tag text-[11px] text-on-surface-variant">
-<span class="px-2 py-1 rounded bg-surface-container">EXCEPTION: SIGSEGV (SIGNAL 11)</span>
-<span class="px-2 py-1 rounded bg-surface-container">CORE_DUMP: /var/crash/core.pid1000</span>
-<span class="px-2 py-1 rounded bg-surface-container text-tertiary">KERNEL REF: ARCH_X86_MMU_FAULT</span>
-</div>
-</div>
-<!-- Module Completion Bar -->
-<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-2xl flex flex-col md:flex-row items-center justify-between gap-space-md">
-<div class="flex items-center gap-space-md">
-<div class="w-12 h-12 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[28px]">verified</span>
-</div>
-<div>
-<span class="font-label-tag text-label-tag text-tertiary tracking-wider uppercase font-bold">SYLLABUS PROGRESS CHECKPOINT</span>
-<h4 class="font-headline-sm text-headline-sm text-on-surface">MODULE 24 COMPLETE // 100% MASTERY // CREDITS ACCREDITED</h4>
-<span class="font-label-code text-[11px] text-on-surface-variant">ACCREDITED: CS301 KERNEL SECURITY ARCHITECTURE</span>
-</div>
-</div>
-<div class="flex items-center gap-space-sm w-full md:w-auto">
-<button class="flex-1 md:flex-initial px-space-md py-2.5 rounded-lg bg-surface-container text-secondary hover:bg-surface-container-high font-label-code text-label-code transition-all" type="button">
-          📖 Review L24 Notes
-        </button>
-<button class="flex-1 md:flex-initial px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary font-label-code text-label-code font-bold hover:shadow-[0_0_20px_rgba(0,210,255,0.4)] transition-all" type="button">
-          🚀 Advance to Final Capstone Security Lab ➔
-        </button>
-</div>
+            Buffer overflows and stack smashing attacks represent the quintessential flaw of low-level systems programming. By exploiting the lack of bounds enforcement in the von Neumann architecture, attackers merge untrusted input data with executable machine control flow.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Modern operating systems neutralize these exploits through layered <strong>defense-in-depth</strong>: <strong class="text-tertiary">Stack Canaries</strong> act as tripwires, <strong class="text-primary">ASLR</strong> scrambles the terrain, and <strong class="text-secondary">NX bits</strong> make the stack inert. If an execution pointer gets corrupted or an unauthorized boundary is crossed, the kernel immediately raises a <code class="text-error font-label-code font-bold">SIGSEGV / SIGABRT</code> signal, aborting the process to protect system integrity <em>(just like a stack of cafeteria plates getting stacked too high, losing balance, and tumbling safely down to the floor!)</em>.
+          </p>
 </div>
 </section>
-<!-- INLINE CLIENT-SIDE SIMULATOR SCRIPT -->
+<!-- ================= BOTTOM NAVIGATION DOCK ================= -->
+<footer class="bg-surface-container-lowest rounded-xl p-space-md border border-outline-variant/30 flex flex-col md:flex-row items-center justify-between gap-space-md shadow-2xl">
+<div class="flex items-center gap-space-md">
+<a class="px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-code text-label-code flex items-center gap-1 transition-all" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+            Prev: L23 Authentication
+          </a>
+<span class="font-label-tag text-label-tag text-primary font-bold">
+            CURRENT: L24 PROGRAM EXPLOITS
+          </span>
+<a class="px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-code text-label-code flex items-center gap-1 transition-all" href="#">
+            Next: L25 Encryption
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high border border-outline-variant text-on-surface font-label-code text-label-code flex items-center gap-1 transition-all" onclick="window.print()">
+<span class="material-symbols-outlined text-[16px]">print</span> Print Notes
+          </button>
+<button class="px-space-md py-space-xs rounded-lg bg-primary-container text-on-primary-container font-label-code text-label-code font-bold flex items-center gap-1 transition-all shadow-[0_0_12px_rgba(0,210,255,0.3)] hover:brightness-110">
+<span class="material-symbols-outlined text-[16px]">download</span> Download PDF
+          </button>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<!-- CLIENT INTERACTIVITY LOGIC -->
 <script>
-    (function initMemoryLab() {
-      const btnExploit = document.getElementById('btn-trigger-exploit');
-      const btnReset = document.getElementById('btn-reset-stack');
-      const statusBanner = document.getElementById('sim-status-banner');
-      const statusText = document.getElementById('sim-status-text');
-      
-      const canaryBadge = document.getElementById('badge-canary');
-      const canaryMagic = document.getElementById('val-canary-magic');
-      const canaryBar = document.getElementById('bar-canary');
-      
-      const corruptBuf = document.getElementById('stack-corrupt-buf');
-      const corruptSfp = document.getElementById('stack-corrupt-sfp');
-      const corruptRet = document.getElementById('stack-corrupt-ret');
+  let simState = {
+    bufferBytes: 0,
+    canaryIntact: true,
+    returnAddressIntact: true
+  };
 
-      if (!btnExploit || !btnReset) return;
+  function logConsole(msg, colorClass = "text-on-surface-variant") {
+    const consoleEl = document.getElementById("sim-console");
+    if (!consoleEl) return;
+    const p = document.createElement("p");
+    p.className = `${colorClass} leading-tight`;
+    p.innerHTML = msg;
+    consoleEl.appendChild(p);
+    consoleEl.scrollTop = consoleEl.scrollHeight;
+  }
 
-      btnExploit.addEventListener('click', function() {
-        // Trigger simulated Canary Alert & Stack Corruption
-        statusBanner.className = "flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-error-container text-on-error-container font-label-code text-[12px] animate-pulse";
-        statusText.textContent = "CANARY VIOLATION DETECTED! *** STACK SMASHING DETECTED *** SYSTEM SHUTDOWN [SIGSEGV]";
+  function setStatus(text, colorClass) {
+    const statusEl = document.getElementById("term-status");
+    if (statusEl) {
+      statusEl.textContent = text;
+      statusEl.className = `font-label-tag text-label-tag ${colorClass}`;
+    }
+  }
 
-        canaryBadge.className = "font-label-tag text-label-tag px-2 py-0.5 rounded bg-error-container text-error font-bold";
-        canaryBadge.textContent = "CRUSHED / DEAD";
-        canaryMagic.textContent = "0x4141414100 (ALTERED!)";
-        canaryMagic.className = "text-error font-bold";
-        canaryBar.className = "bg-error h-full w-full transition-all duration-500";
+  function runSimSafe() {
+    simState.bufferBytes = 32;
+    simState.canaryIntact = true;
+    simState.returnAddressIntact = true;
+    logConsole("&gt; [EXEC] Writing 32-byte string: 'USER_LOGIN_TOKEN_NORMAL'", "text-tertiary");
+    logConsole("&gt; [BUFFER] 32/64 bytes utilized. Boundary intact.", "text-on-surface-variant");
+    logConsole("&gt; [CANARY] Canary guard: 0xDEADBEEF (UNTOUCHED)", "text-tertiary");
+    setStatus("BUFFER SAFE", "text-tertiary");
+  }
 
-        corruptBuf.classList.add("ring-2", "ring-error");
-        corruptSfp.classList.add("ring-2", "ring-error");
-        corruptRet.classList.add("ring-2", "ring-error");
-      });
+  function runSimOverflow() {
+    simState.bufferBytes = 128;
+    simState.canaryIntact = false;
+    simState.returnAddressIntact = false;
+    logConsole("&gt; [ALERT] Injecting 128-byte payload via unsafe strcpy()...", "text-error");
+    logConsole("&gt; [OVERFLOW] 64 bytes fill buffer... 64 bytes spill into stack!", "text-error");
+    logConsole("&gt; [SMASH] Canary stomped with 0x41414141 ('AAAA')", "text-error font-bold");
+    logConsole("&gt; [HIJACK] RIP overwritten with 0x7FFFFFFFD410 (Shellcode)", "text-error font-bold");
+    setStatus("CANARY COMPROMISED", "text-error");
+  }
 
-      btnReset.addEventListener('click', function() {
-        // Reset to pristine stack
-        statusBanner.className = "flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container text-tertiary font-label-code text-[12px]";
-        statusText.textContent = "STACK_INTEGRITY: PRISTINE (NO CORRUPTION DETECTED)";
-
-        canaryBadge.className = "font-label-tag text-label-tag px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-bold";
-        canaryBadge.textContent = "GUARD_ARMED";
-        canaryMagic.textContent = "0xDEADBEEF00";
-        canaryMagic.className = "text-tertiary font-bold";
-        canaryBar.className = "bg-tertiary h-full w-full transition-all duration-500";
-
-        corruptBuf.classList.remove("ring-2", "ring-error");
-        corruptSfp.classList.remove("ring-2", "ring-error");
-        corruptRet.classList.remove("ring-2", "ring-error");
-      });
-    })();
-  </script>
-</div></main></div></body></html>
+  function runSimVerify() {
+    logConsole("&gt; [EPILOGUE] Function returning... Invoking compiler canary test", "text-primary");
+    if (simState.canaryIntact) {
+      logConsole("&gt; [CHECK] Canary == 0xDEADBEEF [PASS]", "text-tertiary font-bold");
+      logConsole("&gt; [RET] CPU safely jumps to legitimate main() at 0x00401152", "text-tertiary");
+      setStatus("EXECUTION OK", "text-tertiary");
+    } else {
+      logConsole("&gt; [CHECK] Canary Mismatch! Found 0x41414141 != 0xDEADBEEF", "text-error font-bold");
+      logConsole("&gt; [KERNEL] Raising SIGABRT: *** STACK SMASHING DETECTED ***", "text-error font-bold");
+      logConsole("&gt; [TRAP] Control flow hijack thwarted! Process terminated safely.", "text-primary font-bold");
+      setStatus("CRASH MITIGATED", "text-primary");
+    }
+  }
+</script></main></div></body></html>
